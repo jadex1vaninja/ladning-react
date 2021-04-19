@@ -1,0 +1,917 @@
+@import './media-mixin.scss';
+
+@font-face {
+  font-family: 'RussoOne-Regular';
+  src: url('./fonts/RussoOne-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+$brand-yellow: #dfc358;
+$brand-white: #fff;
+$brand-black: #000;
+$brand-border: #1b1b1b;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.2;
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  background-image: url(./assets/img/main-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'RussoOne-Regular';
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 28px;
+ 
+  @include _320 {
+    height: 420px;
+  }
+
+  @include _768 {
+    padding: 0;
+    height: 100%;
+  }
+  @include _1440 {
+    height: 80vh;
+  }
+
+  &__banner {
+    width: 100%;
+    height: 300px;
+    position: relative;
+
+    @include _768 {
+      height: 100%;
+    }
+  }
+
+  &__banner-img {
+    width: 100%;
+    display: none;
+
+    @include _768 {
+      display: block;
+    }
+
+    &--mobile {
+      @include _320 {
+        display: block;
+        width: 100%;
+        height: 80%;
+        object-fit: contain;
+        margin: 0 auto;
+      }
+
+      @include _768 {
+        display: none;
+      }
+    }
+  }
+
+  &__inner {
+    position: absolute;
+    width: 100%;
+    height: 4.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    top: 265px;
+    // padding: 0 65px;
+
+    > :first-child {
+      justify-content: flex-end;
+      order: 2;
+
+      @include _768 {
+        order: 1;
+      }
+    }
+
+    > :last-child {
+      justify-content: flex-start;
+      order: 3;
+
+      @include _768 {
+        order: 3;
+      }
+    }
+
+    @include _768 {
+      top: 35.5vw;
+      padding: 0;
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    width: 50%;
+
+    @include _768 {
+      width: 33%;
+    }
+  }
+
+  &__text-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+    order: 1;
+    margin-bottom: 14px;
+
+    @include _768 {
+      width: 33%;
+      margin-bottom: 0;
+      order: 2;
+    }
+  }
+
+  &__logo1 {
+    margin-right: 5rem;
+
+    @include _768 {
+      margin-right: 4rem;
+    }
+  }
+
+  &__logo3 {
+    width: 125px;
+    margin-left: 5px;
+
+    @include _768 {
+      width: 9vw;
+      margin-left: 3rem;
+    }
+  }
+
+  &__title {
+    color: white;
+    font-size: 41px;
+    line-height: 34px;
+
+    @include _768 {
+      font-size: 45px;
+    }
+  }
+
+  &__text {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 3px;
+    line-height: 27px;
+
+    @include _768 {
+      font-size: 16px;
+      font-weight: normal;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+.carousel {
+  background-image: url('./assets/img/black-bg.png');
+  margin-top: -4rem;
+  padding: 4rem 20%;
+  color: $brand-white;
+  background-size: cover;
+
+  // Styles to hide arrows and fit content
+  @media screen and (max-width: 800px) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .slick-slider {
+    margin-bottom: 0;
+  }
+
+  .slick-arrow {
+    border: solid $brand-white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 1rem;
+    &::before {
+      content: unset;
+    }
+    &.slick-prev {
+      left: -5rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(135deg);
+    }
+    &.slick-next {
+      right: -5rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+
+  &__carousel-wrapper {
+    padding: 1rem 0 4rem 0;
+
+    &.slick-initialized {
+      .slick-slide {
+        display: flex;
+      }
+    }
+  }
+
+  &__carousel-item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-logo-section {
+    display: flex;
+    align-items: center;
+
+    img {
+      &:nth-child(1) {
+        max-width: 300px;
+        width: 60%;
+      }
+      &:nth-child(2) {
+        max-width: 210px;
+        width: 40%;
+      }
+    }
+  }
+
+  &__item-content {
+    margin-left: 6%;
+    width: 54%;
+
+    h2 {
+      text-transform: uppercase;
+      padding-bottom: 0.75rem;
+      color: $brand-yellow;
+      font-weight: 500;
+      
+      @include _320 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+      }
+      
+      @include _768 {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      line-height: 1.25rem;
+      @include _320 {
+        font-size: 0.75rem;
+      }
+      
+      @include _768 {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__sub-caption-section {
+    display: flex;
+    margin-top: 2.5rem;
+
+    img {
+      margin-right: 1.25rem;
+      object-fit: contain;
+      align-self: baseline;
+      
+      @include _320 {
+        max-width: 50px;
+        padding-top: 0.5rem;
+      }
+      
+      @include _768 {
+        max-width: 80px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $brand-yellow;
+      font-weight: 500;
+      
+      @include _320 {
+        font-size: 1rem;
+      }
+      
+      @include _768 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+.card {
+  text-transform: uppercase;
+  font-weight: 800;
+  position: relative;
+  top: -4rem;
+  padding: 0 10%;
+
+  &__card-wrapper {
+
+    &.slick-initialized {
+      .slick-slide {
+        display: flex;
+      }
+    }
+
+    &.slick-slider {
+      margin-bottom: 0;
+    }
+
+    .slick-arrow {
+      border: solid $brand-white;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 1rem;
+      z-index: 2;
+      &::before {
+        content: unset;
+      }
+      &.slick-prev {
+        left: -1rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(135deg);
+      }
+      &.slick-next {
+        right: -1rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    background-color: $brand-yellow;
+    width: min-content;
+    margin: 0 auto;
+    letter-spacing: 0.25rem;
+    font-weight: 400;
+    
+    @include _320 {
+      padding: 0.5rem 1.25rem;
+      font-size: 1.25rem;
+    }
+    
+    @include _768 {
+      padding: 0.75rem 3rem;
+      font-size: 1.75rem;
+    }
+  }
+
+  &__card-content {
+    display: flex;
+    flex-direction: column;
+    padding-right: 15%;
+    @include _320 {
+      margin-top: -3.5rem;
+    }
+    
+    @include _768 {
+      margin-top: 0;
+    }
+
+   
+
+    img {
+      position: relative;
+      bottom: -115px;
+      z-index: 2;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  &__content-wrapper {
+    background: $brand-black;
+    color: $brand-white;
+    font-weight: 500;
+    position: relative;
+    padding-top: 130px;
+    border-radius: 1rem;
+    text-align: center;
+
+    h4 {
+      color: $brand-yellow;
+      font-size: 1.25rem;
+      letter-spacing: 0.75rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+    h3.first-description{
+      padding-top: 0.5rem;
+    }
+     h3.second-description {
+      padding-bottom: 0.5rem;
+    }
+    
+  }
+
+  &__sub-caption {
+    margin: 0 1rem;
+    padding: 1rem 0;
+    border-top: 2px solid $brand-border;
+    text-transform: none;
+  }
+
+  &__auction-wrapper {
+    background-color: $brand-yellow;
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+    padding: 0 0.5rem;
+
+    a {
+      text-decoration: none;
+
+      :nth-child(1) {
+        color: $brand-white;
+        padding-top: 1rem;
+        
+        @include _320 {
+          font-size: 1rem;
+        }
+        
+        @include _768 {
+          font-size: 1.25rem;
+        }
+      }
+
+      :nth-child(2) {
+        padding-bottom: 1rem;
+        color: $brand-black;
+        
+        @include _320 {
+          font-size: 2.25rem;
+        }
+        
+        @include _1024 {
+          font-size: 2.75rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel {
+    &__carousel-item {
+      flex-direction: column;
+      padding: 0 0.25rem;
+    }
+    &__item-content {
+      width: 100%;
+      margin: 0;
+    }
+    .arrow {
+      display: none;
+    }
+  }
+
+  .card {
+    &__card-wrapper {
+      width: 90%;
+      margin: 0 auto;
+    }
+    &__card-content {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// Video block
+.video {
+  width: 100%;
+  position: relative;
+  &__banner-img-mobile {
+    width: 100%;
+    height: 100%;
+    @include _768 {
+      display: none;
+    }
+  }
+  &__banner-img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    @include _768 {
+      padding-left: 21px;
+      display: block;
+    }
+
+    @include _1024 {
+      padding-left: 41px;
+    }
+  }
+  &__main-content {
+    width: 100%;
+    padding: 20px 30px 54px 30px;
+    background-color: black;
+    margin-top: -5px;
+    @include _768 {
+      background-color: unset;
+      margin-top: unset;
+      padding: unset;
+      position: absolute;
+      right: 8.4vw;
+      bottom: 7.8vw;
+      max-width: 30%;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    @include _768 {
+    }
+  }
+  &__pre-fight {
+    font-size: 4.8vw;
+    color: #dcbe56;
+    @include _768 {
+      font-size: 1.7vw;
+    }
+  }
+  &__sub-content {
+    padding-top: 8px;
+    display: flex;
+    align-items: center;
+    @include _768 {
+      line-height: 2.3vw;
+      padding-top: 17px;
+    }
+  }
+  &__logo {
+    height: 6.7vw;
+    padding-right: 11px;
+    @include _768 {
+      height: 2.3vw;
+    }
+  }
+  &__coming-soon {
+    font-size: 9.5vw;
+    color: white;
+    @include _768 {
+      font-size: 3vw;
+    }
+  }
+}
+
+//Register block
+.register {
+  background: url(./assets//img/register-bg.jpg);
+  text-align: center;
+  &__title {
+    background-color: #dcbe56;
+    width: 73%;
+    margin: 0 auto;
+    position: relative;
+    top: -25px;
+    span {
+      line-height: 50px;
+      font-size: 6vw;
+      letter-spacing: -1px;
+    }
+    @include _768 {
+      width: 26.5%;
+      span {
+        line-height: 55px;
+        font-size: 1.7vw;
+        letter-spacing: 1.2px;
+      }
+    }
+  }
+  &__main-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 56px;
+    span {
+      font-size: 4.7vw;
+    }
+    @include _768 {
+      padding-left: unset;
+      padding-right: unset;
+      padding-bottom: unset;
+      span {
+        font-size: 1.25vw;
+      }
+    }
+  }
+  &__form {
+    margin-top: 21px;
+    img {
+      display: none;
+    }
+    input {
+      width: 100%;
+      height: 74px;
+      background-color: black;
+      color: #dcbe56;
+      border: none;
+      padding-left: 17px;
+      padding-right: 17px;
+      font-size: 10vw;
+      font-family: 'RussoOne-Regular';
+      &::placeholder {
+        font-size: 10vw;
+        color: #dcbe56;
+        font-family: 'RussoOne-Regular';
+      }
+      &:focus {
+        outline: unset;
+      }
+      &:nth-child(2n) {
+        margin-top: 26px;
+        margin-bottom: 26px;
+      }
+    }
+    @include _768 {
+      margin: 0 auto;
+      width: 57%;
+      padding-top: 42px;
+      padding-bottom: 129px;
+      display: flex;
+      img {
+        display: block;
+        width: 19.4vw;
+        height: 19.4vw;
+        padding-right: 40px;
+      }
+      input {
+        padding-left: 22px;
+        padding-right: 22px;
+        font-size: 1.9vw;
+        &::placeholder {
+          font-size: 1.9vw;
+        }
+      }
+    }
+    @include _1024 {
+      img {
+        padding-right: 50px;
+      }
+    }
+  }
+  &__submit {
+    display: flex;
+    margin-top: 31px;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      width: 17.9vw;
+      display: block;
+    }
+    button {
+      font-size: 13vw;
+      text-transform: uppercase;
+      padding-top: 10px;
+      cursor: pointer;
+      font-family: "RussoOne-Regular";
+      border: none;
+      outline: none;
+      background: transparent;
+    }
+    button {
+      font-size: 13vw;
+      text-transform: uppercase;
+      padding-top: 10px;
+      cursor: pointer;
+    }
+    @include _768 {
+      margin-top: unset;
+      justify-content: flex-end;
+      margin-top: 28px;
+      img {
+        display: none;
+      }
+      button {
+        font-size: 3vw;
+        text-transform: uppercase;
+        padding-top: unset;
+      }
+    }
+  }
+}
+
+//What is an nft block
+.whatIs {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding-bottom: 37px;
+  &__boarder {
+    display: none;
+  }
+  &__mobile-boarder {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  &__title {
+    font-size: 8.3vw;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 45px;
+    position: relative;
+    z-index: 2;
+  }
+  &__main-info {
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 3.5vw;
+    color: #dcbe56;
+    font-weight: normal;
+    position: relative;
+    z-index: 2;
+  }
+  @include _768 {
+    padding-bottom: 78px;
+    &__boarder {
+      display: block;
+      position: absolute;
+      top: -15%;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+    }
+    &__mobile-boarder {
+      display: none;
+    }
+    &__text-container {
+      width: 68%;
+      margin: 0 auto;
+    }
+    &__title {
+      font-size: 3.3vw;
+      padding-top: 64px;
+    }
+    &__main-info {
+      padding-top: 10px;
+      font-size: 1.2vw;
+    }
+  }
+
+  @include _1024 {
+    &__boarder {
+      top: -17%;
+    }
+  }
+
+  @include _1440 {
+    &__boarder {
+      top: -22%;
+    }
+  }
+}
+
+.root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.footer {
+  width: 100%;
+  height: 190px;
+
+  @include _768 {
+    height: 450px;
+  }
+
+  &__banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    @include _768 {
+      height: 100%;
+    }
+  }
+
+  &__banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__inner {
+    position: absolute;
+    width: 100%;
+    height: 4.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 30px;
+
+    > :first-child {
+      justify-content: flex-end;
+    }
+
+    > :last-child {
+      justify-content: flex-start;
+    }
+
+    @include _768 {
+      bottom: 50px;
+      padding: 0;
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    width: 33%;
+
+    @include _768 {
+      width: 33%;
+    }
+  }
+
+  &__text-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 20%;
+
+    @include _768 {
+      width: 20%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__logo1 {
+    margin-right: 35px;
+
+    @include _768 {
+      margin-right: 3rem;
+    }
+  }
+
+  &__logo2 {
+    width: 68px;
+    height: 68px;
+
+    @include _768 {
+      width: 103px;
+      height: 103px;
+    }
+  }
+
+  &__logo3 {
+    width: 108px;
+    // margin-left: 5px;
+
+    @include _768 {
+      width: 9vw;
+    }
+  }
+}
+
+
+//TODO: if we want to prevent image drag
+// img {
+//   user-select: none;
+//   pointer-events: none;
+// }
