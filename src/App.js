@@ -1,7 +1,10 @@
 import React,{ useEffect} from 'react';
 import Slider from "react-slick";
+import Countdown, { zeroPad, calcTimeDelta } from 'react-countdown';
 import "./main.scss";
 const imgPath = process.env.PUBLIC_URL + '/assets/img/';
+
+
 function App() {
   const onSubmit = async(evt)=>{
     evt.preventDefault()
@@ -42,6 +45,24 @@ function App() {
         },
       },
     ],
+  }
+
+  const renderer = ({days, hours, minutes, seconds}) => {
+    return (
+        <div className='card__time-section'>
+          <p className='card__time-chunk'>
+            <span className='card__time-value'>{(days * 24) + hours}</span>
+            <span className='card__indicator'>hrs</span>
+          </p>
+          <p className='card__time-chunk'>
+            <span className='card__time-value'>{minutes}</span><span className='card__indicator'>mins</span>
+          </p>
+          <p className='card__time-chunk'>
+            <span className='card__time-value'>{seconds}</span><span className='card__indicator'>secs</span>
+          </p>
+
+        </div>
+    )
   }
 
   return (
@@ -113,6 +134,15 @@ function App() {
         {/* <!-- Marketplace block --> */}
         <section className="card">
           <h2>Marketplace</h2>
+          <div className='card__countdown'>
+            <h3 className='card__countdown-title'>The countdown begins</h3>
+            <Countdown
+                date={'2021-05-08T00:00:00'}
+                daysInHours={true}
+                renderer={renderer}
+            />
+            <p className='card__sub-title'>The DAZN NFT marketplace is open on the 8th May 2021</p>
+          </div>
           <div className="card__card-wrapper">
           <Slider {...settings}>
             <div className="card__card-content">
