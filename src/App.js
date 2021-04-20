@@ -51,7 +51,10 @@ function App() {
     return (
         <div className='card__time-section'>
           <p className='card__time-chunk'>
-            <span className='card__time-value'>{(days * 24) + hours}</span>
+            <span className='card__time-value'>{days}</span><span className='card__indicator'>days</span>
+          </p>
+          <p className='card__time-chunk'>
+            <span className='card__time-value'>{hours}</span>
             <span className='card__indicator'>hrs</span>
           </p>
           <p className='card__time-chunk'>

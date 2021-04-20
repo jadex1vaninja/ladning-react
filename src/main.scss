@@ -359,13 +359,23 @@ body {
   &__time-section {
     display: flex;
     justify-content: space-between;
+    margin-top: 1rem;
+
+    @include _768 {
+      margin-top: 0;
+    }
   }
 
   &__time-chunk {
+    display: flex;
+    flex-direction: column;
     margin-right: 0.75rem;
+    align-items: center;
 
     @include _768 {
       margin-right: 1rem;
+      flex-direction: row;
+      align-items: baseline;
     }
 
     @include _1440 {
@@ -415,9 +425,11 @@ body {
     color: $brand-white;
     font-size: 0.5rem;
     text-transform: none;
+    margin-top: 0.5rem;
 
     @include _768 {
       font-size: 0.75rem;
+      margin-top: 0;
     }
 
     @include _1440 {
