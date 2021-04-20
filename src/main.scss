@@ -428,8 +428,9 @@ body {
 
   &__sub-title {
     color: $brand-white;
-    font-size: 0.625rem;
+    font-size: .53rem;
     text-transform: none;
+    text-align: center;
     margin-top: 0.5rem;
 
     @include _768 {
