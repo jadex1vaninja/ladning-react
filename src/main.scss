@@ -358,11 +358,14 @@ body {
 
   &__time-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 1rem;
+    width: 100%;
 
     @include _768 {
       margin-top: 0;
+      justify-content: space-between;
+      width: auto;
     }
   }
 
@@ -371,11 +374,13 @@ body {
     flex-direction: column;
     margin-right: 0.75rem;
     align-items: center;
+    width: 17%;
 
     @include _768 {
       margin-right: 1rem;
       flex-direction: row;
       align-items: baseline;
+      width: auto;
     }
 
     @include _1440 {
@@ -423,7 +428,7 @@ body {
 
   &__sub-title {
     color: $brand-white;
-    font-size: 0.5rem;
+    font-size: 0.625rem;
     text-transform: none;
     margin-top: 0.5rem;
 
