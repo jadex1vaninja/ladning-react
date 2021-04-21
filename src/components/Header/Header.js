@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Header.scss';
 const imgPath = process.env.PUBLIC_URL + '/assets/img/';
 
 const Header = () => {
-  const { t, i18n, ready } = useTranslation();
+  const [language, setLanguage] = useState('en');
+  const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -12,8 +13,26 @@ const Header = () => {
 
   return (
     <header className='header'>
-      {/*<button onClick={() => changeLanguage('es')}>es</button>*/}
-      {/*<button onClick={() => changeLanguage('en')}>en</button>*/}
+      <div className='header__buttons'>
+        <button
+          className={`header__button${language === 'es' ? ' active' : ''}`}
+          onClick={() => {
+            changeLanguage('es');
+            setLanguage('es');
+          }}
+        >
+          Es
+        </button>
+        <button
+          className={`header__button${language === 'en' ? ' active' : ''}`}
+          onClick={() => {
+            changeLanguage('en');
+            setLanguage('en');
+          }}
+        >
+          En
+        </button>
+      </div>
       <div className='header__banner'>
         <img
           className='header__banner-img'

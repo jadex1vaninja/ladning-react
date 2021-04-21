@@ -1,11 +1,41 @@
 @import '../../media-mixin.scss';
 
+$brand-yellow: #dfc358;
+$brand-white: #fff;
+$brand-black: #000;
+$brand-border: #1b1b1b;
+
+
 .header {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 0 28px;
+
+  &__buttons {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    z-index: 3;
+
+    @include _768 {
+      right: 3rem;
+      top: 2rem;
+    }
+  }
+
+  &__button {
+    border-radius: 6px;
+    background-color: $brand-yellow;
+    color: $brand-black;
+    padding: 0.5rem;
+    outline: none;
+  }
+
+  .active {
+    background-color: #a08216;
+  }
 
   @include _320 {
     height: 420px;
