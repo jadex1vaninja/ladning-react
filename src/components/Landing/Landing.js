@@ -52,28 +52,28 @@ const Landing = () => {
 
   const renderer = ({ days, hours, minutes, seconds }) => {
     return (
-      <div className='card__time-section'>
-        <p className='card__time-chunk'>
-          <span className='card__time-value'>{days}</span>
-          <span className='card__indicator'>
+      <div className='card1__time-section'>
+        <p className='card1__time-chunk'>
+          <span className='card1__time-value'>{days}</span>
+          <span className='card1__indicator'>
             {t('marketplace.countdown.days')}
           </span>
         </p>
-        <p className='card__time-chunk'>
-          <span className='card__time-value'>{hours}</span>
-          <span className='card__indicator'>
+        <p className='card1__time-chunk'>
+          <span className='card1__time-value'>{hours}</span>
+          <span className='card1__indicator'>
             {t('marketplace.countdown.hours')}
           </span>
         </p>
-        <p className='card__time-chunk'>
-          <span className='card__time-value'>{minutes}</span>
-          <span className='card__indicator'>
+        <p className='card1__time-chunk'>
+          <span className='card1__time-value'>{minutes}</span>
+          <span className='card1__indicator'>
             {t('marketplace.countdown.minutes')}
           </span>
         </p>
-        <p className='card__time-chunk'>
-          <span className='card__time-value'>{seconds}</span>
-          <span className='card__indicator'>
+        <p className='card1__time-chunk'>
+          <span className='card1__time-value'>{seconds}</span>
+          <span className='card1__indicator'>
             {t('marketplace.countdown.seconds')}
           </span>
         </p>
@@ -112,10 +112,10 @@ const Landing = () => {
         </section>
 
         {/* <!-- Marketplace block --> */}
-        <section className='card'>
+        <section className='card1'>
           <h2>{t('marketplace.title')}</h2>
-          <div className='card__countdown'>
-            <h3 className='card__countdown-title'>
+          <div className='card1__countdown'>
+            <h3 className='card1__countdown-title'>
               {t('marketplace.countdown.title')}
             </h3>
             <Countdown
@@ -123,22 +123,22 @@ const Landing = () => {
               daysInHours={true}
               renderer={renderer}
             />
-            <p className='card__sub-title'>
+            <p className='card1__sub-title'>
               {t('marketplace.countdown.sub-title')}
             </p>
           </div>
-          <div className='card__card-wrapper'>
+          <div className='card1__card-wrapper'>
             <Slider {...settings}>
-              <div className='card__card-content'>
+              <div className='card1__card-content'>
                 <img src={imgPath + 'ntf-card1.png'} alt='card' />
-                <div className='card__content-wrapper'>
+                <div className='card1__content-wrapper'>
                   <div>
                     <h4>LEGENDARY</h4>
                     <h3 className='first-description'>Canelo VS</h3>
                     <h3 className='second-description'>Saunders</h3>
-                    <p className='card__sub-caption'>EXCLUSIVE NFTs</p>
+                    <p className='card1__sub-caption'>EXCLUSIVE NFTs</p>
                   </div>
-                  <div className='card__auction-wrapper'>
+                  <div className='card1__auction-wrapper'>
                     <a>
                       <p>Limited Edition</p>
                       <p>Auction</p>
@@ -146,16 +146,16 @@ const Landing = () => {
                   </div>
                 </div>
               </div>
-              <div className='card__card-content'>
+              <div className='card1__card-content'>
                 <img src={imgPath + 'ntf-card2.png'} alt='card' />
-                <div className='card__content-wrapper'>
+                <div className='card1__content-wrapper'>
                   <div>
                     <h4>CONCRETE</h4>
                     <h3 className='first-description'>Canelo VS</h3>
                     <h3 className='second-description'>Saunders</h3>
-                    <p className='card__sub-caption'>EXCLUSIVE NFTs</p>
+                    <p className='card1__sub-caption'>EXCLUSIVE NFTs</p>
                   </div>
-                  <div className='card__auction-wrapper'>
+                  <div className='card1__auction-wrapper'>
                     <a>
                       <p>Limited Edition</p>
                       <p>Auction</p>
@@ -163,16 +163,16 @@ const Landing = () => {
                   </div>
                 </div>
               </div>
-              <div className='card__card-content'>
+              <div className='card1__card-content'>
                 <img src={imgPath + 'ntf-card3.png'} alt='card' />
-                <div className='card__content-wrapper'>
+                <div className='card1__content-wrapper'>
                   <div>
                     <h4>DIAMOND</h4>
                     <h3 className='first-description'>Canelo VS</h3>
                     <h3 className='second-description'>Saunders</h3>
-                    <p className='card__sub-caption'>EXCLUSIVE NFTs</p>
+                    <p className='card1__sub-caption'>EXCLUSIVE NFTs</p>
                   </div>
-                  <div className='card__auction-wrapper'>
+                  <div className='card1__auction-wrapper'>
                     <a>
                       <p>Limited Edition</p>
                       <p>Auction</p>
