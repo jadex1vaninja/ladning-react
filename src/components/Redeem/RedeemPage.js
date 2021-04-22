@@ -116,23 +116,22 @@ const RedeemPage = () => {
         <Spinner />
       ) : (
         <div className='redeem-root__button-wrapper'>
-          <button className='redeem-root__btn' onClick={connectWallet}>
+          <button
+            className='redeem-root__btn'
+            disabled={!!walletID}
+            onClick={connectWallet}
+          >
             Connect wallet
           </button>
-          {walletID &&
-            (Boolean(data.length) ? (
-              <button
-                className='redeem-root__btn-two'
-                disabled
-                onClick={fetchData}
-              >
-                View items
-              </button>
-            ) : (
-              <button className='redeem-root__btn-two' onClick={fetchData}>
-                View items
-              </button>
-            ))}
+          {walletID && (
+            <button
+              className='redeem-root__btn-two'
+              disabled={!!data.length}
+              onClick={fetchData}
+            >
+              View items
+            </button>
+          )}
         </div>
       )}
       <div className='redeem-root__preview'>
