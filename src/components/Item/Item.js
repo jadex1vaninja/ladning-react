@@ -1,11 +1,19 @@
 import React from 'react';
 import './Item.scss';
 
-const Item = ({ id, name, description, imageUrl, link }) => {
+const Item = ({
+  id,
+  name,
+  description,
+  imageUrl,
+  link,
+  handleModal,
+  handleID
+}) => {
   return (
     <div className='item'>
       <div className='item__img'>
-        <a className='item__link' href={link} target='_blank'>
+        <a className='item__link' href={link} target='_blank' rel='noreferrer'>
           <img src={imageUrl} alt={name} />
         </a>
       </div>
@@ -16,7 +24,14 @@ const Item = ({ id, name, description, imageUrl, link }) => {
         <p>{description}</p>
       </div>
       <div className='item__btn-wrap'>
-        <button id={id} className='item__btn'>
+        <button
+          id={id}
+          className='item__btn'
+          onClick={() => {
+            handleModal();
+            handleID(id);
+          }}
+        >
           Redeem
         </button>
       </div>

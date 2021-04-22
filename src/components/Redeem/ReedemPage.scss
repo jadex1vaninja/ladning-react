@@ -2,17 +2,35 @@
 @import '../../variables';
 
 .redeem-root {
-  padding: 4rem;
+  padding: 1rem;
   position: relative;
+  min-height: 100vh;
+
+  @include _1024 {
+    padding: 4rem;
+  }
 
   &__error {
     position: absolute;
-    top: 2rem;
-    right: 4rem;
+    top: 1rem;
+    right: 1rem;
     padding: 1rem;
     color: $brand-white;
     border: 1px solid $brand-white;
     border-radius: 8px;
+    background-color: $brand-yellow ;
+    z-index: 99;
+
+    @include _1024 {
+      top: 2rem;
+      right: 4rem;
+    }
+  }
+
+  &__error-close {
+    text-align: right;
+    cursor: pointer;
+    margin: 0;
   }
 
   &__button-wrapper {
@@ -30,9 +48,13 @@
     background-color: transparent;
     color: $brand-white;
     border: 1px solid $brand-white;
-    padding: 1rem 4rem;
+    padding: 0.5rem 2rem;
     cursor: pointer;
     text-transform: uppercase;
+
+    @include _1024 {
+      padding: 1rem 3rem;
+    }
 
     &:disabled {
       cursor: not-allowed;
@@ -40,7 +62,7 @@
 
     &::before {
       position: absolute;
-      left: 1rem;
+      left: 0.5rem;
       top: 0.5rem;
       content: "1";
       display: flex;
@@ -51,6 +73,11 @@
       border-radius: 50%;
       padding: 0.5rem;
       border: 1px solid $brand-white;
+
+      @include _1024 {
+        left: 1rem;
+        top: 1rem;
+      }
     }
 
     &:active {
@@ -63,9 +90,13 @@
     background-color: transparent;
     color: $brand-white;
     border: 1px solid $brand-white;
-    padding: 1rem 4rem;
+    padding: 0.5rem 2rem;
     cursor: pointer;
     text-transform: uppercase;
+
+    @include _1024 {
+      padding: 1rem 3rem;
+    }
 
     &:disabled {
       cursor: not-allowed;
@@ -73,7 +104,7 @@
 
     &::before {
       position: absolute;
-      left: 1rem;
+      left: 0.5rem;
       top: 0.5rem;
       content: "2";
       display: flex;
@@ -84,6 +115,11 @@
       border-radius: 50%;
       padding: 0.5rem;
       border: 1px solid $brand-white;
+
+      @include _1024 {
+        left: 1rem;
+        top: 1rem;
+      }
     }
 
     &:active {
@@ -93,5 +129,7 @@
 
   &__preview {
     padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
