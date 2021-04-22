@@ -63,7 +63,6 @@ const RedeemPage = () => {
         } = accounts;
         setWalletID(ID);
       }
-      timeOut();
     } catch (e) {
       console.error(e);
       setError(true);
