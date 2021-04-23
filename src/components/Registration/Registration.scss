@@ -1,0 +1,154 @@
+@import '../../media-mixin.scss';
+@import '../../variables';
+
+.register {
+  background: url('../../assets/img/registration-bg.png');
+  text-align: center;
+  background-size: cover;
+  padding: 0 10%;
+  position: relative;
+  top: -8rem;
+
+  @include _768 {
+    padding: 0 30%;
+  }
+
+  &__title {
+    font-family: 'DAZNTrim-Bold';
+    text-transform: uppercase;
+    background-color: $brand-white;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 3.25rem;
+
+    h2 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+
+      @include _768 {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  &__main-content {
+    padding-bottom: 8rem;
+
+    p {
+      font-family: 'DAZNTrim-Bold';
+      text-transform: uppercase;
+      color: $brand-white;
+      margin: 2.5rem 0;
+      font-size: 1.25rem;
+
+      @include _768 {
+        margin: 4.5rem 0;
+      }
+    }
+  }
+
+  &__form {
+    input {
+      width: 100%;
+      color: $brand-grey;
+      height: 3.5rem;
+      border: none;
+      padding: 0 1rem;
+      font-size: 1rem;
+      font-family: 'DAZNTrim-Bold';
+      text-transform: uppercase;
+      
+      &::placeholder {
+        font-size: 1rem;
+        color: $brand-grey;
+      }
+      &:focus {
+        outline: unset;
+      }
+      &:nth-child(2n) {
+        margin: 1.5rem 0;
+      }
+    }
+    @include _768 {
+      input {
+        height: 4.5rem;
+        padding: 0 1.5rem;
+        font-size: 1.25rem;
+
+        &::placeholder {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
+  &__form-info {
+    margin: 2rem;
+    text-align: center;
+
+    p, label {
+      font-family: 'DAZNTrim-Light';
+      font-size: 1.25rem;
+      text-transform: initial;
+      margin: 0;
+      color: $brand-white;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 3.5rem;
+
+    label {
+      margin-right: 1rem;
+    }
+
+    input {
+      width: 1.5rem;
+      min-width: 1.5rem;
+      height: 1.5rem;
+      padding: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: 2px solid $brand-white;
+      position: relative;
+
+      &:checked {
+        background: rgba(40,40,40,0.7);
+        &::before {
+          content: "✓";
+          position: absolute;
+          font-size: 2rem;
+          bottom: -0.5rem;
+        }
+      }
+      
+      &:nth-child(2n) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__submit {
+    button {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: 'DAZNTrim-Bold';
+      border: none;
+      outline: none;
+      background: $brand-yellow;
+      padding: 1rem 2rem;
+      letter-spacing: 0.25rem;
+    }
+
+    @include _768 {
+      button {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}

@@ -1,15 +1,8 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import React from 'react';
+import { imgPath } from '../Landing/Landing';
 import './Footer.scss';
-const imgPath = process.env.PUBLIC_URL + '/assets/img/';
 
 const Footer = () => {
-  const [language, setLanguage] = useState('en');
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
 
   return (
     <footer className='footer'>

@@ -1,0 +1,78 @@
+@import '../../media-mixin.scss';
+@import '../../variables';
+
+.own-it {
+  background-image: url('../../assets/img/black-bg.png');
+  margin-top: -4rem;
+  color: $brand-white;
+  background-size: cover;
+  padding: 8rem 10%;
+  margin-top: -4rem;
+  
+  @include _768 {
+    padding: 8rem 20%;
+  }
+
+  &__item-wrapper {
+    padding: 1rem 0 4rem 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    img {
+      width: 70%;
+      max-width: 300px;
+    }
+
+    @include _768 {
+      flex-direction: row;
+
+      img {
+        width: 100%;
+        max-width: none;
+      }
+    }
+  }
+
+  &__item-content {
+    text-align: center;
+    font-family: 'DAZNTrim-Light';
+    
+    @include _768 {
+      margin-left: 6%;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      padding-bottom: 2.25rem;
+      font-family: 'DAZNTrim-Bold';
+      font-size: 1.75rem;
+      margin-top: 1.5rem;
+
+      @include _768 {
+        font-size: 2.75rem;
+      }
+    }
+
+    p {
+      line-height: 1.75rem;
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+  }
+
+  &__sub-caption-section {
+    text-transform: uppercase;
+    text-align: center;
+    color: $brand-yellow;
+    font-family: 'DAZNTrim-Bold';
+    margin-top: 3rem;
+    
+    @include _768 {
+      margin-top: 4.25rem;
+    }
+  }
+}

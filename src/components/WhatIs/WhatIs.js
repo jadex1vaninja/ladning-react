@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './WhatIs.scss';
-const imgPath = process.env.PUBLIC_URL + '/assets/img/';
 
 const WhatIs = () => {
-  const [language, setLanguage] = useState('en');
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+  const { t } = useTranslation();
 
   return (
     <div className='whatIs'>
