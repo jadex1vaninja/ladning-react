@@ -16,8 +16,8 @@
   "marketplace": {
     "title": "marketplace.title",
     "countdown": {
-      "title": "marketplace.countdown.title",
-      "sub-title": "marketplace.countdown.sub-title",
+      "text-purchase-one": "marketplace.text-purchase-one",
+      "text-purchase-two": "marketplace.text-purchase-two",
       "days": "d",
       "hours": "hr",
       "minutes": "m",

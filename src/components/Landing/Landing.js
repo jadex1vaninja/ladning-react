@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../Header';
-import Countdown from 'react-countdown';
-import Slider from 'react-slick';
+import Cards from '../Cards';
 import { useTranslation } from 'react-i18next';
 import './Landing.scss';
 import Video from '../Video/Video';
@@ -26,62 +25,6 @@ const Landing = () => {
 
     window.scrollTo(0, 0);
     window.location.reload();
-  };
-  const settings = {
-    speed: 500,
-    cssEase: 'linear',
-    useTransform: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: true
-        }
-      },
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: true
-        }
-      }
-    ]
-  };
-
-  const renderer = ({ days, hours, minutes, seconds }) => {
-    return (
-      <div className='card1__time-section'>
-        <p className='card1__time-chunk'>
-          <span className='card1__time-value'>{days}</span>
-          <span className='card1__indicator'>
-            {t('marketplace.countdown.days')}
-          </span>
-        </p>
-        <p className='card1__time-chunk'>
-          <span className='card1__time-value'>{hours}</span>
-          <span className='card1__indicator'>
-            {t('marketplace.countdown.hours')}
-          </span>
-        </p>
-        <p className='card1__time-chunk'>
-          <span className='card1__time-value'>{minutes}</span>
-          <span className='card1__indicator'>
-            {t('marketplace.countdown.minutes')}
-          </span>
-        </p>
-        <p className='card1__time-chunk'>
-          <span className='card1__time-value'>{seconds}</span>
-          <span className='card1__indicator'>
-            {t('marketplace.countdown.seconds')}
-          </span>
-        </p>
-      </div>
-    );
   };
 
   return (
@@ -115,77 +58,7 @@ const Landing = () => {
         </section>
 
         {/* <!-- Marketplace block --> */}
-        <section className='card1'>
-          <h2>{t('marketplace.title')}</h2>
-          <div className='card1__countdown'>
-            <h3 className='card1__countdown-title'>
-              {t('marketplace.countdown.title')}
-            </h3>
-            <Countdown
-              date={'2021-05-08T00:00:00'}
-              daysInHours={true}
-              renderer={renderer}
-            />
-            <p className='card1__sub-title'>
-              {t('marketplace.countdown.sub-title')}
-            </p>
-          </div>
-          <div className='card1__card-wrapper'>
-            <Slider {...settings}>
-              <div className='card1__card-content'>
-                <img src={imgPath + 'ntf-card1.png'} alt='card' />
-                <div className='card1__content-wrapper'>
-                  <div>
-                    <h4>LEGENDARY</h4>
-                    <h3 className='first-description'>Canelo VS</h3>
-                    <h3 className='second-description'>Saunders</h3>
-                    <p className='card1__sub-caption'>EXCLUSIVE NFTs</p>
-                  </div>
-                  <div className='card1__auction-wrapper'>
-                    <a>
-                      <p>Limited Edition</p>
-                      <p>Auction</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className='card1__card-content'>
-                <img src={imgPath + 'ntf-card2.png'} alt='card' />
-                <div className='card1__content-wrapper'>
-                  <div>
-                    <h4>CONCRETE</h4>
-                    <h3 className='first-description'>Canelo VS</h3>
-                    <h3 className='second-description'>Saunders</h3>
-                    <p className='card1__sub-caption'>EXCLUSIVE NFTs</p>
-                  </div>
-                  <div className='card1__auction-wrapper'>
-                    <a>
-                      <p>Limited Edition</p>
-                      <p>Auction</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className='card1__card-content'>
-                <img src={imgPath + 'ntf-card3.png'} alt='card' />
-                <div className='card1__content-wrapper'>
-                  <div>
-                    <h4>DIAMOND</h4>
-                    <h3 className='first-description'>Canelo VS</h3>
-                    <h3 className='second-description'>Saunders</h3>
-                    <p className='card1__sub-caption'>EXCLUSIVE NFTs</p>
-                  </div>
-                  <div className='card1__auction-wrapper'>
-                    <a>
-                      <p>Limited Edition</p>
-                      <p>Auction</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </Slider>
-          </div>
-        </section>
+        <Cards />
 
         {/* <!-- Register block --> */}
         <div className='register'>
@@ -230,7 +103,7 @@ const Landing = () => {
         {/* <!-- What is an nft block --> */}
         <WhatIs />
 
-         {/* <!-- Footer block --> */}
+        {/* <!-- Footer block --> */}
         <Footer />
       </main>
     </>
