@@ -9,8 +9,9 @@
   },
   "own-it-block": {
     "title": "Own a piece of history",
-    "description-part-one": "On May 8, the pound for pound king, Saul Canelo Álvarez will continue his quest to unify the Super Middleweight division when he puts his WBC, WBA and Ring titles on the line against the undefeated WBO Champion Billy Joe Saunders.",
-    "description-part-two": "You can exclusively own the DAZN Canelo vs Saunders NFTs to add to your sporting NFT collection BUT be quick as these are limited.",
+    "description-part-one": "This stunning collection of NFTs commemorates the fight and even gets buyers into the action! All NFTs come with special unlockable bonuses! The extremely rare Gold and Legendary NFTs unlock premium items and experiences like signed gloves by the fighters and tickets to a future fight. Check out the limited NFT collections below and check back for more details soon.",
+    "description-part-two": "Pre-fight sales will go live on fight day,",
+    "description-date": "Saturday, May 8",
     "link": "Want to know more about NFTs?"
   },
   "marketplace": {
@@ -29,16 +30,17 @@
     "text": "COMING SOON"
   },
   "register": {
-    "title": "REGISTER FOR THE DROP",
-    "content-text": "Be the first to find out more about the first ever DAZN NFT drop, register here:",
-    "input-name-placeholder": "Forename",
-    "input-surname-placeholder": "Surname",
+    "title": "Don't miss the drop",
+    "content-text": "Be the first to find out more information about the first ever NFT drop around a world championship fight. Sign up here:",
+    "input-firstname-placeholder": "First name",
+    "input-lastname-placeholder": "Last name",
     "input-email-placeholder": "Email",
-    "submit-btn-text": "Submit"
+    "submit-btn-text": "Submit",
+    "form-text": "Every now and then we may send you e-mails with news, promotionsor special offers about DAZN which may be of interest to you.",
+    "checkbox-text": "If you do not want to receive these messages please click here"
   },
   "what-is-block": {
     "title": "WHAT IS AN NFT?",
     "info-text": "A non-fungible token is a unit of data stored on a digital ledger, called a blockchain, that certifies a digital asset to be unique and therefore not interchangeable. NFTs can be used to represent items such as photos, videos, audio and other types of digital files."
   }
-
 }
