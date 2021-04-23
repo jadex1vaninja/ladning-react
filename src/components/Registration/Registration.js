@@ -27,6 +27,7 @@ const Registration = () => {
 
   const onSubmit = async (evt) => {
     evt.preventDefault();
+    
     const { name, email, surname, receiveMessages } = formFields;
 
     if (!email || !name || !surname) return;
@@ -34,7 +35,7 @@ const Registration = () => {
     const res = await fetch(
       `https://mailapi.vercel.app/api/send-mail?email=${email}&name=${name}&surname=${surname}&receiveMessages=${receiveMessages}`
     );
-    
+
     // eslint-disable-next-line no-unused-vars
     const data = await res.json();
 
@@ -74,9 +75,9 @@ const Registration = () => {
               onChange={(event) => onChange(event, 'email')}
             />
 
-            <div class='register__form-info'>
+            <div className='register__form-info'>
               <p>{t('register.form-text')}</p>
-              <div class='register__checkbox'>
+              <div className='register__checkbox'>
                 <label htmlFor='receiveMessages'>
                   {t('register.checkbox-text')}
                 </label>
