@@ -69,7 +69,7 @@ const Header = () => {
       <div className='header__link-wrap'>
         <p className='header__link-text'>
           {t('header.link-text-one')}{' '}
-          <a className='header__link' href='#'>
+          <a className='header__link' href='#subscribe'>
             {t('header.link-text-two')}
           </a>{' '}
           {t('header.link-text-three')}

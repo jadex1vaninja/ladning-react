@@ -11,6 +11,7 @@
     "title": "own-it-block.title",
     "description-part-one": "own-it-block.description-part-one",
     "description-part-two": "own-it-block.description-part-two",
+    "description-date": "own-it-block.description-date",
     "link": "own-it-block.link"
   },
   "marketplace": {
@@ -30,10 +31,12 @@
   "register": {
     "title": "register.title",
     "content-text": "register.content-text",
-    "input-name-placeholder": "register.input-name-placeholder",
-    "input-surname-placeholder": "register.input-surname-placeholder",
+    "input-firstname-placeholder": "register.input-firstname-placeholder",
+    "input-lastname-placeholder": "register.input-lastname-placeholder",
     "input-email-placeholder": "register.input-email-placeholder",
-    "submit-btn-text": "register.submit-btn-text"
+    "submit-btn-text": "register.submit-btn-text",
+    "form-text": "register.form-text",
+    "checkbox-text": "register.checkbox-text"
   },
   "what-is-block": {
     "title": "what-is-block.title",
