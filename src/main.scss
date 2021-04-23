@@ -8,6 +8,21 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: 'DAZNTrim-Light';
+  src: url('./fonts/DAZNTrim-Light.ttf');
+}
+
+@font-face {
+  font-family: 'DAZNTrim-Bold';
+  src: url('./fonts/DAZNTrim-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'DAZNTrim-ExtraBold';
+  src: url('./fonts/DAZNTrim-ExtraBold.ttf');
+}
+
 * {
   padding: 0;
   margin: 0;

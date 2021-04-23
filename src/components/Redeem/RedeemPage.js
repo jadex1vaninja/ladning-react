@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { ethers } from 'ethers';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Modal, Form } from 'react-bootstrap';
@@ -9,6 +10,22 @@ import { ETHEREUM, API_URL } from '../../const';
 import './ReedemPage.scss';
 
 const RedeemPage = () => {
+  // A Web3Provider wraps a standard Web3 provider, which is
+  // what Metamask injects as window.ethereum into each page
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  console.log(provider);
+  const signer = provider.getSigner();
+  console.log(signer);
+
+  const signMessage = async () => {
+    try {
+      const signature = await signer.signMessage('Hello there');
+      console.log(signature);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   const [error, setError] = useState(false);
   const [isEthereum, setIsEthereum] = useState(false);
   const [walletID, setWalletID] = useState(null);
@@ -119,7 +136,7 @@ const RedeemPage = () => {
           <button
             className='redeem-root__btn'
             disabled={!!walletID}
-            onClick={connectWallet}
+            onClick={signMessage}
           >
             Connect wallet
           </button>
