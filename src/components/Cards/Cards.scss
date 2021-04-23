@@ -1,0 +1,339 @@
+@import '../../media-mixin.scss';
+@import '../../variables';
+
+.cards-root {
+  text-transform: uppercase;
+  font-weight: 800;
+  position: relative;
+  top: -4rem;
+  padding: 0 10%;
+
+  &__title {
+    font-family: 'DAZNTrim-Bold';
+    text-transform: uppercase;
+    background-color: $brand-white;
+    width: min-content;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 55px;
+
+    @include _320 {
+      padding: 0.5rem 5.375rem;
+      font-size: 1.25rem;
+    }
+
+    @include _768 {
+      font-size: 30px;
+      letter-spacing: 1px;
+      line-height: 55px;
+      padding: 0.5rem 5.375rem;
+    }
+  }
+
+  &__countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+
+    @include _1440 {
+      margin-top: 4rem;
+    }
+
+    p:last-child {
+      margin-top: 0;
+    }
+  }
+
+  &__time-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 100%;
+
+    @include _768 {
+      margin-top: 0;
+      justify-content: space-between;
+      width: 70%;
+      max-width: 43.75rem;
+    }
+
+    @include _1024 {
+      width: 100%;
+    }
+  }
+
+  &__time-chunk {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    width: 25%;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 18px;
+      width: 2px;
+      background-color: #fff;
+      height: 20px;
+    }
+
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
+
+    @include _768 {
+      width: 20%;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: -20px;
+        top: 22px;
+        width: 2px;
+        background-color: #fff;
+        height: 30px;
+      }
+    }
+
+    @include _1024 {
+      &:after {
+        content: "";
+        position: absolute;
+        right: -20px;
+        top: 30px;
+        width: 2px;
+        background-color: $brand-white;
+        height: 43px;
+      }
+    }
+
+    @include _1440 {
+      &:after {
+        content: "";
+        position: absolute;
+        right: -20px;
+        top: 30px;
+        width: 2px;
+        background-color: $brand-white;
+        height: 43px;
+      }
+    }
+
+  }
+
+  &__time-value {
+    color: $brand-white;
+    font-family: 'DAZNTrim-ExtraBold';
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 2px;
+
+    @include _768 {
+      font-size: 4rem;
+    }
+
+    @include _1024 {
+      font-size: 6rem;
+    }
+
+    @include _1440 {
+      font-size: 7.5rem;
+      line-height: 7.5rem;
+      letter-spacing: 4px;
+    }
+  }
+
+  &__indicator {
+    color: $brand-white;
+    font-family: 'DAZNTrim-Light';
+    text-transform: uppercase;
+    font-size: 1rem;
+
+    @include _768 {
+      font-size: 1.25rem;
+    }
+
+    @include _1024 {
+      font-size: 1.25rem;
+    }
+
+    @include _1440 {
+      font-size: 1.25rem;
+      letter-spacing: 3px;
+      line-height: 27px;
+    }
+  }
+
+  &__text {
+    font-family: 'DAZNTrim-Bold';
+    color: $brand-white;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 3.625rem;
+    margin-bottom: 0;
+  }
+
+  &__card-wrapper {
+
+    &.slick-initialized {
+      .slick-slide {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &.slick-slider {
+      margin-bottom: 0;
+    }
+
+    .slick-arrow {
+      border: solid $brand-white;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 1rem;
+      z-index: 2;
+      &::before {
+        content: unset;
+      }
+      &.slick-prev {
+        left: -1rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(135deg);
+      }
+      &.slick-next {
+        right: -1rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+
+  &__card-content {
+    display: flex;
+    flex-direction: column;
+    padding-right: 7.5%;
+    padding-left: 7.5%;
+
+    @include _320 {
+      margin-top: -3.5rem;
+    }
+
+    @include _768 {
+      margin-top: 0;
+    }
+
+    img {
+      position: relative;
+      bottom: -115px;
+      z-index: 2;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  &__card-title {
+    font-family: 'DAZNTrim-Bold';
+    color: $brand-white;
+    font-size: 1.625rem;
+    letter-spacing: 1px;
+    line-height: 2.813rem;
+    margin: 0 auto;
+    width: min-content;
+
+    &--legend {
+      background-image: linear-gradient(-54deg, #7d7d7d 0%, #1c1c1c 67%, #3d3d3d 99%);
+      width: 10rem;
+      height: 2.5rem;
+    }
+
+    &--gold {
+      background-image: linear-gradient(-54deg, #ffffff 0%, #ac922a 67%, #bba943 99%);
+      width: 10rem;
+      height: 2.5rem;
+    }
+
+    &--bronze {
+      background-image: linear-gradient(-54deg, #a8a8a8 0%, #aa7174 67%, #3d3030 98%);
+      width: 10rem;
+      height: 2.5rem;
+    }
+  }
+
+  &__inner {
+    padding: 0 1.625rem;
+  }
+
+  &__content-wrapper {
+    font-family: 'DAZNTrim-Bold';
+    background: $brand-black;
+    color: $brand-white;
+    font-weight: 500;
+    position: relative;
+    padding-top: 100px;
+    border-radius: 1rem;
+    text-align: center;
+
+    h3 {
+      font-size: 2.188rem;
+      letter-spacing: 1px;
+      line-height: 2.188rem;
+      margin-bottom: 0;
+    }
+    h3.first-description{
+      padding-top: 1.75rem;
+    }
+    h3.second-description {
+      position: relative;
+      padding: 0 0.625rem 0.5rem;
+      overflow: hidden;
+    }
+  }
+
+  &__hr {
+    width: 100%;
+    height: 3px;
+    background-color: $brand-border;
+  }
+
+  &__auction-wrapper {
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+    padding: 0 1.625rem 1.625rem;
+  }
+
+  &__amount {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    line-height: 2.813rem;
+    margin: 1rem 0;
+  }
+
+  &__desc {
+    font-family: 'DAZNTrim-Light';
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+
+  &__link {
+    color: $brand-yellow;
+    font-size: 1.625rem;
+    line-height: 2.813rem;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-yellow;
+    }
+  }
+}

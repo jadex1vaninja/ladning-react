@@ -14,10 +14,10 @@
     "link": "Want to know more about NFTs?"
   },
   "marketplace": {
-    "title": "Marketplace",
+    "title": "COUNTDOWN",
     "countdown": {
-      "title": "The countdown begins",
-      "sub-title": "The DAZN NFT marketplace is open on the 8th May 2021",
+      "text-purchase-one": "The first drop will be available for",
+      "text-purchase-two": "purchase at 7AM ET / 12:00 GMT on",
       "days": "days",
       "hours": "hrs",
       "minutes": "mins",
