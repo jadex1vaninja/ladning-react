@@ -14,10 +14,10 @@
     "link": "Want to know more about NFTs?"
   },
   "marketplace": {
-    "title": "Marketplace",
+    "title": "COUNTDOWN",
     "countdown": {
-      "title": "The countdown begins",
-      "sub-title": "The DAZN NFT marketplace is open on the 8th May 2021",
+      "text-purchase-one": "The first drop will be available for",
+      "text-purchase-two": "purchase at 7AM ET / 12:00 GMT on",
       "days": "days",
       "hours": "hrs",
       "minutes": "mins",
@@ -25,8 +25,7 @@
     }
   },
   "video-block": {
-    "banner-text": "PRE-FIGHT HIGHLIGHTS",
-    "text": "COMING SOON"
+    "banner-text": "POST-FIGHT HIGHLIGHTS | COMING SOON"
   },
   "register": {
     "title": "REGISTER FOR THE DROP",
@@ -40,5 +39,4 @@
     "title": "WHAT IS AN NFT?",
     "info-text": "A non-fungible token is a unit of data stored on a digital ledger, called a blockchain, that certifies a digital asset to be unique and therefore not interchangeable. NFTs can be used to represent items such as photos, videos, audio and other types of digital files."
   }
-
 }

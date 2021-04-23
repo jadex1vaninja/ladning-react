@@ -1,9 +1,11 @@
 import React from 'react';
 import Header from '../Header';
-import Countdown from 'react-countdown';
-import Slider from 'react-slick';
+import Cards from '../Cards';
 import { useTranslation } from 'react-i18next';
 import './Landing.scss';
+import Video from '../Video/Video';
+import WhatIs from '../WhatIs';
+import Footer from '../Footer';
 const imgPath = process.env.PUBLIC_URL + '/assets/img/';
 
 const Landing = () => {
@@ -23,62 +25,6 @@ const Landing = () => {
 
     window.scrollTo(0, 0);
     window.location.reload();
-  };
-  const settings = {
-    speed: 500,
-    cssEase: 'linear',
-    useTransform: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: true
-        }
-      },
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: true
-        }
-      }
-    ]
-  };
-
-  const renderer = ({ days, hours, minutes, seconds }) => {
-    return (
-      <div className='card1__time-section'>
-        <p className='card1__time-chunk'>
-          <span className='card1__time-value'>{days}</span>
-          <span className='card1__indicator'>
-            {t('marketplace.countdown.days')}
-          </span>
-        </p>
-        <p className='card1__time-chunk'>
-          <span className='card1__time-value'>{hours}</span>
-          <span className='card1__indicator'>
-            {t('marketplace.countdown.hours')}
-          </span>
-        </p>
-        <p className='card1__time-chunk'>
-          <span className='card1__time-value'>{minutes}</span>
-          <span className='card1__indicator'>
-            {t('marketplace.countdown.minutes')}
-          </span>
-        </p>
-        <p className='card1__time-chunk'>
-          <span className='card1__time-value'>{seconds}</span>
-          <span className='card1__indicator'>
-            {t('marketplace.countdown.seconds')}
-          </span>
-        </p>
-      </div>
-    );
   };
 
   return (
@@ -112,111 +58,7 @@ const Landing = () => {
         </section>
 
         {/* <!-- Marketplace block --> */}
-        <section className='card1'>
-          <h2>{t('marketplace.title')}</h2>
-          <div className='card1__countdown'>
-            <h3 className='card1__countdown-title'>
-              {t('marketplace.countdown.title')}
-            </h3>
-            <Countdown
-              date={'2021-05-08T00:00:00'}
-              daysInHours={true}
-              renderer={renderer}
-            />
-            <p className='card1__sub-title'>
-              {t('marketplace.countdown.sub-title')}
-            </p>
-          </div>
-          <div className='card1__card-wrapper'>
-            <Slider {...settings}>
-              <div className='card1__card-content'>
-                <img src={imgPath + 'ntf-card1.png'} alt='card' />
-                <div className='card1__content-wrapper'>
-                  <div>
-                    <h4>LEGENDARY</h4>
-                    <h3 className='first-description'>Canelo VS</h3>
-                    <h3 className='second-description'>Saunders</h3>
-                    <p className='card1__sub-caption'>EXCLUSIVE NFTs</p>
-                  </div>
-                  <div className='card1__auction-wrapper'>
-                    <a>
-                      <p>Limited Edition</p>
-                      <p>Auction</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className='card1__card-content'>
-                <img src={imgPath + 'ntf-card2.png'} alt='card' />
-                <div className='card1__content-wrapper'>
-                  <div>
-                    <h4>CONCRETE</h4>
-                    <h3 className='first-description'>Canelo VS</h3>
-                    <h3 className='second-description'>Saunders</h3>
-                    <p className='card1__sub-caption'>EXCLUSIVE NFTs</p>
-                  </div>
-                  <div className='card1__auction-wrapper'>
-                    <a>
-                      <p>Limited Edition</p>
-                      <p>Auction</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className='card1__card-content'>
-                <img src={imgPath + 'ntf-card3.png'} alt='card' />
-                <div className='card1__content-wrapper'>
-                  <div>
-                    <h4>DIAMOND</h4>
-                    <h3 className='first-description'>Canelo VS</h3>
-                    <h3 className='second-description'>Saunders</h3>
-                    <p className='card1__sub-caption'>EXCLUSIVE NFTs</p>
-                  </div>
-                  <div className='card1__auction-wrapper'>
-                    <a>
-                      <p>Limited Edition</p>
-                      <p>Auction</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </Slider>
-          </div>
-        </section>
-
-        {/* <!-- Video block --> */}
-        <div className='video'>
-          <img
-            src={imgPath + 'video-section-bg.png'}
-            className='video__banner-img'
-            alt='video'
-          />
-          <img
-            src={imgPath + 'video-section-bg-mobile.png'}
-            className='video__banner-img-mobile'
-            alt='video'
-          />
-          <div className='video__main-content'>
-            <img
-              src={imgPath + 'title.png'}
-              alt='title'
-              className='video__title'
-            />
-            <span className='video__pre-fight'>
-              {t('video-block.banner-text')}
-            </span>
-            <div className='video__sub-content'>
-              <img
-                src={imgPath + 'DAZN-logo.png'}
-                alt='logo'
-                className='video__logo'
-              />
-              <span className='video__coming-soon'>
-                {t('video-block.text')}
-              </span>
-            </div>
-          </div>
-        </div>
+        <Cards />
 
         {/* <!-- Register block --> */}
         <div className='register'>
@@ -255,56 +97,15 @@ const Landing = () => {
           </div>
         </div>
 
+        {/* <!-- Video block --> */}
+        <Video />
+
         {/* <!-- What is an nft block --> */}
-        <div className='whatIs'>
-          <img
-            className='whatIs__boarder'
-            src={imgPath + 'what-boarder.png'}
-            alt='boarder'
-          />
-          <img
-            className='whatIs__mobile-boarder'
-            src={imgPath + 'what-boarder-mobile.png'}
-            alt='boarder'
-          />
-          <div className='whatIs__text-container'>
-            <p className='whatIs__title'>{t('what-is-block.title')}</p>
-            <p className='whatIs__main-info'>{t('what-is-block.info-text')}</p>
-          </div>
-        </div>
+        <WhatIs />
+
+        {/* <!-- Footer block --> */}
+        <Footer />
       </main>
-      <footer className='footer'>
-        <div className='footer__banner'>
-          <img
-            className='footer__banner-img'
-            src={imgPath + 'footer-bg.jpg'}
-            alt=''
-          />
-          <div className='footer__inner'>
-            <div className='footer__img-wrapper'>
-              <img
-                className='footer__logo1'
-                src={imgPath + 'logo.png'}
-                alt=''
-              />
-            </div>
-            <div className='footer__text-wrapper'>
-              <img
-                className='footer__logo2'
-                src={imgPath + 'DAZN-logo.png'}
-                alt=''
-              />
-            </div>
-            <div className='footer__img-wrapper'>
-              <img
-                className='footer__logo3'
-                src={imgPath + 'matchroom-logo.png'}
-                alt=''
-              />
-            </div>
-          </div>
-        </div>
-      </footer>
     </>
   );
 };
