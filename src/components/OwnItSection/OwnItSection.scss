@@ -3,11 +3,10 @@
 
 .own-it {
   background-image: url('../../assets/img/black-bg.png');
-  margin-top: -4rem;
   color: $brand-white;
   background-size: cover;
-  padding: 8rem 10%;
-  margin-top: -4rem;
+  padding: 5rem 10% 8rem;
+  margin-top: -7rem;
   
   @include _768 {
     padding: 8rem 20%;
