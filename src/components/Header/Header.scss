@@ -6,7 +6,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
+
+  @include _1024 {
+    padding-bottom: 10rem;
+  }
 
   &__language {
     display: flex;
@@ -143,7 +147,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 47px;
+    margin-bottom: 2rem;
 
     > :first-child {
       justify-content: flex-end;
@@ -151,6 +155,7 @@
 
       @include _768 {
         order: 1;
+        margin-bottom: 3rem;
       }
     }
 
