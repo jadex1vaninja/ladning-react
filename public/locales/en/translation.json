@@ -25,8 +25,7 @@
     }
   },
   "video-block": {
-    "banner-text": "PRE-FIGHT HIGHLIGHTS",
-    "text": "COMING SOON"
+    "banner-text": "POST-FIGHT HIGHLIGHTS | COMING SOON"
   },
   "register": {
     "title": "REGISTER FOR THE DROP",
@@ -40,5 +39,4 @@
     "title": "WHAT IS AN NFT?",
     "info-text": "A non-fungible token is a unit of data stored on a digital ledger, called a blockchain, that certifies a digital asset to be unique and therefore not interchangeable. NFTs can be used to represent items such as photos, videos, audio and other types of digital files."
   }
-
 }

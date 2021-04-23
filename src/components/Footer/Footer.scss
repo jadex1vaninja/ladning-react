@@ -1,0 +1,120 @@
+@import '../../media-mixin.scss';
+@import '../../variables';
+
+//Footer block
+.footer {
+  width: 100%;
+  height: 190px;
+  @include _768 {
+    height: 450px;
+  }
+
+  &__banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    @include _768 {
+      height: 100%;
+    }
+  }
+
+  &__banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__face-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    @include _768 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__face-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__inner {
+    position: absolute;
+    width: 100%;
+    height: 4.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 30px;
+
+    > :first-child {
+      justify-content: flex-end;
+    }
+
+    > :last-child {
+      justify-content: flex-start;
+    }
+
+    @include _768 {
+      bottom: 50px;
+      padding: 0;
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    width: 33%;
+
+    @include _768 {
+      width: 33%;
+    }
+  }
+
+  &__text-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 20%;
+
+    @include _768 {
+      width: 20%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__logo1 {
+    margin-right: 35px;
+
+    @include _768 {
+      margin-right: 3rem;
+    }
+  }
+
+  &__logo2 {
+    width: 68px;
+    height: 68px;
+    margin-right: 35px;
+    @include _768 {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__logo3 {
+    width: 108px;
+    @include _1024 {
+      width: 9vw;
+    }
+  }
+}
