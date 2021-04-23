@@ -1,58 +1,141 @@
 @import '../../media-mixin.scss';
-
-$brand-yellow: #dfc358;
-$brand-white: #fff;
-$brand-black: #000;
-$brand-border: #1b1b1b;
-
+@import '../../variables';
 
 .header {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 28px;
 
-  &__buttons {
-    position: absolute;
-    right: 1rem;
-    top: 0.5rem;
-    z-index: 3;
+  &__language {
+    display: flex;
+    justify-content: flex-end;
+    padding: 13px 13px 16px;
+  }
 
-    @include _768 {
-      right: 3rem;
-      top: 2rem;
-    }
+  &__language-list {
+    position: relative;
+    display: flex;
+    margin: 0;
   }
 
   &__button {
-    border-radius: 6px;
-    background-color: $brand-yellow;
-    color: $brand-black;
-    padding: 0.5rem;
-    outline: none;
+    position: relative;
+    font-family: 'DAZNTrim-Bold';
+    cursor: pointer;
+    color: $brand-white;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-left: 20px;
   }
 
   .active {
-    background-color: #a08216;
+    color: $brand-yellow;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $brand-yellow;
+    }
   }
 
   @include _320 {
-    height: 420px;
-}
+    height: 90vh;
+  }
 
   @include _768 {
     padding: 0;
-    height: 100%;
-}
-  @include _1440 {
-    height: 80vh;
-}
+    height: 90vh;
+  }
+
+  @include _1024 {
+    height: 90vh;
+  }
+
+  &__dazn-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  &__dazn-img {
+    width: 50px;
+    height: 50px;
+
+    @include _768 {
+      width: 75px;
+      height: 75px;
+    }
+
+    @include _1024 {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__promo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @include _1024 {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__promo-img {
+    width: calc(602px / 2);
+    height: calc(212px / 2);
+
+    @include _768 {
+      width: calc(602px / 1.5);
+      height: calc(212px / 1.5);
+    }
+
+    @include _1024 {
+      width: 602px;
+      height: 212px;
+    }
+  }
+
+  &__promo-text {
+    font-family: 'DAZNTrim-Light';
+    color: $brand-white;
+    margin: 0;
+    font-size: 14px;
+    line-height: 35px;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    text-align: center;
+
+    @include _768 {
+      font-size: 16px;
+      line-height: 40px;
+      letter-spacing: 4px;
+      word-spacing: 2px;
+    }
+
+    @include _1024 {
+      font-size: 20px;
+      line-height: 45px;
+      letter-spacing: 8px;
+      word-spacing: 4px;
+    }
+  }
+
 
   &__banner {
     width: 100%;
     height: 300px;
-    position: relative;
+    position: absolute;
+    z-index: -1;
 
     @include _768 {
       height: 100%;
@@ -61,37 +144,20 @@ $brand-border: #1b1b1b;
 
   &__banner-img {
     width: 100%;
-    display: none;
+    display: block;
 
     @include _768 {
       display: block;
   }
-
-    &--mobile {
-      @include _320 {
-        display: block;
-        width: 100%;
-        height: 80%;
-        object-fit: contain;
-        margin: 0 auto;
-    }
-
-      @include _768 {
-        display: none;
-    }
-  }
 }
 
   &__inner {
-    position: absolute;
     width: 100%;
-    height: 4.75rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    top: 265px;
-    // padding: 0 65px;
+    margin-bottom: 47px;
 
     > :first-child {
       justify-content: flex-end;
@@ -99,8 +165,8 @@ $brand-border: #1b1b1b;
 
       @include _768 {
         order: 1;
+      }
     }
-  }
 
     > :last-child {
       justify-content: flex-start;
@@ -108,13 +174,12 @@ $brand-border: #1b1b1b;
 
       @include _768 {
         order: 3;
+      }
     }
-  }
 
     @include _768 {
-      top: 35.5vw;
-      padding: 0;
-  }
+
+    }
 }
 
   &__img-wrapper {
@@ -167,24 +232,79 @@ $brand-border: #1b1b1b;
 
   &__title {
     color: white;
+    font-family: 'DAZNTrim-Bold';
     font-size: 41px;
     line-height: 34px;
 
     @include _768 {
-      font-size: 45px;
+      font-size: 57px;
+      letter-spacing: 0px;
+      line-height: 45px;
   }
 }
 
   &__text {
     color: white;
+    font-family: 'DAZNTrim-Bold';
     font-size: 14px;
     letter-spacing: 3px;
     line-height: 27px;
 
     @include _768 {
-      font-size: 16px;
-      font-weight: normal;
+      font-size: 20px;
       letter-spacing: 3px;
+      line-height: 45px;
+    }
   }
-}
+
+  &__link-wrap {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0;
+
+    @include _768 {
+      margin-bottom: 80px;
+    }
+
+    @include _1024 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link-text {
+    text-transform: uppercase;
+    font-family: 'DAZNTrim-Bold';
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    color: $brand-yellow;
+    margin: 0;
+  }
+
+  &__link {
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'DAZNTrim-Bold';
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    color: $brand-yellow;
+
+    &:hover {
+      color: $brand-yellow;
+      text-decoration: none;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $brand-yellow;
+    }
+  }
 }

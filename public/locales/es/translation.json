@@ -1,7 +1,11 @@
 {
   "header": {
     "title": "header.title",
-    "sub-title": "header.sub-title"
+    "sub-title": "header.sub-title",
+    "promo-text": "header.promo-text",
+    "link-text-one": "header.link-text-one",
+    "link-text-two": "header.link-text-two",
+    "link-text-three": "header.link-text-three"
   },
   "own-it-block": {
     "title": "own-it-block.title",

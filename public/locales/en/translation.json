@@ -1,7 +1,11 @@
 {
   "header": {
     "title": "SAT MAY 8",
-    "sub-title": "STREAM LIVE ON DAZN"
+    "sub-title": "STREAM LIVE ON DAZN",
+    "promo-text": "WBA, WBC, WBO SUPER MIDDLEWEIGHT",
+    "link-text-one": "click",
+    "link-text-two": "here",
+    "link-text-three": "to subscribe now"
   },
   "own-it-block": {
     "title": "Own a piece of history",
