@@ -13,9 +13,7 @@ const RedeemPage = () => {
   // A Web3Provider wraps a standard Web3 provider, which is
   // what Metamask injects as window.ethereum into each page
   const provider = new ethers.providers.Web3Provider(window.ethereum);
-  console.log(provider);
   const signer = provider.getSigner();
-  console.log(signer);
 
   const signMessage = async () => {
     try {
@@ -136,7 +134,7 @@ const RedeemPage = () => {
           <button
             className='redeem-root__btn'
             disabled={!!walletID}
-            onClick={signMessage}
+            onClick={connectWallet}
           >
             Connect wallet
           </button>
