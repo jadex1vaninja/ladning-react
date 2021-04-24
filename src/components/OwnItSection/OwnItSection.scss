@@ -5,11 +5,12 @@
   background-image: url('../../assets/img/black-bg.png');
   color: $brand-white;
   background-size: cover;
-  padding: 5rem 10% 8rem;
+  padding: 4rem 10% 8rem;
   margin-top: -7rem;
   
-  @include _768 {
-    padding: 8rem 20%;
+  @include _1024 {
+    padding-left: 15%;
+    padding-right: 15%;
   }
 
   &__item-wrapper {
@@ -31,7 +32,7 @@
 
       img {
         width: 100%;
-        max-width: none;
+        max-width: 365px;
       }
     }
   }

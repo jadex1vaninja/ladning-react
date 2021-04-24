@@ -7,6 +7,11 @@
   position: relative;
   top: -10rem;
   padding: 0 10%;
+  margin-bottom: -7rem;
+
+  @include _768 {
+    margin-bottom: -6rem;
+  }
 
   &__title {
     font-family: 'DAZNTrim-Bold';
@@ -322,8 +327,13 @@
 
   &__desc {
     font-family: 'DAZNTrim-Light';
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    @include _768 {
+      font-size: 1.25rem;
+      line-height: 1.625rem;
+    }
   }
 
   &__link {
