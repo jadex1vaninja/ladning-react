@@ -3,8 +3,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Countdown from 'react-countdown';
 import Slider from 'react-slick';
+import { imgPath } from '../Landing/Landing';
 import './Cards.scss';
-const imgPath = process.env.PUBLIC_URL + '/assets/img/';
 
 const Cards = () => {
   const { t } = useTranslation();
@@ -98,21 +98,23 @@ const Cards = () => {
             <div className='cards-root__content-wrapper'>
               <div className='cards-root__inner'>
                 <h4 className='cards-root__card-title cards-root__card-title--legend'>
-                  LEGENDARY
+                  {t('marketplace.ntfs.legendary.name')}
                 </h4>
-                <h3 className='first-description'>Canelo VS</h3>
-                <h3 className='second-description'>Saunders</h3>
+                <h3 className='first-description'>
+                  {t('marketplace.ntfs.legendary.title.first')}
+                </h3>
+                <h3 className='second-description'>
+                  {t('marketplace.ntfs.legendary.title.second')}
+                </h3>
                 <div className='cards-root__hr'></div>
               </div>
               <div className='cards-root__auction-wrapper'>
                 <p className='cards-root__amount'>1/50</p>
                 <p className='cards-root__desc'>
-                  If Canelo wins, annual DAZN subscription for all NFT holders +
-                  all NFT holders entered into drawing for 1 personalized video
-                  to randomly selected winner
+                  {t('marketplace.ntfs.legendary.description')}
                 </p>
-                <a className='cards-root__link' href='#'>
-                  View auction
+                <a className='cards-root__link' href=''>
+                  {t('marketplace.ntfs.legendary.link')}
                 </a>
               </div>
             </div>
@@ -122,21 +124,23 @@ const Cards = () => {
             <div className='cards-root__content-wrapper'>
               <div className='cards-root__inner'>
                 <h4 className='cards-root__card-title cards-root__card-title--gold'>
-                  Gold
+                  {t('marketplace.ntfs.gold.name')}
                 </h4>
-                <h3 className='first-description'>Canelo VS</h3>
-                <h3 className='second-description'>Saunders</h3>
+                <h3 className='first-description'>
+                  {t('marketplace.ntfs.gold.title.first')}
+                </h3>
+                <h3 className='second-description'>
+                  {t('marketplace.ntfs.gold.title.second')}
+                </h3>
                 <div className='cards-root__hr'></div>
               </div>
               <div className='cards-root__auction-wrapper'>
                 <p className='cards-root__amount'>1/50</p>
                 <p className='cards-root__desc'>
-                  If Canelo wins, annual DAZN subscription for all NFT holders +
-                  all NFT holders entered into drawing for 1 personalized video
-                  to randomly selected winner
+                  {t('marketplace.ntfs.gold.description')}
                 </p>
-                <a className='cards-root__link' href='#'>
-                  View auction
+                <a className='cards-root__link' href=''>
+                  {t('marketplace.ntfs.gold.link')}
                 </a>
               </div>
             </div>
@@ -146,21 +150,23 @@ const Cards = () => {
             <div className='cards-root__content-wrapper'>
               <div className='cards-root__inner'>
                 <h4 className='cards-root__card-title cards-root__card-title--bronze'>
-                  Bronze
+                  {t('marketplace.ntfs.bronze.name')}
                 </h4>
-                <h3 className='first-description'>Canelo VS</h3>
-                <h3 className='second-description'>Saunders</h3>
+                <h3 className='first-description'>
+                  {t('marketplace.ntfs.bronze.title.first')}
+                </h3>
+                <h3 className='second-description'>
+                  {t('marketplace.ntfs.bronze.title.second')}
+                </h3>
                 <div className='cards-root__hr'></div>
               </div>
               <div className='cards-root__auction-wrapper'>
                 <p className='cards-root__amount'>1/1</p>
                 <p className='cards-root__desc'>
-                  If Canelo wins, annual DAZN subscription for all NFT holders +
-                  all NFT holders entered into drawing for 1 personalized video
-                  to randomly selected winner
+                  {t('marketplace.ntfs.bronze.description')}
                 </p>
-                <a className='cards-root__link' href='#'>
-                  View auction
+                <a className='cards-root__link' href=''>
+                  {t('marketplace.ntfs.bronze.link')}
                 </a>
               </div>
             </div>
@@ -170,21 +176,23 @@ const Cards = () => {
             <div className='cards-root__content-wrapper'>
               <div className='cards-root__inner'>
                 <h4 className='cards-root__card-title cards-root__card-title--legend'>
-                  LEGENDARY
+                  {t('marketplace.ntfs.legendary.name')}
                 </h4>
-                <h3 className='first-description'>Canelo VS</h3>
-                <h3 className='second-description'>Saunders</h3>
+                <h3 className='first-description'>
+                  {t('marketplace.ntfs.legendary.title.first')}
+                </h3>
+                <h3 className='second-description'>
+                  {t('marketplace.ntfs.legendary.title.second')}
+                </h3>
                 <div className='cards-root__hr'></div>
               </div>
               <div className='cards-root__auction-wrapper'>
                 <p className='cards-root__amount'>1/50</p>
                 <p className='cards-root__desc'>
-                  If Canelo wins, annual DAZN subscription for all NFT holders +
-                  all NFT holders entered into drawing for 1 personalized video
-                  to randomly selected winner
+                  {t('marketplace.ntfs.legendary.description')}
                 </p>
-                <a className='cards-root__link' href='#'>
-                  View auction
+                <a className='cards-root__link' href=''>
+                  {t('marketplace.ntfs.legendary.link')}
                 </a>
               </div>
             </div>
@@ -194,21 +202,23 @@ const Cards = () => {
             <div className='cards-root__content-wrapper'>
               <div className='cards-root__inner'>
                 <h4 className='cards-root__card-title cards-root__card-title--gold'>
-                  Gold
+                  {t('marketplace.ntfs.gold.name')}
                 </h4>
-                <h3 className='first-description'>Canelo VS</h3>
-                <h3 className='second-description'>Saunders</h3>
+                <h3 className='first-description'>
+                  {t('marketplace.ntfs.gold.title.first')}
+                </h3>
+                <h3 className='second-description'>
+                  {t('marketplace.ntfs.gold.title.second')}
+                </h3>
                 <div className='cards-root__hr'></div>
               </div>
               <div className='cards-root__auction-wrapper'>
                 <p className='cards-root__amount'>1/50</p>
                 <p className='cards-root__desc'>
-                  If Canelo wins, annual DAZN subscription for all NFT holders +
-                  all NFT holders entered into drawing for 1 personalized video
-                  to randomly selected winner
+                  {t('marketplace.ntfs.gold.description')}
                 </p>
-                <a className='cards-root__link' href='#'>
-                  View auction
+                <a className='cards-root__link' href=''>
+                  {t('marketplace.ntfs.gold.link')}
                 </a>
               </div>
             </div>
@@ -218,21 +228,23 @@ const Cards = () => {
             <div className='cards-root__content-wrapper'>
               <div className='cards-root__inner'>
                 <h4 className='cards-root__card-title cards-root__card-title--bronze'>
-                  Bronze
+                  {t('marketplace.ntfs.bronze.name')}
                 </h4>
-                <h3 className='first-description'>Canelo VS</h3>
-                <h3 className='second-description'>Saunders</h3>
+                <h3 className='first-description'>
+                  {t('marketplace.ntfs.bronze.title.first')}
+                </h3>
+                <h3 className='second-description'>
+                  {t('marketplace.ntfs.bronze.title.second')}
+                </h3>
                 <div className='cards-root__hr'></div>
               </div>
               <div className='cards-root__auction-wrapper'>
                 <p className='cards-root__amount'>1/1</p>
                 <p className='cards-root__desc'>
-                  If Canelo wins, annual DAZN subscription for all NFT holders +
-                  all NFT holders entered into drawing for 1 personalized video
-                  to randomly selected winner
+                  {t('marketplace.ntfs.bronze.description')}
                 </p>
-                <a className='cards-root__link' href='#'>
-                  View auction
+                <a className='cards-root__link' href=''>
+                  {t('marketplace.ntfs.bronze.link')}
                 </a>
               </div>
             </div>

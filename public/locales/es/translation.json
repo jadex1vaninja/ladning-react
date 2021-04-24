@@ -1,46 +1,75 @@
 {
   "header": {
-    "title": "header.title",
-    "sub-title": "header.sub-title",
-    "promo-text": "header.promo-text",
-    "link-text-one": "header.link-text-one",
-    "link-text-two": "header.link-text-two",
-    "link-text-three": "header.link-text-three"
+    "title": "SÁB., 8 DE MAYO",
+    "sub-title": "TRANSMISIÓN EN VIVO POR DAZN",
+    "promo-text": "UNIFICACIÓN DEL PESO SUPERMEDIANO DE LA AMB, EL CMB Y LA OMB",
+    "link-text-one": "HAZ CLIC",
+    "link-text-two": "AQUÍ",
+    "link-text-three": "PARA SUSCRIBIRTE YA"
   },
   "own-it-block": {
-    "title": "own-it-block.title",
-    "description-part-one": "own-it-block.description-part-one",
-    "description-part-two": "own-it-block.description-part-two",
-    "description-date": "own-it-block.description-date",
+    "title": "TEN TU PROPIO PEDAZO DE HISTORIA",
+    "description-part-one": "Esta impresionante colección de fichas no fungibles (NFT) conmemora la pelea ¡e incluso hace que los compradores sean parte de la acción! ¡Todas las NFT vienen con bonos desbloqueables especiales! Las NFT Oro y Legendaria son extremadamente raras y desbloquean artículos y experiencias prémium, como guantes firmados por los peleadores y entradas a una pelea futura. Echa un vistazo a continuación a las colecciones limitadas de NFT y vuelve pronto para conocer más detalles.",
+    "description-part-two": "LAS PREVENTAS COMENZARÁN EL DÍA DE LA PELEA:",
+    "description-date": "SÁBADO, 8 DE MAYO",
     "link": "own-it-block.link"
   },
   "marketplace": {
-    "title": "marketplace.title",
+    "title": "CUENTA REGRESIVA",
     "countdown": {
-      "text-purchase-one": "marketplace.text-purchase-one",
-      "text-purchase-two": "marketplace.text-purchase-two",
-      "days": "d",
-      "hours": "hr",
-      "minutes": "m",
-      "seconds": "s"
+      "text-purchase-one": "LAS COMPRAS DE LA PRIMERA LLEGADA SE ABRIRÁN A",
+      "text-purchase-two": "LAS 7 A. M. ET / 12:00 GMT DEL SÁBADO, 8 DE MAYO",
+      "days": "DÍAS",
+      "hours": "HORAS",
+      "minutes": "MINUTOS",
+      "seconds": "SEGUNDOS"
+    },
+    "ntfs": {
+      "legendary": {
+        "name": "LEGENDARIA",
+        "title": {
+          "first": "Canelo VS",
+          "second": "Saunders"
+        },
+        "description": "Si Canelo gana, una suscripción anual a DAZN para todos los poseedores de NFT + todos los poseedores de NFT entran en un sorteo por un video personalizado para un ganador elegido al azar",
+        "link": "VER SUBASTA"
+      },
+      "gold": {
+        "name": "ORO",
+        "title": {
+          "first": "Canelo VS",
+          "second": "Saunders"
+        },
+        "description": "Si Canelo gana, una suscripción anual a DAZN para todos los poseedores de NFT + todos los poseedores de NFT entran en un sorteo por un video personalizado para un ganador elegido al azar",
+        "link": "VER SUBASTA"
+      },
+      "bronze": {
+        "name": "BRONCE",
+        "title": {
+          "first": "Canelo VS",
+          "second": "Saunders"
+        },
+        "description": "Si Canelo gana, una suscripción anual a DAZN para todos los poseedores de NFT + todos los poseedores de NFT entran en un sorteo por un video personalizado para un ganador elegido al azar",
+        "link": "VER SUBASTA"
+      }
     }
   },
   "video-block": {
-    "banner-text": "video-block.banner-text"
+    "banner-text": "MOMENTOS DESTACADOS DE LA PELEA | PRÓXIMAMENTE"
   },
   "register": {
-    "title": "register.title",
-    "content-text": "register.content-text",
-    "input-firstname-placeholder": "register.input-firstname-placeholder",
-    "input-lastname-placeholder": "register.input-lastname-placeholder",
-    "input-email-placeholder": "register.input-email-placeholder",
-    "submit-btn-text": "register.submit-btn-text",
-    "form-text": "register.form-text",
-    "checkbox-text": "register.checkbox-text"
+    "title": "NO TE PIERDAS SU LLEGADA",
+    "content-text": "SÉ EL PRIMERO EN CONOCER MÁS INFORMACIÓN SOBRE LA PRIMERA LLEGADA DE LAS NFT CON MOTIVO DE UNA PELEA POR UN CAMPEONATO MUNDIAL EN LA HISTORIA. REGÍSTRATE AQUÍ:",
+    "input-firstname-placeholder": "NOMBRE",
+    "input-lastname-placeholder": "APELLIDO",
+    "input-email-placeholder": "CORREO ELECTRÓNICO",
+    "submit-btn-text": "ENVIAR",
+    "form-text": "Es posible que de vez en cuando te enviemos correos electrónicos con noticias, promociones u ofertas especiales sobre DAZN que podrían ser de tu interés.",
+    "checkbox-text": "Si no deseas recibir estos mensajes, haz clic aquí."
   },
   "what-is-block": {
-    "title": "what-is-block.title",
-    "info-text": "what-is-block.info-text"
+    "title": "¿QUÉ ES UNA NFT?",
+    "info-text": "Una ficha no fungible (non-fungible token, NFT) es una unidad de datos que se almacena en un libro contable digital, llamado cadena de bloques (blockchain), que certifica que un artículo digital es único y, por lo tanto, no es intercambiable. Las NFT se pueden usar para representar cosas como fotos, videos, audio y otros tipos de archivos digitales."
   }
 
 }

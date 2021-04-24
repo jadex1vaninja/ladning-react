@@ -266,21 +266,31 @@
   &__link-text {
     text-transform: uppercase;
     font-family: 'DAZNTrim-Bold';
-    font-size: 20px;
+    font-size: 1rem;
     letter-spacing: 1px;
-    line-height: 28px;
     color: $brand-yellow;
     margin: 0;
+
+    @include _768 {
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+      line-height: 1.75rem;
+    }
   }
 
   &__link {
     position: relative;
     text-transform: uppercase;
     font-family: 'DAZNTrim-Bold';
-    font-size: 20px;
+    font-size: 1rem;
     letter-spacing: 1px;
-    line-height: 28px;
     color: $brand-yellow;
+
+    @include _768 {
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+      line-height: 1.75rem;
+    }
 
     &:hover {
       color: $brand-yellow;

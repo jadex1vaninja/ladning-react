@@ -23,6 +23,35 @@
       "hours": "hrs",
       "minutes": "mins",
       "seconds": "secs"
+    },
+    "ntfs": {
+      "legendary": {
+        "name": "Legendary",
+        "title": {
+          "first": "Canelo VS",
+          "second": "Saunders"
+        },
+        "description": "If Canelo wins, annual DAZN subscription for all NFT holders + all NFT holders entered into drawing for 1 personalized video to randomly selected winner",
+        "link": "View auction"
+      },
+      "gold": {
+        "name": "Gold",
+        "title": {
+          "first": "Canelo VS",
+          "second": "Saunders"
+        },
+        "description": "If Canelo wins, annual DAZN subscription for all NFT holders + all NFT holders entered into drawing for 1 personalized video to randomly selected winner",
+        "link": "View auction"
+      },
+      "bronze": {
+        "name": "Bronze",
+        "title": {
+          "first": "Canelo VS",
+          "second": "Saunders"
+        },
+        "description": "If Canelo wins, annual DAZN subscription for all NFT holders + all NFT holders entered into drawing for 1 personalized video to randomly selected winner",
+        "link": "View auction"
+      }
     }
   },
   "video-block": {

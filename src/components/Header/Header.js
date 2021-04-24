@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { imgPath } from '../Landing/Landing';
+import { useWindowInfo } from '../../hooks/useWindowInfo';
 import './Header.scss';
-const imgPath = process.env.PUBLIC_URL + '/assets/img/';
 
 const Header = () => {
   const [language, setLanguage] = useState('en');
   const { t, i18n } = useTranslation();
+  const { isPhone } = useWindowInfo();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -75,13 +77,15 @@ const Header = () => {
           {t('header.link-text-three')}
         </p>
       </div>
-      <div className='header__banner'>
-        <img
-          className='header__banner-img'
-          src={imgPath + 'bg_header.png'}
-          alt='logo'
-        />
-      </div>
+      {!isPhone() && (
+        <div className='header__banner'>
+          <img
+            className='header__banner-img'
+            src={imgPath + 'bg_header.png'}
+            alt='logo'
+          />
+        </div>
+      )}
     </header>
   );
 };
