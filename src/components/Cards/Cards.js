@@ -43,6 +43,7 @@ const Cards = () => {
       }
     ]
   };
+const date = new Date('May 8, 2021 07:00:00 GMT-04:00');
 
   const renderer = ({ days, hours, minutes, seconds }) => {
     return (
@@ -80,7 +81,8 @@ const Cards = () => {
       <h2 className='cards-root__title'>{t('marketplace.title')}</h2>
       <div className='cards-root__countdown'>
         <Countdown
-          date={'2021-05-08T00:00:00'}
+          // date={'2021-05-08T00:00:00'}
+          date={date}
           daysInHours={true}
           renderer={renderer}
         />
