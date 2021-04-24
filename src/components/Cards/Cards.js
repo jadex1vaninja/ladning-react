@@ -109,7 +109,7 @@ const Cards = () => {
                 <div className='cards-root__hr'></div>
               </div>
               <div className='cards-root__auction-wrapper'>
-                <p className='cards-root__amount'>1/50</p>
+                <p className='cards-root__amount'>1/1</p>
                 <p className='cards-root__desc'>
                   {t('marketplace.ntfs.legendary.description')}
                 </p>
@@ -161,7 +161,7 @@ const Cards = () => {
                 <div className='cards-root__hr'></div>
               </div>
               <div className='cards-root__auction-wrapper'>
-                <p className='cards-root__amount'>1/1</p>
+                <p className='cards-root__amount'>1/100</p>
                 <p className='cards-root__desc'>
                   {t('marketplace.ntfs.bronze.description')}
                 </p>
@@ -187,7 +187,7 @@ const Cards = () => {
                 <div className='cards-root__hr'></div>
               </div>
               <div className='cards-root__auction-wrapper'>
-                <p className='cards-root__amount'>1/50</p>
+                <p className='cards-root__amount'>1/1</p>
                 <p className='cards-root__desc'>
                   {t('marketplace.ntfs.legendary.description')}
                 </p>
@@ -239,7 +239,7 @@ const Cards = () => {
                 <div className='cards-root__hr'></div>
               </div>
               <div className='cards-root__auction-wrapper'>
-                <p className='cards-root__amount'>1/1</p>
+                <p className='cards-root__amount'>1/100</p>
                 <p className='cards-root__desc'>
                   {t('marketplace.ntfs.bronze.description')}
                 </p>
