@@ -20,8 +20,8 @@ const Landing = () => {
         <Cards />
         <Video />
         <WhatIs />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 };
