@@ -17,9 +17,11 @@
   }
   &__btn{
     background-color: $brand-yellow;
-    padding: 0.3rem 0.3rem;
     border:none;
     text-transform: uppercase;
+    padding: 1rem 2rem;
+    letter-spacing: 0.25rem;
+    font-size: 1.5rem;
     &:first-child{
       margin-right: 2rem;
     }
