@@ -38,12 +38,12 @@ const Header = () => {
         </ul>
       </div>
       <div className='header__dazn-logo'>
-         <a href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'>
-        <img
-          className='header__dazn-img'
-          src={imgPath + 'DAZN-logo.png'}
-          alt='DAZN'
-        />
+        <a href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'>
+          <img
+            className='header__dazn-img'
+            src={imgPath + 'DAZN-logo.png'}
+            alt='DAZN'
+          />
         </a>
       </div>
       <div className='header__promo'>
@@ -73,7 +73,10 @@ const Header = () => {
       <div className='header__link-wrap'>
         <p className='header__link-text'>
           {t('header.link-text-one')}{' '}
-          <a className='header__link' href='#subscribe'>
+          <a
+            className='header__link'
+            href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'
+          >
             {t('header.link-text-two')}
           </a>{' '}
           {t('header.link-text-three')}
