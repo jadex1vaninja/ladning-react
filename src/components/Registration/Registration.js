@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Modal } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import './Registration.scss';
 
@@ -12,6 +13,18 @@ const initialFields = {
 const Registration = () => {
   const { t } = useTranslation();
   const [formFields, setFormFields] = useState(initialFields);
+  const [showModal, setShowModal] = useState(false);
+
+  const closeModal = () => {
+    setShowModal(false);
+    setFormFields((prevState) => {
+      return {
+        ...prevState,
+        ...initialFields
+      };
+    });
+  };
+  const openModal = () => setShowModal(true);
 
   const onChange = (event, name) => {
     const { value } = event.target;
@@ -19,7 +32,7 @@ const Registration = () => {
     setFormFields({ ...formFields, [name]: value });
   };
 
-  const toggleCheckbox = event => {
+  const toggleCheckbox = (event) => {
     const { checked } = event.target;
 
     setFormFields({ ...formFields, receiveMessages: checked });
@@ -27,24 +40,28 @@ const Registration = () => {
 
   const onSubmit = async (evt) => {
     evt.preventDefault();
-    
-    const { name, email, surname, receiveMessages } = formFields;
 
-    if (!email || !name || !surname) return;
+    try {
+      const { name, email, surname, receiveMessages } = formFields;
 
-    const res = await fetch(
-      `https://mailapi.vercel.app/api/send-mail?email=${email}&name=${name}&surname=${surname}&receiveMessages=${receiveMessages}`
-    );
+      if (!email || !name || !surname) return;
 
-    // eslint-disable-next-line no-unused-vars
-    const data = await res.json();
+      const res = await fetch(
+        `https://mailapi.vercel.app/api/send-mail?email=${email}&name=${name}&surname=${surname}&receiveMessages=${receiveMessages}`
+      );
 
-    window.scrollTo(0, 0);
-    window.location.reload();
+      // eslint-disable-next-line no-unused-vars
+      const data = await res.json();
+      // window.scrollTo(0, 0);
+      // window.location.reload();
+      openModal();
+    } catch (e) {
+      console.error(e, ' : ERROR');
+    }
   };
 
   return (
-    <div className='register' id='subscribe' >
+    <div className='register' id='subscribe'>
       <div className='register__title'>
         <h2>{t('register.title')}</h2>
       </div>
@@ -97,6 +114,28 @@ const Registration = () => {
           </form>
         </div>
       </div>
+      <Modal
+        className='register__modal'
+        show={showModal}
+        backdrop='static'
+        keyboard={false}
+        centered
+        animation={false}
+      >
+        <Modal.Body className='register__modal-content'>
+          <div className='register__modal-inner'>
+            <h1 className='register__modal-title'>
+              {t('register.modal-title')}
+            </h1>
+            <p className='register__modal-text'>{t('register.modal-text')}</p>
+            <div className='register__modal-submit'>
+              <button onClick={closeModal} type='button'>
+                {t('register.modal-btn')}
+              </button>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 };

@@ -65,7 +65,10 @@
     "input-email-placeholder": "CORREO ELECTRÓNICO",
     "submit-btn-text": "ENVIAR",
     "form-text": "Es posible que de vez en cuando te enviemos correos electrónicos con noticias, promociones u ofertas especiales sobre DAZN que podrían ser de tu interés.",
-    "checkbox-text": "Si no deseas recibir estos mensajes, haz clic aquí."
+    "checkbox-text": "Si no deseas recibir estos mensajes, haz clic aquí.",
+    "modal-title": "Gracias por registrarte",
+    "modal-text": "modal.text",
+    "modal-btn": "OK"
   },
   "what-is-block": {
     "title": "¿QUÉ ES UNA NFT?",

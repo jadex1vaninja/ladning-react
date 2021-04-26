@@ -151,4 +151,55 @@
       }
     }
   }
+
+  &__modal {
+
+    .modal-body {
+      padding: 3rem;
+    }
+  }
+
+  &__modal-content {
+    background-image: url(../../assets/img/main-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid $brand-yellow;
+  }
+
+  &__modal-title {
+    color: $brand-white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+
+  &__modal-text {
+    color: $brand-white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  &__modal-submit {
+    display: flex;
+    justify-content: center;
+
+    button {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: 'DAZNTrim-Bold';
+      border: none;
+      outline: none;
+      background: $brand-yellow;
+      padding: 1rem 2rem;
+      letter-spacing: 0.25rem;
+    }
+
+    @include _768 {
+      button {
+        font-size: 1.75rem;
+      }
+    }
+  }
 }
