@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { imgPath } from '../Landing/Landing';
+import { imgPath } from '../../const';
 import { useWindowInfo } from '../../hooks/useWindowInfo';
 import './Header.scss';
 
@@ -8,6 +8,7 @@ const Header = () => {
   const [language, setLanguage] = useState('en');
   const { t, i18n } = useTranslation();
   const { isPhone } = useWindowInfo();
+  const phone = isPhone();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -26,14 +27,18 @@ const Header = () => {
           </a>
         </div>
         <ul className='header__nav-list'>
-          <li className='header__nav-item'>VIEW AUCTION</li>
-          <li className='header__nav-item'>FAQs</li>
-          <li className='header__nav-item'>DAZN</li>
+          <li className='header__nav-item'>
+            {t('header.nav-list.nav-auction')}
+          </li>
+          <li className='header__nav-item'>{t('header.nav-list.nav-faq')}</li>
+          <li className='header__nav-item'>{t('header.nav-list.nav-dazn')}</li>
         </ul>
         <div className='header__terms-language'>
           <ul className='header__terms-list'>
-            <li className='header__terms-item'>T&Cs</li>
-            <li className='header__terms-item'>Privacy Policy</li>
+            <li className='header__terms-item'>{t('header.list.list-t&c')}</li>
+            <li className='header__terms-item'>
+              {t('header.list.list-privacy')}
+            </li>
           </ul>
           <ul className='header__language-list'>
             <li
@@ -67,23 +72,19 @@ const Header = () => {
       </div>
       <div className='header__description'>
         <p className='header__description-text'>
-          The biggest fight of the year is set for May 8 at AT&T Stadium in
-          Arlington, Texas, as WBA, WBC and Ring Magazine champion and the
-          number one pound-for-pound fighter in the world, Canelo Alvarez, meets
-          Billy Joe Saunders, the holder of the WBO belt, in a battle for super
-          middleweight supremacy.
+          {t('header.description.text')}
         </p>
         <a href='' className='header__description-link'>
-          Read more about the NFT Drop
+          {t('header.description.link')}
         </a>
       </div>
       <div className='header__inner'>
         <div className='header__img-wrapper'>
           <img className='header__logo1' src={imgPath + 'logo.png'} alt='' />
         </div>
-        <div className='header__text-wrapper'>
-          <h1 className='header__title'>{t('header.title')}</h1>
-          <span className='header__text'>{t('header.sub-title')}</span>
+        <div className='header__buttons-wrapper'>
+          <button className='header__CTA'>{t('header.buttons.btn-one')}</button>
+          <button className='header__CTA'>{t('header.buttons.btn-two')}</button>
         </div>
         <div className='header__img-wrapper'>
           <img
@@ -93,24 +94,11 @@ const Header = () => {
           />
         </div>
       </div>
-      <div className='header__link-wrap'>
-        <p className='header__link-text'>
-          {t('header.link-text-one')}{' '}
-          <a
-            className='header__link'
-            target='_blank'
-            href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'
-          >
-            {t('header.link-text-two')}
-          </a>{' '}
-          {t('header.link-text-three')}
-        </p>
-      </div>
-      {!isPhone() && (
+      {!phone && (
         <div className='header__banner'>
           <img
             className='header__banner-img'
-            src={imgPath + 'bg_header.png'}
+            src={imgPath + 'DAZN-header-bg.png'}
             alt='logo'
           />
         </div>

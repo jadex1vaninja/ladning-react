@@ -6,16 +6,16 @@ import WhatIs from '../WhatIs';
 import Footer from '../Footer';
 import Registration from '../Registration';
 import OwnItSection from '../OwnItSection';
+import FeaturedNFT from '../FeaturedNFT';
 import './Landing.scss';
-
-export const imgPath = process.env.PUBLIC_URL + '/assets/img/';
 
 const Landing = () => {
   return (
     <>
       <Header />
       <main className='root'>
-        <OwnItSection />
+        <FeaturedNFT />
+        {/*<OwnItSection />*/}
         <Registration />
         <Cards />
         <Video />

@@ -1,11 +1,23 @@
 {
   "header": {
-    "title": "SAT MAY 8",
-    "sub-title": "STREAM LIVE ON DAZN",
+    "nav-list": {
+      "nav-auction": "VIEW AUCTION",
+      "nav-faq": "FAQs",
+      "nav-dazn": "DAZN"
+    },
+    "list": {
+      "list-t&c": "T&Cs",
+      "list-privacy": "Privacy Policy"
+    },
     "promo-text": "FACE THE FEARLESS | NFT COLLECTION",
-    "link-text-one": "click",
-    "link-text-two": "here",
-    "link-text-three": "to subscribe now"
+    "description": {
+      "text": "The biggest fight of the year is set for May 8 at AT&T Stadium in Arlington, Texas, as WBA, WBC and Ring Magazine champion and the number one pound-for-pound fighter in the world, Canelo Alvarez, meets Billy Joe Saunders, the holder of the WBO belt, in a battle for super middleweight supremacy.",
+      "link": "Read more about the NFT Drop"
+    },
+    "buttons": {
+      "btn-one": "see artworks",
+      "btn-two": "subscribe to dazn"
+    }
   },
   "own-it-block": {
     "title": "Own a piece of history",

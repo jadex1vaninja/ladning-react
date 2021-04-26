@@ -33,11 +33,14 @@
     cursor: pointer;
     color: $brand-white;
     text-transform: uppercase;
-    //margin-left: 20px;
     font-size: 1.875rem;
     letter-spacing: 1px;
     line-height: 3.438rem;
-    margin-left: 5.125rem;
+    margin-left: 4rem;
+
+    @include _1440 {
+      margin-left: 5.125rem;
+    }
   }
 
   &__terms-language {
@@ -156,6 +159,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 4.875rem;
   }
 
   &__description-text {
@@ -215,7 +219,6 @@
 
       @include _768 {
         order: 1;
-        margin-bottom: 3rem;
       }
     }
 
@@ -227,11 +230,7 @@
         order: 3;
       }
     }
-
-    @include _768 {
-
-    }
-}
+  }
 
   &__img-wrapper {
     position: relative;
@@ -241,27 +240,38 @@
     width: 50%;
 
     @include _768 {
-      width: 33%;
+      width: 25%;
   }
 }
 
-  &__text-wrapper {
+  &__buttons-wrapper {
     position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-grow: 1;
     width: 100%;
     order: 1;
     margin-bottom: 14px;
 
     @include _768 {
-      width: 33%;
+      width: 35%;
       margin-bottom: 0;
       order: 2;
+    }
   }
-}
+
+  &__CTA {
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'DAZNTrim-Bold';
+    border: none;
+    outline: none;
+    background: #fafe53;
+    padding: 1rem;
+    font-size: 1.563rem;
+    letter-spacing: 1px;
+  }
 
   &__logo1 {
     margin-right: 5rem;
@@ -281,91 +291,4 @@
   }
 }
 
-  &__title {
-    color: white;
-    font-family: 'DAZNTrim-Bold';
-    font-size: 41px;
-    line-height: 34px;
-
-    @include _768 {
-      font-size: 57px;
-      letter-spacing: 0px;
-      line-height: 45px;
-  }
-}
-
-  &__text {
-    color: white;
-    font-family: 'DAZNTrim-Bold';
-    font-size: 14px;
-    letter-spacing: 3px;
-    line-height: 27px;
-
-    @include _768 {
-      font-size: 20px;
-      letter-spacing: 3px;
-      line-height: 45px;
-    }
-  }
-
-  &__link-wrap {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 0;
-
-    @include _768 {
-      margin-bottom: 80px;
-    }
-
-    @include _1024 {
-      margin-bottom: 0;
-    }
-  }
-
-  &__link-text {
-    text-transform: uppercase;
-    font-family: 'DAZNTrim-Bold';
-    font-size: 1rem;
-    letter-spacing: 1px;
-    color: $brand-yellow;
-    margin: 0;
-
-    @include _768 {
-      font-size: 1.25rem;
-      letter-spacing: 1px;
-      line-height: 1.75rem;
-    }
-  }
-
-  &__link {
-    position: relative;
-    text-transform: uppercase;
-    font-family: 'DAZNTrim-Bold';
-    font-size: 1rem;
-    letter-spacing: 1px;
-    color: $brand-yellow;
-
-    @include _768 {
-      font-size: 1.25rem;
-      letter-spacing: 1px;
-      line-height: 1.75rem;
-    }
-
-    &:hover {
-      color: $brand-yellow;
-      text-decoration: none;
-    }
-
-    &::after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      content: "";
-      display: block;
-      height: 2px;
-      width: 100%;
-      background-color: $brand-yellow;
-    }
-  }
 }

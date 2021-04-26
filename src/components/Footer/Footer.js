@@ -1,9 +1,8 @@
 import React from 'react';
-import { imgPath } from '../Landing/Landing';
+import { imgPath } from '../../const';
 import './Footer.scss';
 
 const Footer = () => {
-
   return (
     <footer className='footer'>
       <div className='footer__banner'>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { imgPath } from '../Landing/Landing';
+import { imgPath } from '../../const';
 import './OwnItSection.scss';
 
 const OwnItSection = () => {

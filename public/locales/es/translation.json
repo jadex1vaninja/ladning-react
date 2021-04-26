@@ -1,11 +1,23 @@
 {
   "header": {
-    "title": "SÁB, 8 DE MAYO",
-    "sub-title": "TRANSMISIÓN EN VIVO POR DAZN",
-    "promo-text": "UNIFICACIÓN DEL PESO SUPERMEDIANO DE LA AMB, EL CMB Y LA OMB",
-    "link-text-one": "HAZ CLIC",
-    "link-text-two": "AQUÍ",
-    "link-text-three": "PARA SUSCRIBIRTE YA"
+    "nav-list": {
+      "nav-auction": "nav-auction",
+      "nav-faq": "nav-faq",
+      "nav-dazn": "nav-dazn"
+    },
+    "list": {
+      "list-t&c": "list-t&c",
+      "list-privacy": "ist-privacy"
+    },
+    "promo-text": "promo-text",
+    "description": {
+      "text": "text",
+      "link": "link"
+    },
+    "buttons": {
+      "btn-one": "btn-one",
+      "btn-two": "btn-two"
+    }
   },
   "own-it-block": {
     "title": "TEN TU PROPIO PEDAZO DE HISTORIA",
