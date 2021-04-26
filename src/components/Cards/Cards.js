@@ -3,7 +3,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Countdown from 'react-countdown';
 import Slider from 'react-slick';
-import { imgPath } from '../Landing/Landing';
+import NFT from '../NFT';
+import { NFTS } from '../../const';
 import './Cards.scss';
 
 const Cards = () => {
@@ -43,7 +44,7 @@ const Cards = () => {
       }
     ]
   };
-const date = new Date('May 8, 2021 07:00:00 GMT-04:00');
+  const date = new Date('May 8, 2021 07:00:00 GMT-04:00');
 
   const renderer = ({ days, hours, minutes, seconds }) => {
     return (
@@ -80,12 +81,7 @@ const date = new Date('May 8, 2021 07:00:00 GMT-04:00');
     <section className='cards-root'>
       <h2 className='cards-root__title'>{t('marketplace.title')}</h2>
       <div className='cards-root__countdown'>
-        <Countdown
-          // date={'2021-05-08T00:00:00'}
-          date={date}
-          daysInHours={true}
-          renderer={renderer}
-        />
+        <Countdown date={date} daysInHours={true} renderer={renderer} />
         <p className='cards-root__text'>
           {t('marketplace.countdown.text-purchase-one')}
         </p>
@@ -95,162 +91,16 @@ const date = new Date('May 8, 2021 07:00:00 GMT-04:00');
       </div>
       <div className='cards-root__card-wrapper'>
         <Slider {...settings}>
-          <div className='cards-root__card-content'>
-            <img src={imgPath + 'nft-legend.png'} alt='card' />
-            <div className='cards-root__content-wrapper'>
-              <div className='cards-root__inner'>
-                <h4 className='cards-root__card-title cards-root__card-title--legend'>
-                  {t('marketplace.ntfs.legendary.name')}
-                </h4>
-                <h3 className='first-description'>
-                  {t('marketplace.ntfs.legendary.title.first')}
-                </h3>
-                <h3 className='second-description'>
-                  {t('marketplace.ntfs.legendary.title.second')}
-                </h3>
-                <div className='cards-root__hr'></div>
-              </div>
-              <div className='cards-root__auction-wrapper'>
-                <p className='cards-root__amount'>1/1</p>
-                <p className='cards-root__desc'>
-                  {t('marketplace.ntfs.legendary.description')}
-                </p>
-                <a className='cards-root__link' href=''>
-                  {t('marketplace.ntfs.legendary.link')}
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className='cards-root__card-content'>
-            <img src={imgPath + 'nft-gold.png'} alt='card' />
-            <div className='cards-root__content-wrapper'>
-              <div className='cards-root__inner'>
-                <h4 className='cards-root__card-title cards-root__card-title--gold'>
-                  {t('marketplace.ntfs.gold.name')}
-                </h4>
-                <h3 className='first-description'>
-                  {t('marketplace.ntfs.gold.title.first')}
-                </h3>
-                <h3 className='second-description'>
-                  {t('marketplace.ntfs.gold.title.second')}
-                </h3>
-                <div className='cards-root__hr'></div>
-              </div>
-              <div className='cards-root__auction-wrapper'>
-                <p className='cards-root__amount'>1/50</p>
-                <p className='cards-root__desc'>
-                  {t('marketplace.ntfs.gold.description')}
-                </p>
-                <a className='cards-root__link' href=''>
-                  {t('marketplace.ntfs.gold.link')}
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className='cards-root__card-content'>
-            <img src={imgPath + 'nft-bronze.png'} alt='card' />
-            <div className='cards-root__content-wrapper'>
-              <div className='cards-root__inner'>
-                <h4 className='cards-root__card-title cards-root__card-title--bronze'>
-                  {t('marketplace.ntfs.bronze.name')}
-                </h4>
-                <h3 className='first-description'>
-                  {t('marketplace.ntfs.bronze.title.first')}
-                </h3>
-                <h3 className='second-description'>
-                  {t('marketplace.ntfs.bronze.title.second')}
-                </h3>
-                <div className='cards-root__hr'></div>
-              </div>
-              <div className='cards-root__auction-wrapper'>
-                <p className='cards-root__amount'>1/100</p>
-                <p className='cards-root__desc'>
-                  {t('marketplace.ntfs.bronze.description')}
-                </p>
-                <a className='cards-root__link' href=''>
-                  {t('marketplace.ntfs.bronze.link')}
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className='cards-root__card-content'>
-            <img src={imgPath + 'nft-legend.png'} alt='card' />
-            <div className='cards-root__content-wrapper'>
-              <div className='cards-root__inner'>
-                <h4 className='cards-root__card-title cards-root__card-title--legend'>
-                  {t('marketplace.ntfs.legendary.name')}
-                </h4>
-                <h3 className='first-description'>
-                  {t('marketplace.ntfs.legendary.title.first')}
-                </h3>
-                <h3 className='second-description'>
-                  {t('marketplace.ntfs.legendary.title.second')}
-                </h3>
-                <div className='cards-root__hr'></div>
-              </div>
-              <div className='cards-root__auction-wrapper'>
-                <p className='cards-root__amount'>1/1</p>
-                <p className='cards-root__desc'>
-                  {t('marketplace.ntfs.legendary.description')}
-                </p>
-                <a className='cards-root__link' href=''>
-                  {t('marketplace.ntfs.legendary.link')}
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className='cards-root__card-content'>
-            <img src={imgPath + 'nft-gold.png'} alt='card' />
-            <div className='cards-root__content-wrapper'>
-              <div className='cards-root__inner'>
-                <h4 className='cards-root__card-title cards-root__card-title--gold'>
-                  {t('marketplace.ntfs.gold.name')}
-                </h4>
-                <h3 className='first-description'>
-                  {t('marketplace.ntfs.gold.title.first')}
-                </h3>
-                <h3 className='second-description'>
-                  {t('marketplace.ntfs.gold.title.second')}
-                </h3>
-                <div className='cards-root__hr'></div>
-              </div>
-              <div className='cards-root__auction-wrapper'>
-                <p className='cards-root__amount'>1/50</p>
-                <p className='cards-root__desc'>
-                  {t('marketplace.ntfs.gold.description')}
-                </p>
-                <a className='cards-root__link' href=''>
-                  {t('marketplace.ntfs.gold.link')}
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className='cards-root__card-content'>
-            <img src={imgPath + 'nft-bronze.png'} alt='card' />
-            <div className='cards-root__content-wrapper'>
-              <div className='cards-root__inner'>
-                <h4 className='cards-root__card-title cards-root__card-title--bronze'>
-                  {t('marketplace.ntfs.bronze.name')}
-                </h4>
-                <h3 className='first-description'>
-                  {t('marketplace.ntfs.bronze.title.first')}
-                </h3>
-                <h3 className='second-description'>
-                  {t('marketplace.ntfs.bronze.title.second')}
-                </h3>
-                <div className='cards-root__hr'></div>
-              </div>
-              <div className='cards-root__auction-wrapper'>
-                <p className='cards-root__amount'>1/100</p>
-                <p className='cards-root__desc'>
-                  {t('marketplace.ntfs.bronze.description')}
-                </p>
-                <a className='cards-root__link' href=''>
-                  {t('marketplace.ntfs.bronze.link')}
-                </a>
-              </div>
-            </div>
-          </div>
+          {NFTS.map((element) => (
+            <NFT
+              key={Math.floor(Math.random() * 1000)}
+              type={element.type}
+              title={element.title}
+              img={element.img}
+              description={element.description}
+              rarity={element.rarity}
+            />
+          ))}
         </Slider>
       </div>
     </section>
