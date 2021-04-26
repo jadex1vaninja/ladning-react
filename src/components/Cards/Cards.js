@@ -37,7 +37,7 @@ const Cards = () => {
       {
         breakpoint: 1440,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           arrows: true
         }

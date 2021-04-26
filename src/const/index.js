@@ -11,64 +11,58 @@ export const NFTS = [
   {
     type: 'legendary',
     img: imgPath + 'nft-legend.png',
-    title: 'Knockout - Canelo',
-    rarity: '1/1',
-    description:
-      'THE WINNING BID WILL RECEIVE 2 TICKETS TO THE NEXT MATCHROOM CANELO FIGHT + SIGNED GLOVES FROM CANELO + A PERSONALIZED VIDEO'
+    title: 'canelo-legendary-title',
+    rarity: 'rarity-1',
+    description: 'canelo-legendary-description'
   },
   {
     type: 'legendary',
     img: imgPath + 'nft-legend.png',
-    title: 'Knockout - Saunders',
-    rarity: '1/1',
-    description:
-      'THE WINNING BID WILL RECEIVE 2 TICKETS TO THE NEXT MATCHROOM SAUNDERS FIGHT + SIGNED GLOVES FROM SAUNDERS + A PERSONALIZED VIDEO'
+    title: 'saunders-legendary-title',
+    rarity: 'rarity-1',
+    description: 'saunders-legendary-description'
   },
   {
     type: 'gold',
     img: imgPath + 'nft-gold.png',
-    title: 'Tale of the Tape - Canelo',
-    rarity: '1/1',
-    description: 'SIGNED GLOVES + ANNUAL DAZN SUBSCRIPTION'
+    title: 'canelo-gold-title',
+    rarity: 'rarity-1',
+    description: 'canelo-gold-description'
   },
   {
     type: 'gold',
     img: imgPath + 'nft-gold.png',
-    title: 'Tale of the Tape - Saunders',
-    rarity: '1/1',
-    description: 'SIGNED GLOVES + ANNUAL DAZN SUBSCRIPTION'
+    title: 'saunders-gold-title',
+    rarity: 'rarity-1',
+    description: 'saunders-gold-description'
   },
   {
     type: 'gold',
     img: imgPath + 'nft-gold.png',
-    title: 'Prediction - Rounds 1-13',
-    rarity: '13 (1 per round)',
-    description:
-      'FOR THE ROUND THE FIGHT ENDS IN ONLY, 2 TICKETS TO A FUTURE MATCHROOM FIGHT'
+    title: 'prediction-decision-title',
+    rarity: 'rarity-13',
+    description: 'prediction-decision-description'
   },
   {
     type: 'silver',
     img: imgPath + 'nft-legend.png',
-    title: 'Tale of the Tape - Canelo',
-    rarity: '50',
-    description:
-      'IF CANELO WINS THIS NFT UNLOCKS AN ANNUAL DAZN SUBSCRIPTION + ALL NFT HOLDERS ENTERED INTO A DRAW FOR 1 PERSONALIZED VIDEO FROM CANELO'
+    title: 'canelo-silver-title',
+    rarity: 'rarity-50',
+    description: 'canelo-silver-description'
   },
   {
     type: 'silver',
     img: imgPath + 'nft-legend.png',
-    title: 'Tale of the Tape - Saunders',
-    rarity: '50',
-    description:
-      'IF SAUNDERS WINS THIS NFT UNLOCKS AN ANNUAL DAZN SUBSCRIPTION + ALL NFT HOLDERS ENTERED INTO A DRAW FOR 1 PERSONALIZED VIDEO FROM SAUNDERS'
+    title: 'saunders-silver-title',
+    rarity: 'rarity-50',
+    description: 'saunders-silver-description'
   },
   {
     type: 'bronze',
     img: imgPath + 'nft-bronze.png',
-    title: 'Prediction - Rounds 1-13',
-    rarity: '100 (per round)',
-    description:
-      'FOR THE ROUND THE FIGHT ENDS IN ONLY, ANNUAL DAZN SUBSCRIPTION'
+    title: 'prediction-decision-title-bronze',
+    rarity: 'rarity-100',
+    description: 'prediction-decision-description-bronze'
   }
 ];
 

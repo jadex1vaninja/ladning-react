@@ -289,7 +289,7 @@
     padding-top: 100px;
     border-radius: 1rem;
     text-align: center;
-    min-height: 620px;
+    min-height: 650px;
 
     h3 {
       font-size: 1.5rem;
@@ -326,7 +326,9 @@
   &__hr {
     width: 100%;
     height: 3px;
-    background-color: $brand-border;
+    margin: 1rem 0;
+    color: #fff;
+    background-color: $brand-white;
   }
 
   &__auction-wrapper {
@@ -339,13 +341,14 @@
     font-size: 1.25rem;
     letter-spacing: 1px;
     line-height: 2.813rem;
-    margin: 1rem 0;
+    margin-bottom: 1rem;
   }
 
   &__desc {
     font-family: 'DAZNTrim-Light';
     font-size: 1rem;
     line-height: 1.5rem;
+        text-transform: none;
 
     @include _768 {
       font-size: 1.25rem;
