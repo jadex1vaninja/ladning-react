@@ -20,14 +20,15 @@
     width: fit-content;
     margin: 0 auto;
     padding: 1rem 3.25rem;
+  }
 
-    h2 {
-      margin-bottom: 0;
-      font-size: 1.25rem;
+  &__title-text {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    color: $brand-black;
 
-      @include _768 {
-        font-size: 1.75rem;
-      }
+    @include _768 {
+      font-size: 1.75rem;
     }
   }
 
@@ -117,13 +118,15 @@
       position: relative;
 
       &:checked {
-        background: rgba(40,40,40,0.7);
-        &::before {
-          content: "✓";
-          position: absolute;
-          font-size: 2rem;
-          bottom: -0.5rem;
-        }
+        border: 1px solid $brand-black;
+        background-color: $brand-yellow-secondary;
+        //background: rgba(40,40,40,0.7);
+        //&::before {
+        //  content: "✓";
+        //  position: absolute;
+        //  font-size: 2rem;
+        //  bottom: -0.5rem;
+        //}
       }
       
       &:nth-child(2n) {
@@ -133,6 +136,7 @@
   }
 
   &__submit {
+
     button {
       font-size: 1.25rem;
       text-transform: uppercase;
@@ -140,9 +144,9 @@
       font-family: 'DAZNTrim-Bold';
       border: none;
       outline: none;
-      background: $brand-yellow;
+      background: $brand-yellow-secondary;
       padding: 1rem 2rem;
-      letter-spacing: 0.25rem;
+      letter-spacing: -1px;
     }
 
     @include _768 {

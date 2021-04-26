@@ -21,18 +21,19 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
     
     img {
       width: 70%;
-      max-width: 300px;
+      //max-width: 300px;
     }
 
     @include _768 {
       flex-direction: row;
 
       img {
-        width: 100%;
-        max-width: 365px;
+        width: 115%;
+        //max-width: 365px;
       }
     }
   }
@@ -67,7 +68,7 @@
   &__sub-caption-section {
     text-transform: uppercase;
     text-align: center;
-    color: $brand-yellow;
+    color: $brand-yellow-secondary;
     font-family: 'DAZNTrim-Bold';
     margin-top: 3rem;
     

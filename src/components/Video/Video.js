@@ -1,17 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { dazn_link } from '../../const';
+import { dazn_link, imgPath } from '../../const';
 import './Video.scss';
-const imgPath = process.env.PUBLIC_URL + '/assets/img/';
 
 const Video = () => {
-  const [language, setLanguage] = useState('en');
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+  const { t } = useTranslation();
 
   return (
     <div className='video'>
@@ -35,7 +29,7 @@ const Video = () => {
             />
           </a>
         </div>
-        <img src={imgPath + 'title.png'} alt='title' className='video__title' />
+        <img src={imgPath + 'promo.png'} alt='title' className='video__title' />
         <span className='video__pre-fight'>{t('video-block.banner-text')}</span>
       </div>
     </div>

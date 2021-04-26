@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { imgPath } from '../Landing/Landing';
 import { useWindowInfo } from '../../hooks/useWindowInfo';
-import {dazn_link} from '../../const'
+import { dazn_link } from '../../const';
 import './Header.scss';
 
 const Header = () => {
@@ -39,7 +39,7 @@ const Header = () => {
         </ul>
       </div>
       <div className='header__dazn-logo'>
-        <a target='_blank'  href={dazn_link}>
+        <a target='_blank' href={dazn_link}>
           <img
             className='header__dazn-img'
             src={imgPath + 'DAZN-logo.png'}
@@ -68,7 +68,7 @@ const Header = () => {
         <div className='header__img-wrapper'>
           <img
             className='header__logo3'
-            src={imgPath + 'matchroom-logo.png'}
+            src={imgPath + 'RGB_white_red-min.png'}
             alt=''
           />
         </div>

@@ -63,7 +63,7 @@ const Registration = () => {
   return (
     <div className='register' id='subscribe'>
       <div className='register__title'>
-        <h2>{t('register.title')}</h2>
+        <h2 className='register__title-text'>{t('register.title')}</h2>
       </div>
       <div className='register__main-content'>
         <p>{t('register.content-text')}</p>

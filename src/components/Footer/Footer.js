@@ -45,7 +45,7 @@ const Footer = () => {
           <div className='footer__img-wrapper'>
             <img
               className='footer__logo3'
-              src={imgPath + 'matchroom-logo.png'}
+              src={imgPath + 'RGB_white_red-min.png'}
               alt=''
             />
           </div>
