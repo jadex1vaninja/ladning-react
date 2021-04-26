@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { imgPath } from '../Landing/Landing';
 import { useWindowInfo } from '../../hooks/useWindowInfo';
+import {dazn_link} from '../../const'
 import './Header.scss';
 
 const Header = () => {
@@ -38,7 +39,7 @@ const Header = () => {
         </ul>
       </div>
       <div className='header__dazn-logo'>
-        <a href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'>
+        <a target='_blank'  href={dazn_link}>
           <img
             className='header__dazn-img'
             src={imgPath + 'DAZN-logo.png'}
@@ -60,7 +61,9 @@ const Header = () => {
         </div>
         <div className='header__text-wrapper'>
           <h1 className='header__title'>{t('header.title')}</h1>
-          <span className='header__text'>{t('header.sub-title')}</span>
+          <a target='_blank' href={dazn_link}>
+            <span className='header__text'>{t('header.sub-title')}</span>
+          </a>
         </div>
         <div className='header__img-wrapper'>
           <img
@@ -73,11 +76,7 @@ const Header = () => {
       <div className='header__link-wrap'>
         <p className='header__link-text'>
           {t('header.link-text-one')}{' '}
-          <a
-            className='header__link'
-            target="_blank"
-            href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'
-          >
+          <a className='header__link' target='_blank' href={dazn_link}>
             {t('header.link-text-two')}
           </a>{' '}
           {t('header.link-text-three')}

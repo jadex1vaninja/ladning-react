@@ -71,3 +71,7 @@ export const NFTS = [
       'FOR THE ROUND THE FIGHT ENDS IN ONLY, ANNUAL DAZN SUBSCRIPTION'
   }
 ];
+
+
+export const dazn_link =
+  'https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT';

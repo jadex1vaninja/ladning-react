@@ -1,4 +1,5 @@
 import React from 'react';
+import { dazn_link } from '../../const';
 import { imgPath } from '../Landing/Landing';
 import './Footer.scss';
 
@@ -24,7 +25,7 @@ const Footer = () => {
             <img className='footer__logo1' src={imgPath + 'logo.png'} alt='' />
           </div>
           <div className='footer__text-wrapper'>
-            <a href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'>
+            <a target="_blank" href={dazn_link}>
               <img
                 className='footer__logo2'
                 src={imgPath + 'DAZN-logo.png'}
