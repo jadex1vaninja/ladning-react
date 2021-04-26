@@ -39,7 +39,7 @@ const Header = () => {
         </ul>
       </div>
       <div className='header__dazn-logo'>
-        <a target='_blank'  href={dazn_link}>
+        <a target='_blank' href={dazn_link}>
           <img
             className='header__dazn-img'
             src={imgPath + 'DAZN-logo.png'}
@@ -75,11 +75,12 @@ const Header = () => {
       </div>
       <div className='header__link-wrap'>
         <p className='header__link-text'>
-          {t('header.link-text-one')}{' '}
-          <a className='header__link' target='_blank' href={dazn_link}>
-            {t('header.link-text-two')}
-          </a>{' '}
-          {t('header.link-text-three')}
+          <a href='#subscribe'>
+            <button className='header__btn'>Learn More</button>
+          </a>
+          <a href='#carousel'>
+            <button className='header__btn'>SEE ARTWORKS</button>
+          </a>
         </p>
       </div>
       {!isPhone() && (

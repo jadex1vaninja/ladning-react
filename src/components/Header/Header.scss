@@ -15,7 +15,15 @@
   @include _1024 {
     padding-bottom: 10rem;
   }
-
+  &__btn{
+    background-color: $brand-yellow;
+    padding: 0.3rem 0.3rem;
+    border:none;
+    text-transform: uppercase;
+    &:first-child{
+      margin-right: 2rem;
+    }
+  }
   &__language {
     display: flex;
     justify-content: flex-end;
