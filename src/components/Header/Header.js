@@ -76,10 +76,10 @@ const Header = () => {
       <div className='header__link-wrap'>
         <p className='header__link-text'>
           <a href='#subscribe'>
-            <button className='header__btn'>Learn More</button>
+            <button className='header__btn'>{t('header.learn-more')}</button>
           </a>
           <a href='#carousel'>
-            <button className='header__btn'>SEE ARTWORKS</button>
+            <button className='header__btn'>{t('header.see-artworks')}</button>
           </a>
         </p>
       </div>
