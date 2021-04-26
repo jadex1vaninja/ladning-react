@@ -10,7 +10,7 @@ const OwnItSection = () => {
     <section className='own-it'>
       <div className='own-it__item-wrapper'>
         <div className='own-it__item'>
-          <img src={imgPath + 'own-it.png'} alt='card' />
+          <img src={imgPath + 'nft-legend.png'} alt='card' />
           <div className='own-it__item-content'>
             <h2>{t('own-it-block.title')}</h2>
             <p>{t('own-it-block.description-part-one')}</p>
