@@ -15,37 +15,48 @@ const Header = () => {
 
   return (
     <header className='header'>
-      <div className='header__language'>
-        <ul className='header__language-list'>
-          <li
-            className={`header__button${language === 'en' ? ' active' : ''}`}
-            onClick={() => {
-              changeLanguage('en');
-              setLanguage('en');
-            }}
-          >
-            En
-          </li>
-          <li
-            className={`header__button${language === 'es' ? ' active' : ''}`}
-            onClick={() => {
-              changeLanguage('es');
-              setLanguage('es');
-            }}
-          >
-            Es
-          </li>
+      <nav className='header__navigation'>
+        <div className='header__dazn-logo'>
+          <a href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'>
+            <img
+              className='header__dazn-img'
+              src={imgPath + 'DAZN-logo.png'}
+              alt='DAZN'
+            />
+          </a>
+        </div>
+        <ul className='header__nav-list'>
+          <li className='header__nav-item'>VIEW AUCTION</li>
+          <li className='header__nav-item'>FAQs</li>
+          <li className='header__nav-item'>DAZN</li>
         </ul>
-      </div>
-      <div className='header__dazn-logo'>
-        <a href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'>
-          <img
-            className='header__dazn-img'
-            src={imgPath + 'DAZN-logo.png'}
-            alt='DAZN'
-          />
-        </a>
-      </div>
+        <div className='header__terms-language'>
+          <ul className='header__terms-list'>
+            <li className='header__terms-item'>T&Cs</li>
+            <li className='header__terms-item'>Privacy Policy</li>
+          </ul>
+          <ul className='header__language-list'>
+            <li
+              className={`header__button${language === 'en' ? ' active' : ''}`}
+              onClick={() => {
+                changeLanguage('en');
+                setLanguage('en');
+              }}
+            >
+              En
+            </li>
+            <li
+              className={`header__button${language === 'es' ? ' active' : ''}`}
+              onClick={() => {
+                changeLanguage('es');
+                setLanguage('es');
+              }}
+            >
+              Es
+            </li>
+          </ul>
+        </div>
+      </nav>
       <div className='header__promo'>
         <img
           className='header__promo-img'
@@ -53,6 +64,18 @@ const Header = () => {
           alt='promo'
         />
         <p className='header__promo-text'>{t('header.promo-text')}</p>
+      </div>
+      <div className='header__description'>
+        <p className='header__description-text'>
+          The biggest fight of the year is set for May 8 at AT&T Stadium in
+          Arlington, Texas, as WBA, WBC and Ring Magazine champion and the
+          number one pound-for-pound fighter in the world, Canelo Alvarez, meets
+          Billy Joe Saunders, the holder of the WBO belt, in a battle for super
+          middleweight supremacy.
+        </p>
+        <a href='' className='header__description-link'>
+          Read more about the NFT Drop
+        </a>
       </div>
       <div className='header__inner'>
         <div className='header__img-wrapper'>
@@ -75,7 +98,7 @@ const Header = () => {
           {t('header.link-text-one')}{' '}
           <a
             className='header__link'
-            target="_blank"
+            target='_blank'
             href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'
           >
             {t('header.link-text-two')}

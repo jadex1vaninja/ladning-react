@@ -6,25 +6,54 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  //padding: 2.5rem 2.5rem 0;
+  padding: 2.5rem 2.5rem 0;
 
   @include _1024 {
     padding-bottom: 10rem;
   }
 
-  &__language {
+  &__navigation {
     display: flex;
-    justify-content: flex-end;
-    padding: 13px 13px 16px;
+    justify-content: space-between;
+    margin-bottom: 2rem;
   }
 
-  &__language-list {
+  &__nav-list {
+    position: relative;
+    display: flex;
+    //width: 100%;
+    //max-width: 37.5rem;
+    //padding: 0 2rem;
+    margin-bottom: 0;
+    margin-left: 6rem;
+  }
+
+  &__nav-item {
+    font-family: 'DAZNTrim-Bold';
+    cursor: pointer;
+    color: $brand-white;
+    text-transform: uppercase;
+    //margin-left: 20px;
+    font-size: 1.875rem;
+    letter-spacing: 1px;
+    line-height: 3.438rem;
+    margin-left: 5.125rem;
+  }
+
+  &__terms-language {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__language-list,
+  &__terms-list {
     position: relative;
     display: flex;
     margin: 0;
   }
 
-  &__button {
+  &__button,
+  &__terms-item {
     position: relative;
     font-family: 'DAZNTrim-Bold';
     cursor: pointer;
@@ -32,6 +61,7 @@
     font-size: 18px;
     text-transform: uppercase;
     margin-left: 20px;
+    align-self: flex-start;
   }
 
   .active {
@@ -49,10 +79,10 @@
   }
 
   &__dazn-logo {
-    width: 100%;
+    //width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 24px;
+    //margin-bottom: 24px;
   }
 
   &__dazn-img {
@@ -122,6 +152,34 @@
     }
   }
 
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__description-text {
+    text-align: center;
+    word-spacing: 3px;
+    max-width: 50%;
+  }
+
+  &__description-text,
+  &__description-link {
+    font-family: 'DAZNTrim-Light';
+    color: $brand-white;
+    font-size: 1.563rem;
+    line-height: 2.188rem;
+    margin: 0;
+  }
+
+  &__description-link {
+    text-decoration: underline;
+
+    &:hover {
+      color: $brand-yellow;
+    }
+  }
 
   &__banner {
     width: 100%;
@@ -138,9 +196,9 @@
 
   &__banner-img {
     width: 100%;
-    display: block;
-    height: 100%;
-    object-fit: cover;
+    //display: block;
+    //height: 100%;
+    //object-fit: cover;
 }
 
   &__inner {
