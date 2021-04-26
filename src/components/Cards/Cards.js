@@ -37,7 +37,7 @@ const Cards = () => {
       {
         breakpoint: 1440,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           arrows: true
         }
@@ -78,7 +78,7 @@ const Cards = () => {
   };
 
   return (
-    <section className='cards-root'>
+    <section className='cards-root' >
       <h2 className='cards-root__title'>{t('marketplace.title')}</h2>
       <div className='cards-root__countdown'>
         <Countdown date={date} daysInHours={true} renderer={renderer} />
@@ -89,7 +89,7 @@ const Cards = () => {
           {t('marketplace.countdown.text-purchase-two')}
         </p>
       </div>
-      <div className='cards-root__card-wrapper'>
+      <div className='cards-root__card-wrapper' id='carousel'>
         <Slider {...settings}>
           {NFTS.map((element) => (
             <NFT
