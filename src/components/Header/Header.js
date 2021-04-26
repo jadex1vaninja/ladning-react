@@ -9,6 +9,7 @@ const Header = () => {
   const [language, setLanguage] = useState('en');
   const { t, i18n } = useTranslation();
   const { isPhone } = useWindowInfo();
+  const phone = isPhone();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -57,7 +58,11 @@ const Header = () => {
       </div>
       <div className='header__inner'>
         <div className='header__img-wrapper'>
-          <img className='header__logo1' src={imgPath + 'logo.png'} alt='' />
+          <img
+            className='header__logo1'
+            src={imgPath + 'Canelo-Logo.png'}
+            alt='canelo-logo'
+          />
         </div>
         <div className='header__text-wrapper'>
           <h1 className='header__title'>{t('header.title')}</h1>
@@ -74,16 +79,16 @@ const Header = () => {
         </div>
       </div>
       <div className='header__link-wrap'>
-        <p className='header__link-text'>
-          <a href='#subscribe'>
+        <div className='header__link-text'>
+          <a className='header__hyperlink' href='#subscribe'>
             <button className='header__btn'>{t('header.learn-more')}</button>
           </a>
-          <a href='#carousel'>
+          <a className='header__hyperlink' href='#carousel'>
             <button className='header__btn'>{t('header.see-artworks')}</button>
           </a>
-        </p>
+        </div>
       </div>
-      {!isPhone() && (
+      {!phone && (
         <div className='header__banner'>
           <img
             className='header__banner-img'

@@ -31,7 +31,11 @@ const Footer = () => {
         </div>
         <div className='footer__inner'>
           <div className='footer__img-wrapper'>
-            <img className='footer__logo1' src={imgPath + 'logo.png'} alt='' />
+            <img
+              className='footer__logo1'
+              src={imgPath + 'Canelo-Logo.png'}
+              alt='canelo-logo'
+            />
           </div>
           <div className='footer__text-wrapper'>
             <a target='_blank' href={dazn_link}>
