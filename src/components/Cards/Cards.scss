@@ -338,6 +338,10 @@
   }
 
   &__link {
+    position: absolute;
+    bottom: 1.625rem;
+    left: 0;
+    width: 100%;
     color: $brand-yellow;
     font-size: 1.625rem;
     line-height: 2.813rem;
