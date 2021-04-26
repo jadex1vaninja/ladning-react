@@ -6,7 +6,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 2.5rem 2.5rem 0;
+  //padding: 2.5rem 2.5rem 0;
 
   @include _1024 {
     padding-bottom: 10rem;
@@ -15,7 +15,7 @@
   &__language {
     display: flex;
     justify-content: flex-end;
-    //padding: 13px 13px 16px;
+    padding: 13px 13px 16px;
   }
 
   &__language-list {
