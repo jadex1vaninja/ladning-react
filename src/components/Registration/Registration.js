@@ -15,7 +15,15 @@ const Registration = () => {
   const [formFields, setFormFields] = useState(initialFields);
   const [showModal, setShowModal] = useState(false);
 
-  const closeModal = () => setShowModal(false);
+  const closeModal = () => {
+    setShowModal(false);
+    setFormFields((prevState) => {
+      return {
+        ...prevState,
+        ...initialFields
+      };
+    });
+  };
   const openModal = () => setShowModal(true);
 
   const onChange = (event, name) => {
