@@ -95,6 +95,8 @@
 
   &__logo1 {
     width: 36px;
+    height: 36px;
+
     margin-right: 35px;
 
     @include _768 {
