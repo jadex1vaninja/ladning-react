@@ -26,11 +26,13 @@ const Video = () => {
       />
       <div className='video__main-content'>
         <div className='video__sub-content'>
+            <a href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'>
           <img
             src={imgPath + 'DAZN-logo.png'}
             alt='logo'
             className='video__logo'
           />
+        </a>
         </div>
         <img src={imgPath + 'title.png'} alt='title' className='video__title' />
         <span className='video__pre-fight'>{t('video-block.banner-text')}</span>

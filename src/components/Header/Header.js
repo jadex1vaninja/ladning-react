@@ -38,11 +38,13 @@ const Header = () => {
         </ul>
       </div>
       <div className='header__dazn-logo'>
+         <a href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'>
         <img
           className='header__dazn-img'
           src={imgPath + 'DAZN-logo.png'}
           alt='DAZN'
         />
+        </a>
       </div>
       <div className='header__promo'>
         <img

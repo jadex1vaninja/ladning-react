@@ -24,11 +24,13 @@ const Footer = () => {
             <img className='footer__logo1' src={imgPath + 'logo.png'} alt='' />
           </div>
           <div className='footer__text-wrapper'>
-            <img
-              className='footer__logo2'
-              src={imgPath + 'DAZN-logo.png'}
-              alt=''
-            />
+            <a href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'>
+              <img
+                className='footer__logo2'
+                src={imgPath + 'DAZN-logo.png'}
+                alt=''
+              />
+            </a>
           </div>
           <div className='footer__img-wrapper'>
             <img
