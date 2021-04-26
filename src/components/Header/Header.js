@@ -75,6 +75,7 @@ const Header = () => {
           {t('header.link-text-one')}{' '}
           <a
             className='header__link'
+            target="_blank"
             href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'
           >
             {t('header.link-text-two')}
