@@ -9,7 +9,7 @@ const NFT = ({ img, type, title, description, rarity }) => {
       <img src={img} alt='card' />
       <div className='cards-root__content-wrapper'>
         <div className='cards-root__inner'>
-          <h4 className='cards-root__card-title cards-root__card-title--legend'>
+          <h4 className={`cards-root__card-title cards-root__card-title--${type}`}>
             {type}
           </h4>
           <h3 className='first-description'>{title}</h3>
