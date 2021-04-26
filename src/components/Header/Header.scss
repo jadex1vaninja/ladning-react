@@ -220,6 +220,8 @@
 
   &__logo3 {
     width: 125px;
+    height: 25px;
+
     margin-left: 5px;
 
     @include _768 {
