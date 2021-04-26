@@ -29,7 +29,7 @@ const Video = () => {
             />
           </a>
         </div>
-        <img src={imgPath + 'promo.png'} alt='title' className='video__title' />
+        <img src={imgPath + 'promo2.png'} alt='title' className='video__title' />
         <span className='video__pre-fight'>{t('video-block.banner-text')}</span>
       </div>
     </div>

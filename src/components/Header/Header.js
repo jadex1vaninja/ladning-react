@@ -51,7 +51,7 @@ const Header = () => {
       <div className='header__promo'>
         <img
           className='header__promo-img'
-          src={imgPath + 'promo.png'}
+          src={imgPath + 'promo2.png'}
           alt='promo'
         />
         <p className='header__promo-text'>{t('header.promo-text')}</p>
