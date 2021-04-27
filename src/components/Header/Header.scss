@@ -217,7 +217,7 @@
     height: 36px;
 
     @include _768 {
-      margin-right: 4rem;
+      margin-right: 2.5rem;
 
     }
   }
@@ -226,12 +226,13 @@
     width: 100%;
     max-width: 124px;
     margin-left: 5px;
+    height: 20px;
 
     @include _768 {
       //width: 9vw;
       width: 100%;
       max-width: 156px;
-      margin-left: 3rem;
+      margin-left: 2.5rem;
   }
 }
 
