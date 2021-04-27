@@ -8,13 +8,20 @@
   display: flex;
   justify-content: center;
   padding-top: 6rem;
+  width: 100%;
+
+  &__inner-wrapper {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+  }
 
   &__img-wrapper {
-
+    width: 40%;
   }
 
   &__content {
-
+    width: 60%;
   }
 
   &__sub-title {
@@ -37,6 +44,7 @@
   &__type {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 3.5rem;
   }
 
   &__rarity {
@@ -65,6 +73,7 @@
   &__details {
     font-family: 'DAZNTrim-Bold';
     display: flex;
+    justify-content: space-between;
   }
 
   &__price-block {
@@ -74,6 +83,7 @@
   }
 
   &__price-title {
+    color: $brand-white;
     font-size: 1.25rem;
     letter-spacing: 3px;
     line-height: 1.688rem;
@@ -81,14 +91,60 @@
   }
 
   &__price-value {
+    color: $brand-white;
     font-size: 5rem;
     line-height: 6.25rem;
+    margin-bottom: 0;
   }
 
   &__price-sign {
+    color: $brand-white;
     font-family: 'DAZNTrim-Light';
     font-size: 1.25rem;
     letter-spacing: 3px;
     line-height: 1.688rem;
+    text-transform: uppercase;
   }
+
+  &__countdown-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__countdown-title {
+    color: $brand-white;
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    line-height: 1.688rem;
+    text-transform: uppercase;
+  }
+
+  &__time-section {
+    display: flex;
+  }
+
+  &__time-value {
+    color: $brand-white;
+    font-size: 5rem;
+    line-height: 6.25rem;
+  }
+
+  &__time-chunk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 115px;
+  }
+
+  &__indicator {
+    color: $brand-white;
+    font-family: 'DAZNTrim-Light';
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    line-height: 1.688rem;
+    text-transform: uppercase;
+  }
+
 }
