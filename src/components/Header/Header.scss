@@ -278,8 +278,8 @@
 
     @include _768 {
       margin-right: 4rem;
+    }
   }
-}
 
   &__logo3 {
     width: 125px;
@@ -288,7 +288,6 @@
     @include _768 {
       width: 9vw;
       margin-left: 3rem;
+    }
   }
-}
-
 }

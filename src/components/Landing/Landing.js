@@ -7,6 +7,7 @@ import Footer from '../Footer';
 import Registration from '../Registration';
 import OwnItSection from '../OwnItSection';
 import FeaturedNFT from '../FeaturedNFT';
+import FAQs from '../FAQs';
 import './Landing.scss';
 
 const Landing = () => {
@@ -15,6 +16,7 @@ const Landing = () => {
       <Header />
       <main className='root'>
         <FeaturedNFT />
+        <FAQs />
         {/*<OwnItSection />*/}
         <Registration />
         <Cards />

@@ -2,12 +2,12 @@
 @import '../../variables';
 
 .featured {
-  background-image: url('../../assets/img/black-bg.png');
+  background-image: url('../../assets/img/featured-bg.png');
   background-size: cover;
   color: $brand-white;
   display: flex;
   justify-content: center;
-  padding-top: 6rem;
+  padding: 6rem 2.5rem 0;
   width: 100%;
 
   &__inner-wrapper {
@@ -31,7 +31,6 @@
 
   &__img-wrapper {
     width: 40%;
-    margin-right: 5%;
   }
 
   &__content {
@@ -58,7 +57,7 @@
 
   &__type {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 3.5rem;
   }
 
@@ -67,6 +66,8 @@
     font-size: 1.875rem;
     letter-spacing: 1px;
     line-height: 2.813rem;
+    margin-right: 3rem;
+    margin-bottom: 0;
   }
 
   &__edition {
@@ -75,7 +76,7 @@
     font-size: 1.625rem;
     letter-spacing: 1px;
     line-height: 2.813rem;
-    //margin: 0 auto;
+    margin: 0;
     width: min-content;
     text-align: center;
 
@@ -88,13 +89,27 @@
   &__details {
     font-family: 'DAZNTrim-Bold';
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin-bottom: 2.625rem;
   }
 
   &__price-block {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: flex-start;
+    position: relative;
+    padding-right: 30px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 2px;
+      background-color: #fff;
+      height: 100%;
+    }
   }
 
   &__price-title {
@@ -103,6 +118,7 @@
     letter-spacing: 3px;
     line-height: 1.688rem;
     text-transform: uppercase;
+    margin: 0;
   }
 
   &__price-value {
@@ -119,6 +135,7 @@
     letter-spacing: 3px;
     line-height: 1.688rem;
     text-transform: uppercase;
+    margin: 0;
   }
 
   &__countdown-block {
@@ -133,6 +150,7 @@
     letter-spacing: 3px;
     line-height: 1.688rem;
     text-transform: uppercase;
+    margin: 0;
   }
 
   &__time-section {
@@ -143,6 +161,7 @@
     color: $brand-white;
     font-size: 5rem;
     line-height: 6.25rem;
+    margin: 0;
   }
 
   &__time-chunk {
@@ -151,6 +170,66 @@
     align-items: center;
     width: 100%;
     min-width: 115px;
+    position: relative;
+    margin: 0;
+    padding-left: 0;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 18px;
+      width: 2px;
+      background-color: #fff;
+      height: 20px;
+    }
+
+    &:last-child {
+      &:after {
+        content: none;
+        padding-left: 0;
+      }
+    }
+
+    @include _768 {
+      width: 20%;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 22px;
+        width: 2px;
+        background-color: #fff;
+        height: 30px;
+      }
+    }
+
+    @include _1024 {
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 30px;
+        width: 2px;
+        background-color: $brand-white;
+        height: 39px;
+      }
+    }
+
+    @include _1440 {
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 30px;
+        width: 2px;
+        background-color: $brand-white;
+        height: 39px;
+      }
+    }
   }
 
   &__indicator {
@@ -160,6 +239,23 @@
     letter-spacing: 3px;
     line-height: 1.688rem;
     text-transform: uppercase;
+    margin: 0;
   }
 
+  &__CTA-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__CTA {
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'DAZNTrim-Bold';
+    border: none;
+    outline: none;
+    background: #fafe53;
+    padding: 1rem;
+    font-size: 1.563rem;
+    letter-spacing: 1px;
+  }
 }

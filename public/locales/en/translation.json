@@ -19,6 +19,24 @@
       "btn-two": "subscribe to dazn"
     }
   },
+  "featured-nft": {
+    "sub-title": "FEATURED NFT",
+    "title": "KNOCKOUT – CANELO EDITION",
+    "rarity": "1 of 1",
+    "type": "Legendary Edition",
+    "price": {
+      "title": "Current price",
+      "sign": "ETH"
+    },
+    "countdown": {
+      "title": "Auction ending in",
+      "days": "days",
+      "hours": "hrs",
+      "minutes": "mins",
+      "seconds": "secs"
+    },
+    "CTA": "SEE ARTWORKS"
+  },
   "own-it-block": {
     "title": "Own a piece of history",
     "description-part-one": "This stunning collection of NFTs commemorates the fight and even gets buyers into the action! All NFTs come with special unlockable bonuses! The extremely rare Gold and Legendary NFTs unlock premium items and experiences like signed gloves by the fighters and tickets to a future fight. Check out the limited NFT collections below and check back for more details soon.",

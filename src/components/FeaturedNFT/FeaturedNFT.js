@@ -9,30 +9,31 @@ const FeaturedNFT = () => {
   const date = new Date('May 8, 2021 07:00:00 GMT-04:00');
 
   const renderer = ({ days, minutes, seconds }) => {
+    const DOUBLE_NUM = 10;
     return (
       <div className='featured__time-section'>
         <p className='featured__time-chunk'>
-          <span className='featured__time-value'>{days}</span>
-          <span className='featured__indicator'>
-            {t('marketplace.countdown.days')}
+          <span className='featured__time-value'>
+            {Number(days) < DOUBLE_NUM ? `0${days}` : days}
           </span>
-        </p>
-        {/*<p className='cards-root__time-chunk'>*/}
-        {/*  <span className='cards-root__time-value'>{hours}</span>*/}
-        {/*  <span className='cards-root__indicator'>*/}
-        {/*    {t('marketplace.countdown.hours')}*/}
-        {/*  </span>*/}
-        {/*</p>*/}
-        <p className='featured__time-chunk'>
-          <span className='featured__time-value'>{minutes}</span>
           <span className='featured__indicator'>
-            {t('marketplace.countdown.minutes')}
+            {t('featured-nft.countdown.days')}
           </span>
         </p>
         <p className='featured__time-chunk'>
-          <span className='featured__time-value'>{seconds}</span>
+          <span className='featured__time-value'>
+            {Number(minutes) < DOUBLE_NUM ? `0${minutes}` : minutes}
+          </span>
           <span className='featured__indicator'>
-            {t('marketplace.countdown.seconds')}
+            {t('featured-nft.countdown.minutes')}
+          </span>
+        </p>
+        <p className='featured__time-chunk'>
+          <span className='featured__time-value'>
+            {Number(seconds) < DOUBLE_NUM ? `0${seconds}` : seconds}
+          </span>
+          <span className='featured__indicator'>
+            {t('featured-nft.countdown.seconds')}
           </span>
         </p>
       </div>
@@ -46,7 +47,7 @@ const FeaturedNFT = () => {
           <img src={imgPath + 'own-it.png'} alt='card' />
         </div>
         <div className='featured__content'>
-          <h6 className='featured__sub-title'>FEATURED NFT </h6>
+          <h6 className='featured__sub-title'>FEATURED NFT</h6>
           <h1 className='featured__title'>KNOCKOUT – CANELO EDITION</h1>
           <div className='featured__type'>
             <h2 className='featured__rarity'>1 of 1</h2>
@@ -64,6 +65,9 @@ const FeaturedNFT = () => {
               <h2 className='featured__countdown-title'>Auction ending in</h2>
               <Countdown date={date} daysInHours={true} renderer={renderer} />
             </div>
+          </div>
+          <div className='featured__CTA-wrap'>
+            <button className='featured__CTA'>SEE ARTWORKS</button>
           </div>
         </div>
       </div>

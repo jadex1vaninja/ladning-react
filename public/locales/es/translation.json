@@ -19,6 +19,24 @@
       "btn-two": "btn-two"
     }
   },
+  "featured-nft": {
+    "sub-title": "sub-title",
+    "title": "title",
+    "rarity": "rarity",
+    "type": "type",
+    "price": {
+      "title": "price.title",
+      "sign": "sign"
+    },
+    "countdown": {
+      "title": "countdown.title",
+      "days": "days",
+      "hours": "hrs",
+      "minutes": "mins",
+      "seconds": "secs"
+    },
+    "CTA": "CTA"
+  },
   "own-it-block": {
     "title": "TEN TU PROPIO PEDAZO DE HISTORIA",
     "description-part-one": "Esta impresionante colección de fichas no fungibles (NFT) conmemora la pelea ¡e incluso hace que los compradores sean parte de la acción! ¡Todas las NFT vienen con bonos desbloqueables especiales! Las NFT Oro y Legendaria son extremadamente raras y desbloquean artículos y experiencias prémium, como guantes firmados por los peleadores y entradas a una pelea futura. Echa un vistazo a continuación a las colecciones limitadas de NFT y vuelve pronto para conocer más detalles.",
