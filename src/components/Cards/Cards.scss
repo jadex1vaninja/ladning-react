@@ -300,10 +300,11 @@
     color: $brand-white;
     font-weight: 500;
     position: relative;
-    padding-top: 100px;
+    padding-top: 125px;
     border-radius: 1rem;
     text-align: center;
     min-height: 650px;
+
     @media screen and (max-width: 600px) {
       min-height: 620px;
     }

@@ -10,62 +10,61 @@ export const imgPath = process.env.PUBLIC_URL + '/assets/img/';
 export const NFTS = [
   {
     type: 'legendary',
-    img: imgPath + 'nft-legend.png',
+    img: imgPath + 'Legendary_2_Knockout_Canelo_1_1.png',
     title: 'canelo-legendary-title',
     rarity: 'rarity-1',
     description: 'canelo-legendary-description'
   },
   {
     type: 'legendary',
-    img: imgPath + 'nft-legend.png',
+    img: imgPath + 'Legendary_1_Knockout_Saunders_1_1.png',
     title: 'saunders-legendary-title',
     rarity: 'rarity-1',
     description: 'saunders-legendary-description'
   },
   {
     type: 'gold',
-    img: imgPath + 'nft-gold.png',
+    img: imgPath + 'Gold_1_TaleOfTheTape_Canelo_1_1_Gold.png',
     title: 'canelo-gold-title',
     rarity: 'rarity-1',
     description: 'canelo-gold-description'
   },
   {
     type: 'gold',
-    img: imgPath + 'nft-gold.png',
+    img: imgPath + 'Gold_2_TaleOfTheTape_Saunders_1_1_Gold.png',
     title: 'saunders-gold-title',
     rarity: 'rarity-1',
     description: 'saunders-gold-description'
   },
   {
     type: 'gold',
-    img: imgPath + 'nft-gold.png',
+    img: imgPath + 'Gold_3_Prediction_RND_1_Gold.png',
     title: 'prediction-decision-title',
     rarity: 'rarity-13',
     description: 'prediction-decision-description'
   },
   {
     type: 'silver',
-    img: imgPath + 'nft-legend.png',
+    img: imgPath + 'Silver_1_A1_TaleOfTheTape_Canelo_1_1_Silver.png',
     title: 'canelo-silver-title',
     rarity: 'rarity-50',
     description: 'canelo-silver-description'
   },
   {
     type: 'silver',
-    img: imgPath + 'nft-legend.png',
+    img: imgPath + 'Silver_2_TaleOfTheTape_Saunders_1_1_Silver.png',
     title: 'saunders-silver-title',
     rarity: 'rarity-50',
     description: 'saunders-silver-description'
   },
   {
     type: 'bronze',
-    img: imgPath + 'nft-bronze.png',
+    img: imgPath + 'Bronze_1_Prediction_RND_1_Bronze.png',
     title: 'prediction-decision-title-bronze',
     rarity: 'rarity-100',
     description: 'prediction-decision-description-bronze'
   }
 ];
-
 
 export const dazn_link =
   'https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT';
