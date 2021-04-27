@@ -61,7 +61,7 @@
   },
   "register": {
     "title": "Don't miss the drop",
-    "content-text": "Be the first to find out more information about the first ever NFT drop around a world championship fight. Sign up here:",
+    "content-text": "Be the first to find out more information about the first NFT collection tied to a world championship fight.",
     "input-firstname-placeholder": "First name",
     "input-lastname-placeholder": "Last name",
     "input-email-placeholder": "Email",
@@ -70,7 +70,8 @@
     "checkbox-text": "If you do not want to receive these messages please click here",
     "modal-title": "Thank you",
     "modal-text": "Keep an eye on your email inbox for exclusive news about DAZN NFTs!",
-    "modal-btn": "Ok"
+    "modal-btn": "Ok",
+    "CTA": "Sign up here"
   },
   "what-is-block": {
     "title": "WHAT IS AN NFT?",

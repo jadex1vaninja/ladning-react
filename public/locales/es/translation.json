@@ -61,7 +61,7 @@
   },
   "register": {
     "title": "NO TE PIERDAS SU LLEGADA",
-    "content-text": "SÉ EL PRIMERO EN CONOCER MÁS INFORMACIÓN SOBRE LA PRIMERA LLEGADA DE LAS NFT CON MOTIVO DE UNA PELEA POR UN CAMPEONATO MUNDIAL EN LA HISTORIA. REGÍSTRATE AQUÍ:",
+    "content-text": "Sé el primero en obtener más información sobre la primera colección de NFT vinculada a una pelea por el campeonato mundial.",
     "input-firstname-placeholder": "NOMBRE",
     "input-lastname-placeholder": "APELLIDO",
     "input-email-placeholder": "CORREO ELECTRÓNICO",
@@ -70,7 +70,8 @@
     "checkbox-text": "Si no deseas recibir estos mensajes, haz clic aquí.",
     "modal-title": "Gracias por registrarte",
     "modal-text": "modal.text",
-    "modal-btn": "OK"
+    "modal-btn": "OK",
+    "CTA": "Registrate aquí"
   },
   "what-is-block": {
     "title": "¿QUÉ ES UNA NFT?",

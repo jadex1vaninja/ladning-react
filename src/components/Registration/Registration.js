@@ -67,52 +67,55 @@ const Registration = () => {
       </div>
       <div className='register__main-content'>
         <p>{t('register.content-text')}</p>
-        <div className='register__form'>
-          <form onSubmit={onSubmit}>
-            <input
-              required
-              id='name'
-              value={formFields.name}
-              placeholder={t('register.input-firstname-placeholder')}
-              onChange={(event) => onChange(event, 'name')}
-            />
-            <input
-              required
-              id='surname'
-              value={formFields.surname}
-              placeholder={t('register.input-lastname-placeholder')}
-              onChange={(event) => onChange(event, 'surname')}
-            />
-            <input
-              required
-              type='email'
-              id='email'
-              value={formFields.email}
-              placeholder={t('register.input-email-placeholder')}
-              onChange={(event) => onChange(event, 'email')}
-            />
+        <a className='register__CTA' href='https://cloud.in.dazn.com/NFT'>
+          {t('register.CTA')}
+        </a>
+        {/*<div className='register__form'>*/}
+        {/*  <form onSubmit={onSubmit}>*/}
+        {/*    <input*/}
+        {/*      required*/}
+        {/*      id='name'*/}
+        {/*      value={formFields.name}*/}
+        {/*      placeholder={t('register.input-firstname-placeholder')}*/}
+        {/*      onChange={(event) => onChange(event, 'name')}*/}
+        {/*    />*/}
+        {/*    <input*/}
+        {/*      required*/}
+        {/*      id='surname'*/}
+        {/*      value={formFields.surname}*/}
+        {/*      placeholder={t('register.input-lastname-placeholder')}*/}
+        {/*      onChange={(event) => onChange(event, 'surname')}*/}
+        {/*    />*/}
+        {/*    <input*/}
+        {/*      required*/}
+        {/*      type='email'*/}
+        {/*      id='email'*/}
+        {/*      value={formFields.email}*/}
+        {/*      placeholder={t('register.input-email-placeholder')}*/}
+        {/*      onChange={(event) => onChange(event, 'email')}*/}
+        {/*    />*/}
 
-            <div className='register__form-info'>
-              <p>{t('register.form-text')}</p>
-              <div className='register__checkbox'>
-                <label htmlFor='receiveMessages'>
-                  {t('register.checkbox-text')}
-                </label>
-                <input
-                  type='checkbox'
-                  id='receiveMessages'
-                  onChange={toggleCheckbox}
-                />
-              </div>
-            </div>
+        {/*    <div className='register__form-info'>*/}
+        {/*      <p>{t('register.form-text')}</p>*/}
+        {/*      <div className='register__checkbox'>*/}
+        {/*        <label htmlFor='receiveMessages'>*/}
+        {/*          {t('register.checkbox-text')}*/}
+        {/*        </label>*/}
+        {/*        <input*/}
+        {/*          type='checkbox'*/}
+        {/*          id='receiveMessages'*/}
+        {/*          onChange={toggleCheckbox}*/}
+        {/*        />*/}
+        {/*      </div>*/}
+        {/*    </div>*/}
 
-            <div className='register__submit'>
-              <button type='submit' id='submit'>
-                {t('register.submit-btn-text')}
-              </button>
-            </div>
-          </form>
-        </div>
+        {/*    <div className='register__submit'>*/}
+        {/*      <button type='submit' id='submit'>*/}
+        {/*        {t('register.submit-btn-text')}*/}
+        {/*      </button>*/}
+        {/*    </div>*/}
+        {/*  </form>*/}
+        {/*</div>*/}
       </div>
       <Modal
         className='register__modal'

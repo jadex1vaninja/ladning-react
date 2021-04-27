@@ -73,8 +73,12 @@ const Header = () => {
         <div className='header__img-wrapper'>
           <img
             className='header__logo3'
-            src={imgPath + 'RGB_white_red-min.png'}
-            alt=''
+            src={
+              !phone
+                ? imgPath + 'RGB_white_red-min.png'
+                : imgPath + 'matchroom-mobile.png'
+            }
+            alt='matchroom'
           />
         </div>
       </div>

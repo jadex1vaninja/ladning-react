@@ -263,7 +263,7 @@
         #1c1c1c 67%,
         #3d3d3d 99%
       );
-      width: 10rem;
+      width: 12rem;
       height: 2.5rem;
     }
 
@@ -378,21 +378,21 @@
   }
 
   &__link {
-    position: absolute;
-    bottom: 1.625rem;
-    left: 0;
+    //position: absolute;
+    //bottom: 1.625rem;
+    //left: 0;
     width: 100%;
     color: $brand-yellow;
-    font-size: 1.625rem;
+    font-size: 1.5rem;
     line-height: 2.813rem;
 
     &:hover {
       text-decoration: none;
       color: $brand-yellow;
     }
-    @media screen and (max-width: 600px) {
-      position: initial;
-      font-size: 1.5rem;
+
+    @include _768 {
+      font-size: 1.625rem;
     }
   }
 }

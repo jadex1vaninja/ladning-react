@@ -47,28 +47,37 @@ const Cards = () => {
   const date = new Date('May 8, 2021 07:00:00 GMT-04:00');
 
   const renderer = ({ days, hours, minutes, seconds }) => {
+    const DOUBLE_NUM = 10;
     return (
       <div className='cards-root__time-section'>
         <p className='cards-root__time-chunk'>
-          <span className='cards-root__time-value'>{days}</span>
+          <span className='cards-root__time-value'>
+            {Number(days) < DOUBLE_NUM ? `0${days}` : days}
+          </span>
           <span className='cards-root__indicator'>
             {t('marketplace.countdown.days')}
           </span>
         </p>
         <p className='cards-root__time-chunk'>
-          <span className='cards-root__time-value'>{hours}</span>
+          <span className='cards-root__time-value'>
+            {Number(hours) < DOUBLE_NUM ? `0${hours}` : hours}
+          </span>
           <span className='cards-root__indicator'>
             {t('marketplace.countdown.hours')}
           </span>
         </p>
         <p className='cards-root__time-chunk'>
-          <span className='cards-root__time-value'>{minutes}</span>
+          <span className='cards-root__time-value'>
+            {Number(minutes) < DOUBLE_NUM ? `0${minutes}` : minutes}
+          </span>
           <span className='cards-root__indicator'>
             {t('marketplace.countdown.minutes')}
           </span>
         </p>
         <p className='cards-root__time-chunk'>
-          <span className='cards-root__time-value'>{seconds}</span>
+          <span className='cards-root__time-value'>
+            {Number(seconds) < DOUBLE_NUM ? `0${seconds}` : seconds}
+          </span>
           <span className='cards-root__indicator'>
             {t('marketplace.countdown.seconds')}
           </span>
@@ -78,7 +87,7 @@ const Cards = () => {
   };
 
   return (
-    <section className='cards-root' >
+    <section className='cards-root'>
       <h2 className='cards-root__title'>{t('marketplace.title')}</h2>
       <div className='cards-root__countdown'>
         <Countdown date={date} daysInHours={true} renderer={renderer} />
