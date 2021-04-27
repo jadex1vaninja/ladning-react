@@ -47,27 +47,33 @@ const FeaturedNFT = () => {
           <img src={imgPath + 'own-it.png'} alt='card' />
         </div>
         <div className='featured__content'>
-          <h6 className='featured__sub-title'>FEATURED NFT</h6>
-          <h1 className='featured__title'>KNOCKOUT – CANELO EDITION</h1>
+          <h6 className='featured__sub-title'>{t('featured-nft.sub-title')}</h6>
+          <h1 className='featured__title'>{t('featured-nft.title')}</h1>
           <div className='featured__type'>
-            <h2 className='featured__rarity'>1 of 1</h2>
+            <h2 className='featured__rarity'>{t('featured-nft.rarity')}</h2>
             <h2 className='featured__edition featured__edition--legendary'>
-              Legendary Edition
+              {t('featured-nft.type')}
             </h2>
           </div>
           <div className='featured__details'>
             <div className='featured__price-block'>
-              <h2 className='featured__price-title'>Current price</h2>
+              <h2 className='featured__price-title'>
+                {t('featured-nft.price.title')}
+              </h2>
               <p className='featured__price-value'>40</p>
-              <p className='featured__price-sign'>ETH</p>
+              <p className='featured__price-sign'>
+                {t('featured-nft.price.sign')}
+              </p>
             </div>
             <div className='featured__countdown-block'>
-              <h2 className='featured__countdown-title'>Auction ending in</h2>
+              <h2 className='featured__countdown-title'>
+                {t('featured-nft.countdown.title')}
+              </h2>
               <Countdown date={date} daysInHours={true} renderer={renderer} />
             </div>
           </div>
           <div className='featured__CTA-wrap'>
-            <button className='featured__CTA'>SEE ARTWORKS</button>
+            <button className='featured__CTA'>{t('featured-nft.CTA')}</button>
           </div>
         </div>
       </div>

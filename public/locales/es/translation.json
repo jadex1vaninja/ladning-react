@@ -26,7 +26,7 @@
     "type": "type",
     "price": {
       "title": "price.title",
-      "sign": "sign"
+      "sign": "price.sign"
     },
     "countdown": {
       "title": "countdown.title",
