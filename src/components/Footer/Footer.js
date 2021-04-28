@@ -38,7 +38,7 @@ const Footer = () => {
             />
           </div>
           <div className='footer__text-wrapper'>
-            <a target='_blank' href={dazn_link}>
+            <a target='_blank' rel='noreferrer' href={dazn_link}>
               <img
                 className='footer__logo2'
                 src={imgPath + 'DAZN-logo.png'}

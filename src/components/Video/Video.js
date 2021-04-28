@@ -21,7 +21,7 @@ const Video = () => {
       />
       <div className='video__main-content'>
         <div className='video__sub-content'>
-          <a target='_blank' href={dazn_link}>
+          <a target='_blank' rel='noreferrer' href={dazn_link}>
             <img
               src={imgPath + 'DAZN-logo.png'}
               alt='logo'
@@ -29,7 +29,11 @@ const Video = () => {
             />
           </a>
         </div>
-        <img src={imgPath + 'promo2.png'} alt='title' className='video__title' />
+        <img
+          src={imgPath + 'promo2.png'}
+          alt='title'
+          className='video__title'
+        />
         <span className='video__pre-fight'>{t('video-block.banner-text')}</span>
       </div>
     </div>
