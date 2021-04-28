@@ -19,7 +19,10 @@ const NFT = ({ img, type, title, description, rarity }) => {
         </div>
         <div className='cards-root__auction-wrapper'>
           <p className='cards-root__amount'>{t(`nft-card.${rarity}`)}</p>
-          <p className='cards-root__desc'>{t(`nft-card.${description}`)}</p>
+          <p
+            className='cards-root__desc'
+            dangerouslySetInnerHTML={{__html: t(`nft-card.${description}`)}}
+          ></p>
           <a className='cards-root__link'>
             {t('marketplace.ntfs.legendary.link')}
           </a>
