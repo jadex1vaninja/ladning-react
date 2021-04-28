@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { imgPath } from '../Landing/Landing';
 import { useWindowInfo } from '../../hooks/useWindowInfo';
@@ -14,6 +14,15 @@ const Header = () => {
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
+
+  const getLanguageFromStorage = () => {
+    const lang = localStorage.getItem('i18nextLng') || 'en';
+    return lang;
+  };
+
+  useEffect(() => {
+    setLanguage(getLanguageFromStorage());
+  }, []);
 
   return (
     <header className='header'>
