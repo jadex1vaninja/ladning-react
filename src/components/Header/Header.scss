@@ -221,20 +221,27 @@
 
     }
   }
-
-  &__logo3 {
-    width: 100%;
-    max-width: 124px;
-    margin-left: 5px;
+&__logo3 {
+    width: 108px;
     height: 20px;
-
-    @include _768 {
-      //width: 9vw;
-      width: 100%;
-      max-width: 156px;
+    @include _1024 {
+      width: 9vw;
       margin-left: 2.5rem;
+    }
   }
-}
+//   &__logo3 {
+//     width: 100%;
+//     max-width: 124px;
+//     margin-left: 5px;
+//     height: 20px;
+
+//     @include _768 {
+//       //width: 9vw;
+//       width: 100%;
+//       max-width: 156px;
+//       margin-left: 2.5rem;
+//   }
+// }
 
   &__title {
     color: white;
