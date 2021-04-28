@@ -9,7 +9,7 @@
   padding: 2.5rem 2.5rem 0;
 
   @include _1024 {
-    padding-bottom: 10rem;
+    padding-bottom: 3rem;
   }
 
   &__navigation {
@@ -275,7 +275,7 @@
     font-family: 'DAZNTrim-Bold';
     border: none;
     outline: none;
-    background: #fafe53;
+    background: $brand-yellow;
     padding: 1rem;
     font-size: 1.563rem;
     letter-spacing: 1px;

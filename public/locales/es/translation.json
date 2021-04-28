@@ -37,13 +37,6 @@
     },
     "CTA": "CTA"
   },
-  "own-it-block": {
-    "title": "TEN TU PROPIO PEDAZO DE HISTORIA",
-    "description-part-one": "Esta impresionante colección de fichas no fungibles (NFT) conmemora la pelea ¡e incluso hace que los compradores sean parte de la acción! ¡Todas las NFT vienen con bonos desbloqueables especiales! Las NFT Oro y Legendaria son extremadamente raras y desbloquean artículos y experiencias prémium, como guantes firmados por los peleadores y entradas a una pelea futura. Echa un vistazo a continuación a las colecciones limitadas de NFT y vuelve pronto para conocer más detalles.",
-    "description-part-two": "LAS PREVENTAS COMENZARÁN EL DÍA DE LA PELEA:",
-    "description-date": "SÁBADO, 8 DE MAYO",
-    "link": "own-it-block.link"
-  },
   "marketplace": {
     "title": "CUENTA REGRESIVA",
     "countdown": {
@@ -101,6 +94,9 @@
     "title": "title",
     "CTA-one": "CTA-one",
     "CTA-two": "CTA-two"
+  },
+  "footer": {
+    "text": "text",
+    "CTA": "CTA"
   }
-
 }

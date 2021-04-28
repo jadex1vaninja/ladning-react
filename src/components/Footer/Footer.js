@@ -1,8 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { imgPath } from '../../const';
 import './Footer.scss';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className='footer'>
       <div className='footer__banner'>
@@ -18,9 +21,19 @@ const Footer = () => {
             alt='face the fearless'
           />
         </div>
+        <div className='footer__sign-block'>
+          <p className='footer__text'>{t('footer.text')}</p>
+          <a className='footer__CTA' href=''>
+            {t('footer.CTA')}
+          </a>
+        </div>
         <div className='footer__inner'>
           <div className='footer__img-wrapper'>
-            <img className='footer__logo1' src={imgPath + 'logo.png'} alt='' />
+            <img
+              className='footer__logo1'
+              src={imgPath + 'logo.png'}
+              alt='logo'
+            />
           </div>
           <div className='footer__text-wrapper'>
             <a href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'>
@@ -35,7 +48,7 @@ const Footer = () => {
             <img
               className='footer__logo3'
               src={imgPath + 'matchroom-logo.png'}
-              alt=''
+              alt='logo'
             />
           </div>
         </div>
