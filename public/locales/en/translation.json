@@ -84,24 +84,22 @@
       }
     }
   },
-  "video-block": {
-    "banner-text": "POST-FIGHT HIGHLIGHTS | COMING SOON"
-  },
   "register": {
     "title": "Don't miss the drop",
-    "content-text": "Be the first to find out more information about the first ever NFT drop around a world championship fight. Sign up here:",
+    "content-text": "SIGN UP TO BE THE FIRST TO KNOW ABOUT FIGHT HIGHLIGHT NFTs AND OTHER FUTURE DAZN NFT DROPS",
     "input-firstname-placeholder": "First name",
     "input-lastname-placeholder": "Last name",
     "input-email-placeholder": "Email",
-    "submit-btn-text": "Submit",
-    "form-text": "Every now and then we may send you e-mails with news, promotions or special offers about DAZN which may be of interest to you.",
+    "submit-btn-text": "DROPPING POST FIGHT",
+    "form-text": "Every now and then we may send you e-mails with news, promotionsor special offers about DAZN which may be of interest to you.",
     "checkbox-text": "If you do not want to receive these messages please click here",
     "modal-title": "Thank you",
     "modal-text": "Keep an eye on your email inbox for exclusive news about DAZN NFTs!",
     "modal-btn": "Ok"
   },
-  "what-is-block": {
-    "title": "WHAT IS AN NFT?",
-    "info-text": "Non-fungible tokens (NFTs) are digital collectibles stored on a blockchain. When you buy an NFT, there is a permanent record of your ownership and digital evidence that a particular artist created the work."
+  "terms": {
+    "title": "TERMS & CONDITIONS",
+    "CTA-one": "T&Cs",
+    "CTA-two": "PRIVACY POLICY"
   }
 }

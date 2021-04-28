@@ -35,9 +35,11 @@ const Header = () => {
         </ul>
         <div className='header__terms-language'>
           <ul className='header__terms-list'>
-            <li className='header__terms-item'>{t('header.list.list-t&c')}</li>
             <li className='header__terms-item'>
-              {t('header.list.list-privacy')}
+              <a href='#terms'>{t('header.list.list-t&c')}</a>
+            </li>
+            <li className='header__terms-item'>
+              <a href='#terms'>{t('header.list.list-privacy')}</a>
             </li>
           </ul>
           <ul className='header__language-list'>

@@ -1,59 +1,50 @@
 import React, { useState } from 'react';
 import Accordion from '../Accordion';
+import { accordionInitialList } from '../../const/accordion';
 import './FAQs.scss';
 
-const initialState = {
-  block1: false,
-  block2: false,
-  block3: true
-};
-
 const FAQs = () => {
-  const [state, setState] = useState(initialState);
+  const [accordion, setAccordion] = useState(accordionInitialList);
+  const [active, setActive] = useState(3);
 
-  const toggle = (index) => () => {
-    setState((prevState) => {
-      return {
-        ...prevState,
-        [`block${index}`]: !state[`block${index}`]
-      };
-    });
+  const handleActive = (index) => {
+    active !== index ? setActive(index) : setActive(null);
   };
 
-  const toggleExpand = (expand = false) => () => {
-    setState({
-      block1: expand,
-      block2: expand,
-      block3: expand
-    });
+  // eslint-disable-next-line no-unused-vars
+  const toggle = (index) => {
+    const updated = [...accordion];
+    const clickedItem = updated[index];
+    updated[index] = { ...clickedItem, isExpanded: !clickedItem.isExpanded };
+    console.log(updated);
+    setAccordion(updated);
   };
 
-  const accordionList = [
-    { title: 'First Accordion' },
-    { title: 'Second Accordion' },
-    { title: 'Third Accordion' }
-  ];
+  // eslint-disable-next-line no-unused-vars
+  const closeAll = () => {
+    setActive(null);
+  };
 
   return (
     <div className='faq'>
-      <div className='container'>
-        <button type='button' className='btn' onClick={toggleExpand(true)}>
-          Expand All
-        </button>
-        <button type='button' className='btn' onClick={toggleExpand()}>
-          Collapse All
-        </button>
+      <h1 className='faq__title'>FAQs</h1>
+      <p className='faq__close' onClick={closeAll}>
+        &#215;
+      </p>
+      <p className='faq__text'>WHAT IS AN NFT? AND OTHER QUESTIONS ANSWERED</p>
+      <div className='faq__container'>
         <dl className='accordion'>
-          {accordionList.map((item, index) => (
+          {accordion.map((item, index) => (
             <Accordion
               title={item.title}
-              onClick={toggle(index + 1)}
-              expand={state[`block${index + 1}`]}
+              description={item.description}
+              descriptionTwo={item.description_two}
+              onClick={() => handleActive(index)}
+              expand={active === index}
             />
           ))}
         </dl>
       </div>
-      ;
     </div>
   );
 };

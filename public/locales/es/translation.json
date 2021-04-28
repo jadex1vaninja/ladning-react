@@ -84,9 +84,6 @@
       }
     }
   },
-  "video-block": {
-    "banner-text": "MOMENTOS DESTACADOS DE LA PELEA | PRÓXIMAMENTE"
-  },
   "register": {
     "title": "NO TE PIERDAS SU LLEGADA",
     "content-text": "SÉ EL PRIMERO EN CONOCER MÁS INFORMACIÓN SOBRE LA PRIMERA LLEGADA DE LAS NFT CON MOTIVO DE UNA PELEA POR UN CAMPEONATO MUNDIAL EN LA HISTORIA. REGÍSTRATE AQUÍ:",
@@ -100,9 +97,10 @@
     "modal-text": "modal.text",
     "modal-btn": "OK"
   },
-  "what-is-block": {
-    "title": "¿QUÉ ES UNA NFT?",
-    "info-text": "Una ficha no fungible (non-fungible token, NFT) es una unidad de datos que se almacena en un libro contable digital, llamado cadena de bloques (blockchain), que certifica que un artículo digital es único y, por lo tanto, no es intercambiable. Las NFT se pueden usar para representar cosas como fotos, videos, audio y otros tipos de archivos digitales."
+  "terms": {
+    "title": "title",
+    "CTA-one": "CTA-one",
+    "CTA-two": "CTA-two"
   }
 
 }

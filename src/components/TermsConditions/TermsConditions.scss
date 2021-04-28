@@ -1,0 +1,45 @@
+@import '../../media-mixin.scss';
+@import '../../variables';
+
+.terms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $brand-white;
+  padding: 6rem 0 4.375rem;
+
+  &__title {
+    font-size: 2.813rem;
+    line-height: 2.813rem;
+    font-family: 'DAZNTrim-Bold';
+    margin-bottom: 2.5rem;
+  }
+
+  &__btn-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__CTA {
+    cursor: pointer;
+    font-family: 'DAZNTrim-Bold';
+    border: none;
+    outline: none;
+    color: $brand-yellow;
+    background-color: $brand-black;
+    padding: 1rem;
+    font-size: 1.875rem;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: $brand-yellow;
+      text-decoration: none;
+    }
+
+    &:first-child {
+      margin-right: 3.125rem;
+    }
+  }
+}

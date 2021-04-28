@@ -62,9 +62,6 @@ const Registration = () => {
 
   return (
     <div className='register' id='subscribe'>
-      <div className='register__title'>
-        <h2>{t('register.title')}</h2>
-      </div>
       <div className='register__main-content'>
         <p>{t('register.content-text')}</p>
         <div className='register__form'>

@@ -8,6 +8,7 @@ import Registration from '../Registration';
 import OwnItSection from '../OwnItSection';
 import FeaturedNFT from '../FeaturedNFT';
 import FAQs from '../FAQs';
+import TermsConditions from '../TermsConditions';
 import './Landing.scss';
 
 const Landing = () => {
@@ -19,9 +20,10 @@ const Landing = () => {
         <FAQs />
         {/*<OwnItSection />*/}
         <Registration />
-        <Cards />
-        <Video />
-        <WhatIs />
+        <TermsConditions />
+        {/*<Cards />*/}
+        {/*<Video />*/}
+        {/*<WhatIs />*/}
       </main>
       <Footer />
     </>

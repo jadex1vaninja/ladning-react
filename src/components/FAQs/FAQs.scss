@@ -3,84 +3,93 @@
 
 .faq {
   width: 100%;
-  background-color: $brand-white;
+  height: 875px;
+  background-image: url('../../assets/img/faq-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4.75rem 2.5rem 12.5rem;
+  position: relative;
 
-  .container {
-    min-height: 100%;
-    padding: 30px;
-    font-family: 'PT Sans';
+  &__title {
+    font-family: 'DAZNTrim-Bold';
     text-align: center;
+  }
 
-    .btn {
-      display: inline-block;
-      margin-bottom: 20px;
-      border: 1px solid #1569a8;
-      background: white;
-      color: #1569a8;
-      padding: 5px 10px;
-      border-radius: 5px;
-      margin-right: 5px;
-      font-size: 15px;
-      cursor: pointer;
-      outline: none;
+  &__text {
+    font-family: 'DAZNTrim-Bold';
+    text-align: center;
+  }
 
-      &:hover {
-        background: #1569a8;
-        color: white;
-        transition: .5s;
-      }
-    }
+  &__close {
+    font-family: 'DAZNTrim-Light';
+    cursor: pointer;
+    font-size: 3rem;
+    position: absolute;
+    right: 11.5rem;
+    top: 4.75rem;
+  }
+
+  &__container {
+    width: 85%;
+    margin: 0 auto;
+    min-height: 100%;
+    padding: 3.25rem 0 0;
+    text-align: center;
   }
 
   .accordion {
     margin: 0 auto;
     width: 80%;
-    color: $brand-black;
+    background: transparent;
 
     .title {
-      padding: 30px 30px;
+      font-family: 'DAZNTrim-Bold';
+      padding: 1.25rem 0;
       cursor: pointer;
       transform: translate3d(0, 0, 0);
+      color: $brand-black;
       position: relative;
       font-size: 20px;
-      background: $brand-white;
+      background: transparent;
+      border-top: 2px solid $brand-border;
       margin-bottom: -1px;
       text-align: left;
 
       &::after {
-        content: "+";
+        content: "ᐳ";
         font-size: 18px;
-        color: white;
+        color: $brand-black;
         transition: transform .5s ease-in-out;
         position: absolute;
-        right: 30px;
+        right: 0;
         font-family: monospace;
       }
 
       &.is-expanded {
         transition: background .5s;
-        background: #0e4671;
+        background: transparent;
 
         &::after {
-          content: "-";
-          transform: rotate(-360deg);
+          content: "ᐯ";
+          transform: rotate(360deg);
         }
       }
     }
 
     .content {
+      font-family: 'DAZNTrim-Light';
       overflow: hidden;
       max-height: 0;
       transition: max-height .5s;
       margin: 0;
-      padding: 0 30px;
-      border: solid 1px #eeeeee;
+      padding: 0;
       border-top: 0;
-      background: #e8f4fc;
+      background: transparent;
+      text-align: left;
 
       p {
-        padding: 30px 0;
-        margin: 0;
+        padding: 0 6.25rem 0 0;
+        margin: 0 0 1.25rem 0;
         opacity: 0;
         transition: .5s;
       }
@@ -93,13 +102,10 @@
         }
       }
     }
-
-    &:after {
-      width: 100%;
-      height: 10px;
-      display: block;
-      background: #0e4671;
-      content: '';
-    }
   }
 }
+
+
+
+
+
