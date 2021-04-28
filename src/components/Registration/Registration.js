@@ -67,7 +67,7 @@ const Registration = () => {
       </div>
       <div className='register__main-content'>
         <p>{t('register.content-text')}</p>
-        <a className='register__CTA' href='https://cloud.in.dazn.com/NFT'>
+        <a className='register__CTA' target="_blank" href='https://cloud.in.dazn.com/NFT'>
           {t('register.CTA')}
         </a>
         {/*<div className='register__form'>*/}
