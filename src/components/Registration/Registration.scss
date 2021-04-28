@@ -2,11 +2,12 @@
 @import '../../variables';
 
 .register {
-  text-align: center;
+  background-image: url('../../assets/img/featured-bg.png');
   background-size: cover;
+  color: $brand-white;
+  text-align: center;
   padding: 0 10%;
   position: relative;
-  //top: -8rem;
 
   @include _768 {
     padding: 0 25%;
@@ -31,7 +32,8 @@
   }
 
   &__main-content {
-    padding-bottom: 8rem;
+    padding-bottom: 4.25rem;
+    padding-top: 6.25rem;
 
     p {
       font-family: 'DAZNTrim-Bold';
@@ -47,6 +49,7 @@
   }
 
   &__form {
+
     input {
       width: 100%;
       color: $brand-grey;
@@ -61,13 +64,16 @@
         font-size: 1rem;
         color: $brand-grey;
       }
+
       &:focus {
         outline: unset;
       }
+
       &:nth-child(2n) {
         margin: 1.5rem 0;
       }
     }
+
     @include _768 {
       input {
         height: 4.5rem;
@@ -116,13 +122,8 @@
       position: relative;
 
       &:checked {
-        background: rgba(40,40,40,0.7);
-        &::before {
-          content: "✓";
-          position: absolute;
-          font-size: 2rem;
-          bottom: -0.5rem;
-        }
+        background-color: $brand-yellow;
+        border: 1px solid $brand-black;
       }
       
       &:nth-child(2n) {

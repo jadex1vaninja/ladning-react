@@ -1,11 +1,8 @@
 import React from 'react';
 import Header from '../Header';
 import Cards from '../Cards';
-import Video from '../Video/Video';
-import WhatIs from '../WhatIs';
 import Footer from '../Footer';
 import Registration from '../Registration';
-import OwnItSection from '../OwnItSection';
 import FeaturedNFT from '../FeaturedNFT';
 import FAQs from '../FAQs';
 import TermsConditions from '../TermsConditions';
@@ -18,12 +15,9 @@ const Landing = () => {
       <main className='root'>
         <FeaturedNFT />
         <FAQs />
-        {/*<OwnItSection />*/}
+        <Cards />
         <Registration />
         <TermsConditions />
-        {/*<Cards />*/}
-        {/*<Video />*/}
-        {/*<WhatIs />*/}
       </main>
       <Footer />
     </>
