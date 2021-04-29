@@ -2,12 +2,12 @@
   "header": {
     "title": "SÁB, 8 DE MAYO",
     "sub-title": "TRANSMISIÓN EN VIVO POR DAZN",
-    "promo-text": "UNIFICACIÓN DEL PESO SUPERMEDIANO DE LA AMB, EL CMB Y LA OMB",
+    "promo-text": "De Cara a la Gloria | La Colección de NFT",
     "link-text-one": "HAZ CLIC",
     "link-text-two": "AQUÍ",
     "link-text-three": "PARA SUSCRIBIRTE YA",
-    "learn-more": "Learn More",
-    "see-artworks": "See artworks"
+    "learn-more": "Más información",
+    "see-artworks": "Ver las obras de arte"
   },
   "own-it-block": {
     "title": "TEN TU PROPIO PEDAZO DE HISTORIA",
@@ -34,7 +34,7 @@
           "second": "Saunders"
         },
         "description": "Si Canelo gana, una suscripción anual a DAZN para todos los poseedores de NFT + todos los poseedores de NFT entran en un sorteo por un video personalizado para un ganador elegido al azar",
-        "link": "VER SUBASTA"
+        "link": "A la venta el 8 de Mayo"
       },
       "gold": {
         "name": "ORO",
@@ -43,7 +43,7 @@
           "second": "Saunders"
         },
         "description": "Si Canelo gana, una suscripción anual a DAZN para todos los poseedores de NFT + todos los poseedores de NFT entran en un sorteo por un video personalizado para un ganador elegido al azar",
-        "link": "VER SUBASTA"
+        "link": "A la venta el 8 de Mayo"
       },
       "bronze": {
         "name": "BRONCE",
@@ -52,7 +52,7 @@
           "second": "Saunders"
         },
         "description": "Si Canelo gana, una suscripción anual a DAZN para todos los poseedores de NFT + todos los poseedores de NFT entran en un sorteo por un video personalizado para un ganador elegido al azar",
-        "link": "VER SUBASTA"
+        "link": "A la venta el 8 de Mayo"
       }
     }
   },
@@ -77,33 +77,32 @@
     "title": "¿QUÉ ES UNA NFT?",
     "info-text": "Una ficha no fungible (non-fungible token, NFT) es una unidad de datos que se almacena en un libro contable digital, llamado cadena de bloques (blockchain), que certifica que un artículo digital es único y, por lo tanto, no es intercambiable. Las NFT se pueden usar para representar cosas como fotos, videos, audio y otros tipos de archivos digitales."
   },
-
   "nft-card": {
-    "canelo-legendary-title": "Knockout -</br> Canelo",
-    "canelo-legendary-description": "Canelo Alvarez has knocked out 37 of the fighters he’s faced. In addition to winning the NFT, the winning bid will receive 2 tickets to the next Canelo fight + <b>fight worn</b> signed gloves and a personalized video from Canelo!",
+    "canelo-legendary-title": "Nocaut:</br> Canelo",
+    "canelo-legendary-description": "Canelo Álvarez ha noqueado a 37 de los peleadores que ha enfrentado. Además de ganar la NFT, la oferta ganadora recibirá dos entradas para la siguiente pelea de Canelo + <b>unos guantes usados</b> en pelea y firmados, ¡además de un video personalizado de Canelo!",
 
-    "saunders-legendary-title": "Knockout -</br> Saunders",
-    "saunders-legendary-description": "In his 30 career fights, Billy Joe Saunders has knocked out 14 of his opponents. Will he knock out Canelo on May 8? In addition to winning the NFT, the winning bid will receive 2 tickets to the next Billy Joe Saunders fight + <b>fight worn</b> signed gloves and a personalized video from Billy Joe!",
+    "saunders-legendary-title": "Nocaut:</br> Saunders",
+    "saunders-legendary-description": "En sus 30 peleas profesionales, Billy Joe Saunders ha noqueado a 14 de sus oponentes. ¿Noqueará a Canelo el 8 de mayo? Además de ganar la NFT, la oferta ganadora recibirá dos entradas para la siguiente pelea de Billy Joe Saunders + <b>unos guantes usados</b> en pelea y firmados, ¡además de un video personalizado de Billy Joe!",
 
-    "canelo-gold-title": "Tale of the Tape - Canelo",
-    "canelo-gold-description": "Canelo Alvarez heads to the ring on May 8 with a record of 55-1-2 with 37 knockouts. In addition to winning the NFT, the winning bid will receive signed gloves from Canelo Alvarez + an annual subscription to DAZN.",
+    "canelo-gold-title": "Los números frente a frente: Canelo",
+    "canelo-gold-description": "Canelo Álvarez se dirige hacia el cuadrilátero el 8 de mayo con una marca de 55-1-2 y 37 nocauts. Además de ganar la NFT, la oferta ganadora recibirá unos guantes firmados de Canelo Álvarez + una suscripción anual a DAZN.",
 
-    "saunders-gold-title": "Tale of the Tape - Saunders",
-    "saunders-gold-description": "Billy Joe Saunders heads to the ring on May 8 undefeated (30-0) with 14 knockouts. In addition to winning the NFT, the winning bid will receive signed gloves from Billy Joe Saunders + an annual subscription to DAZN.",
+    "saunders-gold-title": "Los números frente a frente: Saunders",
+    "saunders-gold-description": "Billy Joe Saunders se dirige hacia el cuadrilátero el 8 de mayo con una marca invicta (30-0) y 14 nocauts. Además de ganar la NFT, la oferta ganadora recibirá unos guantes firmados de Billy Joe Saunders + una suscripción anual a DAZN.",
 
-    "prediction-decision-title": "Prediction - Rounds 1-12 + Decision",
-    "prediction-decision-description": "1-of-1 NFTs predicting when the Canelo v. Saunders fight will end - in a specific round or with a judges' decision. For the winning NFT only, receive 2 tickets to the next Canelo fight!",
+    "prediction-decision-title": "Predicción: Alguno de los 12 asaltos + decisión",
+    "prediction-decision-description": "NFT irrepetibles para predecir si la pelea entre Canelo y Saunders terminará en un asalto específico o con la decisión de los jueces. ¡Únicamente la NFT ganadora recibirá dos entradas para la siguiente pelea de Canelo!",
 
-    "canelo-silver-title": "Tale of the Tape - Canelo",
-    "canelo-silver-description": "Canelo Alvarez heads to the ring on May 8 with a record of 55-1-2 with 37 knockouts. IF CANELO WINS, this NFT unlocks an annual DAZN subscpription + 1 of the 50 will unlock a personalized video from Canelo",
-    "saunders-silver-title": "Tale of the Tape - Saunders",
-    "saunders-silver-description": "Billy Joe Saunders heads to the ring on May 8 undefeated (30-0) with 14 knockouts. IF SAUNDERS WINS, this NFT unlocks an annual DAZN subscpription + 1 of the 50 will unlock a personalized video from Billy Joe.",
-    "prediction-decision-title-bronze": "Prediction - Rounds 1-12 + Decision",
-    "prediction-decision-description-bronze": "Limited edition NFTs predicting when the Canelo v. Saunders fight will end - in a specific round or with a judges' decision. For the winning NFTs only, receive an annual subscription to DAZN!",
+    "canelo-silver-title": "Los números frente a frente: Canelo",
+    "canelo-silver-description": "Canelo Álvarez se dirige hacia el cuadrilátero el 8 de mayo con una marca de 55-1-2 y 37 nocauts. SI CANELO GANA, esta NFT desbloquea una suscripción anual a DAZN + todos los poseedores de una NFT entran en un sorteo por un video personalizado de Canelo.",
+    "saunders-silver-title": "Los números frente a frente: Saunders",
+    "saunders-silver-description": "Billy Joe Saunders se dirige hacia el cuadrilátero el 8 de mayo con una marca invicta (30-0) y 14 nocauts. SI Saunders GANA, esta NFT desbloquea una suscripción anual a DAZN + todos los poseedores de una NFT entran en un sorteo por un video personalizado de Billy Joe.",
+    "prediction-decision-title-bronze": "Predicción: Alguno de los 12 asaltos + decisión",
+    "prediction-decision-description-bronze": "NFT de edición limitada para predecir si la pelea entre Canelo y Saunders terminará en un asalto específico o con la decisión de los jueces. ¡Solo las NFT ganadoras recibirán una suscripción anual a DAZN!",
 
     "rarity-1": "1/1",
     "rarity-50": "50",
-    "rarity-13": "13 (1 per outcome)",
-    "rarity-100": "100 Per Outcome"
+    "rarity-13": "13 (1 por resultado)",
+    "rarity-100": "100 por resultado"
   }
 }
