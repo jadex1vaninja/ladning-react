@@ -15,7 +15,7 @@
   &__navigation {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 9.25rem;
   }
 
   &__nav-list {
@@ -64,6 +64,7 @@
     position: relative;
     display: flex;
     margin: 0;
+    z-index: 2;
   }
 
   &__terms-list {
@@ -71,6 +72,7 @@
     position: absolute;
     right: 0;
     top: 12px;
+    z-index: 4;
 
     li:first-child {
       order: 2;
@@ -216,22 +218,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 4.875rem;
+    margin-bottom: 2rem;
+
+    @include _768 {
+      margin-bottom: 4.875rem;
+    }
   }
 
   &__description-text {
     text-align: center;
     word-spacing: 3px;
-    max-width: 50%;
+    max-width: none;
+
+    @include _1024 {
+      max-width: 50%;
+    }
   }
 
   &__description-text,
   &__description-link {
     font-family: 'DAZNTrim-Light';
     color: $brand-white;
-    font-size: 1.563rem;
-    line-height: 2.188rem;
+    font-size: 0.75rem;
     margin: 0;
+
+    @include _1024 {
+      font-size: 1.563rem;
+      line-height: 2.188rem;
+    }
   }
 
   &__description-link {
@@ -293,14 +307,23 @@
     flex-grow: 1;
     width: 50%;
 
+    &--first {
+      width: 40%;
+    }
+
+    &--second {
+      width: 60%;
+    }
+
     @include _768 {
       width: 25%;
-  }
+    }
 }
 
   &__buttons-wrapper {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     flex-grow: 1;
@@ -309,9 +332,15 @@
     margin-bottom: 14px;
 
     @include _768 {
+      flex-direction: row;
       width: 35%;
       margin-bottom: 0;
       order: 2;
+    }
+
+    @include _1024 {
+      align-items: center;
+      justify-content: space-evenly;
     }
   }
 
@@ -323,12 +352,19 @@
     outline: none;
     background: $brand-yellow;
     padding: 1rem;
-    font-size: 1.563rem;
-    letter-spacing: 1px;
+    font-size: 1rem;
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+
+    @include _768 {
+      margin-bottom: 0;
+      letter-spacing: 1px;
+      font-size: 1.563rem;
+    }
   }
 
   &__logo1 {
-    margin-right: 5rem;
+    margin-right: 1rem;
 
     @include _768 {
       margin-right: 4rem;

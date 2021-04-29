@@ -90,14 +90,14 @@ const Header = () => {
         </a>
       </div>
       <div className='header__inner'>
-        <div className='header__img-wrapper'>
+        <div className='header__img-wrapper header__img-wrapper--first'>
           <img className='header__logo1' src={imgPath + 'logo.png'} alt='' />
         </div>
         <div className='header__buttons-wrapper'>
           <button className='header__CTA'>{t('header.buttons.btn-one')}</button>
           <button className='header__CTA'>{t('header.buttons.btn-two')}</button>
         </div>
-        <div className='header__img-wrapper'>
+        <div className='header__img-wrapper header__img-wrapper--second'>
           <img
             className='header__logo3'
             src={imgPath + 'matchroom-logo.png'}
@@ -111,7 +111,7 @@ const Header = () => {
           src={
             !phone
               ? imgPath + 'DAZN-header-bg.png'
-              : imgPath + 'DAZN_NFT_Website_Mobile_01.png'
+              : imgPath + 'DAZN_NFT_LandingPage_Mobile.png'
           }
           alt='logo'
         />
