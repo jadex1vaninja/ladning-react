@@ -106,16 +106,17 @@
     color: $brand-white;
     margin: 0;
     font-size: 14px;
-    line-height: 35px;
+    // line-height: 35px;
     letter-spacing: 2px;
     word-spacing: 1px;
     text-align: center;
     padding-left: 4px;
     max-width: 630px;
+    padding:10px 0;
 
     @include _768 {
       font-size: 16px;
-      line-height: 40px;
+      // line-height: 40px;
       letter-spacing: 4px;
       word-spacing: 1px;
       padding-left: 5px;
@@ -123,7 +124,7 @@
 
     @include _1024 {
       font-size: 20px;
-      line-height: 45px;
+      // line-height: 45px;
       letter-spacing: 8px;
       word-spacing: 1px;
       padding-left: 10px;
@@ -252,12 +253,14 @@
     margin: 0;
 
     @include _768 {
-      font-size: 57px;
+      font-size: 50px;
       letter-spacing: 0px;
       line-height: 38px;
   }
 }
-
+    .text-center{
+          text-align:center;
+    }
   &__text {
     color: $brand-yellow;
     font-family: 'DAZNTrim-Light';

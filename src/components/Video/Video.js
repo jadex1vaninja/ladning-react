@@ -34,7 +34,7 @@ const Video = () => {
           alt='title'
           className='video__title'
         />
-        <span className='video__pre-fight'>{t('video-block.banner-text')}</span>
+        <span className='video__pre-fight' dangerouslySetInnerHTML={{__html:t('video-block.banner-text')}}></span>
       </div>
     </div>
   );
