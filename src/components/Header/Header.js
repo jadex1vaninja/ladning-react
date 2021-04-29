@@ -84,7 +84,7 @@ const Header = () => {
             className='header__logo3'
             src={
               !phone
-                ? imgPath + 'RGB_white_red-min.png'
+                ? imgPath + 'RGB_white_red.png'
                 : imgPath + 'matchroom-mobile.png'
             }
             alt='matchroom'

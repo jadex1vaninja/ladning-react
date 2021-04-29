@@ -15,7 +15,7 @@ const Video = () => {
         alt='video'
       />
       <img
-        src={imgPath + 'new-video-section-bg-mobile.png'}
+        src={imgPath + 'new-video-section-bg-mobile.jpg'}
         className='video__banner-img-mobile'
         alt='video'
       />

@@ -13,7 +13,7 @@ const Footer = () => {
       <div className='footer__banner'>
         <img
           className='footer__banner-img'
-          src={imgPath + 'new-footer-bg.png'}
+          src={imgPath + 'new-footer-bg.jpg'}
           alt='footer'
         />
         <div className='footer__face-container'>
@@ -49,7 +49,7 @@ const Footer = () => {
           <div className='footer__img-wrapper'>
             <img
               className='footer__logo3'
-              src={imgPath + 'RGB_white_red-min.png'}
+              src={imgPath + 'RGB_white_red.png'}
               alt=''
             />
           </div>
