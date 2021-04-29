@@ -6,10 +6,10 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 2.5rem 2.5rem 0;
+  padding: 1.25rem 1.25rem 0;
 
   @include _1024 {
-    padding-bottom: 3rem;
+    padding: 2.5rem 2.5rem 3rem;
   }
 
   &__navigation {
@@ -21,11 +21,12 @@
   &__nav-list {
     position: relative;
     display: flex;
-    //width: 100%;
-    //max-width: 37.5rem;
-    //padding: 0 2rem;
     margin-bottom: 0;
-    margin-left: 6rem;
+    margin-left: 0;
+
+    @include _1024 {
+      margin-left: 6rem;
+    }
   }
 
   &__nav-item {
@@ -33,10 +34,19 @@
     cursor: pointer;
     color: $brand-white;
     text-transform: uppercase;
-    font-size: 1.875rem;
+    font-size: 0.75rem;
     letter-spacing: 1px;
-    line-height: 3.438rem;
-    margin-left: 4rem;
+    margin-left: 18px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @include _1024 {
+      font-size: 1.875rem;
+      margin-left: 4rem;
+      line-height: 3.438rem;
+    }
 
     @include _1440 {
       margin-left: 5.125rem;
@@ -46,6 +56,7 @@
   &__terms-language {
     display: flex;
     justify-content: flex-end;
+    position: relative;
   }
 
   &__language-list,
@@ -55,16 +66,54 @@
     margin: 0;
   }
 
+  &__terms-list {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 12px;
+
+    li:first-child {
+      order: 2;
+    }
+
+    li:last-child {
+      order: 1;
+    }
+
+    @include _1024 {
+      flex-direction: row;
+      position: static;
+    }
+  }
+
   &__button,
   &__terms-item a {
     position: relative;
     font-family: 'DAZNTrim-Bold';
     cursor: pointer;
     color: $brand-white;
-    font-size: 18px;
+    font-size: 0.625rem;
     text-transform: uppercase;
-    margin-left: 20px;
+    margin-left: 0;
     align-self: flex-start;
+
+    @include _1024 {
+      font-size: 18px;
+      margin-left: 20px;
+    }
+  }
+
+  &__button {
+    margin-left: 10px;
+  }
+
+  &__terms-item {
+    text-align: right;
+    margin-top: 1rem;
+
+    @include _1024 {
+      margin-top: 0;
+    }
   }
 
   &__terms-item a {
@@ -97,8 +146,8 @@
   }
 
   &__dazn-img {
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
 
     @include _768 {
       width: 75px;
@@ -112,11 +161,11 @@
   }
 
   &__promo {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    width: 100%;
 
     @include _1024 {
       margin-bottom: 50px;
@@ -208,9 +257,6 @@
 
   &__banner-img {
     width: 100%;
-    //display: block;
-    //height: 100%;
-    //object-fit: cover;
 }
 
   &__inner {
@@ -294,7 +340,8 @@
     margin-left: 5px;
 
     @include _768 {
-      width: 9vw;
+      width: 100%;
+      max-width: 125px;
       margin-left: 3rem;
     }
   }

@@ -14,8 +14,8 @@ const Landing = () => {
       <Header />
       <main className='root'>
         <FeaturedNFT />
-        <FAQs />
         <Cards />
+        <FAQs />
         <Registration />
         <TermsConditions />
       </main>

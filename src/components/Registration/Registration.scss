@@ -8,6 +8,7 @@
   text-align: center;
   padding: 0 10%;
   position: relative;
+  z-index: 1;
 
   @include _768 {
     padding: 0 25%;

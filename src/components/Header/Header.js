@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { imgPath } from '../../const';
 import { useWindowInfo } from '../../hooks/useWindowInfo';
@@ -13,6 +13,15 @@ const Header = () => {
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
+
+  const getLanguageFromStorage = () => {
+    const lang = localStorage.getItem('i18nextLng') || 'en';
+    return lang;
+  };
+
+  useEffect(() => {
+    setLanguage(getLanguageFromStorage());
+  }, []);
 
   return (
     <header className='header'>
@@ -96,15 +105,17 @@ const Header = () => {
           />
         </div>
       </div>
-      {!phone && (
-        <div className='header__banner'>
-          <img
-            className='header__banner-img'
-            src={imgPath + 'DAZN-header-bg.png'}
-            alt='logo'
-          />
-        </div>
-      )}
+      <div className='header__banner'>
+        <img
+          className='header__banner-img'
+          src={
+            !phone
+              ? imgPath + 'DAZN-header-bg.png'
+              : imgPath + 'DAZN_NFT_Website_Mobile_01.png'
+          }
+          alt='logo'
+        />
+      </div>
     </header>
   );
 };
