@@ -1,15 +1,21 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const NFT = ({ img, type, title, description, rarity }) => {
+const NFT = ({ img, type, title, description, rarity, isActive }) => {
   const { t } = useTranslation();
 
   return (
-    <div className='cards-root__card-content'>
+    <div
+      className={`cards-root__card-content ${
+        !isActive && 'cards-root__card-content--disabled'
+      }`}
+    >
       <img src={img} alt='card' />
       <div className='cards-root__content-wrapper'>
         <div className='cards-root__inner'>
-          <h4 className={`cards-root__card-title cards-root__card-title--${type}`}>
+          <h4
+            className={`cards-root__card-title cards-root__card-title--${type}`}
+          >
             {type}
           </h4>
           <h3 className='first-description'>{title}</h3>

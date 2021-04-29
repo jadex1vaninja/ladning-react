@@ -1,0 +1,68 @@
+@import '../../media-mixin.scss';
+@import '../../variables';
+
+.nft-wrapper {
+  padding: 0 1.625rem;
+
+  &__title {
+    font-family: 'DAZNTrim-Bold';
+    text-transform: uppercase;
+    background-color: $brand-white;
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 55px;
+
+    @include _320 {
+      padding: 0.5rem 5.375rem;
+      font-size: 1.25rem;
+    }
+
+    @include _768 {
+      font-size: 30px;
+      letter-spacing: 1px;
+      line-height: 55px;
+      padding: 0.5rem 5.375rem;
+    }
+  }
+
+  &__inner {
+    margin-bottom: 5.125rem;
+
+    &.slick-initialized {
+      .slick-slide {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &.slick-slider {
+      margin-bottom: 0;
+    }
+
+    .slick-arrow {
+      border: solid $brand-white;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 1rem;
+      z-index: 2;
+      &::before {
+        content: unset;
+      }
+      &.slick-prev {
+        left: -1rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(135deg);
+      }
+      &.slick-next {
+        right: -1rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+}

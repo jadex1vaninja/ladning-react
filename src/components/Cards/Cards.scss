@@ -7,10 +7,10 @@
   position: relative;
   //top: -10rem;
   padding: 0 10%;
-  margin-bottom: -7rem;
+  margin-bottom: 10rem;
 
   @include _768 {
-    margin-bottom: -6rem;
+    margin-bottom: 6rem;
   }
 
   &__title {
@@ -79,6 +79,10 @@
     flex-direction: column;
     padding-right: 7.5%;
     padding-left: 7.5%;
+
+    &--disabled {
+      opacity: 0.3;
+    }
 
     @include _320 {
       margin-top: -3.5rem;
