@@ -6,30 +6,12 @@
   background-size: cover;
   color: $brand-white;
   text-align: center;
-  padding: 0 10%;
+  padding: 0 1.25rem;
   position: relative;
   z-index: 1;
 
   @include _768 {
     padding: 0 25%;
-  }
-
-  &__title {
-    font-family: 'DAZNTrim-Bold';
-    text-transform: uppercase;
-    background-color: $brand-white;
-    width: fit-content;
-    margin: 0 auto;
-    padding: 1rem 3.25rem;
-
-    h2 {
-      margin-bottom: 0;
-      font-size: 1.25rem;
-
-      @include _768 {
-        font-size: 1.75rem;
-      }
-    }
   }
 
   &__main-content {
@@ -41,10 +23,11 @@
       text-transform: uppercase;
       color: $brand-white;
       margin: 2.5rem 0;
-      font-size: 1.25rem;
+      font-size: 0.75rem;
 
       @include _768 {
         margin: 4.5rem 0;
+        font-size: 1.25rem;
       }
     }
   }
@@ -54,15 +37,15 @@
     input {
       width: 100%;
       color: $brand-grey;
-      height: 3.5rem;
+      height: 2rem;
       border: none;
       padding: 0 1rem;
-      font-size: 1rem;
+      font-size: 0.75rem;
       font-family: 'DAZNTrim-Bold';
       text-transform: uppercase;
       
       &::placeholder {
-        font-size: 1rem;
+        font-size: 0.75rem;
         color: $brand-grey;
       }
 
@@ -76,6 +59,7 @@
     }
 
     @include _768 {
+
       input {
         height: 4.5rem;
         padding: 0 1.5rem;
@@ -89,15 +73,19 @@
   }
 
   &__form-info {
-    margin: 2rem;
+    margin: 2rem 0;
     text-align: center;
 
     p, label {
       font-family: 'DAZNTrim-Light';
-      font-size: 1.25rem;
+      font-size: 0.75rem;
       text-transform: initial;
       margin: 0;
       color: $brand-white;
+
+      @include _768 {
+        font-size: 1.25rem;
+      }
     }
   }
 
@@ -134,22 +122,9 @@
   }
 
   &__submit {
-    button {
-      font-size: 1.25rem;
-      text-transform: uppercase;
-      cursor: pointer;
-      font-family: 'DAZNTrim-Bold';
-      border: none;
-      outline: none;
-      background: $brand-yellow;
-      padding: 1rem 2rem;
-      letter-spacing: 0.25rem;
-    }
 
-    @include _768 {
-      button {
-        font-size: 1.75rem;
-      }
+    button {
+      @include CTA;
     }
   }
 

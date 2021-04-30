@@ -7,13 +7,22 @@
   align-items: center;
   justify-content: center;
   background-color: $brand-white;
-  padding: 6rem 0 4.375rem;
+  padding: 1.25rem 0;
+
+  @include _1024 {
+    padding: 6rem 0 4.375rem;
+  }
 
   &__title {
-    font-size: 2.813rem;
-    line-height: 2.813rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
     font-family: 'DAZNTrim-Bold';
     margin-bottom: 2.5rem;
+
+    @include _1024 {
+      font-size: 2.813rem;
+      line-height: 2.813rem;
+    }
   }
 
   &__btn-wrapper {
@@ -23,15 +32,9 @@
   }
 
   &__CTA {
-    cursor: pointer;
-    font-family: 'DAZNTrim-Bold';
-    border: none;
-    outline: none;
+    @include CTA;
     color: $brand-yellow;
     background-color: $brand-black;
-    padding: 1rem;
-    font-size: 1.875rem;
-    letter-spacing: 1px;
 
     &:hover {
       color: $brand-yellow;
