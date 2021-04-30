@@ -37,44 +37,45 @@
     },
     "CTA": "SEE ARTWORKS"
   },
-  "marketplace": {
-    "title": "COUNTDOWN",
-    "countdown": {
-      "text-purchase-one": "The first drop will be available for",
-      "text-purchase-two": "purchase at 7AM ET / 12:00 GMT on May 8th",
-      "days": "days",
-      "hours": "hrs",
-      "minutes": "mins",
-      "seconds": "secs"
-    },
-    "ntfs": {
-      "legendary": {
-        "name": "Legendary",
-        "title": {
-          "first": "Canelo VS",
-          "second": "Saunders"
-        },
-        "description": "If Canelo wins, annual DAZN subscription for all NFT holders + all NFT holders entered into drawing for 1 personalized video to randomly selected winner",
-        "link": "ON SALE MAY 8TH"
-      },
-      "gold": {
-        "name": "Gold",
-        "title": {
-          "first": "Canelo VS",
-          "second": "Saunders"
-        },
-        "description": "If Canelo wins, annual DAZN subscription for all NFT holders + all NFT holders entered into drawing for 1 personalized video to randomly selected winner",
-        "link": "ON SALE MAY 8TH"
-      },
-      "bronze": {
-        "name": "Bronze",
-        "title": {
-          "first": "Canelo VS",
-          "second": "Saunders"
-        },
-        "description": "If Canelo wins, annual DAZN subscription for all NFT holders + all NFT holders entered into drawing for 1 personalized video to randomly selected winner",
-        "link": "ON SALE MAY 8TH"
-      }
+  "NFTs": {
+    "title-knockout": "Knockout",
+    "title-tale": "Tale of the Tape",
+    "title-prediction": "Prediction",
+    "title-post-fight": "Post-Fight Highlights: Coming soon",
+    "type-legendary": "Legendary",
+    "type-gold": "Gold",
+    "type-silver": "Silver",
+    "type-bronze": "Bronze",
+    "link-text": "View auction",
+    "nft-card": {
+      "canelo-legendary-title": "Knockout -</br> Canelo",
+      "canelo-legendary-description": "Canelo Alvarez has knocked out 37 of the fighters he’s faced. Get this 1-of-1 Legendary NFT representing his in-ring dominance. In addition to winning the NFT, the winning bid will receive 2 tickets to the next Canelo fight + signed fight gloves and a personalized video from Canelo! To redeem or confirm if the reward has already been redeemed, head to [www.daznboxing.io/redeem](https://www.daznboxing.io/redeem) after June 5, 2021.",
+
+      "saunders-legendary-title": "Knockout -</br> Saunders",
+      "saunders-legendary-description":"In his 30 career fights, Billy Joe Saunders has knocked out 14 of his opponents. Will he knock out Canelo on May 8? Get this 1-of-1 Legendary NFT representing his knockout strength, In addition to winning the NFT, the winning bid will receive 2 tickets to a future Matchroom fight + signed gloves (potentially fight-worn) from Billy Joe Saunders + a personalized video from Billy Joe! To redeem or confirm if the reward has already been redeemed, head to www.daznboxing.io/redeem after June 5, 2021.",
+
+      "canelo-gold-title": "Tale of the Tape - Canelo",
+      "canelo-gold-description": "This is a 1-of-1 NFT celebrating one of the most decorated boxers in history. Canelo Alvarez heads to the ring on May 8 with a record of 55-1-2 with 37 knockouts. In addition to winning the NFT, the winning bid will receive signed gloves from Canelo Alvarez plus an annual subscription to DAZN. To redeem or confirm if the reward has already been redeemed, head to [www.daznboxing.io/redeem](https://www.daznboxing.io/redeem) after June 5, 2021.",
+
+      "saunders-gold-title": "Tale of the Tape - Saunders",
+      "saunders-gold-description": "This 1-of-1 NFT recognizes the WBO belt holder - the undefeated Billy Joe Saunders (30 wins, 0 losses). In addition to winning the NFT, the winning bid will receive signed gloves from Matchroom's Eddie Hearn plus an annual subscription to DAZN. To redeem or confirm if the reward has already been redeemed, head to [www.daznboxing.io/redeem](https://www.daznboxing.io/redeem) after June 5, 2021.",
+
+      "prediction-decision-title": "",
+      "prediction-decision-description": "",
+
+      "canelo-silver-title": "Tale of the Tape - Canelo",
+      "canelo-silver-description": "This NFT celebrates one of the most decorated boxers in history. Canelo Alvarez heads to the ring on May 8 with a record of 55-1-2 with 37 knockouts. IF CANELO WINS, this NFT unlocks an annual DAZN subscription + 1 NFT will unlock 1 personalized video from Canelo. To redeem / confirm if the reward has already been redeemed and find out if your NFT unlocks the video, head to [www.daznboxing.io/redeem] (https://www.daznboxing.io/redeem) after June 5, 2021.",
+
+      "saunders-silver-title": "Tale of the Tape - Saunders",
+      "saunders-silver-description": "This NFT recognizes the WBO belt holder - the undefeated Billy Joe Saunders (30 wins, 0 losses). IF SAUNDERS WINS, this NFT unlocks an annual DAZN subscription + 1 NFT will unlock 1 personalized video from Matchroom's Eddie Hearn. To redeem / confirm if the reward has already been redeemed and find out if your NFT unlocks the video, head to [www.daznboxing.io/redeem](https://www.daznboxing.io/redeem) after June 5, 2021.",
+
+      "prediction-decision-title-bronze":"",
+      "prediction-decision-description-bronze":"",
+
+      "rarity-1": "1/1",
+      "rarity-50": "50",
+      "rarity-13": "13 (1 per outcome)",
+      "rarity-100": "100 Per Outcome"
     }
   },
   "faq": {

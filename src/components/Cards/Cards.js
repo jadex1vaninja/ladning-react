@@ -11,13 +11,14 @@ const Cards = () => {
         <NFTWrapper title={element.title} length={element.cards.length}>
           {element.cards.map((card) => (
             <NFT
-              key={Math.floor(Math.random() * 1000)}
+              key={Math.floor(Math.random() * 1000000)}
               type={card.type}
               title={card.title}
               img={card.img}
               description={card.description}
               rarity={card.rarity}
               isActive={card.isActive}
+              link={card.link}
             />
           ))}
         </NFTWrapper>

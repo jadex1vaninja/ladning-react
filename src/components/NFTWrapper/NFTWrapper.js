@@ -1,8 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 import './NFTWrapper.scss';
 
 const NFTWrapper = ({ title, length, children }) => {
+  const { t } = useTranslation();
+
   const settings = {
     speed: 500,
     cssEase: 'linear',
@@ -41,7 +44,7 @@ const NFTWrapper = ({ title, length, children }) => {
   return (
     <>
       <div className='nft-wrapper'>
-        <h2 className='nft-wrapper__title'>{title}</h2>
+        <h2 className='nft-wrapper__title'>{t(title)}</h2>
       </div>
       <div className='nft-wrapper__inner'>
         <Slider {...settings}>{children}</Slider>

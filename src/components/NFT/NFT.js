@@ -1,9 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { LINK_TO_LIVE } from '../../const';
 import './NFT.scss';
 
-const NFT = ({ img, type, title, description, rarity, isActive }) => {
+const NFT = ({ img, type, title, description, rarity, isActive, link }) => {
   const { t } = useTranslation();
+  const separateType = type.split('-').pop();
 
   return (
     <div
@@ -15,18 +17,21 @@ const NFT = ({ img, type, title, description, rarity, isActive }) => {
       <div className='cards-root__content-wrapper'>
         <div className='cards-root__inner'>
           <h4
-            className={`cards-root__card-title cards-root__card-title--${type}`}
+            className={`cards-root__card-title cards-root__card-title--${separateType}`}
           >
-            {type}
+            {t(type)}
           </h4>
-          <h3 className='first-description'>{title}</h3>
-          <div className='cards-root__hr'></div>
+          <h3
+            className='first-description'
+            dangerouslySetInnerHTML={{ __html: t(title) }}
+          />
+          <div className='cards-root__hr' />
         </div>
         <div className='cards-root__auction-wrapper'>
-          <p className='cards-root__amount'>{rarity}</p>
-          <p className='cards-root__desc'>{description}</p>
-          <a className='cards-root__link' href=''>
-            {t('marketplace.ntfs.legendary.link')}
+          <p className='cards-root__amount'>{t(rarity)}</p>
+          <p className='cards-root__desc'>{t(description)}</p>
+          <a className='cards-root__link' href={LINK_TO_LIVE + link}>
+            {t('NFTs.link-text')}
           </a>
         </div>
       </div>

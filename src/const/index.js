@@ -6,6 +6,7 @@ export const DESKTOP = 1024;
 export const DESKTOP_LARGE = 1440;
 export const DESKTOP_EXTRA_LARGE = 1920;
 export const imgPath = process.env.PUBLIC_URL + '/assets/img/';
+export const LINK_TO_LIVE = `https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/`;
 
 export const NFTS = [
   {
