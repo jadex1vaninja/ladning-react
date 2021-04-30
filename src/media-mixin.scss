@@ -1,3 +1,5 @@
+@import "variables";
+
 @mixin _1440 {
   @media (min-width: 1440px){
       @content;
@@ -22,8 +24,58 @@
   }
 }
 
-@mixin _320{
+@mixin _320 {
   @media (min-width: 320px){
       @content;
+  }
+}
+
+@mixin CTA {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'DAZNTrim-Bold';
+  border: none;
+  outline: none;
+  background: $brand-yellow;
+  padding: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0;
+  margin-bottom: 1rem;
+
+  @include _768 {
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    font-size: 1.563rem;
+  }
+}
+
+@mixin FeaturedNFT-Title {
+  color: $brand-white;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+
+  @include _1024 {
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    line-height: 1.688rem;
+  }
+}
+
+@mixin FeaturedNFT-Text {
+  color: $brand-white;
+  font-family: 'DAZNTrim-Light';
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+
+  @include _1024 {
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    line-height: 1.688rem;
   }
 }

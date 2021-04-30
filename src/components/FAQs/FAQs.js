@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import Accordion from '../Accordion';
+import { useTranslation } from 'react-i18next';
 import { accordionInitialList } from '../../const/accordion';
 import './FAQs.scss';
 
 const FAQs = () => {
   const [accordion, setAccordion] = useState(accordionInitialList);
-  const [active, setActive] = useState(3);
+  const [active, setActive] = useState(null);
+  const { t } = useTranslation();
 
   const handleActive = (index) => {
     active !== index ? setActive(index) : setActive(null);
@@ -27,18 +29,17 @@ const FAQs = () => {
 
   return (
     <div className='faq'>
-      <h1 className='faq__title'>FAQs</h1>
+      <h1 className='faq__title'>{t('faq.title')}</h1>
       <p className='faq__close' onClick={closeAll}>
         &#215;
       </p>
-      <p className='faq__text'>WHAT IS AN NFT? AND OTHER QUESTIONS ANSWERED</p>
+      <p className='faq__text'>{t('faq.sub-title')}</p>
       <div className='faq__container'>
         <dl className='accordion'>
           {accordion.map((item, index) => (
             <Accordion
               title={item.title}
               description={item.description}
-              descriptionTwo={item.description_two}
               onClick={() => handleActive(index)}
               expand={active === index}
             />

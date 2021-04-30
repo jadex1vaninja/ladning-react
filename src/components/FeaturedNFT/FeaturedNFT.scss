@@ -7,8 +7,12 @@
   color: $brand-white;
   display: flex;
   justify-content: center;
-  padding: 6rem 2.5rem 0;
+  padding: 1.25rem 1.25rem 1.25rem;
   width: 100%;
+
+  @include _1024 {
+    padding: 6rem 2.5rem 0;
+  }
 
   &__inner-wrapper {
     width: 100%;
@@ -30,7 +34,15 @@
   }
 
   &__img-wrapper {
-    width: 40%;
+    width: 70%;
+
+    @include _768 {
+      width: 50%;
+    }
+
+    @include _1024 {
+      width: 40%;
+    }
 
     img {
       width: 100%;
@@ -38,25 +50,42 @@
   }
 
   &__content {
-    width: 60%;
-    max-width: 700px;
+    width: 100%;
+    max-width: none;
+
+    @include _1024 {
+      width: 60%;
+      max-width: 700px;
+    }
   }
 
   &__sub-title {
     text-align: center;
     font-family: 'DAZNTrim-Light';
-    font-size: 1.25rem;
+    font-size: 0.75rem;
     letter-spacing: 3px;
-    line-height: 1.688rem;
-    margin: 0 0 1.375rem 0;
+    //line-height: 1.688rem;
+    margin: 0 0 0.75rem 0;
+
+    @include _1024 {
+      font-size: 1.25rem;
+      letter-spacing: 3px;
+      line-height: 1.688rem;
+      margin: 0 0 1.375rem 0;
+    }
   }
 
   &__title {
     text-align: center;
     font-family: 'DAZNTrim-Bold';
-    font-size: 2.813rem;
-    line-height: 2.813rem;
-    margin: 0 0 2.5rem 0;
+    font-size: 1.25rem;
+    margin: 0 0 1.625rem 0;
+
+    @include _1024 {
+      font-size: 2.813rem;
+      line-height: 2.813rem;
+      margin: 0 0 2.5rem 0;
+    }
   }
 
   &__type {
@@ -66,27 +95,44 @@
   }
 
   &__rarity {
+    text-transform: uppercase;
     font-family: 'DAZNTrim-Bold';
-    font-size: 1.875rem;
-    letter-spacing: 1px;
-    line-height: 2.813rem;
+    font-size: 0.75rem;
     margin-right: 3rem;
     margin-bottom: 0;
+
+    @include _1024 {
+      font-size: 1.875rem;
+      letter-spacing: 1px;
+      line-height: 2.813rem;
+      margin-right: 3rem;
+      margin-bottom: 0;
+    }
   }
 
   &__edition {
     font-family: 'DAZNTrim-Bold';
     color: $brand-white;
-    font-size: 1.625rem;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
     letter-spacing: 1px;
-    line-height: 2.813rem;
     margin: 0;
     width: min-content;
     text-align: center;
 
+    @include _1024 {
+      font-size: 1.625rem;
+      letter-spacing: 1px;
+      line-height: 2.813rem;
+    }
+
     &--legendary {
       background-image: linear-gradient(-54deg, #7d7d7d 0%, #1c1c1c 67%, #3d3d3d 99%);
-      width: 16.25rem;
+      width: 9rem;
+
+      @include  _1024 {
+        width: 16.25rem;
+      }
     }
   }
 
@@ -94,7 +140,21 @@
     font-family: 'DAZNTrim-Bold';
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 2.625rem;
+    width: 100%;
+    margin: 0 auto 2.5rem;
+
+    @include _480 {
+      width: 70%;
+    }
+
+    @include _768 {
+      width: 50%;
+    }
+
+    @include _1024 {
+      width: auto;
+      margin: 0 0 2.625rem;
+    }
   }
 
   &__price-block {
@@ -103,7 +163,11 @@
     align-items: center;
     align-self: flex-start;
     position: relative;
-    padding-right: 30px;
+    padding-right: 15px;
+
+    @include _1024 {
+      padding-right: 30px;
+    }
 
     &:after {
       content: "";
@@ -111,35 +175,29 @@
       right: 0;
       top: 0;
       width: 2px;
-      background-color: #fff;
+      background-color: $brand-white;
       height: 100%;
     }
   }
 
   &__price-title {
-    color: $brand-white;
-    font-size: 1.25rem;
-    letter-spacing: 3px;
-    line-height: 1.688rem;
-    text-transform: uppercase;
-    margin: 0;
+    @include FeaturedNFT-Title;
   }
 
   &__price-value {
     color: $brand-white;
-    font-size: 5rem;
-    line-height: 6.25rem;
+    font-size: 2.75rem;
+    line-height: 2.75rem;
     margin-bottom: 0;
+
+    @include _1024 {
+      font-size: 5rem;
+      line-height: 6.25rem;
+    }
   }
 
   &__price-sign {
-    color: $brand-white;
-    font-family: 'DAZNTrim-Light';
-    font-size: 1.25rem;
-    letter-spacing: 3px;
-    line-height: 1.688rem;
-    text-transform: uppercase;
-    margin: 0;
+    @include FeaturedNFT-Text;
   }
 
   &__countdown-block {
@@ -149,12 +207,7 @@
   }
 
   &__countdown-title {
-    color: $brand-white;
-    font-size: 1.25rem;
-    letter-spacing: 3px;
-    line-height: 1.688rem;
-    text-transform: uppercase;
-    margin: 0;
+    @include FeaturedNFT-Title;
   }
 
   &__time-section {
@@ -163,9 +216,14 @@
 
   &__time-value {
     color: $brand-white;
-    font-size: 5rem;
-    line-height: 6.25rem;
+    font-size: 2.75rem;
+    line-height: 2.75rem;
     margin: 0;
+
+    @include _1024 {
+      font-size: 5rem;
+      line-height: 6.25rem;
+    }
   }
 
   &__time-chunk {
@@ -173,18 +231,22 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    min-width: 115px;
+    min-width: 65px;
     position: relative;
     margin: 0;
     padding-left: 0;
 
+    @include _1024 {
+      min-width: 115px;
+    }
+
     &:after {
       content: "";
       position: absolute;
-      right: 0;
-      top: 18px;
+      right: -1px;
+      top: 12px;
       width: 2px;
-      background-color: #fff;
+      background-color: $brand-white;
       height: 20px;
     }
 
@@ -204,7 +266,7 @@
         right: 0;
         top: 22px;
         width: 2px;
-        background-color: #fff;
+        background-color: $brand-white;
         height: 30px;
       }
     }
@@ -214,7 +276,7 @@
       &:after {
         content: "";
         position: absolute;
-        right: 0;
+        right: -1px;
         top: 30px;
         width: 2px;
         background-color: $brand-white;
@@ -237,13 +299,7 @@
   }
 
   &__indicator {
-    color: $brand-white;
-    font-family: 'DAZNTrim-Light';
-    font-size: 1.25rem;
-    letter-spacing: 3px;
-    line-height: 1.688rem;
-    text-transform: uppercase;
-    margin: 0;
+    @include FeaturedNFT-Text;
   }
 
   &__CTA-wrap {
@@ -252,14 +308,6 @@
   }
 
   &__CTA {
-    text-transform: uppercase;
-    cursor: pointer;
-    font-family: 'DAZNTrim-Bold';
-    border: none;
-    outline: none;
-    background: #fafe53;
-    padding: 1rem;
-    font-size: 1.563rem;
-    letter-spacing: 1px;
+    @include CTA
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import './NFT.scss';
 
 const NFT = ({ img, type, title, description, rarity, isActive }) => {
   const { t } = useTranslation();

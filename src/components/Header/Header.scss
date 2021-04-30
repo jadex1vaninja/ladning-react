@@ -345,22 +345,7 @@
   }
 
   &__CTA {
-    text-transform: uppercase;
-    cursor: pointer;
-    font-family: 'DAZNTrim-Bold';
-    border: none;
-    outline: none;
-    background: $brand-yellow;
-    padding: 1rem;
-    font-size: 1rem;
-    letter-spacing: 0;
-    margin-bottom: 1rem;
-
-    @include _768 {
-      margin-bottom: 0;
-      letter-spacing: 1px;
-      font-size: 1.563rem;
-    }
+      @include CTA;
   }
 
   &__logo1 {

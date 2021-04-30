@@ -44,7 +44,10 @@ const FeaturedNFT = () => {
     <div className='featured'>
       <div className='featured__inner-wrapper'>
         <div className='featured__img-wrapper'>
-          <img src={imgPath + 'own-it.png'} alt='card' />
+          <img
+            src={imgPath + 'Legendary_2_Knockout_Canelo_1_1.png'}
+            alt='card'
+          />
         </div>
         <div className='featured__content'>
           <h6 className='featured__sub-title'>{t('featured-nft.sub-title')}</h6>

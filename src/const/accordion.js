@@ -1,42 +1,73 @@
 export const accordionInitialList = [
   {
-    title: 'WHAT IS AN NFT?',
-    description:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent ium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt moll itia animi, id est laborum et dolorum fuga.',
-    description_two:
-      'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis \n' +
-      'est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, \n' +
-      'omnis voluptas assumenda estandae.',
+    title: 'faq.questions.first.title',
+    description: 'faq.questions.first.description',
     isExpanded: false
   },
   {
-    title: 'WHAT IS OPENSEA?',
-    description:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent ium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt moll itia animi, id est laborum et dolorum fuga.',
-    description_two:
-      'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis \n' +
-      'est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, \n' +
-      'omnis voluptas assumenda estandae.',
+    title: 'faq.questions.second.title',
+    description: [
+      'faq.questions.second.description',
+      'faq.questions.second.reminder'
+    ],
     isExpanded: false
   },
   {
-    title: 'WHAT DO I OWN?',
-    description:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent ium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt moll itia animi, id est laborum et dolorum fuga.',
-    description_two:
-      'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis \n' +
-      'est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, \n' +
-      'omnis voluptas assumenda estandae.',
+    title: 'faq.questions.third.title',
+    description: [
+      'faq.questions.third.description',
+      'faq.questions.third.description-two',
+      'faq.questions.third.description-three',
+      'faq.questions.third.description-four',
+      'faq.questions.third.description-five',
+      'faq.questions.third.description-six',
+      'faq.questions.third.description-seven'
+    ],
     isExpanded: false
   },
   {
-    title: 'CAN I SELL MY NFT IF I WIN THE AUCTION?',
-    description:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent ium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt moll itia animi, id est laborum et dolorum fuga.',
-    description_two:
-      'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis \n' +
-      'est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, \n' +
-      'omnis voluptas assumenda estandae.',
-    isExpanded: true
+    title: 'faq.questions.fourth.title',
+    description: [
+      'faq.questions.fourth.description',
+      'faq.questions.fourth.description-two',
+      'faq.questions.fourth.description-three'
+    ],
+    isExpanded: false
+  },
+  {
+    title: 'faq.questions.fifth.title',
+    description: [
+      'faq.questions.fifth.list-title',
+      'faq.questions.fifth.list-item',
+      'faq.questions.fifth.list-item-two',
+      'faq.questions.fifth.list-item-three',
+      'faq.questions.fifth.list-item-four'
+    ],
+    isExpanded: false
+  },
+  {
+    title: 'faq.questions.sixth.title',
+    description: 'faq.questions.sixth.description',
+    isExpanded: false
+  },
+  {
+    title: 'faq.questions.seventh.title',
+    description: 'faq.questions.seventh.description',
+    isExpanded: false
+  },
+  {
+    title: 'faq.questions.eighth.title',
+    description: 'faq.questions.eighth.description',
+    isExpanded: false
+  },
+  {
+    title: 'faq.questions.ninth.title',
+    description: 'faq.questions.ninth.description',
+    isExpanded: false
+  },
+  {
+    title: 'faq.questions.tenth.title',
+    description: 'faq.questions.tenth.description',
+    isExpanded: false
   }
 ];

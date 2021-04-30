@@ -1,17 +1,28 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const Accordion = ({ title, description, descriptionTwo, expand, onClick }) => {
+const Accordion = ({ title, description, expand, onClick }) => {
+  const { t } = useTranslation();
+
+  const isArray = Array.isArray(description);
+
   return (
     <div>
       <dt className={expand ? 'title is-expanded' : 'title'} onClick={onClick}>
-        {title}
+        {t(title)}
       </dt>
-      <dd
-        className={expand ? 'content is-expanded' : 'content'}
-        onClick={onClick}
-      >
-        <p>{description}</p>
-        <p>{descriptionTwo}</p>
+      <dd className={expand ? 'content is-expanded' : 'content'}>
+        {isArray ? (
+          description.map((elem) => (
+            <p dangerouslySetInnerHTML={{ __html: t(elem) }}></p>
+          ))
+        ) : (
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(description)
+            }}
+          ></p>
+        )}
       </dd>
     </div>
   );

@@ -6,7 +6,7 @@ export const NFTs = [
     cards: [
       {
         type: 'legendary',
-        img: imgPath + 'nft-legend.png',
+        img: imgPath + 'Legendary_1_Knockout_Saunders_1_1.png',
         title: 'Knockout - Canelo',
         rarity: '1/1',
         description: `Canelo Alvarez has knocked out 37 of the fighters he’s faced. 
@@ -16,7 +16,7 @@ export const NFTs = [
       },
       {
         type: 'legendary',
-        img: imgPath + 'nft-legend.png',
+        img: imgPath + 'Legendary_1_Knockout_Saunders_1_1.png',
         title: 'Knockout - Saunders',
         rarity: '1/1',
         description: `In his 30 career fights, Billy Joe Saunders has knocked out 14 of his opponents. 
@@ -34,7 +34,7 @@ export const NFTs = [
     cards: [
       {
         type: 'gold',
-        img: imgPath + 'nft-gold.png',
+        img: imgPath + 'Gold_1_TaleOfTheTape_Canelo_1_1_Gold.png',
         title: 'Tale of the Tape - Canelo',
         rarity: '1/1',
         description: `SIGNED GLOVES + ANNUAL DAZN SUBSCRIPTION`,
@@ -42,7 +42,7 @@ export const NFTs = [
       },
       {
         type: 'gold',
-        img: imgPath + 'nft-gold.png',
+        img: imgPath + 'Gold_2_TaleOfTheTape_Saunders_1_1_Gold.png',
         title: 'Tale of the Tape - Saunders',
         rarity: '1/1',
         description: `SIGNED GLOVES + ANNUAL DAZN SUBSCRIPTION`,
@@ -50,7 +50,7 @@ export const NFTs = [
       },
       {
         type: 'gold',
-        img: imgPath + 'nft-gold.png',
+        img: imgPath + 'Gold_3_Prediction_RND_1_Gold.png',
         title: 'Prediction - Rounds 1-13',
         rarity: '13 (1 per round)',
         description: `FOR THE ROUND THE FIGHT ENDS IN ONLY, 2 
@@ -59,7 +59,7 @@ export const NFTs = [
       },
       {
         type: 'silver',
-        img: imgPath + 'nft-legend.png',
+        img: imgPath + 'Silver_1_A1_TaleOfTheTape_Canelo_1_1_Silver.png',
         title: 'Tale of the Tape - Canelo',
         rarity: '50',
         description: `IF CANELO WINS THIS NFT UNLOCKS AN ANNUAL DAZN SUBSCRIPTION + 
@@ -95,23 +95,25 @@ export const NFTs = [
     cards: [
       {
         type: 'gold',
-        img: imgPath + 'nft-gold.png',
-        title: 'Tale of the Tape - Canelo',
-        rarity: '1/1',
-        description: `SIGNED GLOVES + ANNUAL DAZN SUBSCRIPTION`,
+        img: imgPath + 'Gold_3_Prediction_RND_1_Gold.png',
+        title: 'Prediction - Rounds 1-13',
+        rarity: '13 (1 per round)',
+        description: `FOR THE ROUND THE FIGHT ENDS IN ONLY, 2 
+                      TICKETS TO A FUTURE MATCHROOM FIGHT`,
         isActive: false
       },
       {
         type: 'gold',
-        img: imgPath + 'nft-gold.png',
-        title: 'Tale of the Tape - Saunders',
-        rarity: '1/1',
-        description: `SIGNED GLOVES + ANNUAL DAZN SUBSCRIPTION`,
+        img: imgPath + 'Gold_3_Prediction_RND_1_Gold.png',
+        title: 'Prediction - Rounds 1-13',
+        rarity: '13 (1 per round)',
+        description: `FOR THE ROUND THE FIGHT ENDS IN ONLY, 2 
+                      TICKETS TO A FUTURE MATCHROOM FIGHT`,
         isActive: false
       },
       {
         type: 'gold',
-        img: imgPath + 'nft-gold.png',
+        img: imgPath + 'Gold_3_Prediction_RND_1_Gold.png',
         title: 'Prediction - Rounds 1-13',
         rarity: '13 (1 per round)',
         description: `FOR THE ROUND THE FIGHT ENDS IN ONLY, 2 
@@ -120,7 +122,7 @@ export const NFTs = [
       },
       {
         type: 'silver',
-        img: imgPath + 'nft-legend.png',
+        img: imgPath + 'Silver_1_A1_TaleOfTheTape_Canelo_1_1_Silver.png',
         title: 'Tale of the Tape - Canelo',
         rarity: '50',
         description: `IF CANELO WINS THIS NFT UNLOCKS AN ANNUAL DAZN SUBSCRIPTION + 
@@ -129,7 +131,7 @@ export const NFTs = [
       },
       {
         type: 'bronze',
-        img: imgPath + 'nft-bronze.png',
+        img: imgPath + 'Bronze_1_Prediction_RND_1_Bronze.png',
         title: 'Prediction - Rounds 1-13',
         rarity: '100 (per round)',
         description: `FOR THE ROUND THE FIGHT ENDS IN ONLY, ANNUAL DAZN SUBSCRIPTION`,
