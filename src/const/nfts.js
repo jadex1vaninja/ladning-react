@@ -66,6 +66,28 @@ const SILVER_TALE_SAUNDERS = {
     '69208789200216951769366063301950903931594320778910349241631506787363983458354'
 };
 
+
+const GOLDEN_PREDICTION= {
+    type: 'NFTs.type-gold',
+    img: imgPath + 'Gold_3_Prediction_RND_1_Gold.png',
+    title: 'nft-card.prediction-decision-title',
+    rarity: 'nft-card.rarity-13',
+    description: 'nft-card.prediction-decision-description',
+  isActive: true,
+
+    link:
+    '69208789200216951769366063301950903931594320778910349241631506766473262530561'
+};
+const BRONZE_PREDICTION ={
+    type: 'NFTs.type-bronze',
+    img: imgPath + 'Bronze_1_Prediction_RND_1_Bronze.png',
+    title: 'nft-card.prediction-decision-title-bronze',
+    rarity: 'nft-card.rarity-100',
+    description: 'nft-card.prediction-decision-description-bronze',
+    isActive: true,
+    link:
+    '69208789200216951769366063301950903931594320778910349241631506766473262530561'
+};
 export const NFTs = [
   {
     title: 'NFTs.title-knockout',
@@ -82,7 +104,7 @@ export const NFTs = [
   },
   {
     title: 'NFTs.title-prediction',
-    cards: [SILVER_TALE_CANELO, SILVER_TALE_SAUNDERS]
+    cards: [GOLDEN_PREDICTION, BRONZE_PREDICTION]
   },
   {
     title: 'NFTs.title-post-fight',
