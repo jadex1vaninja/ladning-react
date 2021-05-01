@@ -41,6 +41,10 @@
     &:first-child {
       margin-left: 0;
     }
+    &:hover{
+        color: $brand-yellow;
+        text-decoration: none;
+    }
 
     @include _1024 {
       font-size: 1.875rem;
@@ -209,7 +213,7 @@
     @include _1024 {
       font-size: 20px;
       line-height: 45px;
-      letter-spacing: 8px;
+      letter-spacing: 7.5px;
       word-spacing: 4px;
     }
   }

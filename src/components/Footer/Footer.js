@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { imgPath } from '../../const';
+import { imgPath, DAZN_PUBLIC_LINK } from '../../const';
 import './Footer.scss';
 
 const Footer = () => {
@@ -36,7 +36,7 @@ const Footer = () => {
             />
           </div>
           <div className='footer__text-wrapper'>
-            <a href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'>
+            <a href={DAZN_PUBLIC_LINK}>
               <img
                 className='footer__logo2'
                 src={imgPath + 'DAZN-logo.png'}

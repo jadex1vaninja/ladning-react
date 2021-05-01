@@ -41,7 +41,7 @@ const FeaturedNFT = () => {
   };
 
   return (
-    <div className='featured'>
+    <div className='featured' id="auction">
       <div className='featured__inner-wrapper'>
         <div className='featured__img-wrapper'>
           <img

@@ -28,7 +28,7 @@ const FAQs = () => {
   };
 
   return (
-    <div className='faq'>
+    <div className='faq' id="faq">
       <h1 className='faq__title'>{t('faq.title')}</h1>
       <p className='faq__close' onClick={closeAll}>
         &#215;

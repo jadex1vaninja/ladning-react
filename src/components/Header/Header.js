@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { imgPath } from '../../const';
+import { imgPath, DAZN_PUBLIC_LINK, OPENSEA_COLLECTION_LINK } from '../../const';
 import { useWindowInfo } from '../../hooks/useWindowInfo';
 import './Header.scss';
 
@@ -27,7 +27,10 @@ const Header = () => {
     <header className='header'>
       <nav className='header__navigation'>
         <div className='header__dazn-logo'>
-          <a href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'>
+          <a
+            target='_blank'
+            href={DAZN_PUBLIC_LINK}
+          >
             <img
               className='header__dazn-img'
               src={imgPath + 'DAZN-logo.png'}
@@ -36,11 +39,17 @@ const Header = () => {
           </a>
         </div>
         <ul className='header__nav-list'>
-          <li className='header__nav-item'>
-            {t('header.nav-list.nav-auction')}
-          </li>
-          <li className='header__nav-item'>{t('header.nav-list.nav-faq')}</li>
-          <li className='header__nav-item'>{t('header.nav-list.nav-dazn')}</li>
+            <a className='header__nav-item' href="#auction">{t('header.nav-list.nav-auction')}</a>
+            <a className='header__nav-item' href="#faq">
+            {t('header.nav-list.nav-faq')}
+            </a>
+            <a
+            className='header__nav-item'
+              target='_blank'
+              href={DAZN_PUBLIC_LINK}
+            >
+              {t('header.nav-list.nav-dazn')}
+            </a>
         </ul>
         <div className='header__terms-language'>
           <ul className='header__terms-list'>
@@ -94,8 +103,11 @@ const Header = () => {
           <img className='header__logo1' src={imgPath + 'logo.png'} alt='' />
         </div>
         <div className='header__buttons-wrapper'>
-          <button className='header__CTA'>{t('header.buttons.btn-one')}</button>
-          <button className='header__CTA'>{t('header.buttons.btn-two')}</button>
+          <button onClick={()=> window.open(OPENSEA_COLLECTION_LINK, '_blank')} className='header__CTA'>
+
+          {t('header.buttons.btn-one')}
+          </button>
+          <button onClick={()=> window.open(DAZN_PUBLIC_LINK, '_blank')} className='header__CTA'>{t('header.buttons.btn-two')}</button>
         </div>
         <div className='header__img-wrapper header__img-wrapper--second'>
           <img
