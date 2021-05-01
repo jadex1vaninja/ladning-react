@@ -2,8 +2,23 @@
 @import '../../variables';
 
 .cards-root {
-
+  
+  &__soldout-block{
+    background-color: $brand-yellow;
+    color: $brand-black;
+    position: absolute;
+    top: 18%;
+    right: 10%;
+    z-index: 2;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 20px;
+    }
   &__card-content {
+  position:relative;
+
     display: flex;
     flex-direction: column;
     padding-right: 7.5%;
@@ -16,6 +31,12 @@
       opacity: 0.3;
       pointer-events: none;
     }
+    &--soldout{
+      .cards-root__card-img{
+        filter:grayscale(1)
+      }
+    }
+    
 
     @include _320 {
       //margin-top: -3.5rem;

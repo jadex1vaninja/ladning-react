@@ -7,6 +7,7 @@ const LEGENDARY_KNOCKOUT_CANELO = {
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.canelo-legendary-description',
   isActive: true,
+  // isSoldOut:true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506764274239275009'
 };
@@ -73,7 +74,7 @@ const GOLDEN_PREDICTION= {
     title: 'nft-card.prediction-decision-title',
     rarity: 'nft-card.rarity-13',
     description: 'nft-card.prediction-decision-description',
-  isActive: true,
+    isActive: true,
 
     link:
     '69208789200216951769366063301950903931594320778910349241631506766473262530561'
