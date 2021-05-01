@@ -10,7 +10,7 @@ const Video = () => {
   return (
     <div className='video'>
       <img
-        src={imgPath + 'new-video-section-bg.png'}
+        src={imgPath + 'new-video-section-bg.jpg'}
         className='video__banner-img'
         alt='video'
       />
