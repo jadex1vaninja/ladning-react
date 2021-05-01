@@ -28,8 +28,15 @@ const NFT = ({ img, type, title, description, rarity, isActive, link }) => {
           <div className='cards-root__hr' />
         </div>
         <div className='cards-root__auction-wrapper'>
-          <p className='cards-root__amount'>{t(rarity)}</p>
-          <p className='cards-root__desc'>{t(description)}</p>
+          <p
+            className='cards-root__amount'
+            dangerouslySetInnerHTML={{ __html: t(rarity) }}
+          ></p>
+          <p
+            className='cards-root__desc'
+            dangerouslySetInnerHTML={{ __html: t(description) }}
+          >
+          </p>
           <a className='cards-root__link' href={LINK_TO_LIVE + link}>
             {t('NFTs.link-text')}
           </a>
