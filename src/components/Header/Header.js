@@ -27,10 +27,7 @@ const Header = () => {
     <header className='header'>
       <nav className='header__navigation'>
         <div className='header__dazn-logo'>
-          <a
-            target='_blank'
-            href={DAZN_PUBLIC_LINK}
-          >
+          <a target='_blank' rel='noopener noreferrer' href={DAZN_PUBLIC_LINK}>
             <img
               className='header__dazn-img'
               src={imgPath + 'DAZN-logo.png'}
@@ -39,17 +36,20 @@ const Header = () => {
           </a>
         </div>
         <ul className='header__nav-list'>
-            <a className='header__nav-item' href="#auction">{t('header.nav-list.nav-auction')}</a>
-            <a className='header__nav-item' href="#faq">
+          <a className='header__nav-item' href='#auction'>
+            {t('header.nav-list.nav-auction')}
+          </a>
+          <a className='header__nav-item' href='#faq'>
             {t('header.nav-list.nav-faq')}
-            </a>
-            <a
+          </a>
+          <a
             className='header__nav-item'
-              target='_blank'
-              href={DAZN_PUBLIC_LINK}
-            >
-              {t('header.nav-list.nav-dazn')}
-            </a>
+            target='_blank'
+            rel='noopener noreferrer'
+            href={DAZN_PUBLIC_LINK}
+          >
+            {t('header.nav-list.nav-dazn')}
+          </a>
         </ul>
         <div className='header__terms-language'>
           <ul className='header__terms-list'>
@@ -94,6 +94,7 @@ const Header = () => {
         <p className='header__description-text'>
           {t('header.description.text')}
         </p>
+        {/* TODO: ADD LINK */}
         <a href='' className='header__description-link'>
           {t('header.description.link')}
         </a>
@@ -103,11 +104,18 @@ const Header = () => {
           <img className='header__logo1' src={imgPath + 'logo.png'} alt='' />
         </div>
         <div className='header__buttons-wrapper'>
-          <button onClick={()=> window.open(OPENSEA_COLLECTION_LINK, '_blank')} className='header__CTA'>
-
-          {t('header.buttons.btn-one')}
+          <button
+            onClick={() => window.open(OPENSEA_COLLECTION_LINK, '_blank')}
+            className='header__CTA'
+          >
+            {t('header.buttons.btn-one')}
           </button>
-          <button onClick={()=> window.open(DAZN_PUBLIC_LINK, '_blank')} className='header__CTA'>{t('header.buttons.btn-two')}</button>
+          <button
+            onClick={() => window.open(DAZN_PUBLIC_LINK, '_blank')}
+            className='header__CTA'
+          >
+            {t('header.buttons.btn-two')}
+          </button>
         </div>
         <div className='header__img-wrapper header__img-wrapper--second'>
           <img

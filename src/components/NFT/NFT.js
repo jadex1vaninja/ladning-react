@@ -35,9 +35,13 @@ const NFT = ({ img, type, title, description, rarity, isActive, link }) => {
           <p
             className='cards-root__desc'
             dangerouslySetInnerHTML={{ __html: t(description) }}
+          ></p>
+          <a
+            rel='noopener noreferrer'
+            className='cards-root__link'
+            target='_blank'
+            href={LINK_TO_LIVE + link}
           >
-          </p>
-          <a className='cards-root__link' href={LINK_TO_LIVE + link}>
             {t('NFTs.link-text')}
           </a>
         </div>

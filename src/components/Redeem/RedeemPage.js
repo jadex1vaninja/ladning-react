@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ethers } from 'ethers';
+// import { ethers } from 'ethers';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Modal, Form } from 'react-bootstrap';
@@ -12,17 +12,17 @@ import './ReedemPage.scss';
 const RedeemPage = () => {
   // A Web3Provider wraps a standard Web3 provider, which is
   // what Metamask injects as window.ethereum into each page
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-  const signer = provider.getSigner();
+  // const provider = new ethers.providers.Web3Provider(window.ethereum);
+  // const signer = provider.getSigner();
 
-  const signMessage = async () => {
-    try {
-      const signature = await signer.signMessage('Hello there');
-      console.log(signature);
-    } catch (e) {
-      console.error(e);
-    }
-  };
+  // const signMessage = async () => {
+  //   try {
+  //     const signature = await signer.signMessage('Hello there');
+  //     console.log(signature);
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // };
 
   const [error, setError] = useState(false);
   const [isEthereum, setIsEthereum] = useState(false);

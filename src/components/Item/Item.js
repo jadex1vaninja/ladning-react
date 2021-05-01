@@ -13,7 +13,12 @@ const Item = ({
   return (
     <div className='item'>
       <div className='item__img'>
-        <a className='item__link' href={link} target='_blank' rel='noreferrer'>
+        <a
+          className='item__link'
+          href={link}
+          rel='noopener noreferrer'
+          target='_blank'
+        >
           <img src={imageUrl} alt={name} />
         </a>
       </div>

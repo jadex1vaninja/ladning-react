@@ -9,6 +9,7 @@ const TermsConditions = () => {
     <div className='terms' id='terms'>
       <h1 className='terms__title'>{t('terms.title')}</h1>
       <div className='terms__btn-wrapper'>
+        {/* TODO: LINK */}
         <a className='terms__CTA' href=''>
           {t('terms.CTA-one')}
         </a>

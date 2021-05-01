@@ -23,7 +23,12 @@ const Footer = () => {
         </div>
         <div className='footer__sign-block'>
           <p className='footer__text'>{t('footer.text')}</p>
-          <a className='footer__CTA' target="_blank" href={DAZN_PUBLIC_LINK}>
+          <a
+            className='footer__CTA'
+            target='_blank'
+            rel='noopener noreferrer'
+            href={DAZN_PUBLIC_LINK}
+          >
             {t('footer.CTA')}
           </a>
         </div>
