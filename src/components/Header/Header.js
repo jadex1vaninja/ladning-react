@@ -63,7 +63,10 @@ const Header = () => {
           src={imgPath + 'promo2.png'}
           alt='promo'
         />
-        <p className='header__promo-text' dangerouslySetInnerHTML={{__html: t('header.promo-text')}}></p>
+        <p
+          className='header__promo-text'
+          dangerouslySetInnerHTML={{ __html: t('header.promo-text') }}
+        ></p>
       </div>
       <div className='header__inner'>
         <div className='header__img-wrapper'>
@@ -75,7 +78,7 @@ const Header = () => {
         </div>
         <div className='header__text-wrapper'>
           <h1 className='header__title'>{t('header.title')}</h1>
-          <a className="text-center" target='_blank' href={dazn_link}>
+          <a className='text-center' target='_blank' href={dazn_link}>
             <span className='header__text'>{t('header.sub-title')}</span>
           </a>
         </div>
@@ -96,7 +99,11 @@ const Header = () => {
           <a className='header__hyperlink' href='#subscribe'>
             <button className='header__btn'>{t('header.learn-more')}</button>
           </a>
-          <a className='header__hyperlink' href='#carousel'>
+          <a
+            className='header__hyperlink'
+            target="_blank"
+            href='https://opensea.io/collection/dazn-x-canelo-saunders'
+          >
             <button className='header__btn'>{t('header.see-artworks')}</button>
           </a>
         </div>
