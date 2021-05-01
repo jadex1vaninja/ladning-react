@@ -110,8 +110,7 @@
         background: transparent;
 
         &::after {
-          content: "ᐯ";
-          transform: rotate(360deg);
+          transform: rotate(90deg);
         }
       }
     }

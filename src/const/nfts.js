@@ -2,7 +2,7 @@ import { imgPath } from './index';
 
 const LEGENDARY_KNOCKOUT_CANELO = {
   type: 'NFTs.type-legendary',
-  img: imgPath + 'Legendary_1_Knockout_Saunders_1_1.png',
+  img: imgPath + 'Legendary_2_Knockout_Canelo_1_1.png',
   title: 'nft-card.canelo-legendary-title',
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.canelo-legendary-description',
