@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { LINK_TO_LIVE } from '../../const';
 import './NFT.scss';
 
-const NFT = ({ img, type, title, description, rarity, isActive, link, isSoldOut }) => {
+const NFT = ({ img, type, title, description, rarity, isActive, link, isSoldOut, collectionLink }) => {
   const { t } = useTranslation();
   const separateType = type.split('-').pop();
 
@@ -13,10 +13,10 @@ const NFT = ({ img, type, title, description, rarity, isActive, link, isSoldOut 
         !isActive && 'cards-root__card-content--disabled'
       } ${isSoldOut && 'cards-root__card-content--soldout'}`}
     >
-      <img className="cards-root__card-img" src={img} alt='card' />
-      {isSoldOut && <div className="cards-root__soldout-block" >
-      {t("") || "SOLD OUT"}
-      </div>}
+      <img className='cards-root__card-img' src={img} alt='card' />
+      {isSoldOut && (
+        <div className='cards-root__soldout-block'>{t('') || 'SOLD OUT'}</div>
+      )}
       <div className='cards-root__content-wrapper'>
         <div className='cards-root__inner'>
           <h4
@@ -43,7 +43,7 @@ const NFT = ({ img, type, title, description, rarity, isActive, link, isSoldOut 
             rel='noopener noreferrer'
             className='cards-root__link'
             target='_blank'
-            href={LINK_TO_LIVE + link}
+            href={link ? LINK_TO_LIVE + link : collectionLink}
           >
             {t('NFTs.link-text')}
           </a>

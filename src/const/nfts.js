@@ -75,19 +75,18 @@ const GOLDEN_PREDICTION= {
     rarity: 'nft-card.rarity-13',
     description: 'nft-card.prediction-decision-description',
     isActive: true,
+    collectionLink:"https://opensea.io/assets/dazn-x-canelo-saunders?search[query]=Prediction%3A%20Rou[…]ngTraits][0][name]=Type&search[stringTraits][0][values][0]=Gold",
 
-    link:
-    '69208789200216951769366063301950903931594320778910349241631506766473262530561'
 };
-const BRONZE_PREDICTION ={
-    type: 'NFTs.type-bronze',
-    img: imgPath + 'Bronze_1_Prediction_RND_1_Bronze.png',
-    title: 'nft-card.prediction-decision-title-bronze',
-    rarity: 'nft-card.rarity-100',
-    description: 'nft-card.prediction-decision-description-bronze',
-    isActive: true,
-    link:
-    '69208789200216951769366063301950903931594320778910349241631506766473262530561'
+const BRONZE_PREDICTION = {
+  type: 'NFTs.type-bronze',
+  img: imgPath + 'Bronze_1_Prediction_RND_1_Bronze.png',
+  title: 'nft-card.prediction-decision-title-bronze',
+  rarity: 'nft-card.rarity-100',
+  description: 'nft-card.prediction-decision-description-bronze',
+  isActive: true,
+  collectionLink:
+    'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
 };
 export const NFTs = [
   {
