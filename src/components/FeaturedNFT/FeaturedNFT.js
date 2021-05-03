@@ -84,12 +84,14 @@ const FeaturedNFT = () => {
               </h2>
               <p className='featured__price-value'>
               {ethPrice.toFixed(3)}
-              <small>
-              {`($${usdPrice.toFixed(2)})` }
-              </small>
               </p>
               <p className='featured__price-sign'>
                 {t('featured-nft.price.sign')}
+              </p>
+              <p>
+              <small>
+              {`($${usdPrice.toFixed(2)})` }
+              </small>
               </p>
             </div>
             <div className='featured__countdown-block'>
