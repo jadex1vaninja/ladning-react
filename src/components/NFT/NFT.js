@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const NFT = ({ img, type, title, description, rarity }) => {
+const NFT = ({ img, type, title, description, rarity, link }) => {
   const { t } = useTranslation();
 
   return (
@@ -27,7 +27,7 @@ const NFT = ({ img, type, title, description, rarity }) => {
             dangerouslySetInnerHTML={{ __html: t(`nft-card.${description}`) }}
           ></p>
           <a className='cards-root__link'>
-            {t('marketplace.ntfs.legendary.link')}
+            {t('nft-card.${link}')}
           </a>
         </div>
       </div>

@@ -44,7 +44,7 @@ const Cards = () => {
       }
     ]
   };
-  const date = new Date('May 8, 2021 07:00:00 GMT-04:00');
+  const date = new Date('May 5, 2021 12:00:00 GMT-04:00');
 
   const renderer = ({ days, hours, minutes, seconds }) => {
     const DOUBLE_NUM = 10;
@@ -108,6 +108,7 @@ const Cards = () => {
               img={element.img}
               description={element.description}
               rarity={element.rarity}
+              link={element.link}
             />
           ))}
         </Slider>

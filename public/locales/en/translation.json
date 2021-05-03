@@ -12,15 +12,15 @@
   "own-it-block": {
     "title": "Own a piece of history",
     "description-part-one": "This stunning collection of NFTs commemorates the fight and even gets buyers into the action! All NFTs come with special unlockable bonuses! The extremely rare Gold and Legendary NFTs unlock premium items and experiences like signed gloves and tickets to a future fight. Check out the limited NFT collections below and check back for more details soon.",
-    "description-part-two": "Pre-fight sales will go live on fight day,",
-    "description-date": "Saturday, MAY 8 AT 7AM ET / 12:00 BST",
+    "description-part-two": "Pre-fight sales will go live,",
+    "description-date": "Wednesday, May 5 at 12pm ET / 17:00 BST",
     "link": "Want to know more about NFTs?"
   },
   "marketplace": {
     "title": "COUNTDOWN",
     "countdown": {
       "text-purchase-one": "The first drop will be available for",
-      "text-purchase-two": "purchase at 7AM ET / 12:00 BST on May 8th",
+      "text-purchase-two": "purchase at 12PM ET / 17:00 BST ON MAY 5TH",
       "days": "days",
       "hours": "hours",
       "minutes": "minutes",
@@ -34,7 +34,7 @@
           "second": "Saunders"
         },
         "description": "If Canelo wins, annual DAZN subscription for all NFT holders + all NFT holders entered into drawing for 1 personalized video to randomly selected winner",
-        "link": "ON SALE MAY 8TH"
+        "link": "ON SALE MAY 5TH"
       },
       "gold": {
         "name": "Gold",
@@ -43,7 +43,7 @@
           "second": "Saunders"
         },
         "description": "If Canelo wins, annual DAZN subscription for all NFT holders + all NFT holders entered into drawing for 1 personalized video to randomly selected winner",
-        "link": "ON SALE MAY 8TH"
+        "link": "ON SALE MAY 5TH"
       },
       "bronze": {
         "name": "Bronze",
@@ -52,7 +52,7 @@
           "second": "Saunders"
         },
         "description": "If Canelo wins, annual DAZN subscription for all NFT holders + all NFT holders entered into drawing for 1 personalized video to randomly selected winner",
-        "link": "ON SALE MAY 8TH"
+        "link": "ON SALE MAY 7TH"
       }
     }
   },
@@ -105,6 +105,9 @@
     "prediction-decision-title-bronze":"Prediction - Rounds 1-12 + Decision",
     "prediction-decision-description-bronze":"Limited edition NFTs predicting when the Canelo v. Saunders fight will end - in a specific round or with a judges' decision. For the winning NFTs only, receive an annual subscription to DAZN!",
     "prediction-decision-bronze-rarity":"100 Per Outcome",
+
+    "early-link": "ON SALE MAY 5TH",
+    "late-link": "ON SALE MAY 7TH",
 
     "rarity-1": "1/1",
     "rarity-50": "50",
