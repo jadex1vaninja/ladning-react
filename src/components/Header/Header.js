@@ -24,6 +24,8 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
     return lang;
   };
 
+  const faqHref = this.props.history.createHref('/faq');
+
   useEffect(() => {
     setLanguage(getLanguageFromStorage());
   }, []);
@@ -88,9 +90,9 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
               </a>
             </li>
             <li className='header__nav-item'>
-              <Link className='header__nav-link' to='/faq'>
+              <a className='header__nav-link' href={faqHref} target="_blank">
                 {t('header.nav-list.nav-faq')}
-              </Link>
+              </a>
             </li>
             <li className='header__nav-item'>
               <a
