@@ -27,7 +27,7 @@ const NFT = ({ img, type, title, description, rarity, link }) => {
             dangerouslySetInnerHTML={{ __html: t(`nft-card.${description}`) }}
           ></p>
           <a className='cards-root__link'>
-            {t('nft-card.${link}')}
+            {t(`nft-card.${link}`)}
           </a>
         </div>
       </div>
