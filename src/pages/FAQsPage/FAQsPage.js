@@ -15,7 +15,13 @@ const FAQsPage = () => {
   return (
     <>
       <Header isUsedOnSecondaryPage secondaryTitle='FAQs' />
-      <FAQs show={10} isButtonGetBack btnHandler={getBack} />
+      <FAQs
+        show={10}
+        isButtonGetBack
+        btnHandler={getBack}
+        isRotatedBg
+        isUsedOnSecondaryPage
+      />
       <Footer />
     </>
   );

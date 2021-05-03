@@ -15,7 +15,12 @@ const Landing = () => {
       <main className='root'>
         <FeaturedNFT />
         <Cards />
-        <FAQs show={4} isButtonGetBack={false} />
+        <FAQs
+          show={4}
+          isButtonGetBack={false}
+          isRotatedBg={false}
+          isUsedOnSecondaryPage={false}
+        />
         <Registration />
         <TermsConditions />
       </main>

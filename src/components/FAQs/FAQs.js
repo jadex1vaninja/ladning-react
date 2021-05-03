@@ -4,7 +4,13 @@ import { useTranslation } from 'react-i18next';
 import { accordionInitialList } from '../../const/accordion';
 import './FAQs.scss';
 
-const FAQs = ({ show, isButtonGetBack, btnHandler }) => {
+const FAQs = ({
+  show,
+  isButtonGetBack,
+  btnHandler,
+  isRotatedBg,
+  isUsedOnSecondaryPage
+}) => {
   const [accordion, setAccordion] = useState(accordionInitialList);
   const [active, setActive] = useState(null);
   const { t } = useTranslation();
@@ -27,12 +33,18 @@ const FAQs = ({ show, isButtonGetBack, btnHandler }) => {
     setActive(null);
   };
 
+  const rotated = isRotatedBg ? 'faq faq--rotated' : 'faq';
+
   return (
-    <div className='faq' id='faq'>
-      <h1 className='faq__title'>{t('faq.title')}</h1>
-      <p className='faq__close' onClick={closeAll}>
-        &#215;
-      </p>
+    <div className={rotated} id='faq'>
+      {!isUsedOnSecondaryPage && (
+        <>
+          <h1 className='faq__title'>{t('faq.title')}</h1>
+          <p className='faq__close' onClick={closeAll}>
+            &#215;
+          </p>
+        </>
+      )}
       <p className='faq__text'>{t('faq.sub-title')}</p>
       <div className='faq__container'>
         <dl className='accordion'>
