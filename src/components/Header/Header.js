@@ -145,7 +145,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
           src={imgPath + 'promo.png'}
           alt='promo'
         />
-        <p className='header__promo-text'>{t('header.promo-text')}</p>
+        <p className='header__promo-text' dangerouslySetInnerHTML={{ __html: t('header.promo-text') }}></p>
       </div>
       {!isUsedOnSecondaryPage && (
         <div className='header__description'>
