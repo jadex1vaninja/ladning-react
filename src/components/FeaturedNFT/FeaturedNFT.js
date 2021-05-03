@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Countdown from 'react-countdown';
-import { API_URL, CONTRACT_ADDRESS, imgPath, LINK_TO_LIVE } from '../../const';
+import { API_URL, CONTRACT_ADDRESS, imgPath, vidPath, LINK_TO_LIVE } from '../../const';
 import { FeaturedNFT_ID } from '../../const/nfts';
 import './FeaturedNFT.scss';
 import axios from 'axios';
@@ -73,6 +73,8 @@ const FeaturedNFT = () => {
         <div className='featured__img-wrapper'>
           <img
             src={imgPath + 'Legendary_2_Knockout_Canelo_1_1.png'}
+            onMouseOver={this.src = vidPath + 'Legendary_2_Knockout_Canelo_1_1.gif'} 
+            onMouseOut={this.src = imgPath + 'Legendary_2_Knockout_Canelo_1_1.png'}
             alt='card'
           />
         </div>

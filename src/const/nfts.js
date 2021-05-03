@@ -1,8 +1,9 @@
-import { imgPath } from './index';
+import { imgPath, vidPath } from './index';
 
 const LEGENDARY_KNOCKOUT_CANELO = {
   type: 'NFTs.type-legendary',
   img: imgPath + 'Legendary_2_Knockout_Canelo_1_1.png',
+  video: vidPath + 'Legendary_2_Knockout_Canelo_1_1.gif',
   title: 'nft-card.canelo-legendary-title',
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.canelo-legendary-description',
@@ -15,6 +16,7 @@ const LEGENDARY_KNOCKOUT_CANELO = {
 const LEGENDARY_KNOCKOUT_SAUNDERS = {
   type: 'NFTs.type-legendary',
   img: imgPath + 'Legendary_1_Knockout_Saunders_1_1.png',
+  video: vidPath + 'Legendary_1_Knockout_Saunders_1_1.gif',
   title: 'nft-card.saunders-legendary-title',
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.saunders-legendary-description',
@@ -26,6 +28,7 @@ const LEGENDARY_KNOCKOUT_SAUNDERS = {
 const GOLD_TALE_CANELO = {
   type: 'NFTs.type-gold',
   img: imgPath + 'Gold_1_TaleOfTheTape_Canelo_1_1_Gold.png',
+  video: vidPath + 'Gold_1_TaleOfTheTape_Canelo_1_1_Gold.gif',
   title: 'nft-card.canelo-gold-title',
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.canelo-gold-description',
@@ -37,6 +40,7 @@ const GOLD_TALE_CANELO = {
 const GOLD_TALE_SAUNDERS = {
   type: 'NFTs.type-gold',
   img: imgPath + 'Gold_2_TaleOfTheTape_Saunders_1_1_Gold.png',
+  video: vidPath + 'Gold_1_TaleOfTheTape_Canelo_1_1_Gold.gif',
   title: 'nft-card.saunders-gold-title',
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.saunders-gold-description',
@@ -48,6 +52,7 @@ const GOLD_TALE_SAUNDERS = {
 const SILVER_TALE_CANELO = {
   type: 'NFTs.type-silver',
   img: imgPath + 'Silver_1_A1_TaleOfTheTape_Canelo_1_1_Silver.png',
+  video: vidPath + 'Silver_1_A1_TaleOfTheTape_Canelo_1_1_Silver.gif',
   title: 'nft-card.canelo-silver-title',
   rarity: 'nft-card.rarity-50',
   description: 'nft-card.canelo-silver-description',
@@ -59,6 +64,7 @@ const SILVER_TALE_CANELO = {
 const SILVER_TALE_SAUNDERS = {
   type: 'NFTs.type-silver',
   img: imgPath + 'Silver_2_TaleOfTheTape_Saunders_1_1_Silver.png',
+  video: vidPath + 'Silver_2_TaleOfTheTape_Saunders_1_1_Silver.gif',
   title: 'nft-card.saunders-silver-title',
   rarity: 'nft-card.rarity-50',
   description: 'nft-card.saunders-silver-description',
@@ -71,6 +77,7 @@ const SILVER_TALE_SAUNDERS = {
 const GOLDEN_PREDICTION= {
     type: 'NFTs.type-gold',
     img: imgPath + 'Gold_3_Prediction_RND_1_Gold.png',
+    video: vidPath + 'Gold_3_Prediction_RND_1_Gold.gif',
     title: 'nft-card.prediction-decision-title',
     rarity: 'nft-card.rarity-13',
     description: 'nft-card.prediction-decision-description',
@@ -81,6 +88,7 @@ const GOLDEN_PREDICTION= {
 const BRONZE_PREDICTION = {
   type: 'NFTs.type-bronze',
   img: imgPath + 'Bronze_1_Prediction_RND_1_Bronze.png',
+  video: vidPath + 'Bronze_1_Prediction_RND_1_Bronze.gif',
   title: 'nft-card.prediction-decision-title-bronze',
   rarity: 'nft-card.rarity-100',
   description: 'nft-card.prediction-decision-description-bronze',
@@ -91,6 +99,7 @@ const BRONZE_PREDICTION = {
 const POST_FIGHT_CANELO_LEGENDARY = {
   type: 'NFTs.type-legendary',
   img: imgPath + 'winningCanelo.png',
+  video: vidPath + 'winningCanelo.gif',
   title: 'nft-card.post-fight-title-legendary',
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.post-fight-description-legendary',
@@ -102,6 +111,7 @@ const POST_FIGHT_CANELO_LEGENDARY = {
 const POST_FIGHT_SAUNDERS_LEGENDARY = {
   type: 'NFTs.type-legendary',
   img: imgPath + 'winningSaun.png',
+  video: vidPath + 'winningSaun.gif',
   title: 'nft-card.post-fight-title-legendary',
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.post-fight-description-legendary',
@@ -113,6 +123,7 @@ const POST_FIGHT_SAUNDERS_LEGENDARY = {
 const POST_FIGHT_CANELO_GOLD = {
   type: 'NFTs.type-gold',
   img: imgPath + 'ringWalkCanelo.png',
+  video: vidPath + 'ringWalkCanelo.gif',
   title: 'nft-card.prediction-decision-title-bronze',
   rarity: 'nft-card.rarity-50',
   description: 'nft-card.prediction-decision-description-bronze',
@@ -124,6 +135,7 @@ const POST_FIGHT_CANELO_GOLD = {
 const POST_FIGHT_SAUNDERS_GOLD = {
   type: 'NFTs.type-gold',
   img: imgPath + 'ringWalksaun.png',
+  video: vidPath + 'ringWalksaun.gif',
   title: 'nft-card.prediction-decision-title-bronze',
   rarity: 'nft-card.rarity-50',
   description: 'nft-card.prediction-decision-description-bronze',

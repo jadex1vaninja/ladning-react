@@ -6,6 +6,7 @@ export const DESKTOP = 1024;
 export const DESKTOP_LARGE = 1440;
 export const DESKTOP_EXTRA_LARGE = 1920;
 export const imgPath = process.env.PUBLIC_URL + '/assets/img/';
+export const vidPath = process.env.PUBLIC_URL + '/assets/video/';
 export const CONTRACT_ADDRESS = '0x495f947276749ce646f68ac8c248420045cb7b5e';
 export const LINK_TO_LIVE = `https://opensea.io/assets/${CONTRACT_ADDRESS}/`;
 export const DAZN_PUBLIC_LINK= "https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT";
@@ -15,6 +16,7 @@ export const NFTS = [
   {
     type: 'legendary',
     img: imgPath + 'nft-legend.png',
+    video: vidPath + 'nft-legend.gif',
     title: 'Knockout - Canelo',
     rarity: '1/1',
     description:
@@ -23,6 +25,7 @@ export const NFTS = [
   {
     type: 'legendary',
     img: imgPath + 'nft-legend.png',
+    video: vidPath + 'nft-legend.gif',
     title: 'Knockout - Saunders',
     rarity: '1/1',
     description:
@@ -31,6 +34,7 @@ export const NFTS = [
   {
     type: 'gold',
     img: imgPath + 'nft-gold.png',
+    video: vidPath + 'nft-gold.gif',
     title: 'Tale of the Tape - Canelo',
     rarity: '1/1',
     description: 'SIGNED GLOVES + ANNUAL DAZN SUBSCRIPTION'
@@ -38,6 +42,7 @@ export const NFTS = [
   {
     type: 'gold',
     img: imgPath + 'nft-gold.png',
+    video: vidPath + 'nft-gold.gif',
     title: 'Tale of the Tape - Saunders',
     rarity: '1/1',
     description: 'SIGNED GLOVES + ANNUAL DAZN SUBSCRIPTION'
@@ -45,6 +50,7 @@ export const NFTS = [
   {
     type: 'gold',
     img: imgPath + 'nft-gold.png',
+    video: vidPath + 'nft-gold.gif',
     title: 'Prediction - Rounds 1-13',
     rarity: '13 (1 per round)',
     description:
@@ -53,6 +59,7 @@ export const NFTS = [
   {
     type: 'silver',
     img: imgPath + 'nft-legend.png',
+    video: vidPath + 'nft-gold.gif',
     title: 'Tale of the Tape - Canelo',
     rarity: '50',
     description:
@@ -61,6 +68,7 @@ export const NFTS = [
   {
     type: 'silver',
     img: imgPath + 'nft-legend.png',
+    video: vidPath + 'nft-legend.gif',
     title: 'Tale of the Tape - Saunders',
     rarity: '50',
     description:
@@ -69,6 +77,7 @@ export const NFTS = [
   {
     type: 'bronze',
     img: imgPath + 'nft-bronze.png',
+    video: vidPath + 'nft-bronze.gif',
     title: 'Prediction - Rounds 1-13',
     rarity: '100 (per round)',
     description:

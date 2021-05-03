@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { LINK_TO_LIVE } from '../../const';
 import './NFT.scss';
 
-const NFT = ({ img, type, title, description, rarity, isActive, link, isSoldOut, collectionLink }) => {
+const NFT = ({ img, video, type, title, description, rarity, isActive, link, isSoldOut, collectionLink }) => {
   const { t } = useTranslation();
   const separateType = type.split('-').pop();
 
@@ -13,7 +13,7 @@ const NFT = ({ img, type, title, description, rarity, isActive, link, isSoldOut,
         !isActive && 'cards-root__card-content--disabled'
       } ${isSoldOut && 'cards-root__card-content--soldout'}`}
     >
-      <img className='cards-root__card-img' src={img} alt='card' />
+      <img className='cards-root__card-img' src={img} alt='card' onMouseOver={this.src = video} onMouseOut={this.src = img} />
       {isSoldOut && (
         <div className='cards-root__soldout-block'>{t('') || 'SOLD OUT'}</div>
       )}
