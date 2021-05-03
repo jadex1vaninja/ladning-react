@@ -4,7 +4,9 @@ import { imgPath, DAZN_PUBLIC_LINK } from '../../const';
 import './Footer.scss';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
+  const language = i18n.language;
+  const IS_SPANISH = language === 'es';
 
   return (
     <footer className='footer'>
