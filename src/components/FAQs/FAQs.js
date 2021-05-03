@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { accordionInitialList } from '../../const/accordion';
 import './FAQs.scss';
 
-const FAQs = () => {
+const FAQs = ({show}) => {
   const [accordion, setAccordion] = useState(accordionInitialList);
   const [active, setActive] = useState(null);
   const { t } = useTranslation();
@@ -36,7 +36,7 @@ const FAQs = () => {
       <p className='faq__text'>{t('faq.sub-title')}</p>
       <div className='faq__container'>
         <dl className='accordion'>
-          {accordion.map((item, index) => (
+          {accordion.slice(0, show).map((item, index) => (
             <Accordion
               title={item.title}
               description={item.description}
