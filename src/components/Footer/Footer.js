@@ -19,7 +19,11 @@ const Footer = () => {
         <div className='footer__face-container'>
           <img
             className='footer__face-img'
-            src={imgPath + 'face-fearless.png'}
+             src={
+                IS_SPANISH
+                  ? imgPath + 'face-fearless-es.png'
+                  : imgPath + 'face-fearless.png'
+              }
             alt='face the fearless'
           />
         </div>
