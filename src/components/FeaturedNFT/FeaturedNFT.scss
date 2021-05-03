@@ -192,10 +192,7 @@
     font-size: 2.75rem;
     line-height: 2.75rem;
     margin-bottom: 0;
-     small{
-       font-size: .5rem;
-        line-height: .5rem;
-    }
+
     @include _1024 {
       font-size: 6rem;
       line-height: 6rem;
@@ -208,6 +205,10 @@
 
   &__price-sign {
     @include FeaturedNFT-Text;
+  }
+  &__price-dollar {
+    font-size: .5rem;
+    line-height: .5rem;
   }
 
   &__countdown-block {

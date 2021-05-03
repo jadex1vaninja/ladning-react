@@ -91,9 +91,9 @@ const BRONZE_PREDICTION = {
 const POST_FIGHT_CANELO_LEGENDARY = {
   type: 'NFTs.type-legendary',
   img: imgPath + 'winningCanelo.png',
-  title: 'nft-card.prediction-decision-title-bronze',
+  title: 'nft-card.post-fight-title-legendary',
   rarity: 'nft-card.rarity-1',
-  description: 'nft-card.prediction-decision-description-bronze',
+  description: 'nft-card.post-fight-description-legendary',
   isActive: false,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
@@ -102,9 +102,9 @@ const POST_FIGHT_CANELO_LEGENDARY = {
 const POST_FIGHT_SAUNDERS_LEGENDARY = {
   type: 'NFTs.type-legendary',
   img: imgPath + 'winningSaun.png',
-  title: 'nft-card.prediction-decision-title-bronze',
-  rarity: 'nft-card.rarity-50',
-  description: 'nft-card.prediction-decision-description-bronze',
+  title: 'nft-card.post-fight-title-legendary',
+  rarity: 'nft-card.rarity-1',
+  description: 'nft-card.post-fight-description-legendary',
   isActive: false,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
@@ -156,8 +156,8 @@ export const NFTs = [
     cards: [
       POST_FIGHT_CANELO_LEGENDARY,
       POST_FIGHT_SAUNDERS_LEGENDARY,
-      POST_FIGHT_CANELO_GOLD,
-      POST_FIGHT_SAUNDERS_GOLD
+      // POST_FIGHT_CANELO_GOLD,
+      // POST_FIGHT_SAUNDERS_GOLD
     ]
   }
 ];

@@ -89,7 +89,7 @@ const FeaturedNFT = () => {
                 {t('featured-nft.price.sign')}
               </p>
               <p>
-              <small>
+              <small class="featured__price-dollar">
               {`($${usdPrice.toFixed(2)})` }
               </small>
               </p>
