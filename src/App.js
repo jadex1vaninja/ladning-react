@@ -4,6 +4,7 @@ import Landing from './components/Landing';
 import RedeemPage from './components/Redeem';
 import FAQsPage from './pages/FAQsPage';
 import TCsPage from './pages/T&CsPage';
+import PrivacyPage from './pages/PrivacyPolicyPage/PrivacyPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.scss';
 
@@ -12,15 +13,10 @@ function App() {
     <Router>
       <Switch>
         <Route exact path='/' component={Landing} />
-      </Switch>
-      <Switch>
         <Route path='/redeem' component={RedeemPage} />
-      </Switch>
-      <Switch>
         <Route path='/faq' component={FAQsPage} />
-      </Switch>
-      <Switch>
         <Route path='/tcs' component={TCsPage} />
+        <Route path='/privacy-policy' component={PrivacyPage} />
       </Switch>
     </Router>
   );
