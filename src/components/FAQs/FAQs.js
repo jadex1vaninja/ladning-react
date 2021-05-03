@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { accordionInitialList } from '../../const/accordion';
 import './FAQs.scss';
 
-const FAQs = ({show}) => {
+const FAQs = ({ show, isButtonGetBack, btnHandler }) => {
   const [accordion, setAccordion] = useState(accordionInitialList);
   const [active, setActive] = useState(null);
   const { t } = useTranslation();
@@ -28,7 +28,7 @@ const FAQs = ({show}) => {
   };
 
   return (
-    <div className='faq' id="faq">
+    <div className='faq' id='faq'>
       <h1 className='faq__title'>{t('faq.title')}</h1>
       <p className='faq__close' onClick={closeAll}>
         &#215;
@@ -46,6 +46,13 @@ const FAQs = ({show}) => {
           ))}
         </dl>
       </div>
+      {isButtonGetBack && (
+        <div className='faq__btn-wrapper'>
+          <button className='faq__btn' onClick={btnHandler}>
+            Get back
+          </button>
+        </div>
+      )}
     </div>
   );
 };

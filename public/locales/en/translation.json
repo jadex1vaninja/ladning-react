@@ -148,7 +148,8 @@
     "checkbox-text": "If you do not want to receive these messages please click here",
     "modal-title": "Thank you",
     "modal-text": "Keep an eye on your email inbox for exclusive news about DAZN NFTs!",
-    "modal-btn": "Ok"
+    "modal-btn": "Ok",
+    "CTA": "Sign up here"
   },
   "terms": {
     "title": "TERMS & CONDITIONS",
