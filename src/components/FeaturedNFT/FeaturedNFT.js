@@ -16,7 +16,7 @@ const FeaturedNFT = () => {
   const usdPrice = paymentInfo ? tokenPrice *  highestBid.payment_token_contract.usd_price : 0; 
   const ethPrice = paymentInfo ? tokenPrice *  highestBid.payment_token_contract.eth_price : 0;
 
-  const renderer = ({ days, minutes, seconds }) => {
+  const renderer = ({ days, hours, minutes, seconds }) => {
     const DOUBLE_NUM = 10;
     return (
       <div className='featured__time-section'>
@@ -26,6 +26,14 @@ const FeaturedNFT = () => {
           </span>
           <span className='featured__indicator'>
             {t('featured-nft.countdown.days')}
+          </span>
+        </p>
+        <p className='featured__time-chunk'>
+          <span className='featured__time-value'>
+            {Number(hours) < DOUBLE_NUM ? `0${hours}` : hours}
+          </span>
+          <span className='featured__indicator'>
+            {t('featured-nft.countdown.hours')}
           </span>
         </p>
         <p className='featured__time-chunk'>
