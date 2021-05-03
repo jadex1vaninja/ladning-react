@@ -88,6 +88,51 @@ const BRONZE_PREDICTION = {
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
 };
+const POST_FIGHT_CANELO_LEGENDARY = {
+  type: 'NFTs.type-legendary',
+  img: imgPath + 'winningCanelo.png',
+  title: 'nft-card.prediction-decision-title-bronze',
+  rarity: 'nft-card.rarity-1',
+  description: 'nft-card.prediction-decision-description-bronze',
+  isActive: false,
+  collectionLink:
+    'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
+};
+
+const POST_FIGHT_SAUNDERS_LEGENDARY = {
+  type: 'NFTs.type-legendary',
+  img: imgPath + 'winningSaun.png',
+  title: 'nft-card.prediction-decision-title-bronze',
+  rarity: 'nft-card.rarity-50',
+  description: 'nft-card.prediction-decision-description-bronze',
+  isActive: false,
+  collectionLink:
+    'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
+};
+
+const POST_FIGHT_CANELO_GOLD = {
+  type: 'NFTs.type-gold',
+  img: imgPath + 'ringWalkCanelo.png',
+  title: 'nft-card.prediction-decision-title-bronze',
+  rarity: 'nft-card.rarity-50',
+  description: 'nft-card.prediction-decision-description-bronze',
+  isActive: false,
+  collectionLink:
+    'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
+};
+
+const POST_FIGHT_SAUNDERS_GOLD = {
+  type: 'NFTs.type-gold',
+  img: imgPath + 'ringWalksaun.png',
+  title: 'nft-card.prediction-decision-title-bronze',
+  rarity: 'nft-card.rarity-50',
+  description: 'nft-card.prediction-decision-description-bronze',
+  isActive: false,
+  collectionLink:
+    'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
+};
+
+
 export const NFTs = [
   {
     title: 'NFTs.title-knockout',
@@ -109,10 +154,10 @@ export const NFTs = [
   {
     title: 'NFTs.title-post-fight',
     cards: [
-      { ...GOLD_TALE_CANELO, isActive: false },
-      { ...GOLD_TALE_SAUNDERS, isActive: false },
-      { ...SILVER_TALE_CANELO, isActive: false },
-      { ...SILVER_TALE_SAUNDERS, isActive: false }
+      POST_FIGHT_CANELO_LEGENDARY,
+      POST_FIGHT_SAUNDERS_LEGENDARY,
+      POST_FIGHT_CANELO_GOLD,
+      POST_FIGHT_SAUNDERS_GOLD
     ]
   }
 ];
