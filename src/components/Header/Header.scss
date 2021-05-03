@@ -18,6 +18,28 @@
     margin-bottom: 9.25rem;
   }
 
+  &__navigation-secondary {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 1.75rem;
+  }
+
+  &__language-list-secondary {
+    display: flex;
+    position: absolute;
+    margin: 0;
+    right: 0;
+  }
+
+  &__secondary-title {
+    font-family: 'DAZNTrim-Bold';
+    color: $brand-white;
+    font-size: 57px;
+    letter-spacing: 0px;
+    line-height: 45px;
+  }
+
   &__nav-list {
     position: relative;
     display: flex;
@@ -41,10 +63,8 @@
     &:first-child {
       margin-left: 0;
     }
-    &:hover{
-        color: $brand-yellow;
-        text-decoration: none;
-    }
+
+
 
     @include _1024 {
       font-size: 1.875rem;
@@ -54,6 +74,25 @@
 
     @include _1440 {
       margin-left: 5.125rem;
+    }
+  }
+
+  &__nav-link {
+    font-family: 'DAZNTrim-Bold';
+    cursor: pointer;
+    color: $brand-white;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+
+    &:hover{
+      color: $brand-yellow;
+      text-decoration: none;
+    }
+
+    @include _1024 {
+      font-size: 1.875rem;
+      line-height: 3.438rem;
     }
   }
 

@@ -11,7 +11,7 @@
   padding: 1.125rem 1.25rem 12.5rem;
   position: relative;
   margin-bottom: -11rem;
-  z-index: 2;
+  z-index: 1;
 
   @include _1024 {
     margin-bottom: -11rem;
@@ -154,9 +154,16 @@
       }
     }
   }
+
+  &__btn-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+  }
+
+  &__btn {
+    @include CTA;
+    background-color: $brand-black;
+    color: $brand-yellow;
+  }
 }
-
-
-
-
-

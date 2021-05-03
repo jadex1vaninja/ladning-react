@@ -11,11 +11,11 @@ import './Landing.scss';
 const Landing = () => {
   return (
     <>
-      <Header />
+      <Header isUsedOnSecondaryPage={false} />
       <main className='root'>
         <FeaturedNFT />
         <Cards />
-        <FAQs show={4} />
+        <FAQs show={4} isButtonGetBack={false} />
         <Registration />
         <TermsConditions />
       </main>

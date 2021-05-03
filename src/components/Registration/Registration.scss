@@ -2,21 +2,60 @@
 @import '../../variables';
 
 .register {
-  background-image: url('../../assets/img/featured-bg.png');
-  background-size: cover;
-  color: $brand-white;
+  //background-image: url('../../assets/img/featured-bg.png');
+  //background-size: cover;
+  //color: $brand-white;
+  background: url('../../assets/img/registration-bg.png');
   text-align: center;
-  padding: 0 1.25rem;
+  background-size: cover;
+  padding: 0 10%;
   position: relative;
-  z-index: 1;
+  text-align: center;
+  //padding: 0 1.25rem;
+  position: relative;
+  z-index: 2;
 
   @include _768 {
     padding: 0 25%;
   }
 
+  &__title {
+    font-family: 'DAZNTrim-Bold';
+    text-transform: uppercase;
+    background-color: $brand-white;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 3.25rem;
+  }
+
+  &__title-text {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    color: $brand-black;
+
+    @include _768 {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__CTA {
+    @include CTA;
+    color: $brand-black;
+
+    &:hover {
+      color: $brand-black;
+      text-decoration: none;
+    }
+  }
+
   &__main-content {
-    padding-bottom: 4.25rem;
-    padding-top: 6.25rem;
+    padding-bottom: 1.25rem;
+    padding-top: 3.25rem;
+
+    @include _1024 {
+      padding-bottom: 4.25rem;
+      padding-top: 6.25rem;
+    }
 
     p {
       font-family: 'DAZNTrim-Bold';

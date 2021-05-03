@@ -89,7 +89,8 @@
     "checkbox-text": "Si no deseas recibir estos mensajes, haz clic aquí.",
     "modal-title": "Gracias por registrarte",
     "modal-text": "modal.text",
-    "modal-btn": "OK"
+    "modal-btn": "OK",
+    "CTA": "Sign up here"
   },
   "faq": {
     "title": "FAQs",
