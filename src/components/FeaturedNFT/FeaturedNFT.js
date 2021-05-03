@@ -73,8 +73,8 @@ const FeaturedNFT = () => {
         <div className='featured__img-wrapper'>
           <img
             src={imgPath + 'Legendary_2_Knockout_Canelo_1_1.png'}
-            onMouseOver={this.src = vidPath + 'Legendary_2_Knockout_Canelo_1_1.gif'} 
-            onMouseOut={this.src = imgPath + 'Legendary_2_Knockout_Canelo_1_1.png'}
+            onMouseOver={(e) => e.currentTarget.src = vidPath + 'Legendary_2_Knockout_Canelo_1_1.gif'} 
+            onMouseOut={(e) => e.currentTarget.src = imgPath + 'Legendary_2_Knockout_Canelo_1_1.png'}
             alt='card'
           />
         </div>
