@@ -75,7 +75,7 @@ const GOLDEN_PREDICTION= {
     rarity: 'nft-card.rarity-13',
     description: 'nft-card.prediction-decision-description',
     isActive: true,
-    collectionLink:"https://opensea.io/assets/dazn-x-canelo-saunders?search[query]=Prediction%3A%20Rou[…]ngTraits][0][name]=Type&search[stringTraits][0][values][0]=Gold",
+    collectionLink:"https://opensea.io/assets/dazn-x-canelo-saunders?search[query]=Prediction&search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Gold",
 
 };
 const BRONZE_PREDICTION = {
