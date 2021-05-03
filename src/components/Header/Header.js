@@ -88,7 +88,7 @@ const Header = () => {
           src={imgPath + 'promo.png'}
           alt='promo'
         />
-        <p className='header__promo-text'>{t('header.promo-text')}</p>
+        <p className='header__promo-text' dangerouslySetInnerHTML={{ __html: t('header.promo-text') }}></p>
       </div>
       <div className='header__description'>
         <p className='header__description-text'>
