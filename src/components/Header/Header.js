@@ -153,7 +153,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
             {t('header.description.text')}
           </p>
           {/* TODO: ADD LINK */}
-          <a href='' className='header__description-link'>
+          <a target='_blank' href={OPENSEA_COLLECTION_LINK} className='header__description-link'>
             {t('header.description.link')}
           </a>
         </div>
