@@ -13,7 +13,10 @@ const NFT = ({ img, video, type, title, description, rarity, isActive, link, isS
         !isActive && 'cards-root__card-content--disabled'
       } ${isSoldOut && 'cards-root__card-content--soldout'}`}
     >
-      <img className='cards-root__card-img' src={img} alt='card' onMouseOver={this.src = video} onMouseOut={this.src = img} />
+      ${video 
+        ? <img className='cards-root__card-img' src={img} alt='card' onMouseOver={this.src = video} onMouseOut={this.src = img} /> 
+        : <img className='cards-root__card-img' src={img} alt='card' />
+      }
       {isSoldOut && (
         <div className='cards-root__soldout-block'>{t('') || 'SOLD OUT'}</div>
       )}
