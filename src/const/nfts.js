@@ -8,6 +8,7 @@ const LEGENDARY_KNOCKOUT_CANELO = {
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.canelo-legendary-description',
   isActive: true,
+  cta:'nft-card.cta.bin-now',
   // isSoldOut:true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506764274239275009'
@@ -21,6 +22,7 @@ const LEGENDARY_KNOCKOUT_SAUNDERS = {
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.saunders-legendary-description',
   isActive: true,
+  cta: 'nft-card.cta.bin-now',
   link:
     '69208789200216951769366063301950903931594320778910349241631506765373750902785'
 };

@@ -3,6 +3,7 @@ import Accordion from '../Accordion';
 import { useTranslation } from 'react-i18next';
 import { accordionInitialList } from '../../const/accordion';
 import './FAQs.scss';
+import { useHistory } from 'react-router';
 
 const FAQs = ({
   show,
@@ -14,6 +15,7 @@ const FAQs = ({
   const [accordion, setAccordion] = useState(accordionInitialList);
   const [active, setActive] = useState(null);
   const { t } = useTranslation();
+  const history = useHistory();
 
   const handleActive = (index) => {
     active !== index ? setActive(index) : setActive(null);
@@ -60,8 +62,21 @@ const FAQs = ({
       </div>
       {isButtonGetBack && (
         <div className='faq__btn-wrapper'>
-          <button className='faq__btn' onClick={btnHandler}>
-            Get back
+          <button
+            className='faq__btn'
+            onClick={() => window.open(window.location.origin)}
+          >
+            Go home
+          </button>
+        </div>
+      )}
+      {!isButtonGetBack && (
+        <div className='faq__btn-wrapper'>
+          <button
+            className='faq__btn'
+            onClick={() => window.open('/faq')}
+          >
+            More FAQs
           </button>
         </div>
       )}

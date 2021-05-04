@@ -5,12 +5,12 @@ import './NFTWrapper.scss';
 
 const NFTWrapper = ({ title, length, children }) => {
   const { t } = useTranslation();
-
+  const slidesToShow = length < 3 ? 2 : 3;
   const settings = {
     speed: 500,
     cssEase: 'linear',
     useTransform: false,
-    slidesToShow: length < 3 ? 2 : 3,
+    slidesToShow,
     slidesToScroll: 1,
     arrows: true,
     responsive: [
@@ -25,7 +25,7 @@ const NFTWrapper = ({ title, length, children }) => {
       {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 3,
+          slidesToShow,
           slidesToScroll: 1,
           arrows: true
         }
@@ -33,7 +33,7 @@ const NFTWrapper = ({ title, length, children }) => {
       {
         breakpoint: 1440,
         settings: {
-          slidesToShow: 3,
+          slidesToShow,
           slidesToScroll: 1,
           arrows: true
         }

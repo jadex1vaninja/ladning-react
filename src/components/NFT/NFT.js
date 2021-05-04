@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { LINK_TO_LIVE } from '../../const';
 import './NFT.scss';
 
-const NFT = ({ img, video, type, title, description, rarity, isActive, link, isSoldOut, collectionLink }) => {
+const NFT = ({ img, video, type, title, description, rarity, isActive, link, isSoldOut, collectionLink,cta }) => {
   const { t } = useTranslation();
   const separateType = type.split('-').pop();
 
@@ -48,7 +48,7 @@ const NFT = ({ img, video, type, title, description, rarity, isActive, link, isS
             target='_blank'
             href={link ? LINK_TO_LIVE + link : collectionLink}
           >
-            {t('NFTs.link-text')}
+            {t(cta || 'NFTs.link-text')}
           </a>
         </div>
       </div>
