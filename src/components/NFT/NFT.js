@@ -22,7 +22,7 @@ const NFT = ({
   const [text, setText] = useState('');
   const [isSliced, setIsSliced] = useState(true);
   const separateType = type.split('-').pop();
-  const MAX_SYMBOLS = 170;
+  const MAX_SYMBOLS = 140;
 
   const sliceText = (string) => {
     return `${string.slice(0, MAX_SYMBOLS)}...`;
