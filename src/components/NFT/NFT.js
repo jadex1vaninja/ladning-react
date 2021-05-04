@@ -24,7 +24,9 @@ const NFT = ({
   const [text, setText] = useState('');
   const [showRound, setShowRound] = useState(false);
   const ctaRef = useRef();
-  useOutsideClick(ctaRef, ()=>{setShowRound(false)});
+  useOutsideClick(ctaRef, () => {
+    setShowRound(false);
+  });
   const [isSliced, setIsSliced] = useState(true);
   const separateType = type.split('-').pop();
   const MAX_SYMBOLS = 140;
@@ -137,7 +139,9 @@ const NFT = ({
                               rel='noreferrer'
                               href={e.link}
                             >
-                              {e.name}
+                              {e.roundValue
+                                ? t('nft-card.round', { round: e.roundValue })
+                                : t(e.name)}
                             </a>
                           </div>
                         </>
