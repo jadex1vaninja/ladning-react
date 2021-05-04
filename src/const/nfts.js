@@ -83,9 +83,9 @@ const GOLDEN_PREDICTION = {
   type: 'NFTs.type-gold',
   img: imgPath + 'Gold_3_Prediction_RND_1_Gold.png',
   video: vidPath + 'Gold_3_Prediction_RND_1_Gold.gif',
-  title: 'NFTs.nft-card.prediction-decision-title',
-  rarity: 'NFTs.nft-card.rarity-13',
-  description: 'NFTs.nft-card.prediction-decision-description',
+  title: 'nft-card.prediction-decision-title',
+  rarity: 'nft-card.rarity-13',
+  description: 'nft-card.prediction-decision-description',
   isActive: true,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[query]=Prediction&search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Gold'
@@ -106,9 +106,9 @@ const BRONZE_PREDICTION = {
   type: 'NFTs.type-bronze',
   img: imgPath + 'Bronze_1_Prediction_RND_1_Bronze.png',
   video: vidPath + 'Bronze_1_Prediction_RND_1_Bronze.gif',
-  title: 'NFTs.nft-card.prediction-decision-title-bronze',
-  rarity: 'NFTs.nft-card.rarity-100',
-  description: 'NFTs.nft-card.prediction-decision-description-bronze',
+  title: 'nft-card.prediction-decision-title-bronze',
+  rarity: 'nft-card.rarity-100',
+  description: 'nft-card.prediction-decision-description-bronze',
   isActive: true,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
