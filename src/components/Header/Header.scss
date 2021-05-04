@@ -24,7 +24,19 @@
     position: relative;
     margin-bottom: 1.75rem;
   }
+  &__title {
+    color: white;
+    font-family: 'DAZNTrim-Bold';
+    font-size: 41px;
+    line-height: 34px;
+    margin: 0;
 
+    @include _768 {
+      font-size: 50px;
+      letter-spacing: 0px;
+      line-height: 38px;
+  }
+}
   &__language-list-secondary {
     display: flex;
     position: absolute;
