@@ -23,8 +23,10 @@ const NFT = ({
 
   return (
     <>
-      <div className="card-wrap">
-        {comingSoon && <div className='coming-soon'>coming Soon</div>}
+      <div className='card-wrap'>
+        {comingSoon && (
+          <div className='coming-soon'>{t('nft-card.coming-soon')}</div>
+        )}
         <div
           className={`cards-root__card-content ${
             !isActive && 'cards-root__card-content--disabled'
