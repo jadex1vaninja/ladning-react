@@ -11,6 +11,7 @@ import './Header.scss';
 
 const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
   const [language, setLanguage] = useState('en');
+  const [showMore, setShowMore] = useState(false);
   const { t, i18n } = useTranslation();
   const { isPhone } = useWindowInfo();
   const phone = isPhone();
@@ -71,7 +72,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
           <div></div>
           <ul className='header__nav-list'>
             <li className='header__nav-item'>
-              <a className='header__nav-link' href='#auction'>
+              <a className='header__nav-link c' target="_blank" href={OPENSEA_COLLECTION_LINK}>
                 {t('header.nav-list.nav-auction')}
               </a>
             </li>
@@ -145,13 +146,29 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
             {t('header.description.text')}
           </p>
           {/* TODO: ADD LINK */}
-          <a
-            target='_blank'
-            href={OPENSEA_COLLECTION_LINK}
-            className='header__description-link'
-          >
-            {t('header.description.link')}
-          </a>
+          {!showMore && (
+            <span
+              onClick={() => setShowMore(true)}
+              className='header__description-link'
+            >
+              {t('header.description.link')}
+            </span>
+          )}
+          {showMore && (
+            <>
+              <br></br>
+              <p className='header__description-text'>
+                {t('header.read-more.text')}
+              </p>
+              <br></br>
+              <ul className='header__list'>
+                <li>{t('header.read-more.tale')}</li>
+                <li>{t('header.read-more.knockout')}</li>
+                <li>{t('header.read-more.prediction')}</li>
+                <li>{t('header.read-more.pos-fight')}</li>
+              </ul>
+            </>
+          )}
         </div>
       )}
       <div className='header__inner'>
