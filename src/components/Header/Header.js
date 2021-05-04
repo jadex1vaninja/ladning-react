@@ -66,7 +66,35 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
         </nav>
       ) : (
         <nav className='header__navigation'>
-          <div></div>
+          <div
+            style={{ visibility: 'hidden' }}
+            className='header__terms-language'
+          >
+            <ul className='header__language-list'>
+              <li
+                className={`header__button${
+                  language === 'en' ? ' active' : ''
+                }`}
+                onClick={() => {
+                  changeLanguage('en');
+                  setLanguage('en');
+                }}
+              >
+                En
+              </li>
+              <li
+                className={`header__button${
+                  language === 'es' ? ' active' : ''
+                }`}
+                onClick={() => {
+                  changeLanguage('es');
+                  setLanguage('es');
+                }}
+              >
+                Es
+              </li>
+            </ul>
+          </div>
           <ul className='header__nav-list'>
             <li className='header__nav-item'>
               <a
@@ -174,10 +202,11 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
           )}
         </div>
       )}
-       {!isUsedOnSecondaryPage &&<div className='header__inner'>
-        <div className='header__img-wrapper header__img-wrapper--first'>
-          <img className='header__logo1' src={imgPath + 'logo.png'} alt='' />
-        </div>
+      {!isUsedOnSecondaryPage && (
+        <div className='header__inner'>
+          <div className='header__img-wrapper header__img-wrapper--first'>
+            <img className='header__logo1' src={imgPath + 'logo.png'} alt='' />
+          </div>
 
           <div className='header__text-wrapper'>
             <h1 className='header__title'>{t('header.title')}</h1>
@@ -185,14 +214,15 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
               <span className='header__text'>{t('header.sub-title')}</span>
             </a>
           </div>
-        <div className='header__img-wrapper header__img-wrapper--second'>
-          <img
-            className='header__logo3'
-            src={imgPath + 'matchroom-logo.png'}
-            alt=''
-          />
+          <div className='header__img-wrapper header__img-wrapper--second'>
+            <img
+              className='header__logo3'
+              src={imgPath + 'matchroom-logo.png'}
+              alt=''
+            />
+          </div>
         </div>
-      </div>}
+      )}
       <div className='header__banner'>
         <img
           className='header__banner-img'
