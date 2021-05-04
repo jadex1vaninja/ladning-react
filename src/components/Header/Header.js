@@ -33,19 +33,6 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
     <header className='header'>
       {isUsedOnSecondaryPage ? (
         <nav className='header__navigation-secondary'>
-          <div className='header__dazn-logo-secondary'>
-            <a
-              target='_blank'
-              rel='noopener noreferrer'
-              href={DAZN_PUBLIC_LINK}
-            >
-              <img
-                className='header__dazn-img-secondary'
-                src={imgPath + 'DAZN-logo.png'}
-                alt='DAZN'
-              />
-            </a>
-          </div>
           <ul className='header__language-list-secondary'>
             <li
               className={`header__button${language === 'en' ? ' active' : ''}`}
@@ -72,7 +59,11 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
           <div></div>
           <ul className='header__nav-list'>
             <li className='header__nav-item'>
-              <a className='header__nav-link c' target="_blank" href={OPENSEA_COLLECTION_LINK}>
+              <a
+                className='header__nav-link c'
+                target='_blank'
+                href={OPENSEA_COLLECTION_LINK}
+              >
                 {t('header.nav-list.nav-auction')}
               </a>
             </li>
@@ -120,26 +111,28 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
           </div>
         </nav>
       )}
-      <div className='header__promo'>
-       {!isUsedOnSecondaryPage && <div className='header__dazn-logo'>
-          <a target='_blank' href={DAZN_PUBLIC_LINK}>
-            <img
-              className='header__dazn-img'
-              src={imgPath + 'DAZN-logo.png'}
-              alt='DAZN'
-            />
-          </a>
-        </div>}
-        <img
-          className='header__promo-img'
-          src={imgPath + 'promo.png'}
-          alt='promo'
-        />
-        <p
-          className='header__promo-text'
-          dangerouslySetInnerHTML={{ __html: t('header.promo-text') }}
-        ></p>
-      </div>
+      {!isUsedOnSecondaryPage && (
+        <div className='header__promo'>
+          <div className='header__dazn-logo'>
+            <a target='_blank' href={DAZN_PUBLIC_LINK}>
+              <img
+                className='header__dazn-img'
+                src={imgPath + 'DAZN-logo.png'}
+                alt='DAZN'
+              />
+            </a>
+          </div>
+          <img
+            className='header__promo-img'
+            src={imgPath + 'promo.png'}
+            alt='promo'
+          />
+          <p
+            className='header__promo-text'
+            dangerouslySetInnerHTML={{ __html: t('header.promo-text') }}
+          ></p>
+        </div>
+      )}
       {!isUsedOnSecondaryPage && (
         <div className='header__description'>
           <p className='header__description-text'>
@@ -177,7 +170,15 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
         </div>
         {isUsedOnSecondaryPage ? (
           <div className='header__buttons-wrapper'>
-            <h1 className='header__secondary-title'>{secondaryTitle}</h1>
+            <div className='header__dazn-logo'>
+              <a target='_blank' href={DAZN_PUBLIC_LINK}>
+                <img
+                  className='header__dazn-img'
+                  src={imgPath + 'DAZN-logo.png'}
+                  alt='DAZN'
+                />
+              </a>
+            </div>
           </div>
         ) : (
           <div className='header__text-wrapper'>
