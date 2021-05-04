@@ -3,13 +3,13 @@ import { useTranslation } from 'react-i18next';
 import { imgPath, DAZN_PUBLIC_LINK } from '../../const';
 import './Footer.scss';
 
-const Footer = () => {
-  const { t,i18n } = useTranslation();
+const Footer = ({ isUsedOnSecondaryPage }) => {
+  const { t, i18n } = useTranslation();
   const language = i18n.language;
   const IS_SPANISH = language === 'es';
 
   return (
-    <footer className='footer'>
+    <footer className={'footer' + isUsedOnSecondaryPage && ' low-height'}>
       <div className='footer__banner'>
         <img
           className='footer__banner-img'
@@ -27,17 +27,19 @@ const Footer = () => {
             alt='face the fearless'
           />
         </div>
-        <div className='footer__sign-block'>
-          <div className='footer__btn-wrapper'>
-            {/* TODO: LINK */}
-            <a className='footer__CTA' target='_blank' href='/tcs'>
-              {t('terms.CTA-one')}
-            </a>
-            <a className='footer__CTA' target='_blank' href='/privacy-policy'>
-              {t('terms.CTA-two')}
-            </a>
+        {!isUsedOnSecondaryPage && (
+          <div className='footer__sign-block'>
+            <div className='footer__btn-wrapper'>
+              {/* TODO: LINK */}
+              <a className='footer__CTA' target='_blank' href='/tcs'>
+                {t('terms.CTA-one')}
+              </a>
+              <a className='footer__CTA' target='_blank' href='/privacy-policy'>
+                {t('terms.CTA-two')}
+              </a>
+            </div>
           </div>
-        </div>
+        )}
         <div className='footer__inner'>
           <div className='footer__img-wrapper'>
             <img

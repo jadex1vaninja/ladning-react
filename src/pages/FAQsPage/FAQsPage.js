@@ -22,7 +22,7 @@ const FAQsPage = () => {
         isRotatedBg
         isUsedOnSecondaryPage
       />
-      <Footer />
+      <Footer isUsedOnSecondaryPage />
     </>
   );
 };

@@ -95,7 +95,7 @@ const TCsPage = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer isUsedOnSecondaryPage />
     </>
   );
 };

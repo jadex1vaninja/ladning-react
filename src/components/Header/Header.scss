@@ -20,7 +20,8 @@
 
   &__navigation-secondary {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     margin-bottom: 1.75rem;
   }
@@ -39,9 +40,7 @@
   }
   &__language-list-secondary {
     display: flex;
-    position: absolute;
-    margin: 0;
-    right: 0;
+    align-self: flex-start;
   }
 
   &__secondary-title {
