@@ -217,9 +217,10 @@
   .round-link{
     padding: 5px;
     &__item{
+      color: $brand-yellow;
     &:hover {
       text-decoration: none;
-      color: $brand-white  !important;
+      color: $brand-white !important;
     }
     &:visited {
       text-decoration: none;
