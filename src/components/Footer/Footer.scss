@@ -83,6 +83,14 @@
     }
   }
 
+   &__btn-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include _1024 {
+      margin-top: 3rem;
+    }
+  }
   &__CTA {
     @include CTA;
     color: $brand-black;
@@ -90,6 +98,9 @@
     &:hover {
       color: $brand-black;
       text-decoration: none;
+    }
+    &:first-child {
+      margin-right: 3.125rem;
     }
   }
 

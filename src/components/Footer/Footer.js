@@ -19,24 +19,24 @@ const Footer = () => {
         <div className='footer__face-container'>
           <img
             className='footer__face-img'
-             src={
-                IS_SPANISH
-                  ? imgPath + 'face-fearless-es.png'
-                  : imgPath + 'face-fearless.png'
-              }
+            src={
+              IS_SPANISH
+                ? imgPath + 'face-fearless-es.png'
+                : imgPath + 'face-fearless.png'
+            }
             alt='face the fearless'
           />
         </div>
         <div className='footer__sign-block'>
-          <p className='footer__text'>{t('footer.text')}</p>
-          <a
-            className='footer__CTA'
-            target='_blank'
-            rel='noopener noreferrer'
-            href={DAZN_PUBLIC_LINK}
-          >
-            {t('footer.CTA')}
-          </a>
+          <div className='footer__btn-wrapper'>
+            {/* TODO: LINK */}
+            <a className='footer__CTA' target='_blank' href='/tcs'>
+              {t('terms.CTA-one')}
+            </a>
+            <a className='footer__CTA' target='_blank' href='/privacy-policy'>
+              {t('terms.CTA-two')}
+            </a>
+          </div>
         </div>
         <div className='footer__inner'>
           <div className='footer__img-wrapper'>
