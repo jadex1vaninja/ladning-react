@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LINK_TO_LIVE } from '../../const';
+import useOutsideClick from '@rooks/use-outside-click';
 import './NFT.scss';
 
 const NFT = ({
@@ -16,10 +17,14 @@ const NFT = ({
   collectionLink,
   cta,
   grayscale,
-  comingSoon
+  comingSoon,
+  subitems
 }) => {
   const { t } = useTranslation();
   const [text, setText] = useState('');
+  const [showRound, setShowRound] = useState(false);
+  const ctaRef = useRef();
+  useOutsideClick(ctaRef, ()=>{setShowRound(false)});
   const [isSliced, setIsSliced] = useState(true);
   const separateType = type.split('-').pop();
   const MAX_SYMBOLS = 140;
@@ -38,6 +43,8 @@ const NFT = ({
   useEffect(() => {
     setText(t(description));
   }, [t]);
+
+  console.log(subitems);
 
   return (
     <>
@@ -110,14 +117,44 @@ const NFT = ({
                   />
                 )}
               </div>
-              <a
-                rel='noopener noreferrer'
-                className='cards-root__link'
-                target='_blank'
-                href={link ? LINK_TO_LIVE + link : collectionLink}
-              >
-                {t(cta || 'NFTs.link-text')}
-              </a>
+              {subitems ? (
+                <>
+                  <span
+                    ref={ctaRef}
+                    onClick={() => setShowRound(true)}
+                    className='cards-root__link'
+                  >
+                    {t(cta || 'NFTs.link-text')}
+                  </span>
+                  {showRound && (
+                    <div>
+                      {subitems.map((e) => (
+                        <>
+                          <div className='round-link'>
+                            <a
+                              className='round-link__item'
+                              target='_blank'
+                              rel='noreferrer'
+                              href={e.link}
+                            >
+                              {e.name}
+                            </a>
+                          </div>
+                        </>
+                      ))}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <a
+                  rel='noopener noreferrer'
+                  className='cards-root__link'
+                  target='_blank'
+                  href={link ? LINK_TO_LIVE + link : collectionLink}
+                >
+                  {t(cta || 'NFTs.link-text')}
+                </a>
+              )}
             </div>
           </div>
         </div>

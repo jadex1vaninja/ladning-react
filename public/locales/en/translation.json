@@ -177,8 +177,11 @@
     "cta": {
       "bin-now": "BID NOW",
       "view-collection": "VIEW COLLECTION",
-      "buy-now": "BUY NOW"
+      "buy-now": "BUY NOW",
+      "select-round": "SELECT ROUND"
     },
+    "round":"Round {{round}}",
+    "go-cards":"Gone to Cards",
     "canelo-legendary-title": "Knockout -</br> Canelo",
     "canelo-legendary-description": "Canelo Alvarez has knocked out 37 of the fighters he’s faced. Get this 1-of-1 Legendary NFT representing his in-ring dominance. In addition to winning the NFT, the winning bid will receive 2 tickets to the next Canelo fight + <b>signed fight gloves</b> and a personalized video from Canelo!",
 

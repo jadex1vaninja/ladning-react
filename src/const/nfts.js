@@ -87,6 +87,76 @@ const GOLDEN_PREDICTION = {
   rarity: 'nft-card.rarity-13',
   description: 'nft-card.prediction-decision-description',
   isActive: true,
+  subitems: [
+    {
+      name: 'Round 1',
+      link:
+        'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506768672285786113'
+    },
+    {
+      name: 'Round 2',
+      link:
+        'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506769771797413889'
+    },
+    {
+      name: 'Round 3',
+      link:
+        'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506770871309041665'
+    },
+    {
+      name: 'Round 4',
+      link:
+        'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506771970820669441'
+    },
+    {
+      name: 'Round 5',
+      link:
+        'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506773070332297217'
+    },
+    {
+      name: 'Round 6',
+      link:
+        'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506789563006713857'
+    },
+    {
+      name: 'Round 7',
+      link:
+        'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506790662518341633'
+    },
+    {
+      name: 'Round 8',
+      link:
+        'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506774169843924993'
+    },
+    {
+      name: 'Round 9',
+      link:
+        'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506791762029969409'
+    },
+
+    {
+      name: 'Round 10',
+      link:
+        'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506775269355552769'
+    },
+
+    {
+      name: 'Round 11',
+      link:
+        'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506776368867180545'
+    },
+    {
+      name: 'Round 12',
+      link:
+        'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506777468378808321'
+    },
+    {
+      name: 'Gone To Cards',
+      link:
+        'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506792861541597185'
+    }
+  ],
+  cta: 'nft-card.cta.select-round',
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[query]=Prediction&search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Gold'
 };
@@ -110,6 +180,7 @@ const BRONZE_PREDICTION = {
   rarity: 'nft-card.rarity-100',
   description: 'nft-card.prediction-decision-description-bronze',
   isActive: true,
+  cta: 'nft-card.cta.select-round',
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
 };

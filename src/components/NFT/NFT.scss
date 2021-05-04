@@ -213,4 +213,19 @@
       color: $brand-yellow;
     }
   }
+
+  .round-link{
+    padding: 5px;
+    &__item{
+    &:hover {
+      text-decoration: none;
+      color: $brand-white  !important;
+    }
+    &:visited {
+      text-decoration: none;
+      color: $brand-yellow;
+    }
+  }
+  }
+  
 }
