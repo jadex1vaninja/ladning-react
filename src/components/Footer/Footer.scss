@@ -1,7 +1,7 @@
 @import '../../media-mixin.scss';
 @import '../../variables';
 .low-height{
-   height: 300px;
+   height: 300px !important;
 }
 .footer {
   width: 100%;

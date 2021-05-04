@@ -7,9 +7,10 @@ const Footer = ({ isUsedOnSecondaryPage }) => {
   const { t, i18n } = useTranslation();
   const language = i18n.language;
   const IS_SPANISH = language === 'es';
-
+  console.log(isUsedOnSecondaryPage, 'sad');
+  console.log('footer' + (isUsedOnSecondaryPage ? ' low-height' : ''));
   return (
-    <footer className={'footer' + isUsedOnSecondaryPage && ' low-height'}>
+    <footer className={'footer' + (isUsedOnSecondaryPage ? ' low-height' : '')}>
       <div className='footer__banner'>
         <img
           className='footer__banner-img'
