@@ -104,14 +104,6 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
             </li>
           </ul>
           <div className='header__terms-language'>
-            <ul className='header__terms-list'>
-              <li className='header__terms-item'>
-                <a href='#terms'>{t('header.list.list-t&c')}</a>
-              </li>
-              <li className='header__terms-item'>
-                <a href='#terms'>{t('header.list.list-privacy')}</a>
-              </li>
-            </ul>
             <ul className='header__language-list'>
               <li
                 className={`header__button${
@@ -167,20 +159,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
             <h1 className='header__secondary-title'>{secondaryTitle}</h1>
           </div>
         ) : (
-          <div className='header__buttons-wrapper'>
-            <button
-              onClick={() => window.open(OPENSEA_COLLECTION_LINK, '_blank')}
-              className='header__CTA'
-            >
-              {t('header.buttons.btn-one')}
-            </button>
-            <button
-              onClick={() => window.open(DAZN_PUBLIC_LINK, '_blank')}
-              className='header__CTA'
-            >
-              {t('header.buttons.btn-two')}
-            </button>
-          </div>
+          <></>
         )}
         <div className='header__img-wrapper header__img-wrapper--second'>
           <img
