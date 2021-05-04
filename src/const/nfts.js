@@ -35,6 +35,7 @@ const GOLD_TALE_CANELO = {
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.canelo-gold-description',
   isActive: true,
+  cta: 'nft-card.cta.bin-now',
   link:
     '69208789200216951769366063301950903931594320778910349241631506766473262530561'
 };
@@ -47,6 +48,7 @@ const GOLD_TALE_SAUNDERS = {
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.saunders-gold-description',
   isActive: true,
+  cta: 'nft-card.cta.bin-now',
   link:
     '69208789200216951769366063301950903931594320778910349241631506766473262530561'
 };
@@ -56,9 +58,10 @@ const SILVER_TALE_CANELO = {
   img: imgPath + 'Silver_1_A1_TaleOfTheTape_Canelo_1_1_Silver.png',
   video: vidPath + 'Silver_1_A1_TaleOfTheTape_Canelo_1_1_Silver.gif',
   title: 'nft-card.canelo-silver-title',
-  rarity: 'nft-card.rarity-50',
+  rarity: 'nft-card.rarity-only-50',
   description: 'nft-card.canelo-silver-description',
   isActive: true,
+  cta: 'nft-card.cta.view-collection',
   link:
     '69208789200216951769366063301950903931594320778910349241631506788463495086130'
 };
@@ -68,8 +71,9 @@ const SILVER_TALE_SAUNDERS = {
   img: imgPath + 'Silver_2_TaleOfTheTape_Saunders_1_1_Silver.png',
   video: vidPath + 'Silver_2_TaleOfTheTape_Saunders_1_1_Silver.gif',
   title: 'nft-card.saunders-silver-title',
-  rarity: 'nft-card.rarity-50',
+  rarity: 'nft-card.rarity-only-50',
   description: 'nft-card.saunders-silver-description',
+  cta: 'nft-card.cta.view-collection',
   isActive: true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506787363983458354'
