@@ -1,11 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LINK_TO_LIVE } from '../../const';
 import './NFT.scss';
 
-const NFT = ({ img, video, type, title, description, rarity, isActive, link, isSoldOut, collectionLink,cta }) => {
+const NFT = ({
+  img,
+  video,
+  type,
+  title,
+  description,
+  rarity,
+  isActive,
+  link,
+  isSoldOut,
+  collectionLink,
+  cta
+}) => {
   const { t } = useTranslation();
+  const [text, setText] = useState('');
+  const [isSliced, setIsSliced] = useState(true);
   const separateType = type.split('-').pop();
+  const MAX_SYMBOLS = 170;
+
+  const sliceText = (string) => {
+    return `${string.slice(0, MAX_SYMBOLS)}...`;
+  };
+
+  const showFullText = () => {
+    setIsSliced(false);
+    setText((prevState) => {
+      return prevState;
+    });
+  };
+
+  useEffect(() => {
+    setText(t(description));
+  }, [t]);
 
   return (
     <div
@@ -13,10 +43,17 @@ const NFT = ({ img, video, type, title, description, rarity, isActive, link, isS
         !isActive && 'cards-root__card-content--disabled'
       } ${isSoldOut && 'cards-root__card-content--soldout'}`}
     >
-      {video 
-        ? <img className='cards-root__card-img' src={img} alt='card' onMouseOver={(e) => e.currentTarget.src = video} onMouseOut={(e) => e.currentTarget.src = img} /> 
-        : <img className='cards-root__card-img' src={img} alt='card' />
-      }
+      {video ? (
+        <img
+          className='cards-root__card-img'
+          src={img}
+          alt='card'
+          onMouseOver={(e) => (e.currentTarget.src = video)}
+          onMouseOut={(e) => (e.currentTarget.src = img)}
+        />
+      ) : (
+        <img className='cards-root__card-img' src={img} alt='card' />
+      )}
       {isSoldOut && (
         <div className='cards-root__soldout-block'>{t('') || 'SOLD OUT'}</div>
       )}
@@ -37,11 +74,18 @@ const NFT = ({ img, video, type, title, description, rarity, isActive, link, isS
           <p
             className='cards-root__amount'
             dangerouslySetInnerHTML={{ __html: t(rarity) }}
-          ></p>
+          />
           <p
             className='cards-root__desc'
-            dangerouslySetInnerHTML={{ __html: t(description) }}
-          ></p>
+            dangerouslySetInnerHTML={{
+              __html: isSliced ? sliceText(text) : text
+            }}
+          />
+          {isSliced && (
+            <span className='cards-root__show-more' onClick={showFullText}>
+              Read more
+            </span>
+          )}
           <a
             rel='noopener noreferrer'
             className='cards-root__link'

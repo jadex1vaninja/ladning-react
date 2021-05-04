@@ -165,6 +165,19 @@
     }
   }
 
+  &__show-more {
+    cursor: pointer;
+    color: $brand-white;
+    text-decoration: underline;
+    font-family: 'DAZNTrim-Light';
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: none;
+    position: absolute;
+    right: 1.625rem;
+    bottom: 13rem;
+  }
+
   &__link {
     position: absolute;
     bottom: 1.625rem;
