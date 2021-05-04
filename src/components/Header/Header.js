@@ -68,19 +68,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
         </nav>
       ) : (
         <nav className='header__navigation'>
-          <div className='header__dazn-logo'>
-            <a
-              target='_blank'
-              rel='noopener noreferrer'
-              href={DAZN_PUBLIC_LINK}
-            >
-              <img
-                className='header__dazn-img'
-                src={imgPath + 'DAZN-logo.png'}
-                alt='DAZN'
-              />
-            </a>
-          </div>
+          <div></div>
           <ul className='header__nav-list'>
             <li className='header__nav-item'>
               <a className='header__nav-link' href='#auction'>
@@ -88,7 +76,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
               </a>
             </li>
             <li className='header__nav-item'>
-              <a className='header__nav-link' href="/faq" target="_blank">
+              <a className='header__nav-link' href='/faq' target='_blank'>
                 {t('header.nav-list.nav-faq')}
               </a>
             </li>
@@ -132,12 +120,24 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
         </nav>
       )}
       <div className='header__promo'>
+        <div className='header__dazn-logo'>
+          <a target='_blank' href={DAZN_PUBLIC_LINK}>
+            <img
+              className='header__dazn-img'
+              src={imgPath + 'DAZN-logo.png'}
+              alt='DAZN'
+            />
+          </a>
+        </div>
         <img
           className='header__promo-img'
           src={imgPath + 'promo.png'}
           alt='promo'
         />
-        <p className='header__promo-text' dangerouslySetInnerHTML={{ __html: t('header.promo-text') }}></p>
+        <p
+          className='header__promo-text'
+          dangerouslySetInnerHTML={{ __html: t('header.promo-text') }}
+        ></p>
       </div>
       {!isUsedOnSecondaryPage && (
         <div className='header__description'>
@@ -145,7 +145,11 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
             {t('header.description.text')}
           </p>
           {/* TODO: ADD LINK */}
-          <a target='_blank' href={OPENSEA_COLLECTION_LINK} className='header__description-link'>
+          <a
+            target='_blank'
+            href={OPENSEA_COLLECTION_LINK}
+            className='header__description-link'
+          >
             {t('header.description.link')}
           </a>
         </div>
