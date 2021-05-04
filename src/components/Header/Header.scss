@@ -227,7 +227,23 @@
       height: 212px;
     }
   }
+  &__text-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+    order: 1;
+    margin-bottom: 14px;
 
+    @include _768 {
+      width: 33%;
+      margin-bottom: 0;
+      order: 2;
+  }
+}
   &__promo-text {
     font-family: 'DAZNTrim-Light';
     color: $brand-white;
