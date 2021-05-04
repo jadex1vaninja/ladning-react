@@ -22,7 +22,7 @@ const Landing = () => {
           isUsedOnSecondaryPage={false}
         />
         <Registration />
-        <TermsConditions />
+        {/* <TermsConditions /> */}
       </main>
       <Footer />
     </>
