@@ -33,6 +33,16 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
     <header className='header'>
       {isUsedOnSecondaryPage ? (
         <nav className='header__navigation-secondary'>
+          <div className='header__dazn-logo'>
+            <a target='_blank' href={DAZN_PUBLIC_LINK}>
+              <img
+                className='header__dazn-img'
+                src={imgPath + 'DAZN-logo.png'}
+                alt='DAZN'
+              />
+            </a>
+          </div>
+          <h1 className='header__secondary-title'>{secondaryTitle}</h1>
           <ul className='header__language-list-secondary'>
             <li
               className={`header__button${language === 'en' ? ' active' : ''}`}
@@ -164,30 +174,17 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
           )}
         </div>
       )}
-      <div className='header__inner'>
+       {!isUsedOnSecondaryPage &&<div className='header__inner'>
         <div className='header__img-wrapper header__img-wrapper--first'>
           <img className='header__logo1' src={imgPath + 'logo.png'} alt='' />
         </div>
-        {isUsedOnSecondaryPage ? (
-          <div className='header__buttons-wrapper'>
-            <div className='header__dazn-logo'>
-              <a target='_blank' href={DAZN_PUBLIC_LINK}>
-                <img
-                  className='header__dazn-img'
-                  src={imgPath + 'DAZN-logo.png'}
-                  alt='DAZN'
-                />
-              </a>
-            </div>
-          </div>
-        ) : (
+
           <div className='header__text-wrapper'>
             <h1 className='header__title'>{t('header.title')}</h1>
             <a className='text-center' target='_blank' href={DAZN_PUBLIC_LINK}>
               <span className='header__text'>{t('header.sub-title')}</span>
             </a>
           </div>
-        )}
         <div className='header__img-wrapper header__img-wrapper--second'>
           <img
             className='header__logo3'
@@ -195,7 +192,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
             alt=''
           />
         </div>
-      </div>
+      </div>}
       <div className='header__banner'>
         <img
           className='header__banner-img'
