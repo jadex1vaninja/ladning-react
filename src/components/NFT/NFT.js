@@ -50,9 +50,7 @@ const NFT = ({
             !isActive && 'cards-root__card-content--disabled'
           } ${(isSoldOut || grayscale) && 'cards-root__card-content--soldout'}`}
         >
-          <div
-            className={!isActive && 'cards-root__card-content--disabled'}
-          ></div>
+          <div className={!isActive && 'cards-root__card-content--disabled'} />
           {video ? (
             <img
               className='cards-root__card-img'
@@ -87,10 +85,31 @@ const NFT = ({
                 className='cards-root__amount'
                 dangerouslySetInnerHTML={{ __html: t(rarity) }}
               />
-              <p
-                className='cards-root__desc'
-                dangerouslySetInnerHTML={{ __html: t(description) }}
-              />
+              <div>
+                {isSliced ? (
+                  <>
+                    <span
+                      className='cards-root__desc'
+                      dangerouslySetInnerHTML={{
+                        __html: sliceText(text)
+                      }}
+                    />
+                    <span
+                      className='cards-root__show-more'
+                      onClick={showFullText}
+                    >
+                      Read more
+                    </span>
+                  </>
+                ) : (
+                  <span
+                    className='cards-root__desc'
+                    dangerouslySetInnerHTML={{
+                      __html: text
+                    }}
+                  />
+                )}
+              </div>
               <a
                 rel='noopener noreferrer'
                 className='cards-root__link'
