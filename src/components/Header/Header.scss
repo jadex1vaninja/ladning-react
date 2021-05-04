@@ -35,8 +35,8 @@
       font-size: 50px;
       letter-spacing: 0px;
       line-height: 38px;
+    }
   }
-}
   &__language-list-secondary {
     display: flex;
     position: absolute;
@@ -93,7 +93,7 @@
     font-size: 0.75rem;
     letter-spacing: 1px;
 
-    &:hover{
+    &:hover {
       color: $brand-yellow;
       text-decoration: none;
     }
@@ -170,7 +170,6 @@
   }
 
   &__terms-item a {
-
     &:hover {
       color: $brand-white;
       text-decoration: none;
@@ -183,7 +182,7 @@
     &::after {
       position: absolute;
       bottom: 0;
-      content: "";
+      content: '';
       display: block;
       height: 2px;
       width: 100%;
@@ -254,12 +253,25 @@
       width: 33%;
       margin-bottom: 0;
       order: 2;
+    }
   }
-}
+  &__text {
+    color: $brand-yellow;
+    font-family: 'DAZNTrim-Light';
+    font-size: 14px;
+    letter-spacing: 3px;
+    line-height: 27px;
+
+    @include _768 {
+      font-size: 20px;
+      letter-spacing: 3px;
+      line-height: 45px;
+    }
+  }
   &__promo-text {
     font-family: 'DAZNTrim-Light';
     color: $brand-white;
-    text-transform:uppercase;
+    text-transform: uppercase;
     margin: 0;
     font-size: 14px;
     line-height: 35px;
@@ -334,12 +346,12 @@
 
     @include _768 {
       height: 100%;
+    }
   }
-}
 
   &__banner-img {
     width: 100%;
-}
+  }
 
   &__inner {
     width: 100%;
@@ -386,7 +398,7 @@
     @include _768 {
       width: 25%;
     }
-}
+  }
 
   &__buttons-wrapper {
     position: relative;
@@ -413,7 +425,7 @@
   }
 
   &__CTA {
-      @include CTA;
+    @include CTA;
   }
 
   &__logo1 {
