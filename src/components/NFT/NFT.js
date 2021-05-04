@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LINK_TO_LIVE } from '../../const';
 import './NFT.scss';
@@ -19,7 +19,25 @@ const NFT = ({
   comingSoon
 }) => {
   const { t } = useTranslation();
+  const [text, setText] = useState('');
+  const [isSliced, setIsSliced] = useState(true);
   const separateType = type.split('-').pop();
+  const MAX_SYMBOLS = 170;
+
+  const sliceText = (string) => {
+    return `${string.slice(0, MAX_SYMBOLS)}...`;
+  };
+
+  const showFullText = () => {
+    setIsSliced(false);
+    setText((prevState) => {
+      return prevState;
+    });
+  };
+
+  useEffect(() => {
+    setText(t(description));
+  }, [t]);
 
   return (
     <>
@@ -32,9 +50,7 @@ const NFT = ({
             !isActive && 'cards-root__card-content--disabled'
           } ${(isSoldOut || grayscale) && 'cards-root__card-content--soldout'}`}
         >
-          <div
-            className={!isActive && 'cards-root__card-content--disabled'}
-          ></div>
+          <div className={!isActive && 'cards-root__card-content--disabled'} />
           {video ? (
             <img
               className='cards-root__card-img'
@@ -68,11 +84,32 @@ const NFT = ({
               <p
                 className='cards-root__amount'
                 dangerouslySetInnerHTML={{ __html: t(rarity) }}
-              ></p>
-              <p
-                className='cards-root__desc'
-                dangerouslySetInnerHTML={{ __html: t(description) }}
-              ></p>
+              />
+              <div>
+                {isSliced ? (
+                  <>
+                    <span
+                      className='cards-root__desc'
+                      dangerouslySetInnerHTML={{
+                        __html: sliceText(text)
+                      }}
+                    />
+                    <span
+                      className='cards-root__show-more'
+                      onClick={showFullText}
+                    >
+                      Read more
+                    </span>
+                  </>
+                ) : (
+                  <span
+                    className='cards-root__desc'
+                    dangerouslySetInnerHTML={{
+                      __html: text
+                    }}
+                  />
+                )}
+              </div>
               <a
                 rel='noopener noreferrer'
                 className='cards-root__link'

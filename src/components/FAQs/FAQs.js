@@ -52,6 +52,7 @@ const FAQs = ({
         <dl className='accordion'>
           {accordion.slice(0, show).map((item, index) => (
             <Accordion
+              key={JSON.stringify(item.title)}
               title={item.title}
               description={item.description}
               onClick={() => handleActive(index)}
@@ -72,10 +73,7 @@ const FAQs = ({
       )}
       {!isButtonGetBack && (
         <div className='faq__btn-wrapper'>
-          <button
-            className='faq__btn'
-            onClick={() => window.open('/faq')}
-          >
+          <button className='faq__btn' onClick={() => window.open('/faq')}>
             More FAQs
           </button>
         </div>
