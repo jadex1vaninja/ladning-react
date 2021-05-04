@@ -90,7 +90,7 @@ const PrivacyPage = () => {
           </span>
           <div className='privacy__btn-wrapper'>
             <button className='privacy__btn' onClick={getBack}>
-              Get back
+              GO HOME
             </button>
           </div>
         </div>
