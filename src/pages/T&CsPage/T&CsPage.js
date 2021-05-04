@@ -90,7 +90,7 @@ const TCsPage = () => {
           </span>
           <div className='tcs__btn-wrapper'>
             <button className='tcs__btn' onClick={getBack}>
-              Get back
+              GO HOME
             </button>
           </div>
         </div>
