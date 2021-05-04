@@ -163,7 +163,12 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
             <h1 className='header__secondary-title'>{secondaryTitle}</h1>
           </div>
         ) : (
-          <></>
+          <div className='header__text-wrapper'>
+            <h1 className='header__title'>{t('header.title')}</h1>
+            <a className='text-center' target='_blank' href={DAZN_PUBLIC_LINK}>
+              <span className='header__text'>{t('header.sub-title')}</span>
+            </a>
+          </div>
         )}
         <div className='header__img-wrapper header__img-wrapper--second'>
           <img
