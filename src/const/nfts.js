@@ -4,11 +4,11 @@ const LEGENDARY_KNOCKOUT_CANELO = {
   type: 'NFTs.type-legendary',
   img: imgPath + 'Legendary_2_Knockout_Canelo_1_1.png',
   video: vidPath + 'Legendary_2_Knockout_Canelo_1_1.gif',
-  title: 'nft-card.canelo-legendary-title',
-  rarity: 'nft-card.rarity-1',
-  description: 'nft-card.canelo-legendary-description',
+  title: 'NFTs.nft-card.canelo-legendary-title',
+  rarity: 'NFTs.nft-card.rarity-1',
+  description: 'NFTs.nft-card.canelo-legendary-description',
   isActive: true,
-  cta:'nft-card.cta.bin-now',
+  cta: 'nft-card.cta.bin-now',
   // isSoldOut:true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506764274239275009'
@@ -18,9 +18,9 @@ const LEGENDARY_KNOCKOUT_SAUNDERS = {
   type: 'NFTs.type-legendary',
   img: imgPath + 'Legendary_1_Knockout_Saunders_1_1.png',
   video: vidPath + 'Legendary_1_Knockout_Saunders_1_1.gif',
-  title: 'nft-card.saunders-legendary-title',
-  rarity: 'nft-card.rarity-1',
-  description: 'nft-card.saunders-legendary-description',
+  title: 'NFTs.nft-card.saunders-legendary-title',
+  rarity: 'NFTs.nft-card.rarity-1',
+  description: 'NFTs.nft-card.saunders-legendary-description',
   isActive: true,
   cta: 'nft-card.cta.bin-now',
   link:
@@ -31,9 +31,9 @@ const GOLD_TALE_CANELO = {
   type: 'NFTs.type-gold',
   img: imgPath + 'Gold_1_TaleOfTheTape_Canelo_1_1_Gold.png',
   video: vidPath + 'Gold_1_TaleOfTheTape_Canelo_1_1_Gold.gif',
-  title: 'nft-card.canelo-gold-title',
-  rarity: 'nft-card.rarity-1',
-  description: 'nft-card.canelo-gold-description',
+  title: 'NFTs.nft-card.canelo-gold-title',
+  rarity: 'NFTs.nft-card.rarity-1',
+  description: 'NFTs.nft-card.canelo-gold-description',
   isActive: true,
   cta: 'nft-card.cta.bin-now',
   link:
@@ -44,9 +44,9 @@ const GOLD_TALE_SAUNDERS = {
   type: 'NFTs.type-gold',
   img: imgPath + 'Gold_2_TaleOfTheTape_Saunders_1_1_Gold.png',
   video: vidPath + 'Gold_1_TaleOfTheTape_Saunders_1_1_Gold.gif',
-  title: 'nft-card.saunders-gold-title',
-  rarity: 'nft-card.rarity-1',
-  description: 'nft-card.saunders-gold-description',
+  title: 'NFTs.nft-card.saunders-gold-title',
+  rarity: 'NFTs.nft-card.rarity-1',
+  description: 'NFTs.nft-card.saunders-gold-description',
   isActive: true,
   cta: 'nft-card.cta.bin-now',
   link:
@@ -57,9 +57,9 @@ const SILVER_TALE_CANELO = {
   type: 'NFTs.type-silver',
   img: imgPath + 'Silver_1_A1_TaleOfTheTape_Canelo_1_1_Silver.png',
   video: vidPath + 'Silver_1_A1_TaleOfTheTape_Canelo_1_1_Silver.gif',
-  title: 'nft-card.canelo-silver-title',
-  rarity: 'nft-card.rarity-only-50',
-  description: 'nft-card.canelo-silver-description',
+  title: 'NFTs.nft-card.canelo-silver-title',
+  rarity: 'NFTs.nft-card.rarity-only-50',
+  description: 'NFTs.nft-card.canelo-silver-description',
   isActive: true,
   cta: 'nft-card.cta.view-collection',
   link:
@@ -70,38 +70,50 @@ const SILVER_TALE_SAUNDERS = {
   type: 'NFTs.type-silver',
   img: imgPath + 'Silver_2_TaleOfTheTape_Saunders_1_1_Silver.png',
   video: vidPath + 'Silver_2_TaleOfTheTape_Saunders_1_1_Silver.gif',
-  title: 'nft-card.saunders-silver-title',
+  title: 'NFTs.nft-card.saunders-silver-title',
   rarity: 'nft-card.rarity-only-50',
-  description: 'nft-card.saunders-silver-description',
+  description: 'NFTs.nft-card.saunders-silver-description',
   cta: 'nft-card.cta.view-collection',
   isActive: true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506787363983458354'
 };
 
-
-const GOLDEN_PREDICTION= {
-    type: 'NFTs.type-gold',
-    img: imgPath + 'Gold_3_Prediction_RND_1_Gold.png',
-    video: vidPath + 'Gold_3_Prediction_RND_1_Gold.gif',
-    title: 'nft-card.prediction-decision-title',
-    rarity: 'nft-card.rarity-13',
-    description: 'nft-card.prediction-decision-description',
-    isActive: true,
-    collectionLink:"https://opensea.io/assets/dazn-x-canelo-saunders?search[query]=Prediction&search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Gold",
-
+const GOLDEN_PREDICTION = {
+  type: 'NFTs.type-gold',
+  img: imgPath + 'Gold_3_Prediction_RND_1_Gold.png',
+  video: vidPath + 'Gold_3_Prediction_RND_1_Gold.gif',
+  title: 'NFTs.nft-card.prediction-decision-title',
+  rarity: 'NFTs.nft-card.rarity-13',
+  description: 'NFTs.nft-card.prediction-decision-description',
+  isActive: true,
+  collectionLink:
+    'https://opensea.io/assets/dazn-x-canelo-saunders?search[query]=Prediction&search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Gold'
 };
+
+const GOLD_PREDICTIONS_GONE_TO_CARDS = {
+  type: 'NFTs.type-gold',
+  img: imgPath + 'Gold_3_Prediction_RND_1_Gold.png',
+  video: vidPath + 'Gold_3_Prediction_RND_1_Gold.gif',
+  title: 'NFTs.nft-card.gold-prediction-gone-to-card-title',
+  rarity: 'NFTs.nft-card.rarity-13',
+  description: 'NFTs.nft-card.gold-prediction-gone-to-card-description',
+  isActive: true,
+  collectionLink: ''
+};
+
 const BRONZE_PREDICTION = {
   type: 'NFTs.type-bronze',
   img: imgPath + 'Bronze_1_Prediction_RND_1_Bronze.png',
   video: vidPath + 'Bronze_1_Prediction_RND_1_Bronze.gif',
-  title: 'nft-card.prediction-decision-title-bronze',
-  rarity: 'nft-card.rarity-100',
-  description: 'nft-card.prediction-decision-description-bronze',
+  title: 'NFTs.nft-card.prediction-decision-title-bronze',
+  rarity: 'NFTs.nft-card.rarity-100',
+  description: 'NFTs.nft-card.prediction-decision-description-bronze',
   isActive: true,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
 };
+
 const POST_FIGHT_CANELO_LEGENDARY = {
   type: 'NFTs.type-legendary',
   img: imgPath + 'winningCanelo.png',
@@ -144,12 +156,11 @@ const POST_FIGHT_SAUNDERS_SILVER = {
   rarity: 'nft-card.rarity-50',
   description: 'nft-card.post-fight-description-silver-saunders',
   isActive: false,
-  comingSoon:true,
-  grayscale:true,
+  comingSoon: true,
+  grayscale: true,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
 };
-
 
 export const NFTs = [
   {
