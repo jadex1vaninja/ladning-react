@@ -76,12 +76,8 @@
 
     @include _1024 {
       font-size: 1.875rem;
-      margin-left: 4rem;
+      margin-left: 9rem;
       line-height: 3.438rem;
-    }
-
-    @include _1440 {
-      margin-left: 5.125rem;
     }
   }
 
@@ -438,7 +434,7 @@
 
   &__CTA {
     color: $brand-black !important;
-    text-decoration: none  !important;
+    text-decoration: none !important;
     @include CTA;
   }
 
@@ -461,17 +457,17 @@
     }
   }
 
-  &__list{
-    li{
-    font-family: 'DAZNTrim-Light';
-    color: $brand-white;
-    font-size: 0.75rem;
-    margin: 0;
-    text-align: center;
-    @include _1024 {
-      font-size: 1.563rem;
-      line-height: 2.188rem;
-    }
+  &__list {
+    li {
+      font-family: 'DAZNTrim-Light';
+      color: $brand-white;
+      font-size: 0.75rem;
+      margin: 0;
+      text-align: center;
+      @include _1024 {
+        font-size: 1.563rem;
+        line-height: 2.188rem;
+      }
     }
   }
 }
