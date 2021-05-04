@@ -121,7 +121,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
         </nav>
       )}
       <div className='header__promo'>
-        <div className='header__dazn-logo'>
+       {!isUsedOnSecondaryPage && <div className='header__dazn-logo'>
           <a target='_blank' href={DAZN_PUBLIC_LINK}>
             <img
               className='header__dazn-img'
@@ -129,7 +129,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
               alt='DAZN'
             />
           </a>
-        </div>
+        </div>}
         <img
           className='header__promo-img'
           src={imgPath + 'promo.png'}
