@@ -88,37 +88,19 @@
   &__nav-link {
     font-family: 'DAZNTrim-Bold';
     cursor: pointer;
-    //color: $brand-white;
-    //font-size: 0.75rem;
+    color: $brand-white;
+    font-size: 0.75rem;
     letter-spacing: 1px;
 
     &:hover {
       color: $brand-yellow;
-      background-color: $brand-black;
-      box-shadow: inset 0 0 1px 1px $brand-yellow;
       text-decoration: none;
-      transition: all 0.4s;
-    }
-
-    @include CTA;
-    color: $brand-black;
-    font-size: 0.5rem;
-    padding: 0.25rem;
-
-    @include _768 {
-      //font-size: 1.875rem;
-      font-size: 1rem;
-      //line-height: 3.438rem;
-      padding: 0.5rem;
     }
 
     @include _1024 {
-      //font-size: 1.875rem;
-      font-size: 1rem;
-      //line-height: 3.438rem;
-      padding: 0.5rem;
+      font-size: 1.875rem;
+      line-height: 3.438rem;
     }
-
   }
 
   &__terms-language {
