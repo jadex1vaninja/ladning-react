@@ -6,7 +6,7 @@ import './Cards.scss';
 
 const Cards = () => {
   return (
-    <section className='cards-root'>
+    <section id="cards" className='cards-root'>
       {NFTs.map((element) => (
         <NFTWrapper title={element.title} length={element.cards.length}>
           {element.cards.map((card) => (

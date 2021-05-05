@@ -174,7 +174,7 @@
       text-align: left;
 
       p {
-        font-size: 0.75rem;
+        font-size: 1rem;
         padding: 0;
         margin: 0 0 1.25rem 0;
         opacity: 0;
@@ -182,17 +182,23 @@
         color: $brand-black;
 
         @include _1024 {
-          font-size: 1.563rem;
+          font-size: 1.25rem;
           padding: 0 6.25rem 0 0;
         }
-
+        a {
+          color: #81bbff !important;
+          text-decoration: underline;
+        }
         a, b {
-          font-size: 0.75rem;
+          font-size: 1rem;
           color: $brand-black;
 
           @include _1024 {
-            font-size: 1.563rem;
+             font-size: 1.25rem;;
           }
+        }
+        b{
+          font-family: 'DAZNTrim-Bold';
         }
       }
 
@@ -214,6 +220,7 @@
   }
 
   &__btn {
+    text-transform: none !important; 
     @include CTA;
     background-color: $brand-black;
     color: $brand-yellow;

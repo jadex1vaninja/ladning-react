@@ -94,6 +94,8 @@
     }
   }
   &__CTA {
+    
+    text-transform: none !important;
     @include CTA;
     color: $brand-black;
 

@@ -20,7 +20,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
   };
 
   const getLanguageFromStorage = () => {
-    const lang = localStorage.getItem('i18nextLng') || 'en';
+    const lang = 'en'; //localStorage.getItem('i18nextLng') || 'en';
     return lang;
   };
 
@@ -47,6 +47,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
             style={{ visibility: 'hidden' }}
           >
             <li
+              style={{ visibility: 'hidden' }}
               className={`header__button${language === 'en' ? ' active' : ''}`}
               onClick={() => {
                 changeLanguage('en');
@@ -96,11 +97,9 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
             <li className='header__nav-item'>
               <a
                 className='header__nav-link'
-                target='_blank'
-                rel='noopener noreferrer'
-                href={DAZN_PUBLIC_LINK}
+                href="#cards"
               >
-                {t('header.nav-list.nav-dazn')}
+                {t('header.nav-list.nav-artwork')}
               </a>
             </li>
           </ul>
@@ -116,6 +115,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
           <div className='header__terms-language' style={{ display: 'none' }}>
             <ul className='header__language-list'>
               <li
+                style={{ visibility: 'hidden' }}
                 className={`header__button${
                   language === 'en' ? ' active' : ''
                 }`}
@@ -220,7 +220,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
 
           <div className='header__text-wrapper'>
             <h1 className='header__title'>{t('header.title')}</h1>
-            <a className='text-center' target='_blank' href={DAZN_PUBLIC_LINK}>
+            <a className='text-center' target='_blank' href={OPENSEA_COLLECTION_LINK}>
               <span className='header__text'>{t('header.sub-title')}</span>
             </a>
           </div>
