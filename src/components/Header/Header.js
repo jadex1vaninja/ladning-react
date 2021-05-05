@@ -53,6 +53,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
               En
             </li>
             <li
+              style={{ visibility: 'hidden' }}
               className={`header__button${language === 'es' ? ' active' : ''}`}
               onClick={() => {
                 changeLanguage('es');
@@ -82,6 +83,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
                 En
               </li>
               <li
+                style={{ visibility: 'hidden' }}
                 className={`header__button${
                   language === 'es' ? ' active' : ''
                 }`}
@@ -134,6 +136,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
                 En
               </li>
               <li
+                style={{ visibility: 'hidden' }}
                 className={`header__button${
                   language === 'es' ? ' active' : ''
                 }`}
