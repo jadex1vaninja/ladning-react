@@ -13,7 +13,7 @@ const TCsPage = () => {
   };
   return (
     <>
-      <Header isUsedOnSecondaryPage secondaryTitle='T&Cs' />
+      <Header isUsedOnSecondaryPage secondaryTitle='Terms & Conditions' />
       <div className='tcs'>
         <div className='tcs__wrapper'></div>
         <div className='tcs__container'>
