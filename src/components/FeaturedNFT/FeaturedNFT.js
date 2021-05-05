@@ -10,7 +10,9 @@ const FeaturedNFT = () => {
   const { t } = useTranslation();
   const [nftFromApi, setNft] = useState({ orders: [{ closing_date :new Date('May 8, 2021 07:00:00 GMT-04:00')}]});
   // UNcoment when auction will be setted up;
-  const [/*createdOrder,*/ highestBid] = nftFromApi.orders;
+  let [createdOrder, highestBid] = nftFromApi.orders;
+
+  highestBid = highestBid || createdOrder;
   const paymentInfo =highestBid.payment_token_contract;
   const tokenPrice = paymentInfo ? highestBid.base_price / 10 ** highestBid.payment_token_contract.decimals : 0;
   const usdPrice = paymentInfo ? tokenPrice *  highestBid.payment_token_contract.usd_price : 0; 
