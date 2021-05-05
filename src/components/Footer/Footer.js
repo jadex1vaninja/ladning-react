@@ -32,7 +32,7 @@ const Footer = ({ isUsedOnSecondaryPage }) => {
           <div className='footer__sign-block'>
             <div className='footer__btn-wrapper'>
               {/* TODO: LINK */}
-              <a className='footer__CTA' target='_blank' href='/tcs'>
+              <a className='footer__CTA' target='_blank' href='/terms'>
                 {t('terms.CTA-one')}
               </a>
               <a className='footer__CTA' target='_blank' href='/privacy-policy'>

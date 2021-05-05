@@ -17,7 +17,7 @@ function App() {
         <Route exact path='/' component={Landing} />
         <Route path='/redeem' component={RedeemPage} />
         <Route path='/faq' component={FAQsPage} />
-        <Route path='/tcs' component={TCsPage} />
+        <Route path='/terms' component={TCsPage} />
         <Route path='/privacy-policy' component={PrivacyPage} />
       </Switch>
     </Router>
