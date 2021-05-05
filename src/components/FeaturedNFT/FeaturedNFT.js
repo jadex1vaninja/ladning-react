@@ -71,10 +71,13 @@ const FeaturedNFT = () => {
     <div className='featured' id='auction'>
       <div className='featured__inner-wrapper'>
         <div className='featured__img-wrapper'>
+        <video autoplay>
+          <source src={vidPath + 'Legendary_2_Knockout_Canelo_1_1.mp4'} type="video/mp4" />
           <img
             src={vidPath + 'Legendary_2_Knockout_Canelo_1_1.gif'}
             alt='card'
           />
+        </video>
         </div>
         <div className='featured__content'>
           <h6 className='featured__sub-title'>{t('featured-nft.sub-title')}</h6>

@@ -14,15 +14,14 @@
     "promo-text": "FACE THE FEARLESS | NFT COLLECTION",
     "description": {
       "text": "The biggest fight of the year is set for May 8 at AT&T Stadium in Arlington, Texas, as WBA, WBC and Ring Magazine champion and the number one pound-for-pound fighter in the world, Canelo Alvarez, meets Billy Joe Saunders, the holder of the WBO belt, in a battle for super middleweight supremacy.",
-      "link": "Read more about the NFT Drop",
-      "link-less": "Read less"
+      "link": "Read more about the NFT Drop"
     },
     "read-more": {
       "text": "This stunning collection of NFTs commemorates the fight and even gets buyers into the action! All NFTs come with special unlockable bonuses! The extremely rare Gold and Legendary NFTs unlock premium items and experiences like signed gloves and tickets to a future fight. Check out all the limited NFT collections.",
-      "tale": "<b>Tale of the Tape:</b> a 1-of-1 Gold Edition plus 50 Silver Editions for each fighter.",
-      "knockout": "<b>Knockout:</b> For each fighter, Legendary 1-of-1 3D personalized gloves digitally signed by the fighter ",
-      "prediction": "<b>Prediction:</b> Get the NFT for when you think the fight will end to unlock rewards. ",
-      "post-fight": "<b>Post-Fight Highlights:</b> dropping after the fight, own the greatest moments from the fight."
+      "tale": "Tale of the Tape: a 1-of-1 Gold Edition plus 50 Silver Editions for each fighter.",
+      "knockout": "Knockout: For each fighter, Legendary 1-of-1 3D personalized gloves digitally signed by the fighter ",
+      "prediction": "Prediction: Get the NFT for when you think the fight will end to unlock rewards. ",
+      "post-fight": "Post-Fight Highlights: Coming soon..."
     },
     "buttons": {
       "btn-one": "see collection",
@@ -31,7 +30,7 @@
   },
   "featured-nft": {
     "sub-title": "FEATURED NFT",
-    "title": "KNOCKOUT – CANELO",
+    "title": "KNOCKOUT – CANELO EDITION",
     "rarity": "1 of 1",
     "type": "Legendary Edition",
     "price": {
@@ -62,7 +61,7 @@
       "canelo-legendary-description": "Canelo Alvarez has knocked out 37 of the fighters he’s faced. Get this 1-of-1 Legendary NFT representing his in-ring dominance. In addition to winning the NFT, the winning bid will receive 2 tickets to the next Canelo fight + signed fight gloves and a personalized video from Canelo! To redeem or confirm if the reward has already been redeemed, head to <a target='_blank' href='https://www.daznboxing.io/redeem'>www.daznboxing.io/redeem</a> after June 5, 2021.",
 
       "saunders-legendary-title": "Knockout -</br> Saunders",
-      "saunders-legendary-description": "In his 30 career fights, Billy Joe Saunders has knocked out 14 of his opponents. Will he knock out Canelo on May 8? Get this 1-of-1 Legendary NFT representing his knockout strength. In addition to winning the NFT, the winning bid will receive 2 tickets to the next Billy Joe Saunders fight + signed fight gloves and a personalized video from Matchroom's Eddie Hearn! To redeem or confirm if the reward has already been redeemed, head to <a target='_blank' href='https://DAZNBoxing.io/redeem'>DAZNBoxing.io/redeem</a> after June 5, 2021.",
+      "saunders-legendary-description": "In his 30 career fights, Billy Joe Saunders has knocked out 14 of his opponents. Will he knock out Canelo on May 8? Get this 1-of-1 Legendary NFT representing his knockout strength, In addition to winning the NFT, the winning bid will receive 2 tickets to a future Matchroom fight + signed gloves (potentially fight-worn) from Billy Joe Saunders + a personalized video from Billy Joe! To redeem or confirm if the reward has already been redeemed, head to <a target='_blank' href='https://www.daznboxing.io/redeem'>www.daznboxing.io/redeem</a> after June 5, 2021.",
 
       "canelo-gold-title": "Tale of the Tape - Canelo",
       "canelo-gold-description": "This is a 1-of-1 NFT celebrating one of the most decorated boxers in history. Canelo Alvarez heads to the ring on May 8 with a record of 55-1-2 with 37 knockouts. In addition to winning the NFT, the winning bid will receive signed gloves from Canelo Alvarez plus an annual subscription to DAZN. To redeem or confirm if the reward has already been redeemed, head to <a target='_blank' href='https://www.daznboxing.io/redeem'>www.daznboxing.io/redeem</a> after June 5, 2021.",
@@ -102,12 +101,13 @@
       },
       "second": {
         "title": "What is the Canelo v. Saunders: Face the Fearless NFT Collection?",
-        "description": "Non-fungible tokens (NFT) that celebrate the May 8 boxing match between Canelo Alvarez and Billy Joe Saunders. Additionally, many of the NFTs unlock premium rewards such as signed gloves, tickets to future fights and DAZN subscriptions."
+        "description": "Non-fungible tokens (NFT) that celebrate the May 8 boxing match between Canelo Alvarez and Billy Joe Saunders. Additionally, many of the NFTs unlock premium rewards such as signed gloves, tickets to future fights and DAZN subscriptions.",
+        "reminder": "INSERT DAZN-PRODUCED EXPLAINER VIDEO"
       },
       "third": {
         "title": "How do I buy one of the NFTs?",
-        "description": "The Canelo v. Saunders: Face the Fearless NFTs will be sold exclusively on <a target='_blank' href='https://www.opensea.io'>OpenSea</a>. OpenSea lets you buy and sell crypto collectibles, gaming items, digital art, and other blockchain-based digital items.",
-        "description-two": "You will need to set up an OpenSea account to participate in the sales as well as link your digital wallet to OpenSea in accordance with its terms and conditions. You may only participate in the sales by linking your digital wallets on supported bridge extensions such as <a target='_blank' href='https://metamask.io'>MetaMask</a>. MetaMask is an electronic wallet, which allows you engage in transactions using Ethereum cryptocurrency. OpenSea will ask you to download a supported electronic wallet extension and connect and unlock your digital wallets with that extension. Once you submit an order to sell or purchase a unique digital asset, your order is passed on to the applicable extension, which completes the transaction on your behalf.",
+        "description": "The Canelo v. Saunders: Face the Fearless NFTs will be sold exclusively on OpenSea <a target='_blank' href='https://www.opensea.io'>(www.opensea.io)</a>. OpenSea lets you buy and sell crypto collectibles, gaming items, digital art, and other blockchain-based digital items.",
+        "description-two": "You will need to set up an OpenSea account to participate in the sales as well as link your digital wallet to OpenSea in accordance with its terms and conditions. You may only participate in the sales by linking your digital wallets on supported bridge extensions such as MetaMask <a target='_blank' href='https://metamask.io'>(https://metamask.io/)</a>. MetaMask is an electronic wallet, which allows you engage in transactions using Ethereum cryptocurrency. OpenSea will ask you to download a supported electronic wallet extension and connect and unlock your digital wallets with that extension. Once you submit an order to sell or purchase a unique digital asset, your order is passed on to the applicable extension, which completes the transaction on your behalf.",
         "description-three": "We encourage you to setup your OpenSea account and associated digital wallet in advance of sales starting on May 8th.",
         "description-four": "DAZN does not endorse the use of Metamask or any other digital wallet and will not be liable for any use made of it in the purchase of the NFTs or holding cryptocurrencies.",
         "description-five": "In order to purchase or bid, you must use Ethereum. OpenSea does not accept credit cards.",
@@ -116,19 +116,17 @@
       },
       "fourth": {
         "title": "When do the NFTs go on sale?",
-        "description": "Pre-fight auction items (all Legendary & Gold editions) will open for sale at 12pm ET / 17:00 BST on Wednesday, May 5. This includes the Legendary edition Knockout NFTs, the Gold edition Tale of the Tape NFTs, and the Gold edition Prediction NFTs.",
-        "description-two": "Pre-fight fixed price items (all Silver & Bronze editions) will open for sale at 3pm ET / 20:00 BST on Friday, May 7. This includes the Silver edition Tale of the Tape NFTs and the Bronze edition Prediction NFTs.",
-        "description-three": "Knockout and Tale of the Tape items will be sold until 11pm ET on Saturday, May 8 (04:00 BST on Sunday, May 9). Prediction items will be sold until 10pm ET on Saturday, May 8 (03:00 BST on Sunday, May 9). Any bids placed on auction items during this time will extend the end time by 10 minutes in order to allow users who have been outbid a chance to increase their bids.",
-        "description-four": "Note that in the event the auctions for the Prediction Series NFTs extend into the fight, the highest bid will be accepted at the start of the fight.",
-        "description-five": "Post-fight NFTs will go on sale shortly after the fight. Check back after the fight for more information."
+        "description": "Knockout and Tale of the Tape items will be sold until 11pm ET on Saturday, May 8 (04:00 BST on Sunday, May 9). Prediction items will be sold until 10pm ET on Saturday, May 8 (03:00 BST on Sunday, May 9). Any bids placed on auction items during this time will extend the end time by 10 minutes in order to allow users who have been outbid a chance to increase their bids.",
+        "description-two": "Note that in the event the auctions for the Prediction Series NFTs extend into the fight, the highest bid will be accepted at the start of the fight.",
+        "description-three": "Post-fight NFTs will go on sale shortly after the fight. Check back after the fight for more information."
       },
       "fifth": {
         "title": "What are the different types of NFTs?",
         "list-title": "There are three pre-fight collections:",
-        "list-item": "<b>Knockout:</b> For each fighter, Legendary 1-of-1 3D personalized gloves digitally signed by the fighter. The owner of the Canelo NFT will receive two tickets to Canelo’s next fight, signed fight gloves from Canelo, and a personalized video from Canelo. The owner of the Saunders NFT will receive two tickets to Saunders’ next fight, signed gloves from Eddie Hearn, and a personalized video from Eddie Hearn.",
-        "list-item-two": "<b>Tale of the Tape:</b> a 1-of-1 Gold Edition plus 50 Silver Editions for each fighter. Owners of the gold editions will receive signed gloves from Canelo for the Canelo NFT or signed gloves from Eddie Hearn for the Saunders NFT, plus an annual subscription to DAZN. Owners of the Silver Edition NFTs representing the winning fighter will receive an annual subscription to DAZN. In addition, one of the Silver Edition NFTs representing the winning fighter will unlock a personalized video from either Canelo or Eddie Hearn.",
+        "list-item": "<b>Knockout:</b> For each fighter, Legendary 1-of-1 3D personalized gloves digitally signed by the fighter. Owners of each NFT will receive, for the fighter represented in that NFT, 2 tickets to the fighter’s next fight, signed fight gloves from the fighter, and a personalized video from the fighter.",
+        "list-item-two": "<b>Tale of the Tape:</b> a 1-of-1 Gold Edition plus 50 Silver Editions for each fighter. Owners of the gold editions will receive signed gloves from the fighter of their NFT plus an annual subscription to DAZN. Owners of the Silver Edition NFTs representing the winning fighter will receive an annual subscription to DAZN. In addition, one of the Silver Edition NFTs representing the winning fighter will unlock a personalized video from the fighter.",
         "list-item-three": "<b>Prediction:</b> Get the NFT for when you think the fight will end to unlock rewards – a 1-of-1 Gold Edition for each of the 12 rounds and a judges' decision (13 total) plus 100 Bronze Editions per round and judges’ decision. The owner of the winning Gold Edition will receive 2 tickets to the next Canelo fight. Owners of the winning Bronze Editions will receive an annual subscription to DAZN.",
-        "list-item-four": "<b>Post-Fight Highlights:</b> Check back after the fight for more details about this collection which will include the winning moment from the fight and each fighter’s ring walk forever immortalized in an NFT."
+        "list-item-four": "<b>Post-Fight Highlights:</b> The Winning Moment in the May 8 fight between Canelo Alvarez and Billy Joe Saunders will be forever immortalized in a Legendary Edition NFT. A Gold Edition of the winning fighter’s ring walk will be available as well as a Silver Edition of the losing fighter’s ring walk."
       },
       "sixth": {
         "title": "How many Canelo v. Saunders: Face the Fearless NFTs can I buy?",
@@ -210,17 +208,17 @@
     "prediction-decision-description-bronze": "Limited edition NFTs predicting when the Canelo v. Saunders fight will end - in a specific round or with a judges' decision. For the winning NFTs only, receive an annual subscription to DAZN!",
     "prediction-decision-bronze-rarity": "100 Per Outcome",
 
-    "post-fight-title-legendary": "Winning <br/> moment",
+    "post-fight-title-legendary": "Winning <br/> moments",
     "post-fight-description-legendary": "The Winning Moment in the May 8 fight between Canelo Alvarez and Billy Joe Saunders, forever immortalized in this NFT.",
 
-    "post-fight-title-gold-canelo":"Winner’s <br/> ring walk",
-    "post-fight-title-silver-saunders":"Loser’s <br/> ring walk",
+    "post-fight-title-gold-canelo":"Gold Canelo Ring Walk",
+    "post-fight-title-silver-saunders":"Silver Saunders Ring Walk",
 
-    "post-fight-description-gold-canelo":"Own the winning fighter’s ring walk, forever immortalized in this NFT.",
-    "post-fight-description-silver-saunders":"Own the winning fighter’s ring walk, forever immortalized in this NFT.",
+    "post-fight-description-gold-canelo":"The WBA, WBC and Ring Magazine champion and the number one pound-for-pound fighter in the world, Canelo Alvarez puts on a show as he makes his way to the ring for his fight against Billy Joe Saunders on May 8, 2021.",
+    "post-fight-description-silver-saunders":"The WBO Champion Billy Joe Saunders makes his way to the ring ahead of his fight against Canelo Alvarez on May 8, 2021.",
 
     "rarity-1": "1/1",
-    "rarity-50": "</br>",
+    "rarity-50": "50",
     "rarity-only-50": "ONLY 50 AVAILABLE",
     "rarity-13": "13 1/1s (1 PER OUTCOME)",
     "rarity-100": "100 Per Outcome",

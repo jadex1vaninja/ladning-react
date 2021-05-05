@@ -1,12 +1,15 @@
 export const accordionInitialList = [
   {
     title: 'faq.questions.first.title',
-    description: ['faq.questions.first.description'],
+    description: 'faq.questions.first.description',
     isExpanded: false
   },
   {
     title: 'faq.questions.second.title',
-    description: ['faq.questions.second.description'],
+    description: [
+      'faq.questions.second.description',
+      'faq.questions.second.reminder'
+    ],
     isExpanded: false
   },
   {
@@ -27,9 +30,7 @@ export const accordionInitialList = [
     description: [
       'faq.questions.fourth.description',
       'faq.questions.fourth.description-two',
-      'faq.questions.fourth.description-three',
-      'faq.questions.fourth.description-four',
-      'faq.questions.fourth.description-five'
+      'faq.questions.fourth.description-three'
     ],
     isExpanded: false
   },
@@ -46,27 +47,27 @@ export const accordionInitialList = [
   },
   {
     title: 'faq.questions.sixth.title',
-    description: ['faq.questions.sixth.description'],
+    description: 'faq.questions.sixth.description',
     isExpanded: false
   },
   {
     title: 'faq.questions.seventh.title',
-    description: ['faq.questions.seventh.description'],
+    description: 'faq.questions.seventh.description',
     isExpanded: false
   },
   {
     title: 'faq.questions.eighth.title',
-    description: ['faq.questions.eighth.description'],
+    description: 'faq.questions.eighth.description',
     isExpanded: false
   },
   {
     title: 'faq.questions.ninth.title',
-    description: ['faq.questions.ninth.description'],
+    description: 'faq.questions.ninth.description',
     isExpanded: false
   },
   {
     title: 'faq.questions.tenth.title',
-    description: ['faq.questions.tenth.description'],
+    description: 'faq.questions.tenth.description',
     isExpanded: false
   }
 ];
