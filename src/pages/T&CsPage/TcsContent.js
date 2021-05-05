@@ -3,31 +3,20 @@ export const TcsContent = () => {
     <div>
       <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
       <meta name='Generator' content='Microsoft Word 15 (filtered)' />
-      <style
-        dangerouslySetInnerHTML={{
-          __html:
-            '\n<!--\n /* Font Definitions */\n @font-face\n\t{font-family:Wingdings;\n\tpanose-1:5 0 0 0 0 0 0 0 0 0;}\n@font-face\n\t{font-family:"Cambria Math";\n\tpanose-1:2 4 5 3 5 4 6 3 2 4;}\n@font-face\n\t{font-family:Calibri;\n\tpanose-1:2 15 5 2 2 2 4 3 2 4;}\n@font-face\n\t{font-family:"Segoe UI";\n\tpanose-1:2 11 5 2 4 2 4 2 2 3;}\n /* Style Definitions */\n p.MsoNormal, li.MsoNormal, div.MsoNormal\n\t{margin-top:0in;\n\tmargin-right:0in;\n\tmargin-bottom:8.0pt;\n\tmargin-left:0in;\n\tline-height:107%;\n\tfont-size:11.0pt;\n\tfont-family:"Calibri",sans-serif;}\na:link, span.MsoHyperlink\n\t{color:#0563C1;\n\ttext-decoration:underline;}\np.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph\n\t{margin-top:0in;\n\tmargin-right:0in;\n\tmargin-bottom:8.0pt;\n\tmargin-left:.5in;\n\tline-height:107%;\n\tfont-size:11.0pt;\n\tfont-family:"Calibri",sans-serif;}\np.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst\n\t{margin-top:0in;\n\tmargin-right:0in;\n\tmargin-bottom:0in;\n\tmargin-left:.5in;\n\tline-height:107%;\n\tfont-size:11.0pt;\n\tfont-family:"Calibri",sans-serif;}\np.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle\n\t{margin-top:0in;\n\tmargin-right:0in;\n\tmargin-bottom:0in;\n\tmargin-left:.5in;\n\tline-height:107%;\n\tfont-size:11.0pt;\n\tfont-family:"Calibri",sans-serif;}\np.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast\n\t{margin-top:0in;\n\tmargin-right:0in;\n\tmargin-bottom:8.0pt;\n\tmargin-left:.5in;\n\tline-height:107%;\n\tfont-size:11.0pt;\n\tfont-family:"Calibri",sans-serif;}\n.MsoChpDefault\n\t{font-family:"Calibri",sans-serif;}\n.MsoPapDefault\n\t{margin-bottom:8.0pt;\n\tline-height:107%;}\n@page WordSection1\n\t{size:595.3pt 841.9pt;\n\tmargin:1.0in 1.0in 1.0in 1.0in;}\ndiv.WordSection1\n\t{page:WordSection1;}\n /* List Definitions */\n ol\n\t{margin-bottom:0in;}\nul\n\t{margin-bottom:0in;}\n-->\n'
-        }}
-      />
-      <div className='WordSection1'>
-        <p className='MsoNormal' style={{ textAlign: 'justify' }}>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            Last update on 30 April 2021
-          </span>
+      <div className='tcs__content'>
+        <p className='tcs__paragraph'>
+          <span>Last update on 30 April 2021</span>
         </p>
-        <p className='MsoNormal' style={{ textAlign: 'justify' }}>
+        <p className='tcs__paragraph'>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
+            <span>
               TERMS &amp; CONDITIONS OF SERVICE FOR NFTS BOUGHT AS PART OF THE
               CANELO VS. SAUNDERS FACE THE FEARLESS SALE
             </span>
           </b>
         </p>
-        <p className='MsoNormal' style={{ textAlign: 'justify' }}>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             These Terms and Conditions of Service (“T&amp;Cs”) constitute a
             legally binding agreement (the “Agreement”) between you (also
             referred to herein as “User”) and DAZN Limited (“DAZN”) governing
@@ -38,20 +27,18 @@ export const TcsContent = () => {
             ALL OF THE TERMS OF SERVICE INCLUDED AS PART OF OZONE NETWORKS, INC
             D/B/A OPENSEA (
           </span>
-          <span lang='EN-GB'>
+          <span>
             <a href='https://opensea.io/tos'>
-              <span style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-                https://opensea.io/tos
-              </span>
+              <span>https://opensea.io/tos</span>
             </a>
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             ). If you do not agree to these T&amp;Cs, you may not bid in this
             auction.
           </span>
         </p>
-        <p className='MsoNormal' style={{ textAlign: 'justify' }}>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             PLEASE BE ADVISED: THIS AGREEMENT CONTAINS PROVISIONS THAT GOVERN
             HOW CLAIMS BETWEEN YOU AND DAZN CAN BE BROUGHT (SEE SECTION 12
             BELOW). THESE PROVISIONS WILL, WITH LIMITED EXCEPTION, REQUIRE YOU
@@ -60,62 +47,44 @@ export const TcsContent = () => {
             MEMBER IN ANY CLASS, GROUP OR REPRESENTATIVE ACTION OR PROCEEDING.
           </span>
         </p>
-        <p
-          className='MsoListParagraph'
-          style={{ textAlign: 'justify', textIndent: '-.25in' }}
-        >
+        <p className='tcs__paragraph'>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              1.
-              <span style={{ font: '7.0pt "Times New Roman"' }}>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-            </span>
+            <span>1.</span>
           </b>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Definitions.
-            </span>
+            <span>Definitions.</span>
           </b>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+          <span className='tcs__paragraph'>&nbsp;</span>
         </p>
-        <p className='MsoNormal' style={{ textAlign: 'justify' }}>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             “<b>Art</b>” means any art, design, and drawings that may be
             associated with an NFT that you Own.
           </span>
         </p>
-        <p className='MsoNormal' style={{ textAlign: 'justify' }}>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             "<b>NFT</b>" means any blockchain-tracked, non-fungible token, such
             as those conforming to the ERC-721 standard.
           </span>
         </p>
-        <p className='MsoNormal' style={{ textAlign: 'justify' }}>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             “<b>Licensed</b> <b>Rights</b>” with respect to an NFT means your
             rights to an NFT that you are the current rightful licensee and
             which you acquired from a legitimate source, where proof of such
             purchase is recorded on the relevant blockchain.
           </span>
         </p>
-        <p className='MsoNormal' style={{ textAlign: 'justify' }}>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             “<b>Licensed</b> <b>NFT</b>” means an NFT for which you successfully
             provided the highest bid, or otherwise acquired &nbsp;in accordance
             with the terms applicable to the Sale.
           </span>
         </p>
-        <p className='MsoNormal' style={{ textAlign: 'justify' }}>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             “<b>Third Party IP</b>” means any third-party patent rights
             (including, without limitation, patent applications and
             disclosures), copyrights, trade secrets, trademarks, know-how or any
@@ -123,49 +92,29 @@ export const TcsContent = () => {
             jurisdiction in the world.
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpFirst'
-          style={{ textAlign: 'justify', textIndent: '-.25in' }}
-        >
+        <p className='tcs__paragraph'>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              2.
-              <span style={{ font: '7.0pt "Times New Roman"' }}>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-            </span>
+            <span>2.</span>
           </b>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Your ownership of NFTs.
-            </span>
+            <span>Your ownership of NFTs.</span>
           </b>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             &nbsp;You acknowledge and agree that DAZN (or, as applicable, its
             licensors) owns all legal right, title and interest in and to the
             Art, and all intellectual property rights therein. The rights that
             you have in and to the Licensed NFT and Art are limited to those
             expressly stated in Section{' '}
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            3
-          </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>3</span>
+          <span>
             {' '}
             of these T&amp;Cs below. DAZN and its licensors reserve all rights
             in and to the Licensed NFT and Art not expressly granted to you in
             Section{' '}
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            3
-          </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>3</span>
+          <span>
             {' '}
             of these T&amp;Cs. All purchases of NFTs, as well as associated
             charges, are non-refundable. This no-refund policy shall apply at
@@ -174,55 +123,25 @@ export const TcsContent = () => {
             any other reason whatsoever.
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify' }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify', textIndent: '-.25in' }}
-        >
+        <p className='tcs__paragraph'>
           <a name='_Ref70064562'>
             <b>
-              <span
-                lang='EN-GB'
-                style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-              >
-                3.
-                <span style={{ font: '7.0pt "Times New Roman"' }}>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </span>
-              </span>
+              <span>3.</span>
             </b>
             <b>
-              <span
-                lang='EN-GB'
-                style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-              >
-                What you may do in connection with your NFTs.
-              </span>
+              <span>What you may do in connection with your NFTs.</span>
             </b>
           </a>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             a.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             Subject to your continued compliance with these T&amp;Cs, DAZN
             grants you a worldwide, non-exclusive, non-transferable (except as
             specifical provided below in section 3 (b)), royalty-free license to
@@ -239,41 +158,25 @@ export const TcsContent = () => {
             Rights.
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ marginLeft: '1.0in', textAlign: 'justify' }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             b.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             You have the limited right to transfer the Licensed NFT, provided
             that (i) the transferee accepts all of the T&amp;Cs and all of Ozone
             Networks, Inc. d/b/a OpenSea terms of service,&nbsp;
           </span>
-          <span lang='EN-GB'>
+          <span>
             <a href='https://opensea.io/tos'>
-              <span style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-                https://opensea.io/tos
-              </span>
+              <span>https://opensea.io/tos</span>
             </a>
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             ; (ii) DAZN is paid and actually receives ten (10%) of the gross
             value received or receivable by the transferee (or the person for
             whose economic benefit the transfer is being made) relating to the
@@ -287,41 +190,25 @@ export const TcsContent = () => {
             prior to the transfer, violated any of the T&amp;Cs and/or Ozone
             Networks, Inc. d/b/a OpenSea terms of service,&nbsp;
           </span>
-          <span lang='EN-GB'>
+          <span>
             <a href='https://opensea.io/tos'>
-              <span style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-                https://opensea.io/tos
-              </span>
+              <span>https://opensea.io/tos</span>
             </a>
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             ; and (iv) the party receiving the Licensed NFT provides DAZN with a
             valid e-mail address.
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ marginLeft: '1.0in', textAlign: 'justify' }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             c.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             Subject to the following conditions, if you are the licensee of any
             Licensed NFT listed in the following paragraph 3d. &nbsp;on or after
             June 5<sup>th</sup> 2021, you are entitled to redeem the real-world
@@ -342,27 +229,13 @@ export const TcsContent = () => {
             2021.{' '}
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ marginLeft: '1.0in', textAlign: 'justify' }}
-        >
-          &nbsp;
-        </p>
-        <p
-          className='MsoListParagraphCxSpLast'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>&nbsp;</p>
+        <p className='tcs__paragraph'>
+          <span>
             d.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <span style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             References in this paragraph to: “<b>Canelo</b>” means Saul Alvarez;
             “<b>Saunders</b>” means Billy Joe Saunders; “<b>Fight</b>” means the
             bout on 8<sup>th</sup> May 2021 between Canelo and Saunders.{' '}
@@ -374,7 +247,7 @@ export const TcsContent = () => {
           cellSpacing={0}
           cellPadding={0}
           style={{
-            marginLeft: '1.0in',
+            width: '100%',
             borderCollapse: 'collapse',
             border: 'none'
           }}
@@ -390,16 +263,9 @@ export const TcsContent = () => {
                   padding: '0in 5.4pt 0in 5.4pt'
                 }}
               >
-                <p
-                  className='MsoNormal'
-                  style={{ marginBottom: '0in', lineHeight: 'normal' }}
-                >
+                <p className='tcs__paragraph'>
                   <b>
-                    <i>
-                      <span style={{ fontSize: '9.0pt' }}>
-                        Name of Licensed NFT
-                      </span>
-                    </i>
+                    <span>Name of Licensed NFT</span>
                   </b>
                 </p>
               </td>
@@ -418,11 +284,9 @@ export const TcsContent = () => {
                   style={{ marginBottom: '0in', lineHeight: 'normal' }}
                 >
                   <b>
-                    <i>
-                      <span style={{ fontSize: '9.0pt' }}>
-                        Asset(s) which may be redeemed against this Licensed NFT
-                      </span>
-                    </i>
+                    <span>
+                      Asset(s) which may be redeemed against this Licensed NFT
+                    </span>
                   </b>
                 </p>
               </td>
@@ -438,19 +302,8 @@ export const TcsContent = () => {
                   padding: '0in 5.4pt 0in 5.4pt'
                 }}
               >
-                <p
-                  className='MsoNormal'
-                  style={{
-                    marginBottom: '0in',
-                    textAlign: 'justify',
-                    lineHeight: 'normal'
-                  }}
-                >
-                  <i>
-                    <span style={{ fontSize: '9.0pt' }}>
-                      Tale of the Tape – Canelo 1 of 1 (Gold)
-                    </span>
-                  </i>
+                <p className='tcs__paragraph'>
+                  <span>Tale of the Tape – Canelo 1 of 1 (Gold)</span>
                 </p>
                 <p
                   className='MsoNormal'
@@ -463,9 +316,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <i>
-                    <span style={{ fontSize: '9.0pt' }}>&nbsp;</span>
-                  </i>
+                  <span>&nbsp;</span>
                 </p>
               </td>
               <td
@@ -488,7 +339,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>
+                  <span>
                     Licensee may redeem 1 x pair of boxing gloves signed by
                     Canelo, and 1 x 12 month DAZN subscription{' '}
                   </span>
@@ -514,11 +365,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <i>
-                    <span style={{ fontSize: '9.0pt' }}>
-                      Tale of the Tape – Saunders 1/1 (Gold)
-                    </span>
-                  </i>
+                  <span>Tale of the Tape – Saunders 1/1 (Gold)</span>
                 </p>
               </td>
               <td
@@ -541,7 +388,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>
+                  <span>
                     Licensee may redeem 1 x pair of boxing gloves signed by
                     Eddie Hearn, and 1 x 12 month DAZN subscription
                   </span>
@@ -559,24 +406,11 @@ export const TcsContent = () => {
                   padding: '0in 5.4pt 0in 5.4pt'
                 }}
               >
-                <p className='MsoNormal' style={{ lineHeight: 'normal' }}>
-                  <i>
-                    <span style={{ fontSize: '9.0pt' }}>
-                      Tale of the Tape – Canelo (Silver)
-                    </span>
-                  </i>
+                <p className='tcs__paragraph'>
+                  <span>Tale of the Tape – Canelo (Silver)</span>
                 </p>
-                <p
-                  className='MsoNormal'
-                  style={{
-                    marginBottom: '0in',
-                    textAlign: 'justify',
-                    lineHeight: 'normal'
-                  }}
-                >
-                  <i>
-                    <span style={{ fontSize: '9.0pt' }}>&nbsp;</span>
-                  </i>
+                <p>
+                  <span>&nbsp;</span>
                 </p>
               </td>
               <td
@@ -599,11 +433,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <u>
-                    <span style={{ fontSize: '9.0pt' }}>
-                      If Canelo wins the Fight:{' '}
-                    </span>
-                  </u>
+                  <span>If Canelo wins the Fight: </span>
                 </p>
                 <p
                   className='MsoNormal'
@@ -613,7 +443,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>&nbsp;</span>
+                  <span>&nbsp;</span>
                 </p>
                 <p
                   className='MsoListParagraph'
@@ -624,15 +454,13 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt', fontFamily: 'Symbol' }}>
+                  <span>
                     ·
-                    <span style={{ font: '7.0pt "Times New Roman"' }}>
+                    <span>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </span>
                   </span>
-                  <span style={{ fontSize: '9.0pt' }}>
-                    1 x 12 month DAZN subscription.{' '}
-                  </span>
+                  <span>1 x 12 month DAZN subscription. </span>
                 </p>
                 <p
                   className='MsoNormal'
@@ -642,7 +470,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>&nbsp;</span>
+                  <span>&nbsp;</span>
                 </p>
                 <p
                   className='MsoListParagraph'
@@ -653,13 +481,13 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt', fontFamily: 'Symbol' }}>
+                  <span>
                     ·
-                    <span style={{ font: '7.0pt "Times New Roman"' }}>
+                    <span>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </span>
                   </span>
-                  <span style={{ fontSize: '9.0pt' }}>
+                  <span>
                     One of the 50 Tale of the Tape – Canelo (Silver) Licensed
                     NFTs (which may not in fact be purchased) will be
                     pre-assigned a bonus Asset being 1 x video short from
@@ -674,7 +502,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>&nbsp;</span>
+                  <span>&nbsp;</span>
                 </p>
               </td>
             </tr>
@@ -689,12 +517,8 @@ export const TcsContent = () => {
                   padding: '0in 5.4pt 0in 5.4pt'
                 }}
               >
-                <p className='MsoNormal' style={{ lineHeight: 'normal' }}>
-                  <i>
-                    <span style={{ fontSize: '9.0pt' }}>
-                      Tale of the Tape – Saunders (Silver)
-                    </span>
-                  </i>
+                <p>
+                  <span>Tale of the Tape – Saunders (Silver)</span>
                 </p>
                 <p
                   className='MsoNormal'
@@ -704,9 +528,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <i>
-                    <span style={{ fontSize: '9.0pt' }}>&nbsp;</span>
-                  </i>
+                  <span>&nbsp;</span>
                 </p>
               </td>
               <td
@@ -730,9 +552,7 @@ export const TcsContent = () => {
                   }}
                 >
                   <u>
-                    <span style={{ fontSize: '9.0pt' }}>
-                      If Saunders wins the Fight:{' '}
-                    </span>
+                    <span>If Saunders wins the Fight: </span>
                   </u>
                 </p>
                 <p
@@ -743,7 +563,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>&nbsp;</span>
+                  <span>&nbsp;</span>
                 </p>
                 <p
                   className='MsoListParagraph'
@@ -754,15 +574,13 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt', fontFamily: 'Symbol' }}>
+                  <span>
                     ·
-                    <span style={{ font: '7.0pt "Times New Roman"' }}>
+                    <span>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </span>
                   </span>
-                  <span style={{ fontSize: '9.0pt' }}>
-                    1 x 12 month DAZN subscription.{' '}
-                  </span>
+                  <span>1 x 12 month DAZN subscription. </span>
                 </p>
                 <p
                   className='MsoNormal'
@@ -772,7 +590,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>&nbsp;</span>
+                  <span>&nbsp;</span>
                 </p>
                 <p
                   className='MsoListParagraph'
@@ -783,13 +601,13 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt', fontFamily: 'Symbol' }}>
+                  <span>
                     ·
-                    <span style={{ font: '7.0pt "Times New Roman"' }}>
+                    <span>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </span>
                   </span>
-                  <span style={{ fontSize: '9.0pt' }}>
+                  <span>
                     One of the 50 Tale of the Tape – Saunders (Silver) Licensed
                     NFTs (which may not in fact be purchased) will be
                     pre-assigned a bonus Asset being 1 x video short from Eddie
@@ -804,7 +622,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>&nbsp;</span>
+                  <span>&nbsp;</span>
                 </p>
               </td>
             </tr>
@@ -827,11 +645,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <i>
-                    <span style={{ fontSize: '9.0pt' }}>
-                      Knockout – Canelo 1 of 1 (Legendary)
-                    </span>
-                  </i>
+                  <span>Knockout – Canelo 1 of 1 (Legendary)</span>
                 </p>
               </td>
               <td
@@ -854,7 +668,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>
+                  <span>
                     Licensee may redeem 2 x tickets to the next Canelo fight; 1
                     x pair of boxing gloves visually similar to those worn
                     during the Fight* signed by Canelo; and 1 x video short from
@@ -869,7 +683,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>&nbsp;</span>
+                  <span>&nbsp;</span>
                 </p>
               </td>
             </tr>
@@ -892,11 +706,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <i>
-                    <span style={{ fontSize: '9.0pt' }}>
-                      Knockout – Saunders 1 of 1 (Legendary)
-                    </span>
-                  </i>
+                  <span>Knockout – Saunders 1 of 1 (Legendary)</span>
                 </p>
               </td>
               <td
@@ -919,7 +729,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>
+                  <span>
                     Licensee may redeem 2 x tickets to the next Saunders fight;
                     1 x pair of boxing gloves visually similar to those worn
                     during the Fight* signed by Eddie Hearn; and 1 x video short
@@ -934,7 +744,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>&nbsp;</span>
+                  <span>&nbsp;</span>
                 </p>
               </td>
             </tr>
@@ -957,11 +767,9 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <i>
-                    <span style={{ fontSize: '9.0pt' }}>
-                      Prediction – Round Numbers 1 to 12 – 1 of 1 (Gold)
-                    </span>
-                  </i>
+                  <span>
+                    Prediction – Round Numbers 1 to 12 – 1 of 1 (Gold)
+                  </span>
                 </p>
               </td>
               <td
@@ -984,7 +792,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>
+                  <span>
                     Licensee of the Licensed NFT the Round number of which
                     matches the Round in which the Fight ends (if any) may
                     redeem 2 x tickets to the next Canelo fight.{' '}
@@ -1011,11 +819,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <i>
-                    <span style={{ fontSize: '9.0pt' }}>
-                      Prediction – Gone to Cards – 1 of 1 (Gold)
-                    </span>
-                  </i>
+                  <span>Prediction – Gone to Cards – 1 of 1 (Gold)</span>
                 </p>
               </td>
               <td
@@ -1038,7 +842,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>
+                  <span>
                     If the Fight ends in a judges’ decision, Licensee of the
                     Licensed NFT may redeem 2 x tickets to the next Canelo
                     fight.
@@ -1065,11 +869,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <i>
-                    <span style={{ fontSize: '9.0pt' }}>
-                      Prediction – Round Numbers 1 to 12 (Bronze)
-                    </span>
-                  </i>
+                  <span>Prediction – Round Numbers 1 to 12 (Bronze)</span>
                 </p>
               </td>
               <td
@@ -1092,7 +892,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>
+                  <span>
                     Licensee of a Licensed NFT the Round number of which matches
                     the Round in which the Fight ends (if any) may redeem 1 x 12
                     month DAZN subscription.
@@ -1119,11 +919,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <i>
-                    <span style={{ fontSize: '9.0pt' }}>
-                      Prediction – Gone to Cards (Bronze)
-                    </span>
-                  </i>
+                  <span>Prediction – Gone to Cards (Bronze)</span>
                 </p>
               </td>
               <td
@@ -1146,7 +942,7 @@ export const TcsContent = () => {
                     lineHeight: 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '9.0pt' }}>
+                  <span>
                     If the Fight ends in a judges’ decision, any Licensee of a
                     Licensed NFT may redeem 1 x 12 month DAZN subscription.
                   </span>
@@ -1155,42 +951,21 @@ export const TcsContent = () => {
             </tr>
           </tbody>
         </table>
-        <p className='MsoListParagraphCxSpFirst'>
+        <p className='tcs__paragraph'>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              &nbsp;
-            </span>
+            <span>&nbsp;</span>
           </b>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify', textIndent: '-.25in' }}
-        >
+        <p className='tcs__paragraph'>
           <a name='_Ref70066734'>
             <b>
-              <span
-                lang='EN-GB'
-                style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-              >
-                4.
-                <span style={{ font: '7.0pt "Times New Roman"' }}>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </span>
-              </span>
+              <span>4.</span>
             </b>
             <b>
-              <span
-                lang='EN-GB'
-                style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-              >
-                What you may not do in connection with your NFTs.
-              </span>
+              <span>What you may not do in connection with your NFTs.</span>
             </b>
           </a>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             &nbsp;You agree that you may not, nor permit any third party to do
             or attempt to do any of the following without DAZN’s express prior
             written consent in each case: (i) modify the Licensed NFT and/or Art
@@ -1236,46 +1011,23 @@ export const TcsContent = () => {
             failure to do so will be deemed a breach of these T&amp;Cs. The
             restrictions in this Section{' '}
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            4
-          </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>4</span>
+          <span>
             {' '}
             will survive the expiration or termination of these T&amp;Cs.
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify' }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify', textIndent: '-.25in' }}
-        >
+        <p className='tcs__paragraph'>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              5.
-              <span style={{ font: '7.0pt "Times New Roman"' }}>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-            </span>
+            <span>5.</span>
           </b>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Termination of your rights in any Licensed NFT.
-            </span>
+            <span>Termination of your rights in any Licensed NFT.</span>
           </b>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             &nbsp;The rights granted hereunder shall automatically terminate and
             all rights shall return to DAZN if: (i) If at any time you sell,
             trade, donate, give away, transfer, or otherwise dispose of your
@@ -1284,14 +1036,12 @@ export const TcsContent = () => {
             valid; (iii) you breach any of the T&amp;Cs and conditions and/or
             Ozone Networks, Inc. d/b/a OpenSea terms of service,&nbsp;
           </span>
-          <span lang='EN-GB'>
+          <span>
             <a href='https://opensea.io/tos'>
-              <span style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-                https://opensea.io/tos
-              </span>
+              <span>https://opensea.io/tos</span>
             </a>
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             ; (iii) you have a receiver or similar party appointed for your
             property, become insolvent, acknowledge your insolvency in any
             manner, make an assignment for the benefit of your creditors, or
@@ -1302,38 +1052,19 @@ export const TcsContent = () => {
             members, affiliates, agents, attorneys and employees..
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify' }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify', textIndent: '-.25in' }}
-        >
+        <p className='tcs__paragraph'>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              6.
-              <span style={{ font: '7.0pt "Times New Roman"' }}>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-            </span>
+            <span>6.</span>
           </b>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
+            <span>
               DAZN's disclaimer of warranties &amp; limitation of liability.
             </span>
           </b>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             &nbsp;AS USED HEREIN THE PHRASE “DAZN PARTIES” MEANS DAZN, IT'S
             DIRECT AND INDIRECT PRESENT AND FUTURE PARENT, SUBSIDIARY AND
             AFFILIATE ENTITIES, AND IT'S VENDORS, LICENSORS, OFFICERS,
@@ -1372,38 +1103,17 @@ export const TcsContent = () => {
             APPLICABLE LAW.{' '}
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify' }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify', textIndent: '-.25in' }}
-        >
+        <p className='tcs__paragraph'>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              7.
-              <span style={{ font: '7.0pt "Times New Roman"' }}>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-            </span>
+            <span>7.</span>
           </b>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Governing Law.
-            </span>
+            <span>Governing Law.</span>
           </b>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             &nbsp;These T&amp;Cs and all matters related to them and/or any
             Licensed NFT shall be governed by, construed, and enforced in
             accordance with the laws of the State of New York, as they are
@@ -1418,35 +1128,17 @@ export const TcsContent = () => {
             all claims.
           </span>
         </p>
-        <p className='MsoListParagraphCxSpMiddle'>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify', textIndent: '-.25in' }}
-        >
+        <p className='tcs__paragraph'>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              8.
-              <span style={{ font: '7.0pt "Times New Roman"' }}>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-            </span>
+            <span>8.</span>
           </b>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Changes to these T&amp;Cs.
-            </span>
+            <span>Changes to these T&amp;Cs.</span>
           </b>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             &nbsp;DAZN may make changes to these T&amp;Cs from time to time.
             When DAZN makes changes, we will make the updated T&amp;Cs available
             on this website and update the “Last Updated” date at the beginning
@@ -1458,35 +1150,17 @@ export const TcsContent = () => {
             updates.
           </span>
         </p>
-        <p className='MsoListParagraphCxSpMiddle'>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify', textIndent: '-.25in' }}
-        >
+        <p className='tcs__paragraph'>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              9.
-              <span style={{ font: '7.0pt "Times New Roman"' }}>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-            </span>
+            <span>9.</span>
           </b>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Eligibility:
-            </span>
+            <span>Eligibility:</span>
           </b>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             &nbsp;(a) Participation in the Sale is open only to individuals who
             have the right and authority to enter into this Agreement, are fully
             able and competent to satisfy the terms, conditions, and obligations
@@ -1497,38 +1171,17 @@ export const TcsContent = () => {
             and warrant that you are at least 18 years old.
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify' }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify', textIndent: '-.25in' }}
-        >
+        <p className='tcs__paragraph'>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              10.
-              <span style={{ font: '7.0pt "Times New Roman"' }}>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-            </span>
+            <span>10.</span>
           </b>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Indemnity:
-            </span>
+            <span>Indemnity:</span>
           </b>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             &nbsp;You will defend, indemnify, and hold DAZN, including our
             affiliates, subsidiaries, parents, successors and assigns, and each
             of our respective officers, directors, employees, agents, or
@@ -1549,69 +1202,29 @@ export const TcsContent = () => {
             including any indemnified person.
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify' }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ textAlign: 'justify', textIndent: '-.25in' }}
-        >
+        <p className='tcs__paragraph'>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              11.
-              <span style={{ font: '7.0pt "Times New Roman"' }}>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-            </span>
+            <span>11.</span>
           </b>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
+            <span>
               Dispute resolution, arbitration &amp; class action waiver
             </span>
           </b>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ marginLeft: '1.0in', textAlign: 'justify' }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             a.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <i>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Agreement to Binding Arbitration Between You and DAZN
-            </span>
-          </i>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>Agreement to Binding Arbitration Between You and DAZN</span>
+          <span>
             . YOU AND DAZN MUTUALLY AGREE TO WAIVE OUR RESPECTIVE RIGHTS TO
             RESOLUTION OF DISPUTES IN A COURT OF LAW BY A JUDGE OR JURY AND
             AGREE TO RESOLVE ANY DISPUTE BY ARBITRATION,&nbsp;as set forth
@@ -1627,29 +1240,15 @@ export const TcsContent = () => {
             employees, agents, or shareholders.
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ marginLeft: '1.0in', textAlign: 'justify' }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             b.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             Except as expressly provided below,&nbsp;ALL DISPUTES AND CLAIMS
             BETWEEN US (EACH A “<b>CLAIM</b>” AND COLLECTIVELY, “<b>CLAIMS</b>
             ”) SHALL BE EXCLUSIVELY RESOLVED BY BINDING ARBITRATION SOLELY
@@ -1676,29 +1275,15 @@ export const TcsContent = () => {
             except as expressly provided below.
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ marginLeft: '1.0in', textAlign: 'justify' }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             c.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             BY AGREEING TO ARBITRATION, YOU UNDERSTAND THAT YOU AND DAZN ARE
             WAIVING THE RIGHT TO SUE IN COURT OR HAVE A JURY TRIAL FOR ALL
             CLAIMS, EXCEPT AS EXPRESSLY OTHERWISE PROVIDED IN THIS ARBITRATION
@@ -1709,34 +1294,18 @@ export const TcsContent = () => {
             requirement to arbitrate.
           </span>
         </p>
-        <p className='MsoListParagraphCxSpMiddle'>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             d.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <i>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Prohibition of Class Actions and Non-Individualized Relief.{' '}
-            </span>
-          </i>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
+            Prohibition of Class Actions and Non-Individualized Relief.{' '}
+          </span>
+          <span>
             YOU UNDERSTAND AND AGREE THAT YOU AND DAZN MAY EACH BRING CLAIMS IN
             ARBITRATION AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT
             ON A CLASS, COLLECTIVE ACTION, OR REPRESENTATIVE BASIS (“CLASS
@@ -1749,29 +1318,15 @@ export const TcsContent = () => {
             SEPARATELY IN OTHER SECTIONS.
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ marginLeft: '1.0in', textAlign: 'justify' }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             e.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             The arbitrator shall have no authority to consider or resolve any
             Claim or issue any relief on any basis other than an individual
             basis. The arbitrator shall have no authority to consider or resolve
@@ -1782,26 +1337,15 @@ export const TcsContent = () => {
             by that party's individual claims.
           </span>
         </p>
-        <p className='MsoListParagraphCxSpMiddle'>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             f.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             Notwithstanding any other provision of this Agreement, the
             Arbitration Agreement or the AAA Rules, disputes regarding the
             scope, applicability, enforceability, revocability, or validity of
@@ -1819,58 +1363,36 @@ export const TcsContent = () => {
             other Claims or remedies to the fullest extent possible.
           </span>
         </p>
-        <p className='MsoListParagraphCxSpMiddle'>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             g.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <i>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Rules Governing the Arbitration.{' '}
-            </span>
-          </i>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>Rules Governing the Arbitration. </span>
+          <span>
             Any arbitration conducted pursuant to this Arbitration Agreement
             shall be administered by the American Arbitration Association
             (“AAA”) pursuant to its&nbsp;
           </span>
-          <span lang='EN-GB'>
+          <span>
             <a href='https://www.adr.org/aaa/faces/rules/searchrules/rulesdetail?_afrWindowId=57rsw71ei_1&_afrLoop=1335893675945842&doc=ADRSTAGE2021424&_afrWindowMode=0&_adf.ctrl-state=hf27f5iaa_4#%40%3F_afrWindowId%3D57rsw71ei_1%26_afrLoop%3D1335893675945842%26doc%3DADRSTAGE2021424%26_afrWindowMode%3D0%26_adf.ctrl-state%3D57rsw71ei_79'>
-              <span style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-                Consumer Arbitration Rules
-              </span>
+              <span>Consumer Arbitration Rules</span>
             </a>
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             &nbsp;that are in effect at the time the arbitration is initiated,
             as modified by the terms set forth in this Agreement. Copies of
             these rules can be obtained at the AAA’s website (
           </span>
-          <span lang='EN-GB'>
+          <span>
             <a href='https://gronknft.com/www.adr.org'>
-              <span style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-                www.adr.org
-              </span>
+              <span>www.adr.org</span>
             </a>
           </span>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             ) (the “AAA Rules”) or by calling the AAA at 1-800-778-7879.
             Notwithstanding the foregoing, if requested by you and if proper
             based on the facts and circumstances of the Claims presented, the
@@ -1898,29 +1420,13 @@ export const TcsContent = () => {
             arbitrator may be entered in any court having jurisdiction thereof.
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             h.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <i>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Arbitration Fees and Awards.{' '}
-            </span>
-          </i>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>Arbitration Fees and Awards. </span>
+          <span>
             The payment of filing and arbitration fees will be governed by the
             relevant AAA Rules subject to the following modification: The
             arbitrator in his award shall allocate all arbitration fees in his
@@ -1928,37 +1434,16 @@ export const TcsContent = () => {
             attorney fees of the successful party to the losing party.
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ marginLeft: '1.0in', textAlign: 'justify' }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             i.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <i>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Location and Manner of Arbitration.{' '}
-            </span>
-          </i>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>Location and Manner of Arbitration. </span>
+          <span>
             Unless you and DAZN agree otherwise, any arbitration hearings
             between DAZN and a User will take place in the county of your
             billing address. If AAA arbitration is unavailable in your county,
@@ -1967,34 +1452,16 @@ export const TcsContent = () => {
             determined by the AAA Rules.
           </span>
         </p>
-        <p className='MsoListParagraphCxSpMiddle'>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             j.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <i>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Exceptions to Arbitration.{' '}
-            </span>
-          </i>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>Exceptions to Arbitration. </span>
+          <span>
             This Arbitration Agreement shall not require arbitration of the
             following types of claims: (1) small claims actions brought on an
             individual basis that are within the scope of such small claims
@@ -2018,37 +1485,16 @@ export const TcsContent = () => {
             Provision.
           </span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{ marginLeft: '1.0in', textAlign: 'justify' }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpMiddle'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             k.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <i>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Severability
-            </span>
-          </i>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>Severability</span>
+          <span>
             . In addition to the severability provisions in subsections (b) and
             (c) above, in the event that any portion of this Arbitration
             Agreement is deemed illegal or unenforceable under applicable law
@@ -2057,34 +1503,16 @@ export const TcsContent = () => {
             effect.{' '}
           </span>
         </p>
-        <p className='MsoListParagraphCxSpMiddle'>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
-            &nbsp;
-          </span>
+        <p className='tcs__paragraph'>
+          <span>&nbsp;</span>
         </p>
-        <p
-          className='MsoListParagraphCxSpLast'
-          style={{
-            marginLeft: '1.0in',
-            textAlign: 'justify',
-            textIndent: '-.25in'
-          }}
-        >
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+        <p className='tcs__paragraph'>
+          <span>
             l.
-            <span style={{ font: '7.0pt "Times New Roman"' }}>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
-          <i>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              Optional Pre-Arbitration Negotiation Process.{' '}
-            </span>
-          </i>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>Optional Pre-Arbitration Negotiation Process. </span>
+          <span>
             Before initiating any arbitration or proceeding, you and DAZN may
             agree to first attempt to negotiate any dispute, claim or
             controversy between the parties informally for 30 days, unless this
@@ -2101,16 +1529,11 @@ export const TcsContent = () => {
             parties.
           </span>
         </p>
-        <p className='MsoNormal' style={{ textAlign: 'justify' }}>
+        <p className='tcs__paragraph'>
           <b>
-            <span
-              lang='EN-GB'
-              style={{ fontSize: '9.0pt', lineHeight: '107%' }}
-            >
-              13. Contact Us.
-            </span>
+            <span>13. Contact Us.</span>
           </b>
-          <span lang='EN-GB' style={{ fontSize: '9.0pt', lineHeight: '107%' }}>
+          <span>
             &nbsp;If you have any questions or concerns, including if you need
             to access these T&amp;Cs in an alternative format, we encourage you
             to contact us via e-mail at&nbsp;help@dazn.com.

@@ -2,21 +2,40 @@
 @import '../../variables';
 
 .tcs {
+
   .splitter {
     background-color: black;
     height: 1px;
     margin: 3rem 0;
   }
+
   &__wrapper {
     background-image: url('../../assets/img/Rectangle228.png');
     height: 100px;
   }
+
   &__container {
     min-height: 100vh;
     padding: 20px 25px;
     background-color: white;
+
     @include _1024 {
       padding: 5% 15%;
+    }
+  }
+
+  &__content {
+    font-family: 'DAZNTrim-Light'!important;
+  }
+
+  &__paragraph {
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+
+    @include _1024 {
+      font-size: 1.25rem;
+      line-height: 1.25rem;
+      letter-spacing: 3px;
     }
   }
 
