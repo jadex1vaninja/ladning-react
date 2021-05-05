@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Accordion from '../Accordion';
 import { useTranslation } from 'react-i18next';
 import { accordionInitialList } from '../../const/accordion';
-import './FAQs.scss';
 import { useHistory } from 'react-router';
+import './FAQs.scss';
 
 const FAQs = ({
   show,

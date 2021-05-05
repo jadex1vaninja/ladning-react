@@ -179,14 +179,20 @@
         margin: 0 0 1.25rem 0;
         opacity: 0;
         transition: .5s;
+        color: $brand-black;
 
         @include _1024 {
           font-size: 1.563rem;
           padding: 0 6.25rem 0 0;
         }
 
-        a,b {
+        a, b {
           font-size: 0.75rem;
+          color: $brand-black;
+
+          @include _1024 {
+            font-size: 1.563rem;
+          }
         }
       }
 
