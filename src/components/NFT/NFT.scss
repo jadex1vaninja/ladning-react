@@ -1,13 +1,15 @@
 @import '../../media-mixin.scss';
 @import '../../variables';
-.card-wrap{
+
+.card-wrap {
   position: relative;
 }
-.coming-soon{
+
+.coming-soon {
    position: absolute;
    color:$brand-black;
    background-color: $brand-yellow;
-   top:10%;
+   top: 30%;
    padding: 15px;
    border-radius: 5px;
    z-index: 90;
