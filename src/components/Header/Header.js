@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
   imgPath,
@@ -168,7 +167,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
           <p
             className='header__promo-text'
             dangerouslySetInnerHTML={{ __html: t('header.promo-text') }}
-          ></p>
+          />
         </div>
       )}
       {!isUsedOnSecondaryPage && (
@@ -193,11 +192,33 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
               </p>
               <br></br>
               <ul className='header__list'>
-                <li>{t('header.read-more.tale')}</li>
-                <li>{t('header.read-more.knockout')}</li>
-                <li>{t('header.read-more.prediction')}</li>
-                <li>{t('header.read-more.pos-fight')}</li>
+                <li
+                  dangerouslySetInnerHTML={{
+                    __html: t('header.read-more.tale')
+                  }}
+                />
+                <li
+                  dangerouslySetInnerHTML={{
+                    __html: t('header.read-more.knockout')
+                  }}
+                />
+                <li
+                  dangerouslySetInnerHTML={{
+                    __html: t('header.read-more.prediction')
+                  }}
+                />
+                <li
+                  dangerouslySetInnerHTML={{
+                    __html: t('header.read-more.post-fight')
+                  }}
+                />
               </ul>
+              <span
+                className='header__description-link'
+                onClick={() => setShowMore(false)}
+              >
+                {t('header.description.link-less')}
+              </span>
             </>
           )}
         </div>
@@ -205,7 +226,11 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
       {!isUsedOnSecondaryPage && (
         <div className='header__inner'>
           <div className='header__img-wrapper header__img-wrapper--first'>
-            <img className='header__logo1' src={imgPath + 'logo.png'} alt='' />
+            <img
+              className='header__logo1'
+              src={imgPath + 'logo.png'}
+              alt='logo'
+            />
           </div>
 
           <div className='header__text-wrapper'>
@@ -218,7 +243,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
             <img
               className='header__logo3'
               src={imgPath + 'matchroom-logo.png'}
-              alt=''
+              alt='logo'
             />
           </div>
         </div>

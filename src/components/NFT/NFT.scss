@@ -4,7 +4,6 @@
 .card-wrap {
   position: relative;
 }
-
 .coming-soon {
    position: absolute;
    color:$brand-black;
@@ -21,7 +20,7 @@
 }
 .cards-root {
   
-  &__soldout-block{
+  &__soldout-block {
     background-color: $brand-yellow;
     color: $brand-black;
     position: absolute;
@@ -33,10 +32,10 @@
     border-radius: 50%;
     text-align: center;
     padding-top: 20px;
-    }
-  &__card-content {
-  position:relative;
+  }
 
+  &__card-content {
+    position:relative;
     display: flex;
     flex-direction: column;
     padding-right: 7.5%;
@@ -49,7 +48,9 @@
       opacity: 0.3;
       pointer-events: none;
     }
-    &--soldout{
+
+    &--soldout {
+
       .cards-root__card-img{
         filter:grayscale(1)
       }
