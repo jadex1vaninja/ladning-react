@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Countdown from 'react-countdown';
-import { API_URL, CONTRACT_ADDRESS, vidPath, LINK_TO_LIVE } from '../../const';
+import { API_URL, CONTRACT_ADDRESS, imgPath, LINK_TO_LIVE } from '../../const';
 import { FeaturedNFT_ID } from '../../const/nfts';
 import './FeaturedNFT.scss';
 import axios from 'axios';
@@ -71,13 +71,12 @@ const FeaturedNFT = () => {
     <div className='featured' id='auction'>
       <div className='featured__inner-wrapper'>
         <div className='featured__img-wrapper'>
-        <video autoplay controlslist="nodownload" loop playsinline 
-          poster={vidPath + 'Legendary_2_Knockout_Canelo_1_1.png'} 
-          src="https://storage.opensea.io/files/9dde6c08550efb852ee28ccded80ad3b.mp4">
+        <video controlslist="nodownload" loop="" playsinline="" autoplay=""
+          poster={imgPath + 'Legendary_2_Knockout_Canelo_1_1.png'}>
+          <source src="https://storage.opensea.io/files/9dde6c08550efb852ee28ccded80ad3b.mp4"/>
           <img
-              src={vidPath + 'Legendary_2_Knockout_Canelo_1_1.gif'}
-              alt='card'
-            />
+              src={imgPath + 'Legendary_2_Knockout_Canelo_1_1.png'}
+              alt='card'/>
         </video>
         </div>
         <div className='featured__content'>
