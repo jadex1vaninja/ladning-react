@@ -98,7 +98,7 @@
     "questions": {
       "first": {
         "title": "What is an NFT?",
-        "description": "Non-fungible tokens (NFTs) are digital collectibles stored on a blockchain. When you buy an NFT, there is a permanent record of your ownership and digital evidence that a particular artist created the work."
+        "description": "Non-fungible tokens (NFTs) are digital collectibles stored on a blockchain. When you buy an NFT, there is a permanent record of your ownership and digital evidence that a particular artist created the work. <br/><br/> <div style='text-align:center'> <iframe width='560' height='315' src='https://www.youtube.com/embed/p5yOT4tB3bk' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe> </div>"
       },
       "second": {
         "title": "What is the Canelo v. Saunders: Face the Fearless NFT Collection?",
