@@ -95,10 +95,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
               </a>
             </li>
             <li className='header__nav-item'>
-              <a
-                className='header__nav-link'
-                href="#cards"
-              >
+              <a className='header__nav-link' href='#cards'>
                 {t('header.nav-list.nav-artwork')}
               </a>
             </li>
@@ -220,14 +217,18 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
 
           <div className='header__text-wrapper'>
             <h1 className='header__title'>{t('header.title')}</h1>
-            <a className='text-center' target='_blank' href={OPENSEA_COLLECTION_LINK}>
+            <a
+              className='text-center'
+              target='_blank'
+              href={OPENSEA_COLLECTION_LINK}
+            >
               <span className='header__text'>{t('header.sub-title')}</span>
             </a>
           </div>
           <div className='header__img-wrapper header__img-wrapper--second'>
             <img
               className='header__logo3'
-              src={imgPath + 'matchroom-logo.png'}
+              src={imgPath + 'RGB_white_red.png'}
               alt='logo'
             />
           </div>
