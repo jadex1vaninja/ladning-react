@@ -42,7 +42,10 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
             </a>
           </div>
           <h1 className='header__secondary-title'>{secondaryTitle}</h1>
-          <ul className='header__language-list-secondary'>
+          <ul
+            className='header__language-list-secondary'
+            style={{ visibility: 'hidden' }}
+          >
             <li
               className={`header__button${language === 'en' ? ' active' : ''}`}
               onClick={() => {
@@ -66,35 +69,14 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
         </nav>
       ) : (
         <nav className='header__navigation'>
-          <div
-            style={{ visibility: 'hidden' }}
-            className='header__terms-language'
-          >
-            <ul className='header__language-list'>
-              <li
-                className={`header__button${
-                  language === 'en' ? ' active' : ''
-                }`}
-                onClick={() => {
-                  changeLanguage('en');
-                  setLanguage('en');
-                }}
-              >
-                En
-              </li>
-              <li
-                style={{ visibility: 'hidden' }}
-                className={`header__button${
-                  language === 'es' ? ' active' : ''
-                }`}
-                onClick={() => {
-                  changeLanguage('es');
-                  setLanguage('es');
-                }}
-              >
-                Es
-              </li>
-            </ul>
+          <div className='header__dazn-logo'>
+            <a target='_blank' href={DAZN_PUBLIC_LINK}>
+              <img
+                className='header__dazn-img'
+                src={imgPath + 'DAZN-logo.png'}
+                alt='DAZN'
+              />
+            </a>
           </div>
           <ul className='header__nav-list'>
             <li className='header__nav-item'>
@@ -122,7 +104,16 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
               </a>
             </li>
           </ul>
-          <div className='header__terms-language'>
+          <div className='header__dazn-logo' style={{ visibility: 'hidden' }}>
+            <a target='_blank' href={DAZN_PUBLIC_LINK}>
+              <img
+                className='header__dazn-img'
+                src={imgPath + 'DAZN-logo.png'}
+                alt='DAZN'
+              />
+            </a>
+          </div>
+          <div className='header__terms-language' style={{ display: 'none' }}>
             <ul className='header__language-list'>
               <li
                 className={`header__button${
@@ -153,15 +144,6 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
       )}
       {!isUsedOnSecondaryPage && (
         <div className='header__promo'>
-          <div className='header__dazn-logo'>
-            <a target='_blank' href={DAZN_PUBLIC_LINK}>
-              <img
-                className='header__dazn-img'
-                src={imgPath + 'DAZN-logo.png'}
-                alt='DAZN'
-              />
-            </a>
-          </div>
           <img
             className='header__promo-img'
             src={imgPath + 'promo.png'}
