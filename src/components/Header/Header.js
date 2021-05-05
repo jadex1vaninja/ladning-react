@@ -114,11 +114,9 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
             <li className='header__nav-item'>
               <a
                 className='header__nav-link'
-                target='_blank'
-                rel='noopener noreferrer'
-                href={DAZN_PUBLIC_LINK}
+                href="#cards"
               >
-                {t('header.nav-list.nav-dazn')}
+                {t('header.nav-list.nav-artwork')}
               </a>
             </li>
           </ul>
