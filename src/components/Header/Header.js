@@ -20,7 +20,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
   };
 
   const getLanguageFromStorage = () => {
-    const lang = localStorage.getItem('i18nextLng') || 'en';
+    const lang = 'en'; //localStorage.getItem('i18nextLng') || 'en';
     return lang;
   };
 
@@ -44,6 +44,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
           <h1 className='header__secondary-title'>{secondaryTitle}</h1>
           <ul className='header__language-list-secondary'>
             <li
+              style={{ visibility: 'hidden' }}
               className={`header__button${language === 'en' ? ' active' : ''}`}
               onClick={() => {
                 changeLanguage('en');
@@ -72,6 +73,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
           >
             <ul className='header__language-list'>
               <li
+                style={{ visibility: 'hidden' }}
                 className={`header__button${
                   language === 'en' ? ' active' : ''
                 }`}
@@ -123,6 +125,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
           <div className='header__terms-language'>
             <ul className='header__language-list'>
               <li
+                style={{ visibility: 'hidden' }}
                 className={`header__button${
                   language === 'en' ? ' active' : ''
                 }`}
