@@ -102,13 +102,12 @@
       },
       "second": {
         "title": "What is the Canelo v. Saunders: Face the Fearless NFT Collection?",
-        "description": "Non-fungible tokens (NFT) that celebrate the May 8 boxing match between Canelo Alvarez and Billy Joe Saunders. Additionally, many of the NFTs unlock premium rewards such as signed gloves, tickets to future fights and DAZN subscriptions.",
-        "reminder": "INSERT DAZN-PRODUCED EXPLAINER VIDEO"
+        "description": "Non-fungible tokens (NFT) that celebrate the May 8 boxing match between Canelo Alvarez and Billy Joe Saunders. Additionally, many of the NFTs unlock premium rewards such as signed gloves, tickets to future fights and DAZN subscriptions."
       },
       "third": {
         "title": "How do I buy one of the NFTs?",
-        "description": "The Canelo v. Saunders: Face the Fearless NFTs will be sold exclusively on OpenSea <a target='_blank' href='https://www.opensea.io'>(www.opensea.io)</a>. OpenSea lets you buy and sell crypto collectibles, gaming items, digital art, and other blockchain-based digital items.",
-        "description-two": "You will need to set up an OpenSea account to participate in the sales as well as link your digital wallet to OpenSea in accordance with its terms and conditions. You may only participate in the sales by linking your digital wallets on supported bridge extensions such as MetaMask <a target='_blank' href='https://metamask.io'>(https://metamask.io/)</a>. MetaMask is an electronic wallet, which allows you engage in transactions using Ethereum cryptocurrency. OpenSea will ask you to download a supported electronic wallet extension and connect and unlock your digital wallets with that extension. Once you submit an order to sell or purchase a unique digital asset, your order is passed on to the applicable extension, which completes the transaction on your behalf.",
+        "description": "The Canelo v. Saunders: Face the Fearless NFTs will be sold exclusively on <a target='_blank' href='https://www.opensea.io'>OpenSea</a>. OpenSea lets you buy and sell crypto collectibles, gaming items, digital art, and other blockchain-based digital items.",
+        "description-two": "You will need to set up an OpenSea account to participate in the sales as well as link your digital wallet to OpenSea in accordance with its terms and conditions. You may only participate in the sales by linking your digital wallets on supported bridge extensions such as <a target='_blank' href='https://metamask.io'>MetaMask</a>. MetaMask is an electronic wallet, which allows you engage in transactions using Ethereum cryptocurrency. OpenSea will ask you to download a supported electronic wallet extension and connect and unlock your digital wallets with that extension. Once you submit an order to sell or purchase a unique digital asset, your order is passed on to the applicable extension, which completes the transaction on your behalf.",
         "description-three": "We encourage you to setup your OpenSea account and associated digital wallet in advance of sales starting on May 8th.",
         "description-four": "DAZN does not endorse the use of Metamask or any other digital wallet and will not be liable for any use made of it in the purchase of the NFTs or holding cryptocurrencies.",
         "description-five": "In order to purchase or bid, you must use Ethereum. OpenSea does not accept credit cards.",
@@ -117,17 +116,19 @@
       },
       "fourth": {
         "title": "When do the NFTs go on sale?",
-        "description": "Knockout and Tale of the Tape items will be sold until 11pm ET on Saturday, May 8 (04:00 BST on Sunday, May 9). Prediction items will be sold until 10pm ET on Saturday, May 8 (03:00 BST on Sunday, May 9). Any bids placed on auction items during this time will extend the end time by 10 minutes in order to allow users who have been outbid a chance to increase their bids.",
-        "description-two": "Note that in the event the auctions for the Prediction Series NFTs extend into the fight, the highest bid will be accepted at the start of the fight.",
-        "description-three": "Post-fight NFTs will go on sale shortly after the fight. Check back after the fight for more information."
+        "description": "Pre-fight auction items (all Legendary & Gold editions) will open for sale at 12pm ET / 17:00 BST on Wednesday, May 5. This includes the Legendary edition Knockout NFTs, the Gold edition Tale of the Tape NFTs, and the Gold edition Prediction NFTs.",
+        "description-two": "Pre-fight fixed price items (all Silver & Bronze editions) will open for sale at 3pm ET / 20:00 BST on Friday, May 7. This includes the Silver edition Tale of the Tape NFTs and the Bronze edition Prediction NFTs.",
+        "description-three": "Knockout and Tale of the Tape items will be sold until 11pm ET on Saturday, May 8 (04:00 BST on Sunday, May 9). Prediction items will be sold until 10pm ET on Saturday, May 8 (03:00 BST on Sunday, May 9). Any bids placed on auction items during this time will extend the end time by 10 minutes in order to allow users who have been outbid a chance to increase their bids.",
+        "description-four": "Note that in the event the auctions for the Prediction Series NFTs extend into the fight, the highest bid will be accepted at the start of the fight.",
+        "description-five": "Post-fight NFTs will go on sale shortly after the fight. Check back after the fight for more information."
       },
       "fifth": {
         "title": "What are the different types of NFTs?",
         "list-title": "There are three pre-fight collections:",
-        "list-item": "<b>Knockout:</b> For each fighter, Legendary 1-of-1 3D personalized gloves digitally signed by the fighter. Owners of each NFT will receive, for the fighter represented in that NFT, 2 tickets to the fighter’s next fight, signed fight gloves from the fighter, and a personalized video from the fighter.",
-        "list-item-two": "<b>Tale of the Tape:</b> a 1-of-1 Gold Edition plus 50 Silver Editions for each fighter. Owners of the gold editions will receive signed gloves from the fighter of their NFT plus an annual subscription to DAZN. Owners of the Silver Edition NFTs representing the winning fighter will receive an annual subscription to DAZN. In addition, one of the Silver Edition NFTs representing the winning fighter will unlock a personalized video from the fighter.",
+        "list-item": "<b>Knockout:</b> For each fighter, Legendary 1-of-1 3D personalized gloves digitally signed by the fighter. The owner of the Canelo NFT will receive two tickets to Canelo’s next fight, signed fight gloves from Canelo, and a personalized video from Canelo. The owner of the Saunders NFT will receive two tickets to Saunders’ next fight, signed gloves from Eddie Hearn, and a personalized video from Eddie Hearn.",
+        "list-item-two": "<b>Tale of the Tape:</b> a 1-of-1 Gold Edition plus 50 Silver Editions for each fighter. Owners of the gold editions will receive signed gloves from Canelo for the Canelo NFT or signed gloves from Eddie Hearn for the Saunders NFT, plus an annual subscription to DAZN. Owners of the Silver Edition NFTs representing the winning fighter will receive an annual subscription to DAZN. In addition, one of the Silver Edition NFTs representing the winning fighter will unlock a personalized video from either Canelo or Eddie Hearn.",
         "list-item-three": "<b>Prediction:</b> Get the NFT for when you think the fight will end to unlock rewards – a 1-of-1 Gold Edition for each of the 12 rounds and a judges' decision (13 total) plus 100 Bronze Editions per round and judges’ decision. The owner of the winning Gold Edition will receive 2 tickets to the next Canelo fight. Owners of the winning Bronze Editions will receive an annual subscription to DAZN.",
-        "list-item-four": "<b>Post-Fight Highlights:</b> The Winning Moment in the May 8 fight between Canelo Alvarez and Billy Joe Saunders will be forever immortalized in a Legendary Edition NFT. A Gold Edition of the winning fighter’s ring walk will be available as well as a Silver Edition of the losing fighter’s ring walk."
+        "list-item-four": "<b>Post-Fight Highlights:</b> Check back after the fight for more details about this collection which will include the winning moment from the fight and each fighter’s ring walk forever immortalized in an NFT."
       },
       "sixth": {
         "title": "How many Canelo v. Saunders: Face the Fearless NFTs can I buy?",
