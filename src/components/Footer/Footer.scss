@@ -194,10 +194,7 @@
   }
 
   &__logo3 {
-    width: 108px;
-
-    @include _1024 {
-      width: 9vw;
-    }
+    width: 125px;
+    height: 20px;
   }
 }

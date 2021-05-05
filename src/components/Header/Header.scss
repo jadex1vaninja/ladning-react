@@ -449,10 +449,10 @@
   &__logo3 {
     width: 125px;
     margin-left: 5px;
+    height: 20px;
 
     @include _768 {
-      width: 100%;
-      max-width: 125px;
+      max-width: 167px;
       margin-left: 3rem;
     }
   }

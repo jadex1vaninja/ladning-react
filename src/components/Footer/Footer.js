@@ -61,7 +61,7 @@ const Footer = ({ isUsedOnSecondaryPage }) => {
           <div className='footer__img-wrapper'>
             <img
               className='footer__logo3'
-              src={imgPath + 'matchroom-logo.png'}
+              src={imgPath + 'RGB_white_red.png'}
               alt='logo'
             />
           </div>

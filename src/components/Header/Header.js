@@ -42,7 +42,10 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
             </a>
           </div>
           <h1 className='header__secondary-title'>{secondaryTitle}</h1>
-          <ul className='header__language-list-secondary'>
+          <ul
+            className='header__language-list-secondary'
+            style={{ visibility: 'hidden' }}
+          >
             <li
               style={{ visibility: 'hidden' }}
               className={`header__button${language === 'en' ? ' active' : ''}`}
@@ -67,36 +70,14 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
         </nav>
       ) : (
         <nav className='header__navigation'>
-          <div
-            style={{ visibility: 'hidden' }}
-            className='header__terms-language'
-          >
-            <ul className='header__language-list'>
-              <li
-                style={{ visibility: 'hidden' }}
-                className={`header__button${
-                  language === 'en' ? ' active' : ''
-                }`}
-                onClick={() => {
-                  changeLanguage('en');
-                  setLanguage('en');
-                }}
-              >
-                En
-              </li>
-              <li
-                style={{ visibility: 'hidden' }}
-                className={`header__button${
-                  language === 'es' ? ' active' : ''
-                }`}
-                onClick={() => {
-                  changeLanguage('es');
-                  setLanguage('es');
-                }}
-              >
-                Es
-              </li>
-            </ul>
+          <div className='header__dazn-logo'>
+            <a target='_blank' href={DAZN_PUBLIC_LINK}>
+              <img
+                className='header__dazn-img'
+                src={imgPath + 'DAZN-logo.png'}
+                alt='DAZN'
+              />
+            </a>
           </div>
           <ul className='header__nav-list'>
             <li className='header__nav-item'>
@@ -114,15 +95,21 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
               </a>
             </li>
             <li className='header__nav-item'>
-              <a
-                className='header__nav-link'
-                href="#cards"
-              >
+              <a className='header__nav-link' href='#cards'>
                 {t('header.nav-list.nav-artwork')}
               </a>
             </li>
           </ul>
-          <div className='header__terms-language'>
+          <div className='header__dazn-logo' style={{ visibility: 'hidden' }}>
+            <a target='_blank' href={DAZN_PUBLIC_LINK}>
+              <img
+                className='header__dazn-img'
+                src={imgPath + 'DAZN-logo.png'}
+                alt='DAZN'
+              />
+            </a>
+          </div>
+          <div className='header__terms-language' style={{ display: 'none' }}>
             <ul className='header__language-list'>
               <li
                 style={{ visibility: 'hidden' }}
@@ -154,15 +141,6 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
       )}
       {!isUsedOnSecondaryPage && (
         <div className='header__promo'>
-          <div className='header__dazn-logo'>
-            <a target='_blank' href={DAZN_PUBLIC_LINK}>
-              <img
-                className='header__dazn-img'
-                src={imgPath + 'DAZN-logo.png'}
-                alt='DAZN'
-              />
-            </a>
-          </div>
           <img
             className='header__promo-img'
             src={imgPath + 'promo.png'}
@@ -239,14 +217,18 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
 
           <div className='header__text-wrapper'>
             <h1 className='header__title'>{t('header.title')}</h1>
-            <a className='text-center' target='_blank' href={OPENSEA_COLLECTION_LINK}>
+            <a
+              className='text-center'
+              target='_blank'
+              href={OPENSEA_COLLECTION_LINK}
+            >
               <span className='header__text'>{t('header.sub-title')}</span>
             </a>
           </div>
           <div className='header__img-wrapper header__img-wrapper--second'>
             <img
               className='header__logo3'
-              src={imgPath + 'matchroom-logo.png'}
+              src={imgPath + 'RGB_white_red.png'}
               alt='logo'
             />
           </div>
