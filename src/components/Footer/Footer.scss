@@ -176,8 +176,8 @@
 
     @include _768 {
       margin-right: 3rem;
-      width: 45px;
-      height: 45px;
+      width: 60px;
+      height: 60px;
     }
   }
 
@@ -194,7 +194,12 @@
   }
 
   &__logo3 {
-    width: 125px;
+        width: 125px;
     height: 20px;
+    @include _768 {
+      width: 250px;
+    height: 40px;
+    }
+  
   }
 }
