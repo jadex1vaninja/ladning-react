@@ -47,8 +47,22 @@
       margin-right: 10%;
     }
 
-    img, video {
-      width: 100%;
+    video {
+      width:100%;
+      -moz-transform:scale(1.5);
+      -webkit-transform:scale(1.5);
+      -o-transform:scale(1.5);
+      -ms-transform:scale(1.5);
+      transform:scale(1.5);
+    }
+
+    img {
+      width:100%;
+      -moz-transform:scale(1);
+      -webkit-transform:scale(1);
+      -o-transform:scale(1);
+      -ms-transform:scale(1);
+      transform:scale(1);
     }
   }
 
