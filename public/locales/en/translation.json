@@ -14,14 +14,15 @@
     "promo-text": "FACE THE FEARLESS | NFT COLLECTION",
     "description": {
       "text": "The biggest fight of the year is set for May 8 at AT&T Stadium in Arlington, Texas, as WBA, WBC and Ring Magazine champion and the number one pound-for-pound fighter in the world, Canelo Alvarez, meets Billy Joe Saunders, the holder of the WBO belt, in a battle for super middleweight supremacy.",
-      "link": "Read more about the NFT Drop"
+      "link": "Read more about the NFT Drop",
+      "link-less": "Read less"
     },
     "read-more": {
       "text": "This stunning collection of NFTs commemorates the fight and even gets buyers into the action! All NFTs come with special unlockable bonuses! The extremely rare Gold and Legendary NFTs unlock premium items and experiences like signed gloves and tickets to a future fight. Check out all the limited NFT collections.",
-      "tale": "Tale of the Tape: a 1-of-1 Gold Edition plus 50 Silver Editions for each fighter.",
-      "knockout": "Knockout: For each fighter, Legendary 1-of-1 3D personalized gloves digitally signed by the fighter ",
-      "prediction": "Prediction: Get the NFT for when you think the fight will end to unlock rewards. ",
-      "post-fight": "Post-Fight Highlights: Coming soon..."
+      "tale": "<b>Tale of the Tape:</b> a 1-of-1 Gold Edition plus 50 Silver Editions for each fighter.",
+      "knockout": "<b>Knockout:</b> For each fighter, Legendary 1-of-1 3D personalized gloves digitally signed by the fighter ",
+      "prediction": "<b>Prediction:</b> Get the NFT for when you think the fight will end to unlock rewards. ",
+      "post-fight": "<b>Post-Fight Highlights:</b> dropping after the fight, own the greatest moments from the fight."
     },
     "buttons": {
       "btn-one": "see collection",
@@ -30,7 +31,7 @@
   },
   "featured-nft": {
     "sub-title": "FEATURED NFT",
-    "title": "KNOCKOUT – CANELO EDITION",
+    "title": "KNOCKOUT – CANELO",
     "rarity": "1 of 1",
     "type": "Legendary Edition",
     "price": {
