@@ -214,6 +214,7 @@
   }
 
   &__btn {
+    text-transform: none !important; 
     @include CTA;
     background-color: $brand-black;
     color: $brand-yellow;
