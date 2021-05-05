@@ -71,8 +71,8 @@ const FeaturedNFT = () => {
     <div className='featured' id='auction'>
       <div className='featured__inner-wrapper'>
         <div className='featured__img-wrapper'>
-        <video controlslist="nodownload" loop="" playsinline="" autoplay="" muted=""
-          poster={imgPath + 'Legendary_2_Knockout_Canelo_1_1.png'}>
+        <video controlslist="nodownload" loop playsinline autoplay muted
+          poster={imgPath + 'Legendary_2_Knockout_Canelo_1_1.png'} >
           <source src="https://storage.opensea.io/files/9dde6c08550efb852ee28ccded80ad3b.mp4"/>
           <img
               src={imgPath + 'Legendary_2_Knockout_Canelo_1_1.png'}
