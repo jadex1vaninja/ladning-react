@@ -256,7 +256,7 @@ const BRONZE_PREDICTION = {
 
 const POST_FIGHT_CANELO_LEGENDARY = {
   type: 'NFTs.type-legendary',
-  img: imgPath + 'winningCanelo.png',
+  img: imgPath + 'legendary-generic.png',
   title: 'nft-card.post-fight-title-legendary',
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.post-fight-description-legendary',
@@ -279,7 +279,7 @@ const POST_FIGHT_SAUNDERS_LEGENDARY = {
 
 const POST_FIGHT_CANELO_GOLD = {
   type: 'NFTs.type-gold',
-  img: imgPath + 'ringWalkCanelo.png',
+  img: imgPath + 'gold-generic.png',
   title: 'nft-card.post-fight-title-gold-canelo',
   rarity: 'nft-card.rarity-50',
   description: 'nft-card.post-fight-description-gold-canelo',
@@ -291,7 +291,7 @@ const POST_FIGHT_CANELO_GOLD = {
 
 const POST_FIGHT_SAUNDERS_SILVER = {
   type: 'NFTs.type-silver',
-  img: imgPath + 'ringWalksaun.png',
+  img: imgPath + 'silver-generic.png',
   title: 'nft-card.post-fight-title-silver-saunders',
   rarity: 'nft-card.rarity-50',
   description: 'nft-card.post-fight-description-silver-saunders',
