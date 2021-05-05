@@ -209,17 +209,17 @@
     "prediction-decision-description-bronze": "Limited edition NFTs predicting when the Canelo v. Saunders fight will end - in a specific round or with a judges' decision. For the winning NFTs only, receive an annual subscription to DAZN!",
     "prediction-decision-bronze-rarity": "100 Per Outcome",
 
-    "post-fight-title-legendary": "Winning <br/> moments",
+    "post-fight-title-legendary": "Winning <br/> moment",
     "post-fight-description-legendary": "The Winning Moment in the May 8 fight between Canelo Alvarez and Billy Joe Saunders, forever immortalized in this NFT.",
 
-    "post-fight-title-gold-canelo":"Gold Canelo Ring Walk",
-    "post-fight-title-silver-saunders":"Silver Saunders Ring Walk",
+    "post-fight-title-gold-canelo":"Winner’s <br/> ring walk",
+    "post-fight-title-silver-saunders":"Loser’s <br/> ring walk",
 
-    "post-fight-description-gold-canelo":"The WBA, WBC and Ring Magazine champion and the number one pound-for-pound fighter in the world, Canelo Alvarez puts on a show as he makes his way to the ring for his fight against Billy Joe Saunders on May 8, 2021.",
-    "post-fight-description-silver-saunders":"The WBO Champion Billy Joe Saunders makes his way to the ring ahead of his fight against Canelo Alvarez on May 8, 2021.",
+    "post-fight-description-gold-canelo":"Own the winning fighter’s ring walk, forever immortalized in this NFT.",
+    "post-fight-description-silver-saunders":"Own the winning fighter’s ring walk, forever immortalized in this NFT.",
 
     "rarity-1": "1/1",
-    "rarity-50": "50",
+    "rarity-50": "</br>",
     "rarity-only-50": "ONLY 50 AVAILABLE",
     "rarity-13": "13 1/1s (1 PER OUTCOME)",
     "rarity-100": "100 Per Outcome",
