@@ -108,11 +108,7 @@ const RedeemPage = () => {
 
   return (
     <>
-      <Header
-        isUsedOnSecondaryPage
-        secondaryTitle='Redemption'
-        promoBanner={<PromoBanner />}
-      >
+      <Header isUsedOnSecondaryPage secondaryTitle='Redemption'>
         <Button
           ctaText='Connect Wallet'
           onClick={connectWallet}
