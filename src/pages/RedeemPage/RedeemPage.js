@@ -107,19 +107,6 @@ const RedeemPage = () => {
   };
 
   return (
-    <h1
-      style={{
-        color: 'white',
-        fontSsize: '48px',
-        textAlign: 'center',
-        paddingTop: '100px'
-      }}
-    >
-      Coming Soon
-    </h1>
-  );
-
-  return (
     <>
       <Header isUsedOnSecondaryPage secondaryTitle='Redemption'>
         <Button
