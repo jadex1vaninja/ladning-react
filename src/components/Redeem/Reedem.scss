@@ -5,7 +5,7 @@
   background-image: url('../../assets/img/wave-bg.png');
   background-repeat: no-repeat;
   padding: 1rem;
-  position: relative;
+  //position: relative;
   //min-height: 100vh;
   margin-top: 25rem;
 
@@ -18,8 +18,8 @@
     top: 1rem;
     right: 1rem;
     padding: 1rem;
-    color: $brand-white;
-    border: 1px solid $brand-white;
+    color: $brand-black;
+    border: 1px solid $brand-black;
     border-radius: 8px;
     background-color: $brand-yellow;
     z-index: 99;
