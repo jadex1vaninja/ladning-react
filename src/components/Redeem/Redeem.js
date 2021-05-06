@@ -1,116 +1,37 @@
-import React, { useState, useEffect } from 'react';
-// import { ethers } from 'ethers';
+import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Modal, Form } from 'react-bootstrap';
 import { Spinner } from '../shared/SVG/Spinner';
 import Item from '../Item';
 import Input from '../Input/Input';
-import { ETHEREUM, API_URL } from '../../const';
-import './ReedemPage.scss';
+import './Reedem.scss';
 
-const RedeemPage = () => {
-  // A Web3Provider wraps a standard Web3 provider, which is
-  // what Metamask injects as window.ethereum into each page
-  // const provider = new ethers.providers.Web3Provider(window.ethereum);
-  // const signer = provider.getSigner();
-
-  // const signMessage = async () => {
-  //   try {
-  //     const signature = await signer.signMessage('Hello there');
-  //     console.log(signature);
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
-
-  const [error, setError] = useState(false);
-  const [isEthereum, setIsEthereum] = useState(false);
-  const [walletID, setWalletID] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
-  const [showModal, setShowModal] = useState(false);
-  const [initialFormState, setInitialFormState] = useState({
-    name: '',
-    email: '',
-    street: '',
-    city: '',
-    state: '',
-    zipcode: '',
-    country: '',
-    additional: ''
-  });
-
-  useEffect(() => {
-    ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
-  }, []);
-
-  const closeErrorNotification = () => {
-    setError(false);
-  };
-
-  const fetchData = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch(`${API_URL + walletID}`);
-      const { assets } = await response.json();
-      setData(assets);
-    } catch (e) {
-      console.error('Ошибка:', e);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const connectWallet = async () => {
-    setLoading(true);
-
-    //if you have closed Metamask window [X]
-    const timeOut = setTimeout(() => {
-      setLoading(false);
-    }, 10000);
-
-    try {
-      if (ETHEREUM) {
-        const accounts = await ETHEREUM.send('eth_requestAccounts');
-        const {
-          result: [ID]
-        } = accounts;
-        setWalletID(ID);
-      }
-    } catch (e) {
-      console.error(e);
-      setError(true);
-    } finally {
-      setLoading(false);
-      clearTimeout(timeOut);
-    }
-  };
-
-  const handleShowModal = () => setShowModal(true);
-  const handleCloseModal = () => setShowModal(false);
-
-  const handleClickedID = (id) => {
-    const item = data.find((item) => item.id === id);
-    setInitialFormState((prevState) => ({
-      ...prevState,
-      walletID,
-      itemId: item.id,
-      itemName: item.name,
-      itemDescription: item.description,
-      itemLink: item.permalink
-    }));
-  };
-
-  const onSubmit = async (values) => {
-    console.log('VALUES', values);
-    handleCloseModal();
-  };
-  return (
-    <h1 style={{color: "white", fontSsize: "48px", textAlign: "center", paddingTop: "100px"}}>
-      Coming Soon
-    </h1>
-  );
+const Redeem = ({
+  isEthereum,
+  error,
+  loading,
+  data,
+  showModalHandler,
+  closeModalHandler,
+  showModal,
+  initialFormState,
+  handleClickedID,
+  onSubmit,
+  closeErrorNotification
+}) => {
+  // return (
+  //   <h1
+  //     style={{
+  //       color: 'white',
+  //       fontSsize: '48px',
+  //       textAlign: 'center',
+  //       paddingTop: '100px'
+  //     }}
+  //   >
+  //     Coming Soon
+  //   </h1>
+  // );
   return (
     <div className='redeem-root'>
       {!isEthereum && (
@@ -131,46 +52,35 @@ const RedeemPage = () => {
           <p>Something goes wrong...</p>
         </div>
       )}
-      {loading ? (
-        <Spinner />
-      ) : (
-        <div className='redeem-root__button-wrapper'>
-          <button
-            className='redeem-root__btn'
-            disabled={!!walletID}
-            onClick={connectWallet}
-          >
-            Connect wallet
-          </button>
-          {walletID && (
-            <button
-              className='redeem-root__btn-two'
-              disabled={!!data.length}
-              onClick={fetchData}
-            >
-              View items
-            </button>
-          )}
-        </div>
-      )}
+
       <div className='redeem-root__preview'>
-        {Boolean(data.length) &&
-          data.map((item) => (
-            <Item
-              key={item.id}
-              id={item.id}
-              name={item.name}
-              description={item.description}
-              imageUrl={item.image_thumbnail_url}
-              link={item.permalink}
-              handleModal={handleShowModal}
-              handleID={handleClickedID}
-            />
-          ))}
+        <div className='redeem-root__preview-header'>
+          <p className='redeem-root__preview-header-text'>Contact address</p>
+          <p className='redeem-root__preview-header-text'>Token Id</p>
+        </div>
+        {loading ? (
+          <Spinner />
+        ) : (
+          <>
+            {Boolean(data.length) &&
+              data.map((item) => (
+                <Item
+                  key={item.id}
+                  id={item.id}
+                  name={item.name}
+                  description={item.description}
+                  imageUrl={item.image_thumbnail_url}
+                  link={item.permalink}
+                  handleModal={showModalHandler}
+                  handleID={handleClickedID}
+                />
+              ))}
+          </>
+        )}
       </div>
       <Modal
         show={showModal}
-        onHide={handleCloseModal}
+        onHide={closeModalHandler}
         backdrop='static'
         keyboard={false}
         centered
@@ -316,7 +226,7 @@ const RedeemPage = () => {
                   <button
                     type='button'
                     className='btn btn-danger'
-                    onClick={handleCloseModal}
+                    onClick={closeModalHandler}
                   >
                     Decline
                   </button>
@@ -330,4 +240,4 @@ const RedeemPage = () => {
   );
 };
 
-export default RedeemPage;
+export default Redeem;

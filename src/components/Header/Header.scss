@@ -476,4 +476,9 @@
       }
     }
   }
+
+  &__miscellaneous {
+    display: flex;
+    justify-content: center;
+  }
 }

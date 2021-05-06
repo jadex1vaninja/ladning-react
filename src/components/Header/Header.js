@@ -8,7 +8,12 @@ import {
 import { useWindowInfo } from '../../hooks/useWindowInfo';
 import './Header.scss';
 
-const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
+const Header = ({
+  isUsedOnSecondaryPage,
+  secondaryTitle,
+  children,
+  promoBanner
+}) => {
   const [language, setLanguage] = useState('en');
   const [showMore, setShowMore] = useState(false);
   const { t, i18n } = useTranslation();
@@ -144,19 +149,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
           </div>
         </nav>
       )}
-      {!isUsedOnSecondaryPage && (
-        <div className='header__promo'>
-          <img
-            className='header__promo-img'
-            src={imgPath + 'promo.png'}
-            alt='promo'
-          />
-          <p
-            className='header__promo-text'
-            dangerouslySetInnerHTML={{ __html: t('header.promo-text') }}
-          />
-        </div>
-      )}
+      {promoBanner && promoBanner}
       {!isUsedOnSecondaryPage && (
         <div className='header__description'>
           <p className='header__description-text'>
@@ -239,6 +232,7 @@ const Header = ({ isUsedOnSecondaryPage, secondaryTitle }) => {
           </div>
         </div>
       )}
+      <div className='header__miscellaneous'>{children}</div>
       <div className='header__banner'>
         <img
           className='header__banner-img'

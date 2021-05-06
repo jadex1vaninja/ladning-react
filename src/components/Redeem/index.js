@@ -1,3 +1,3 @@
-import RedeemPage from './RedeemPage';
+import Redeem from './Redeem';
 
-export default RedeemPage;
+export default Redeem;
