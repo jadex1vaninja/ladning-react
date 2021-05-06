@@ -1,7 +1,12 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route, useLocation } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useLocation
+} from 'react-router-dom';
 import Landing from './components/Landing';
-import RedeemPage from './components/Redeem';
+import RedeemPage from './pages/RedeemPage';
 import FAQsPage from './pages/FAQsPage';
 import TCsPage from './pages/T&CsPage';
 import PrivacyPage from './pages/PrivacyPolicyPage/PrivacyPage';
@@ -9,7 +14,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.scss';
 
 function App() {
- 
   return (
     <Router>
       <ScrollToTop></ScrollToTop>
@@ -24,11 +28,11 @@ function App() {
   );
 }
 
-const ScrollToTop=()=>{
-    const { pathname } = useLocation();
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, [pathname]);
-    return null;
-}
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
 export default App;
