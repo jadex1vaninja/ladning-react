@@ -5,7 +5,7 @@ export const TcsContent = () => {
       <meta name='Generator' content='Microsoft Word 15 (filtered)' />
       <div className='tcs__content'>
         <p className='tcs__paragraph'>
-          <span>Last update on 30 April 2021</span>
+          <span>Last update on 6 MAY 2021</span>
         </p>
         <p className='tcs__paragraph'>
           <b>
@@ -209,24 +209,19 @@ export const TcsContent = () => {
             <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </span>
           <span>
-            Subject to the following conditions, if you are the licensee of any
-            Licensed NFT listed in the following paragraph 3d. &nbsp;on or after
-            June 5<sup>th</sup> 2021, you are entitled to redeem the real-world
-            asset(s) (“<b>Asset(s)</b>”) listed against the relevant Licensed
-            NFT.{' '}
+            Subject to the following conditions, if you are the licensee of any 
+            Licensed NFT listed in the following paragraph 3d. on or after June 5th 2021, 
+            you are entitled to redeem the real-world asset(s) (“Asset(s)”) listed against the relevant Licensed NFT. {' '}
             <u>
               To redeem any Asset(s), you must follow all relevant instructions
               hosted at at www.DAZNBoxing.io/redeem
             </u>
-            . &nbsp;You understand that your entitlement to redeem any Asset(s)
-            is non-transferable and you must, and that your redemption, use or
-            enjoyment of any Asset may be further conditioned upon compliance
-            with the terms and conditions associated with the use of the Asset
-            itself (such as DAZN subscription terms, Covid-19 rules, security
-            provisions and restrictions on attending events). &nbsp;DAZN
-            reserves the right to refuse redemption of any Asset(s) which are
-            not redeemed by midnight US Eastern Time on July 5<sup>th</sup>{' '}
-            2021.{' '}
+            . The purchase of certain NFTs includes free entry to predict the outcome of the Event which may result in receiving 
+            the Asset(s) attached to the game. You understand that your entitlement to redeem any Asset(s) is non-transferable 
+            and you must, and that your redemption, use or enjoyment of any Asset may be further conditioned upon compliance with 
+            the terms and conditions associated with the use of the Asset itself (such as DAZN subscription terms, Covid-19 rules, 
+            security provisions and restrictions on attending events). DAZN reserves the right to refuse redemption of any Asset(s) 
+            which are not redeemed by midnight US Eastern Time on July 5<sup>th</sup> 2021. 
           </span>
         </p>
         <p className='tcs__paragraph'>&nbsp;</p>
