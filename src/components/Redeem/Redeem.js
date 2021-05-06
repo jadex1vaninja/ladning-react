@@ -64,16 +64,7 @@ const Redeem = ({
           <>
             {Boolean(data.length) &&
               data.map((item) => (
-                <Item
-                  key={item.id}
-                  id={item.id}
-                  name={item.name}
-                  description={item.description}
-                  imageUrl={item.image_thumbnail_url}
-                  link={item.permalink}
-                  handleModal={showModalHandler}
-                  handleID={handleClickedID}
-                />
+                <Item key={item.id} id={item.id} name={item.name} />
               ))}
           </>
         )}
