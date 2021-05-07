@@ -46,8 +46,6 @@ const NFT = ({
     setText(t(description));
   }, [t]);
 
-  console.log(subitems);
-
   return (
     <>
       <div className='card-wrap'>
@@ -61,7 +59,7 @@ const NFT = ({
         >
           <div className={!isActive && 'cards-root__card-content--disabled'} />
           <img className='cards-root__card-img' src={img} alt='card' />
-          
+
           {isSoldOut && (
             <div className='cards-root__soldout-block'>
               {t('') || 'SOLD OUT'}
@@ -115,7 +113,11 @@ const NFT = ({
                   <span
                     ref={ctaRef}
                     onClick={() => setShowRound(true)}
-                    className='cards-root__link'
+                    className={
+                      isSoldOut
+                        ? 'cards-root__link cards-root__link--soldout'
+                        : 'cards-root__link'
+                    }
                   >
                     {t(cta || 'NFTs.link-text')}
                   </span>
@@ -125,7 +127,11 @@ const NFT = ({
                         <>
                           <div className='round-link'>
                             <a
-                              className='round-link__item'
+                              className={
+                                isSoldOut
+                                  ? 'round-link__item round-link__item--soldout'
+                                  : 'round-link__item'
+                              }
                               target='_blank'
                               rel='noreferrer'
                               href={e.link}
@@ -143,7 +149,11 @@ const NFT = ({
               ) : (
                 <a
                   rel='noopener noreferrer'
-                  className='cards-root__link'
+                  className={
+                    isSoldOut
+                      ? 'cards-root__link cards-root__link--soldout'
+                      : 'cards-root__link'
+                  }
                   target='_blank'
                   href={link ? LINK_TO_LIVE + link : collectionLink}
                 >

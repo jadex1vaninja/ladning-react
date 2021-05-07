@@ -223,6 +223,10 @@
       text-decoration: none;
       color: $brand-yellow;
     }
+
+    &--soldout {
+      pointer-events: none;
+    }
   }
 
   .round-link{
@@ -237,6 +241,10 @@
       text-decoration: none;
       color: $brand-yellow;
     }
+
+      &--soldout {
+        pointer-events: none;
+      }
   }
   }
   
