@@ -21,6 +21,8 @@
 .cards-root {
   
   &__soldout-block {
+    font-family: 'DAZNTrim-ExtraBold';
+    font-size: 19px;
     background-color: $brand-yellow;
     color: $brand-black;
     position: absolute;
