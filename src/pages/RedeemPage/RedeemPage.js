@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import { ethers } from 'ethers';
+import { ethers } from 'ethers';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Redeem from '../../components/Redeem';
@@ -11,17 +11,21 @@ import PromoBanner from '../../components/Header/components/PromoBanner';
 const RedeemPage = () => {
   // A Web3Provider wraps a standard Web3 provider, which is
   // what Metamask injects as window.ethereum into each page
-  // const provider = new ethers.providers.Web3Provider(window.ethereum);
-  // const signer = provider.getSigner();
+  const provider = new ethers.providers.Web3Provider(ETHEREUM);
+  const signer = provider.getSigner();
 
-  // const signMessage = async () => {
-  //   try {
-  //     const signature = await signer.signMessage('Hello there');
-  //     console.log(signature);
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
+  const signMessage = async () => {
+    try {
+      const id = await signer.getAddress();
+      setWalletID(id);
+      const signature = await signer.signMessage('open the door');
+      // setWalletID(signature);
+      console.log(signature);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   const API = `https://rinkeby-api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=20&owner=`;
   const [error, setError] = useState(false);
   const [isEthereum, setIsEthereum] = useState(false);
@@ -39,10 +43,6 @@ const RedeemPage = () => {
     country: '',
     additional: ''
   });
-
-  useEffect(() => {
-    ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
-  }, []);
 
   const closeErrorNotification = () => {
     setError(false);
@@ -86,6 +86,11 @@ const RedeemPage = () => {
     }
   };
 
+  useEffect(() => {
+    ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
+    // connectWallet();
+  }, []);
+  console.log(walletID);
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
 
@@ -111,7 +116,10 @@ const RedeemPage = () => {
       <Header isUsedOnSecondaryPage secondaryTitle='Redemption'>
         <Button
           ctaText='Connect Wallet'
-          onClick={connectWallet}
+          onClick={() => {
+            // connectWallet();
+            signMessage();
+          }}
           isDisabled={!!walletID}
         />
         {walletID && (
