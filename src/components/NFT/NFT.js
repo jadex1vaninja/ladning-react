@@ -61,7 +61,7 @@ const NFT = ({
         >
           <div className={!isActive && 'cards-root__card-content--disabled'} />
           <img className='cards-root__card-img' src={img} alt='card' />
-          
+
           {isSoldOut && (
             <div className='cards-root__soldout-block'>
               {t('') || 'SOLD OUT'}
@@ -98,7 +98,7 @@ const NFT = ({
                       className='cards-root__show-more'
                       onClick={showFullText}
                     >
-                      Read more
+                      {t('NFTs.read-more')}
                     </span>
                   </>
                 ) : (

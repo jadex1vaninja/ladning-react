@@ -23,7 +23,7 @@ const PrivacyPage = () => {
           <PrivacyContent></PrivacyContent>
           <div className='privacy__btn-wrapper'>
             <button className='privacy__btn' onClick={getBack}>
-              GO HOME
+              {t('terms.go-home')}
             </button>
           </div>
         </div>

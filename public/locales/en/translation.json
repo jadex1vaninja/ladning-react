@@ -57,6 +57,7 @@
     "type-silver": "Silver",
     "type-bronze": "Bronze",
     "link-text": "View auction",
+    "read-more": "Read more",
     "nft-card": {
       "canelo-legendary-title": "Knockout -</br> Canelo",
       "canelo-legendary-description": "Canelo Alvarez has knocked out 37 of the fighters he’s faced. Get this 1-of-1 Legendary NFT representing his in-ring dominance. In addition to winning the NFT, the winning bid will receive 2 tickets to the next Canelo fight + signed fight gloves and a personalized video from Canelo! To redeem or confirm if the reward has already been redeemed, head to DAZNBoxing.io/redeem after June 5, 2021.",
@@ -167,6 +168,7 @@
     "CTA": "Sign up here"
   },
   "terms": {
+    "go-home": "GO HOME",
     "title": "TERMS & CONDITIONS",
     "CTA-one": "T&Cs",
     "CTA-two": "PRIVACY POLICY"

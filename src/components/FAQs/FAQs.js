@@ -67,7 +67,7 @@ const FAQs = ({
             className='faq__btn'
             onClick={() => window.open(window.location.origin)}
           >
-            Go home
+            {t('terms.go-home')}
           </button>
         </div>
       )}

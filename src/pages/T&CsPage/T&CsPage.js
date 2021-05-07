@@ -4,10 +4,11 @@ import Footer from '../../components/Footer';
 import './T&CsPage.scss';
 import { useHistory } from 'react-router';
 import { TcsContent } from './TcsContent';
+import { useTranslation } from 'react-i18next';
 
 const TCsPage = () => {
   const history = useHistory();
-
+  const { t } = useTranslation();
   const getBack = () => {
     history.push('/');
   };
@@ -22,7 +23,7 @@ const TCsPage = () => {
           <TcsContent></TcsContent>
           <div className='tcs__btn-wrapper'>
             <button className='tcs__btn' onClick={getBack}>
-              GO HOME
+              {t('terms.go-home')}
             </button>
           </div>
         </div>
