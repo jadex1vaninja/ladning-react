@@ -49,7 +49,7 @@ const Header = ({
           <h1 className='header__secondary-title'>{secondaryTitle}</h1>
           <ul
             className='header__language-list-secondary'
-            style={{ visibility: 'hidden' }}
+            // style={{ visibility: 'hidden' }}
           >
             <li
               style={{ visibility: 'hidden' }}
@@ -62,7 +62,7 @@ const Header = ({
               En
             </li>
             <li
-              style={{ visibility: 'hidden' }}
+              // style={{ visibility: 'hidden' }}
               className={`header__button${language === 'es' ? ' active' : ''}`}
               onClick={() => {
                 changeLanguage('es');
@@ -110,19 +110,10 @@ const Header = ({
               </a>
             </li>
           </ul>
-          <div className='header__dazn-logo' style={{ visibility: 'hidden' }}>
-            <a target='_blank' href={DAZN_PUBLIC_LINK}>
-              <img
-                className='header__dazn-img'
-                src={imgPath + 'DAZN-logo.png'}
-                alt='DAZN'
-              />
-            </a>
-          </div>
-          <div className='header__terms-language' style={{ display: 'none' }}>
+          <div className='header__terms-language'>
             <ul className='header__language-list'>
               <li
-                style={{ visibility: 'hidden' }}
+                // style={{ visibility: 'hidden' }}
                 className={`header__button${
                   language === 'en' ? ' active' : ''
                 }`}
@@ -134,7 +125,7 @@ const Header = ({
                 En
               </li>
               <li
-                style={{ visibility: 'hidden' }}
+                // style={{ visibility: 'hidden' }}
                 className={`header__button${
                   language === 'es' ? ' active' : ''
                 }`}
