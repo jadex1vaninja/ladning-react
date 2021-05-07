@@ -4,12 +4,12 @@
     "sub-title": "Compra Ahora por OpenSea",
     "nav-list": {
       "nav-auction": "Ver la colección",
-      "nav-faq": "nav-faq",
-      "nav-artwork": "nav-dazn"
+      "nav-faq": "Preguntas frecuentes",
+      "nav-artwork": "Ver las obras de arte"
     },
     "list": {
       "list-t&c": "list-t&c",
-      "list-privacy": "ist-privacy"
+      "list-privacy": "Aviso de privacidad "
     },
     "promo-text": "De Cara a la Gloria </br> La Colección de NFT",
     "description": {
@@ -103,7 +103,7 @@
     "CTA": "Registrate aquí"
   },
   "faq": {
-    "title": "FAQs",
+    "title": "Preguntas frecuentes",
     "sub-title": "WHAT IS AN NFT? AND OTHER QUESTIONS ANSWERED",
     "questions": {
       "first": {
@@ -177,6 +177,8 @@
       "buy-now": "Compra ahora",
       "select-round": "SELECT ROUND"
     },
+    "round": "Asaltos del número {{round}}",
+    "go-cards": "Hasta las tarjetas",
     "canelo-legendary-title": "Nocaut:</br> Canelo",
     "canelo-legendary-description": "Canelo Álvarez ha noqueado a 37 de los peleadores que ha enfrentado. Consigue la única edición de esta legendaria NFT que representa su dominancia en el cuadrilátero. Además de ganar la NFT, la oferta ganadora recibirá dos entradas para la siguiente pelea de Canelo + <b>unos guantes firmados <b/>, ¡además de un video personalizado de Canelo!",
 
