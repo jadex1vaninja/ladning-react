@@ -9,7 +9,7 @@ const LEGENDARY_KNOCKOUT_CANELO = {
   description: 'NFTs.nft-card.canelo-legendary-description',
   isActive: true,
   cta: 'nft-card.cta.bin-now',
-  // isSoldOut:true,
+  isSoldOut: true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506764274239275009'
 };
@@ -23,6 +23,7 @@ const LEGENDARY_KNOCKOUT_SAUNDERS = {
   description: 'NFTs.nft-card.saunders-legendary-description',
   isActive: true,
   cta: 'nft-card.cta.bin-now',
+  isSoldOut: true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506765373750902785'
 };
@@ -36,6 +37,7 @@ const GOLD_TALE_CANELO = {
   description: 'NFTs.nft-card.canelo-gold-description',
   isActive: true,
   cta: 'nft-card.cta.bin-now',
+  isSoldOut: true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506766473262530561'
 };
@@ -49,6 +51,7 @@ const GOLD_TALE_SAUNDERS = {
   description: 'NFTs.nft-card.saunders-gold-description',
   isActive: true,
   cta: 'nft-card.cta.bin-now',
+  isSoldOut: true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506786264471830529'
 };
@@ -62,6 +65,7 @@ const SILVER_TALE_CANELO = {
   description: 'NFTs.nft-card.canelo-silver-description',
   isActive: true,
   cta: 'nft-card.cta.view-collection',
+  isSoldOut: true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506788463495086130'
 };
@@ -75,6 +79,7 @@ const SILVER_TALE_SAUNDERS = {
   description: 'NFTs.nft-card.saunders-silver-description',
   cta: 'nft-card.cta.view-collection',
   isActive: true,
+  isSoldOut: true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506787363983458354'
 };
@@ -157,6 +162,7 @@ const GOLDEN_PREDICTION = {
     }
   ],
   cta: 'nft-card.cta.select-round',
+  isSoldOut: true,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[query]=Prediction&search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Gold'
 };
@@ -180,6 +186,7 @@ const BRONZE_PREDICTION = {
   rarity: 'nft-card.rarity-100',
   description: 'nft-card.prediction-decision-description-bronze',
   isActive: true,
+  isSoldOut: true,
   cta: 'nft-card.cta.select-round',
   subitems: [
     {
@@ -260,8 +267,8 @@ const POST_FIGHT_CANELO_LEGENDARY = {
   title: 'nft-card.post-fight-title-legendary',
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.post-fight-description-legendary',
-  isActive: false,
-  comingSoon: true,
+  isActive: true,
+  comingSoon: false,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
 };
@@ -283,8 +290,8 @@ const POST_FIGHT_CANELO_GOLD = {
   title: 'nft-card.post-fight-title-gold-canelo',
   rarity: 'nft-card.rarity-50',
   description: 'nft-card.post-fight-description-gold-canelo',
-  isActive: false,
-  comingSoon: true,
+  isActive: true,
+  comingSoon: false,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
 };
@@ -295,14 +302,22 @@ const POST_FIGHT_SAUNDERS_SILVER = {
   title: 'nft-card.post-fight-title-silver-saunders',
   rarity: 'nft-card.rarity-50',
   description: 'nft-card.post-fight-description-silver-saunders',
-  isActive: false,
-  comingSoon: true,
+  isActive: true,
+  comingSoon: false,
   grayscale: true,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
 };
 
 export const NFTs = [
+  {
+    title: 'NFTs.title-post-fight',
+    cards: [
+      POST_FIGHT_CANELO_LEGENDARY,
+      POST_FIGHT_CANELO_GOLD,
+      POST_FIGHT_SAUNDERS_SILVER
+    ]
+  },
   {
     title: 'NFTs.title-knockout',
     cards: [LEGENDARY_KNOCKOUT_CANELO, LEGENDARY_KNOCKOUT_SAUNDERS]
@@ -319,14 +334,6 @@ export const NFTs = [
   {
     title: 'NFTs.title-prediction',
     cards: [GOLDEN_PREDICTION, BRONZE_PREDICTION]
-  },
-  {
-    title: 'NFTs.title-post-fight',
-    cards: [
-      POST_FIGHT_CANELO_LEGENDARY,
-      POST_FIGHT_CANELO_GOLD,
-      POST_FIGHT_SAUNDERS_SILVER
-    ]
   }
 ];
 export const FeaturedNFT_ID = LEGENDARY_KNOCKOUT_CANELO.link;
