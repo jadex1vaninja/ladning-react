@@ -5,13 +5,16 @@ import './PrivacyPage.scss';
 import { useHistory } from 'react-router';
 import { PrivacyContent } from './Content';
 import { useTranslation } from 'react-i18next';
+import PrivacyPageEs from './PrivacyPageEs';
 
 const PrivacyPage = () => {
   const history = useHistory();
-  const { t } = useTranslation();
   const getBack = () => {
     history.push('/');
   };
+  const { t, i18n } = useTranslation();
+  const language = i18n.language;
+  const IS_SPANISH = language === 'es';
   return (
     <>
       <Header isUsedOnSecondaryPage secondaryTitle={t('terms.CTA-two')} />
@@ -20,7 +23,12 @@ const PrivacyPage = () => {
         <div className='privacy__container'>
           <p className='privacy__tittle'>{t('terms.CTA-two')}</p>
           <div className='splitter'></div>
-          <PrivacyContent></PrivacyContent>
+          {IS_SPANISH ? (
+            <PrivacyPageEs></PrivacyPageEs>
+          ) : (
+            <PrivacyContent></PrivacyContent>
+          )}
+
           <div className='privacy__btn-wrapper'>
             <button className='privacy__btn' onClick={getBack}>
               {t('terms.go-home')}
