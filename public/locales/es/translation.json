@@ -30,7 +30,7 @@
     }
   },
   "featured-nft": {
-    "sub-title": "sub-title",
+    "sub-title": "NFT DESTACADO",
     "title": "title",
     "rarity": "rarity",
     "type": "type",
@@ -45,7 +45,7 @@
       "minutes": "mins",
       "seconds": "secs"
     },
-    "CTA": "CTA"
+    "CTA": "Ver la subasta"
   },
   "NFTs": {
     "title-knockout": "title",
@@ -163,8 +163,8 @@
   },
   "terms": {
     "title": "title",
-    "CTA-one": "CTA-one",
-    "CTA-two": "CTA-two"
+    "CTA-one": "T&Cs",
+    "CTA-two": "AVISO DE PRIVACIDAD"
   },
   "footer": {
     "text": "text",
