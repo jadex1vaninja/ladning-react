@@ -173,7 +173,8 @@
     }
   },
   "terms": {
-    "go-home": "Go home",
+    "go-home": "REGRESO",
+    "more-faqs": "MÁS PREGUNTAS FRECUENTES",
     "title": "title",
     "CTA-one": "T&Cs",
     "CTA-two": "AVISO DE PRIVACIDAD"

@@ -52,7 +52,7 @@ const Header = ({
             // style={{ visibility: 'hidden' }}
           >
             <li
-              style={{ visibility: 'hidden' }}
+              // style={{ visibility: 'hidden' }}
               className={`header__button${language === 'en' ? ' active' : ''}`}
               onClick={() => {
                 changeLanguage('en');

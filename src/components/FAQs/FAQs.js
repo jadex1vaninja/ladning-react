@@ -75,7 +75,7 @@ const FAQs = ({
       {!isButtonGetBack && (
         <div className='faq__btn-wrapper'>
           <button className='faq__btn' onClick={() => window.open('/faq')}>
-            More FAQs
+            {t('terms.more-faqs')}
           </button>
         </div>
       )}
