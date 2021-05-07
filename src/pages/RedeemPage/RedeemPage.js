@@ -6,26 +6,8 @@ import Redeem from '../../components/Redeem';
 import Button from '../../components/Button';
 import { API_URL, ETHEREUM } from '../../const';
 import './RedeemPage.scss';
-import PromoBanner from '../../components/Header/components/PromoBanner';
 
 const RedeemPage = () => {
-  // A Web3Provider wraps a standard Web3 provider, which is
-  // what Metamask injects as window.ethereum into each page
-  const provider = new ethers.providers.Web3Provider(ETHEREUM);
-  const signer = provider.getSigner();
-
-  const signMessage = async () => {
-    try {
-      const id = await signer.getAddress();
-      setWalletID(id);
-      const signature = await signer.signMessage('open the door');
-      // setWalletID(signature);
-      console.log(signature);
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
   const API = `https://rinkeby-api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=20&owner=`;
   const [error, setError] = useState(false);
   const [isEthereum, setIsEthereum] = useState(false);
@@ -43,6 +25,21 @@ const RedeemPage = () => {
     country: '',
     additional: ''
   });
+
+  // A Web3Provider wraps a standard Web3 provider, which is
+  // what Metamask injects as window.ethereum into each page
+  const provider = new ethers.providers.Web3Provider(ETHEREUM);
+  const signer = provider.getSigner();
+  const address = signer.getAddress();
+
+  const signMessage = async () => {
+    try {
+      const signature = await signer.signMessage('open the door');
+      console.log('Message has been signed :', signature);
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   const closeErrorNotification = () => {
     setError(false);
@@ -77,6 +74,7 @@ const RedeemPage = () => {
         } = accounts;
         setWalletID(ID);
       }
+      console.log('WALLET HAS BEEN CONNECTED');
     } catch (e) {
       console.error(e);
       setError(true);
@@ -88,9 +86,8 @@ const RedeemPage = () => {
 
   useEffect(() => {
     ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
-    // connectWallet();
   }, []);
-  console.log(walletID);
+
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
 
@@ -117,11 +114,16 @@ const RedeemPage = () => {
         <Button
           ctaText='Connect Wallet'
           onClick={() => {
-            // connectWallet();
-            signMessage();
+            connectWallet();
           }}
           isDisabled={!!walletID}
         />
+        {/*<Button*/}
+        {/*  ctaText='Sign message'*/}
+        {/*  onClick={() => {*/}
+        {/*    signMessage();*/}
+        {/*  }}*/}
+        {/*/>*/}
         {walletID && (
           <Button
             ctaText='View items'
