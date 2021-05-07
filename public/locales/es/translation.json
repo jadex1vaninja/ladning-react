@@ -1,10 +1,10 @@
 {
   "header": {
-    "title": "En Venta Ahora",
-    "sub-title": "Compra Ahora por OpenSea",
+    "title": "EN VENTA AHORA",
+    "sub-title": "COMPRA AHORA POR OPENSEA",
     "nav-list": {
       "nav-auction": "Ver la colección",
-      "nav-faq": "Preguntas frecuentes",
+      "nav-faq": "PREGUNTAS FRECUENTES",
       "nav-artwork": "Ver las obras de arte"
     },
     "list": {
@@ -103,7 +103,7 @@
     "CTA": "Registrate aquí"
   },
   "faq": {
-    "title": "Preguntas frecuentes",
+    "title": "PREGUNTAS FRECUENTES",
     "sub-title": "WHAT IS AN NFT? AND OTHER QUESTIONS ANSWERED",
     "questions": {
       "first": {
