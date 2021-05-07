@@ -19,7 +19,7 @@ const Header = ({
   const { t, i18n } = useTranslation();
   const { isPhone } = useWindowInfo();
   const phone = isPhone();
-
+  const IS_SPANISH = language === 'es';
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
@@ -147,7 +147,7 @@ const Header = ({
             {t('header.description.text')}
           </p>
           {/* TODO: ADD LINK */}
-          {!showMore && (
+          {!showMore && !IS_SPANISH && (
             <span
               onClick={() => setShowMore(true)}
               className='header__description-link'
@@ -155,7 +155,7 @@ const Header = ({
               {t('header.description.link')}
             </span>
           )}
-          {showMore && (
+          {showMore && !IS_SPANISH && (
             <>
               <br></br>
               <p className='header__description-text'>

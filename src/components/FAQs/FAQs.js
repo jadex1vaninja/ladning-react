@@ -14,13 +14,14 @@ const FAQs = ({
 }) => {
   const [accordion, setAccordion] = useState(accordionInitialList);
   const [active, setActive] = useState(null);
-  const { t } = useTranslation();
   const history = useHistory();
 
   const handleActive = (index) => {
     active !== index ? setActive(index) : setActive(null);
   };
-
+  const { t, i18n } = useTranslation();
+  const language = i18n.language;
+  const IS_SPANISH = language === 'es';
   // eslint-disable-next-line no-unused-vars
   const toggle = (index) => {
     const updated = [...accordion];
@@ -47,7 +48,7 @@ const FAQs = ({
           </p>
         </>
       )}
-      <p className='faq__text'>{t('faq.sub-title')}</p>
+      {!IS_SPANISH && <p className='faq__text'>{t('faq.sub-title')}</p>}
       <div className='faq__container'>
         <dl className='accordion'>
           {accordion.slice(0, show).map((item, index) => (
