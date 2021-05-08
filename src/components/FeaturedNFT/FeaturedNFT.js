@@ -117,7 +117,7 @@ const FeaturedNFT = () => {
                 {t('featured-nft.countdown.title')}
               </h2>
               <Countdown
-                date={new Date('2021-05-09T06:00:00')}
+                date={new Date('May 8, 2021 23:00:00 GMT-04:00')}
                 daysInHours={true}
                 renderer={renderer}
               />
