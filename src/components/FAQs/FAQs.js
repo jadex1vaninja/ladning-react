@@ -48,7 +48,7 @@ const FAQs = ({
           </p>
         </>
       )}
-      {!IS_SPANISH && <p className='faq__text'>{t('faq.sub-title')}</p>}
+      {<p className='faq__text'>{t('faq.sub-title')}</p>}
       <div className='faq__container'>
         <dl className='accordion'>
           {accordion.slice(0, show).map((item, index) => (

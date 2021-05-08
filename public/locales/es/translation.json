@@ -13,16 +13,16 @@
     },
     "promo-text": "De Cara a la Gloria </br> La Colección de NFT",
     "description": {
-      "text": "¡Esta impresionante colección de fichas no fungibles (NFT) conmemora la pelea e incluso hace que los compradores sean parte de la acción! ¡Todas las NFT vienen con bonos desbloqueables especiales! Las NFT Oro y Legendaria son extremadamente raras y desbloquean artículos y experiencias prémium, como guantes firmados y entradas a una pelea futura. Echa un vistazo a continuación a las colecciones limitadas de NFT",
+      "text": "La pelea más grande del año está programada para el 8 de mayo en el AT&T Stadium de Arlington, Texas, donde el campeón de la AMB, el CMB y la revista Ring Magazine, Canelo Álvarez, se enfrenta a Billy Joe Saunders, el poseedor del cinturón de la OMB, en una batalla por la supremacía del peso súper mediano.",
       "link": "Leer más sobre el lanzamiento de los NFT",
       "link-less": "Leer menos"
     },
     "read-more": {
-      "text": "This stunning collection of NFTs commemorates the fight and even gets buyers into the action! All NFTs come with special unlockable bonuses! The extremely rare Gold and Legendary NFTs unlock premium items and experiences like signed gloves and tickets to a future fight. Check out all the limited NFT collections.",
-      "tale": "",
-      "knockout": "",
-      "prediction": "",
-      "post-fight": ""
+      "text": "¡Esta impresionante colección de NFT conmemora la pelea e incluso lleva a los compradores a la acción! ¡Todos los NFT vienen con bonificaciones especiales desbloqueables! Los extremadamente raros NFT Gold y Legendary desbloquean artículos y experiencias premium como guantes firmados y boletos para una pelea futura. Consulte todas las colecciones NFT limitadas.",
+      "tale": "<b>Números frente a frente: </b> una edición Gold 1 de 1, más 50 ediciones Silver para cada boxeador",
+      "knockout": "<b>Nocaut: </b>Para cada boxeador, 1 de 1 Legendary guantes en 3D firmados digitalmente por el boxeador",
+      "prediction": "<b>Predicción: </b>Consigue el NFT para cuando crees que la pelea terminará para desbloquear recompensas",
+      "post-fight": "<b>Destacados de la pelea: </b>lanzan después de la pelea, obtén los mejores momentos de la pelea"
     },
     "buttons": {
       "btn-one": "Ver las obras de arte",
@@ -113,7 +113,7 @@
   },
   "faq": {
     "title": "PREGUNTAS FRECUENTES",
-    "sub-title": "WHAT IS AN NFT? AND OTHER QUESTIONS ANSWERED",
+    "sub-title": "¿Qué es un NFT? Y otras preguntas respondidas.",
     "questions": {
       "first": {
         "title": "¿Qué es un NFT?",
@@ -188,7 +188,7 @@
       "bin-now": "Haz tu oferta",
       "view-collection": "Ver la colección",
       "buy-now": "Compra ahora",
-      "select-round": "ELEGIR RONDA"
+      "select-round": "elige la ronda"
     },
     "round": "Asaltos del número {{round}}",
     "go-cards": "Hasta las tarjetas",

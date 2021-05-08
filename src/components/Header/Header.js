@@ -147,7 +147,7 @@ const Header = ({
             {t('header.description.text')}
           </p>
           {/* TODO: ADD LINK */}
-          {!showMore && !IS_SPANISH && (
+          {!showMore  && (
             <span
               onClick={() => setShowMore(true)}
               className='header__description-link'
@@ -155,7 +155,7 @@ const Header = ({
               {t('header.description.link')}
             </span>
           )}
-          {showMore && !IS_SPANISH && (
+          {showMore  && (
             <>
               <br></br>
               <p className='header__description-text'>
