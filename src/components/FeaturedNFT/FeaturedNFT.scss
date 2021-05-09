@@ -49,18 +49,21 @@
 
     video {
       width:100%;
-      -moz-transform:scale(1.5);
-      -webkit-transform:scale(1.5);
-      -o-transform:scale(1.5);
-      -ms-transform:scale(1.5);
-      transform:scale(1.5);
-
+      
       @include _768 {
         -moz-transform:scale(1);
         -webkit-transform:scale(1);
         -o-transform:scale(1);
         -ms-transform:scale(1);
         transform:scale(1);
+      }
+
+      @include _1024 {
+        -moz-transform:scale(1.5);
+        -webkit-transform:scale(1.5);
+        -o-transform:scale(1.5);
+        -ms-transform:scale(1.5);
+        transform:scale(1.5);
       }
     }
 
