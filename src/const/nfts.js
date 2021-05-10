@@ -8,7 +8,7 @@ const LEGENDARY_KNOCKOUT_CANELO = {
   rarity: 'NFTs.nft-card.rarity-1',
   description: 'NFTs.nft-card.canelo-legendary-description',
   isActive: true,
-  cta: 'nft-card.cta.bin-now',
+  cta: 'nft-card.sold-out',
   isSoldOut: true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506764274239275009'
@@ -22,7 +22,7 @@ const LEGENDARY_KNOCKOUT_SAUNDERS = {
   rarity: 'NFTs.nft-card.rarity-1',
   description: 'NFTs.nft-card.saunders-legendary-description',
   isActive: true,
-  cta: 'nft-card.cta.bin-now',
+  cta: 'nft-card.sold-out',
   isSoldOut: true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506765373750902785'
@@ -36,7 +36,7 @@ const GOLD_TALE_CANELO = {
   rarity: 'NFTs.nft-card.rarity-1',
   description: 'NFTs.nft-card.canelo-gold-description',
   isActive: true,
-  cta: 'nft-card.cta.bin-now',
+  cta: 'nft-card.sold-out',
   isSoldOut: true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506766473262530561'
@@ -50,7 +50,7 @@ const GOLD_TALE_SAUNDERS = {
   rarity: 'NFTs.nft-card.rarity-1',
   description: 'NFTs.nft-card.saunders-gold-description',
   isActive: true,
-  cta: 'nft-card.cta.bin-now',
+  cta: 'nft-card.sold-out',
   isSoldOut: true,
   link:
     '69208789200216951769366063301950903931594320778910349241631506786264471830529'
@@ -65,7 +65,7 @@ const SILVER_TALE_CANELO = {
   description: 'NFTs.nft-card.canelo-silver-description',
   isActive: true,
   isSoldOut: true,
-  cta: 'nft-card.cta.buy-now',
+   cta: 'nft-card.sold-out',
   link:
     '69208789200216951769366063301950903931594320778910349241631506788463495086130'
 };
@@ -77,7 +77,7 @@ const SILVER_TALE_SAUNDERS = {
   title: 'NFTs.nft-card.saunders-silver-title',
   rarity: 'nft-card.rarity-only-50',
   description: 'NFTs.nft-card.saunders-silver-description',
-  cta: 'nft-card.cta.buy-now',
+   cta: 'nft-card.sold-out',
   isActive: true,
   isSoldOut: true,
   link:
@@ -161,7 +161,7 @@ const GOLDEN_PREDICTION = {
         'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506792861541597185'
     }
   ],
-  cta: 'nft-card.cta.select-round',
+   cta: 'nft-card.sold-out',
   isSoldOut: true,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[query]=Prediction&search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Gold'
@@ -187,7 +187,7 @@ const BRONZE_PREDICTION = {
   description: 'nft-card.prediction-decision-description-bronze',
   isActive: true,
   isSoldOut: true,
-  cta: 'nft-card.cta.select-round',
+   cta: 'nft-card.sold-out',
   subitems: [
     {
       roundValue: '1',
