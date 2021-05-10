@@ -39,7 +39,7 @@
       "sign": "ETH"
     },
     "countdown": {
-      "title": "Auction ending in",
+      "title": "Auction ended",
       "days": "days",
       "hours": "hrs",
       "minutes": "mins",
@@ -57,6 +57,7 @@
     "type-silver": "Silver",
     "type-bronze": "Bronze",
     "link-text": "View auction",
+    "read-more": "Read more",
     "nft-card": {
       "canelo-legendary-title": "Knockout -</br> Canelo",
       "canelo-legendary-description": "Canelo Alvarez has knocked out 37 of the fighters he’s faced. Get this 1-of-1 Legendary NFT representing his in-ring dominance. In addition to winning the NFT, the winning bid will receive 2 tickets to the next Canelo fight + signed fight gloves and a personalized video from Canelo! To redeem or confirm if the reward has already been redeemed, head to DAZNBoxing.io/redeem after June 5, 2021.",
@@ -167,6 +168,8 @@
     "CTA": "Sign up here"
   },
   "terms": {
+    "more-faqs": "More FAQs",
+    "go-home": "GO HOME",
     "title": "TERMS & CONDITIONS",
     "CTA-one": "T&Cs",
     "CTA-two": "PRIVACY POLICY"
@@ -182,8 +185,8 @@
       "buy-now": "BUY NOW",
       "select-round": "SELECT ROUND"
     },
-    "round":"Round {{round}}",
-    "go-cards":"Gone to Cards",
+    "round": "Round {{round}}",
+    "go-cards": "Gone to Cards",
     "canelo-legendary-title": "Knockout -</br> Canelo",
     "canelo-legendary-description": "Canelo Alvarez has knocked out 37 of the fighters he’s faced. Get this 1-of-1 Legendary NFT representing his in-ring dominance. In addition to winning the NFT, the winning bid will receive 2 tickets to the next Canelo fight + <b>signed fight gloves</b> and a personalized video from Canelo!",
 
@@ -213,17 +216,17 @@
     "post-fight-title-legendary": "Winning <br/> moment",
     "post-fight-description-legendary": "The Winning Moment in the May 8 fight between Canelo Alvarez and Billy Joe Saunders, forever immortalized in this NFT.",
 
-    "post-fight-title-gold-canelo":"Winner’s <br/> ring walk",
-    "post-fight-title-silver-saunders":"Loser’s <br/> ring walk",
+    "post-fight-title-gold-canelo": "Winner’s <br/> ring walk",
+    "post-fight-title-silver-saunders": "Loser’s <br/> ring walk",
 
-    "post-fight-description-gold-canelo":"Own the winning fighter’s ring walk, forever immortalized in this NFT.",
-    "post-fight-description-silver-saunders":"Own the losing fighter's ring walk, forever immortalized in this NFT.",
+    "post-fight-description-gold-canelo": "Own the winning fighter’s ring walk, forever immortalized in this NFT.",
+    "post-fight-description-silver-saunders": "Own the losing fighter's ring walk, forever immortalized in this NFT.",
 
     "rarity-1": "1/1",
     "rarity-50": "</br>",
     "rarity-only-50": "ONLY 50 AVAILABLE",
     "rarity-13": "13 1/1s (1 PER OUTCOME)",
     "rarity-100": "100 Per Outcome",
-    "coming-soon":"coming soon"
+    "coming-soon": "coming soon"
   }
 }

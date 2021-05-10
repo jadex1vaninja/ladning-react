@@ -96,7 +96,7 @@ const NFT = ({
                       className='cards-root__show-more'
                       onClick={showFullText}
                     >
-                      Read more
+                      {t('NFTs.read-more')}
                     </span>
                   </>
                 ) : (

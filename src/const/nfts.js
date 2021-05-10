@@ -64,8 +64,7 @@ const SILVER_TALE_CANELO = {
   rarity: 'NFTs.nft-card.rarity-only-50',
   description: 'NFTs.nft-card.canelo-silver-description',
   isActive: true,
-  cta: 'nft-card.cta.view-collection',
-  isSoldOut: true,
+  cta: 'nft-card.cta.buy-now',
   link:
     '69208789200216951769366063301950903931594320778910349241631506788463495086130'
 };
@@ -77,7 +76,7 @@ const SILVER_TALE_SAUNDERS = {
   title: 'NFTs.nft-card.saunders-silver-title',
   rarity: 'nft-card.rarity-only-50',
   description: 'NFTs.nft-card.saunders-silver-description',
-  cta: 'nft-card.cta.view-collection',
+  cta: 'nft-card.cta.buy-now',
   isActive: true,
   isSoldOut: true,
   link:
