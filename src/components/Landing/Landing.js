@@ -15,6 +15,8 @@ const Landing = () => {
       <Header isUsedOnSecondaryPage={false} promoBanner={<PromoBanner />} />
       <main className='root'>
         <FeaturedNFT />
+        <FeaturedNFT withMargin />
+
         <Cards />
         <FAQs
           show={4}

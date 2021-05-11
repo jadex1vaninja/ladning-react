@@ -6,7 +6,7 @@ import { FeaturedNFT_ID } from '../../const/nfts';
 import './FeaturedNFT.scss';
 import axios from 'axios';
 
-const FeaturedNFT = () => {
+const FeaturedNFT = ({withMargin}) => {
   const { t } = useTranslation();
   const [nftFromApi, setNft] = useState({ orders: [{ closing_date :new Date('May 8, 2021 07:00:00 GMT-04:00')}]});
   // UNcoment when auction will be setted up;
@@ -21,7 +21,11 @@ const FeaturedNFT = () => {
   const renderer = ({ days, hours, minutes, seconds }) => {
     const DOUBLE_NUM = 10;
     return (
-      <div className='featured__time-section'>
+      <div
+        className={
+          'featured__time-section' 
+        }
+      >
         <p className='featured__time-chunk'>
           <span className='featured__time-value'>
             {Number(days) < DOUBLE_NUM ? `0${days}` : days}
@@ -71,7 +75,11 @@ const FeaturedNFT = () => {
   }, []);
   return (
     <div className='featured' id='auction'>
-      <div className='featured__inner-wrapper'>
+      <div
+        className={
+          'featured__inner-wrapper' 
+        }
+      >
         <div className='featured__img-wrapper'>
           <video
             controlslist='nodownload'
@@ -107,9 +115,7 @@ const FeaturedNFT = () => {
                 {t('featured-nft.price.sign')}
               </p>
               <p>
-                <small class='featured__price-dollar'>
-                  $18888.43
-                </small>
+                <small class='featured__price-dollar'>$18888.43</small>
               </p>
             </div>
             <div className='featured__countdown-block'>
