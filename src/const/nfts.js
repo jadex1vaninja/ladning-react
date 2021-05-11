@@ -289,6 +289,7 @@ const POST_FIGHT_SAUNDERS_LEGENDARY = {
 };
 
 const POST_FIGHT_CANELO_START = {
+  type: 'NFTs.type-legendary',
   img: imgPath + 'legendary-generic.png',
   title: 'nft-card.post-fight-title-legendary-started',
   rarity: 'nft-card.rarity-1',
