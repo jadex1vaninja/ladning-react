@@ -289,13 +289,12 @@ const POST_FIGHT_SAUNDERS_LEGENDARY = {
 };
 
 const POST_FIGHT_CANELO_START = {
-  type: 'NFTs.type-legendary',
-  img: imgPath + 'gold-generic.png',
+  img: imgPath + 'legendary-generic.png',
   title: 'nft-card.post-fight-title-legendary-started',
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.post-fight-description-legendary-started',
   isActive: true,
-  cta:'nft-card.cta.bin-now',
+  cta: 'nft-card.cta.bin-now',
   comingSoon: false,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
