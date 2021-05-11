@@ -315,25 +315,25 @@ const POST_FIGHT_SAUNDERS_SILVER = {
 };
 
 export const NFTs = [
-  {
-    title: 'NFTs.title-post-fight',
-    cards: [
-      POST_FIGHT_CANELO_LEGENDARY,
-      POST_FIGHT_CANELO_START,
-    ]
-  },
   // {
-  //   title: 'NFTs.title-prefight',
+  //   title: 'NFTs.title-post-fight',
   //   cards: [
-  //     LEGENDARY_KNOCKOUT_CANELO,
-  //     LEGENDARY_KNOCKOUT_SAUNDERS,
-  //     GOLD_TALE_CANELO,
-  //     GOLD_TALE_SAUNDERS,
-  //     SILVER_TALE_CANELO,
-  //     SILVER_TALE_SAUNDERS,
-  //     GOLDEN_PREDICTION,
-  //     BRONZE_PREDICTION
+  //     POST_FIGHT_CANELO_LEGENDARY,
+  //     POST_FIGHT_CANELO_START,
   //   ]
-  // }
+  // },
+  {
+    title: 'NFTs.title-prefight',
+    cards: [
+      LEGENDARY_KNOCKOUT_CANELO,
+      LEGENDARY_KNOCKOUT_SAUNDERS,
+      GOLD_TALE_CANELO,
+      GOLD_TALE_SAUNDERS,
+      SILVER_TALE_CANELO,
+      SILVER_TALE_SAUNDERS,
+      GOLDEN_PREDICTION,
+      BRONZE_PREDICTION
+    ]
+  }
 ];
 export const FeaturedNFT_ID = LEGENDARY_KNOCKOUT_CANELO.link;

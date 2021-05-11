@@ -19,7 +19,7 @@ const Landing = () => {
         <FeaturedNFT title={t('nft-card.post-fight-title-legendary')} />
         <FeaturedNFT withMargin title={t('nft-card.post-fight-title-legendary-started')} />
 
-        {/* <Cards /> */}
+        <Cards />
         <FAQs
           show={4}
           isButtonGetBack={false}
