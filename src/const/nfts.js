@@ -161,10 +161,11 @@ const GOLDEN_PREDICTION = {
         'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506792861541597185'
     }
   ],
-   cta: 'nft-card.sold-out',
+  cta: 'nft-card.sold-out',
   isSoldOut: true,
-  collectionLink:
-    'https://opensea.io/assets/dazn-x-canelo-saunders?search[query]=Prediction&search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Gold'
+  subitems: null,
+  link:
+    '69208789200216951769366063301950903931594320778910349241631506774169843924993'
 };
 
 const GOLD_PREDICTIONS_GONE_TO_CARDS = {
@@ -187,7 +188,7 @@ const BRONZE_PREDICTION = {
   description: 'nft-card.prediction-decision-description-bronze',
   isActive: true,
   isSoldOut: true,
-   cta: 'nft-card.sold-out',
+  cta: 'nft-card.sold-out',
   subitems: [
     {
       roundValue: '1',
@@ -257,8 +258,9 @@ const BRONZE_PREDICTION = {
         'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506799458611363940'
     }
   ],
-  collectionLink:
-    'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
+  subitems: null,
+  link:
+    '69208789200216951769366063301950903931594320778910349241631506782965936947300'
 };
 
 const POST_FIGHT_CANELO_LEGENDARY = {
