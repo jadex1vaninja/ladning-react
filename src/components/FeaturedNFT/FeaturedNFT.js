@@ -6,7 +6,7 @@ import { FeaturedNFT_ID } from '../../const/nfts';
 import './FeaturedNFT.scss';
 import axios from 'axios';
 
-const FeaturedNFT = ({withMargin}) => {
+const FeaturedNFT = ({withMargin, title}) => {
   const { t } = useTranslation();
   const [nftFromApi, setNft] = useState({ orders: [{ closing_date :new Date('May 8, 2021 07:00:00 GMT-04:00')}]});
   // UNcoment when auction will be setted up;
@@ -75,11 +75,7 @@ const FeaturedNFT = ({withMargin}) => {
   }, []);
   return (
     <div className='featured' id='auction'>
-      <div
-        className={
-          'featured__inner-wrapper' 
-        }
-      >
+      <div className={'featured__inner-wrapper'}>
         <div className='featured__img-wrapper'>
           <video
             controlslist='nodownload'
@@ -97,8 +93,10 @@ const FeaturedNFT = ({withMargin}) => {
           </video>
         </div>
         <div className='featured__content'>
-          <h6 className='featured__sub-title'>{t('featured-nft.sub-title')}</h6>
-          <h1 className='featured__title'>{t('featured-nft.title')}</h1>
+          <h6 className='featured__sub-title'>
+            {t('featured-nft.sub-title')}
+          </h6>
+          <h1 className='featured__title'> {title}</h1>
           <div className='featured__type'>
             <h2 className='featured__rarity'>{t('featured-nft.rarity')}</h2>
             <h2 className='featured__edition featured__edition--legendary'>

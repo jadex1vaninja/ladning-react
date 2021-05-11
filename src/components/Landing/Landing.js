@@ -8,16 +8,18 @@ import FAQs from '../FAQs';
 import PromoBanner from '../Header/components/PromoBanner';
 import TermsConditions from '../TermsConditions';
 import './Landing.scss';
+import { useTranslation } from 'react-i18next';
 
 const Landing = () => {
+    const { t } = useTranslation();
   return (
     <>
       <Header isUsedOnSecondaryPage={false} promoBanner={<PromoBanner />} />
       <main className='root'>
-        <FeaturedNFT />
-        <FeaturedNFT withMargin />
+        <FeaturedNFT title={t('nft-card.post-fight-title-legendary')} />
+        <FeaturedNFT withMargin title={t('nft-card.post-fight-title-legendary-started')} />
 
-        <Cards />
+        {/* <Cards /> */}
         <FAQs
           show={4}
           isButtonGetBack={false}
