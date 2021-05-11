@@ -267,8 +267,8 @@ const POST_FIGHT_CANELO_LEGENDARY = {
   title: 'nft-card.post-fight-title-legendary',
   rarity: 'nft-card.rarity-1',
   description: 'nft-card.post-fight-description-legendary',
-  isActive: false,
-  comingSoon: true,
+  isActive: true,
+  comingSoon: false,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
 };
@@ -285,14 +285,14 @@ const POST_FIGHT_SAUNDERS_LEGENDARY = {
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
 };
 
-const POST_FIGHT_CANELO_GOLD = {
-  type: 'NFTs.type-gold',
+const POST_FIGHT_CANELO_START = {
+  type: 'NFTs.type-legendary',
   img: imgPath + 'gold-generic.png',
-  title: 'nft-card.post-fight-title-gold-canelo',
-  rarity: 'nft-card.rarity-50',
-  description: 'nft-card.post-fight-description-gold-canelo',
-  isActive: false,
-  comingSoon: true,
+  title: 'nft-card.post-fight-title-legendary-started',
+  rarity: 'nft-card.rarity-1',
+  description: 'nft-card.post-fight-description-legendary-started',
+  isActive: true,
+  comingSoon: false,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
 };
@@ -315,8 +315,7 @@ export const NFTs = [
     title: 'NFTs.title-post-fight',
     cards: [
       POST_FIGHT_CANELO_LEGENDARY,
-      POST_FIGHT_CANELO_GOLD,
-      POST_FIGHT_SAUNDERS_SILVER
+      POST_FIGHT_CANELO_START,
     ]
   },
   {
