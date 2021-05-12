@@ -7,6 +7,7 @@ import Registration from '../Registration';
 import FeaturedNFT from '../FeaturedNFT';
 import FAQs from '../FAQs';
 import PromoBanner from '../Header/components/PromoBanner';
+import CountdownWrapper from '../CountdownWrapper';
 import TermsConditions from '../TermsConditions';
 import featuredBgRipped from '../../assets/img/featured-bg.png';
 import featuredBgBlack from '../../assets/img/featured-nft-black.png';
@@ -29,7 +30,7 @@ const Landing = () => {
           description='featured-nft.description.post-fight-highlights-started'
           bgURL={featuredBgBlack}
         />
-
+        <CountdownWrapper title={t('featured-nft.countdown.title')} />
         <Cards />
         <FAQs
           show={4}

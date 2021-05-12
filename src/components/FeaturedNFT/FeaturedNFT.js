@@ -6,16 +6,9 @@ import { FeaturedNFT_ID } from '../../const/nfts';
 import './FeaturedNFT.scss';
 import axios from 'axios';
 
-const FeaturedNFT = ({
-  withMargin,
-  title,
-  description,
-  shortDescription,
-  bgURL
-}) => {
+const FeaturedNFT = ({ withMargin, title, description, bgURL }) => {
   const { t } = useTranslation();
   const [text, setText] = useState('');
-  const [shortText, setShortText] = useState('');
   const [isRolled, setIsRolled] = useState(false);
 
   const [nftFromApi, setNft] = useState({
@@ -36,45 +29,45 @@ const FeaturedNFT = ({
     ? tokenPrice * highestBid.payment_token_contract.eth_price
     : 0;
 
-  const renderer = ({ days, hours, minutes, seconds }) => {
-    const DOUBLE_NUM = 10;
-    return (
-      <div className={'featured__time-section'}>
-        <p className='featured__time-chunk'>
-          <span className='featured__time-value'>
-            {Number(days) < DOUBLE_NUM ? `0${days}` : days}
-          </span>
-          <span className='featured__indicator'>
-            {t('featured-nft.countdown.days')}
-          </span>
-        </p>
-        <p className='featured__time-chunk'>
-          <span className='featured__time-value'>
-            {Number(hours) < DOUBLE_NUM ? `0${hours}` : hours}
-          </span>
-          <span className='featured__indicator'>
-            {t('featured-nft.countdown.hours')}
-          </span>
-        </p>
-        <p className='featured__time-chunk'>
-          <span className='featured__time-value'>
-            {Number(minutes) < DOUBLE_NUM ? `0${minutes}` : minutes}
-          </span>
-          <span className='featured__indicator'>
-            {t('featured-nft.countdown.minutes')}
-          </span>
-        </p>
-        <p className='featured__time-chunk'>
-          <span className='featured__time-value'>
-            {Number(seconds) < DOUBLE_NUM ? `0${seconds}` : seconds}
-          </span>
-          <span className='featured__indicator'>
-            {t('featured-nft.countdown.seconds')}
-          </span>
-        </p>
-      </div>
-    );
-  };
+  // const renderer = ({ days, hours, minutes, seconds }) => {
+  //   const DOUBLE_NUM = 10;
+  //   return (
+  //     <div className={'featured__time-section'}>
+  //       <p className='featured__time-chunk'>
+  //         <span className='featured__time-value'>
+  //           {Number(days) < DOUBLE_NUM ? `0${days}` : days}
+  //         </span>
+  //         <span className='featured__indicator'>
+  //           {t('featured-nft.countdown.days')}
+  //         </span>
+  //       </p>
+  //       <p className='featured__time-chunk'>
+  //         <span className='featured__time-value'>
+  //           {Number(hours) < DOUBLE_NUM ? `0${hours}` : hours}
+  //         </span>
+  //         <span className='featured__indicator'>
+  //           {t('featured-nft.countdown.hours')}
+  //         </span>
+  //       </p>
+  //       <p className='featured__time-chunk'>
+  //         <span className='featured__time-value'>
+  //           {Number(minutes) < DOUBLE_NUM ? `0${minutes}` : minutes}
+  //         </span>
+  //         <span className='featured__indicator'>
+  //           {t('featured-nft.countdown.minutes')}
+  //         </span>
+  //       </p>
+  //       <p className='featured__time-chunk'>
+  //         <span className='featured__time-value'>
+  //           {Number(seconds) < DOUBLE_NUM ? `0${seconds}` : seconds}
+  //         </span>
+  //         <span className='featured__indicator'>
+  //           {t('featured-nft.countdown.seconds')}
+  //         </span>
+  //       </p>
+  //     </div>
+  //   );
+  // };
   useEffect(() => {
     apiCall();
     const intervalTime = 1000 * 60 * 5; // 5min
@@ -107,7 +100,6 @@ const FeaturedNFT = ({
 
   useEffect(() => {
     setText(t(description));
-    setShortText(t(shortDescription));
     setIsRolled(true);
   }, [t]);
 
