@@ -103,6 +103,7 @@ const RedeemPage = () => {
 
   const onSubmit = async (values) => {
     console.log('VALUES', values);
+    console.log('api call')
     handleCloseModal();
   };
 
