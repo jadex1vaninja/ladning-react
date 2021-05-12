@@ -41,9 +41,9 @@
     "countdown": {
       "title": "Auction ending in",
       "days": "days",
-      "hours": "hrs",
-      "minutes": "mins",
-      "seconds": "secs"
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds"
     },
     "CTA": "VIEW AUCTION",
     "description": {
@@ -162,7 +162,7 @@
   },
   "register": {
     "title": "Don't miss the drop",
-    "content-text": "SIGN UP TO BE THE FIRST TO KNOW ABOUT FIGHT HIGHLIGHT NFTs AND OTHER FUTURE DAZN NFT DROPS",
+    "content-text": "Sign up to be the first to know about future DAZN NFT drops",
     "input-firstname-placeholder": "First name",
     "input-lastname-placeholder": "Last name",
     "input-email-placeholder": "Email",
