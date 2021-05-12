@@ -6,26 +6,30 @@ import { FeaturedNFT_ID } from '../../const/nfts';
 import './FeaturedNFT.scss';
 import axios from 'axios';
 
-const FeaturedNFT = ({withMargin, title}) => {
+const FeaturedNFT = ({ withMargin, title, bgURL }) => {
   const { t } = useTranslation();
-  const [nftFromApi, setNft] = useState({ orders: [{ closing_date :new Date('May 8, 2021 07:00:00 GMT-04:00')}]});
+  const [nftFromApi, setNft] = useState({
+    orders: [{ closing_date: new Date('May 8, 2021 07:00:00 GMT-04:00') }]
+  });
   // UNcoment when auction will be setted up;
   let [createdOrder, highestBid] = nftFromApi.orders;
 
   highestBid = highestBid || createdOrder;
   const paymentInfo = highestBid ? highestBid.payment_token_contract : null;
-  const tokenPrice = paymentInfo ? highestBid.base_price / 10 ** highestBid.payment_token_contract.decimals : 0;
-  const usdPrice = paymentInfo ? tokenPrice *  highestBid.payment_token_contract.usd_price : 0; 
-  const ethPrice = paymentInfo ? tokenPrice *  highestBid.payment_token_contract.eth_price : 0;
+  const tokenPrice = paymentInfo
+    ? highestBid.base_price / 10 ** highestBid.payment_token_contract.decimals
+    : 0;
+  const usdPrice = paymentInfo
+    ? tokenPrice * highestBid.payment_token_contract.usd_price
+    : 0;
+  const ethPrice = paymentInfo
+    ? tokenPrice * highestBid.payment_token_contract.eth_price
+    : 0;
 
   const renderer = ({ days, hours, minutes, seconds }) => {
     const DOUBLE_NUM = 10;
     return (
-      <div
-        className={
-          'featured__time-section' 
-        }
-      >
+      <div className={'featured__time-section'}>
         <p className='featured__time-chunk'>
           <span className='featured__time-value'>
             {Number(days) < DOUBLE_NUM ? `0${days}` : days}
@@ -74,7 +78,11 @@ const FeaturedNFT = ({withMargin, title}) => {
     setNft(response.data);
   }, []);
   return (
-    <div className='featured' id='auction'>
+    <div
+      className='featured'
+      id='auction'
+      style={{ backgroundImage: `url(${bgURL})` }}
+    >
       <div className={'featured__inner-wrapper'}>
         <div className='featured__img-wrapper'>
           <video
@@ -93,9 +101,7 @@ const FeaturedNFT = ({withMargin, title}) => {
           </video>
         </div>
         <div className='featured__content'>
-          <h6 className='featured__sub-title'>
-            {t('featured-nft.sub-title')}
-          </h6>
+          <h6 className='featured__sub-title'>{t('featured-nft.sub-title')}</h6>
           <h1 className='featured__title'> {title}</h1>
           <div className='featured__type'>
             <h2 className='featured__rarity'>{t('featured-nft.rarity')}</h2>
