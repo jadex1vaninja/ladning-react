@@ -2,7 +2,6 @@
 @import '../../variables';
 
 .tcs {
-
   .splitter {
     background-color: black;
     height: 1px;
@@ -25,17 +24,18 @@
   }
 
   &__content {
-    font-family: 'DAZNTrim-Light'!important;
+    font-family: 'DAZNTrim-Light' !important;
   }
 
-  &__paragraph {
-    font-size: 0.75rem;
-    line-height: 0.75rem;
+  &__paragraph,
+  p {
+    font-size: 0.75rem !important;
+    line-height: 0.75rem !important;
 
     @include _1024 {
-      font-size: 1.25rem;
-      line-height: 1.25rem;
-      letter-spacing: 3px;
+      font-size: 1.25rem !important;
+      line-height: 1.25rem !important;
+      letter-spacing: 3px !important;
     }
   }
 
@@ -65,7 +65,7 @@
       letter-spacing: 3px;
     }
   }
-   &__btn-wrapper {
+  &__btn-wrapper {
     display: flex;
     justify-content: center;
     padding: 3rem 0;

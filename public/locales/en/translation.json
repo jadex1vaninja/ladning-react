@@ -31,7 +31,7 @@
   },
   "featured-nft": {
     "sub-title": "FEATURED NFT",
-    "title": "KNOCKOUT – CANELO",
+    "title": "Winning Moment",
     "rarity": "1 of 1",
     "type": "Legendary Edition",
     "price": {
@@ -41,22 +41,28 @@
     "countdown": {
       "title": "Auction ending in",
       "days": "days",
-      "hours": "hrs",
-      "minutes": "mins",
-      "seconds": "secs"
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds"
     },
-    "CTA": "VIEW AUCTION"
+    "CTA": "BID NOW",
+    "description": {
+      "post-fight-highlights-ended": "Canelo Alvarez delivers a brutal right uppercut in the eighth round of his super middleweight title fight against Billy Joe Saunders on May 8, 2021 at AT&T Stadium in Arlington, TX. The devastating blow shut the eye of Saunders, forcing him to quit and ending the fight in a TKO, giving Canelo his 56th win and 38th knockout. With this victory, Canelo unified the WBO title with his WBA, WBC, and The Ring Magazine belts and solidified his place as the best pound-for-pound fighter in the sport.<br/> <br/> In addition to winning this NFT, the highest bidder will also receive signed gloves and a personalized video from Canelo's promoter Eddie Hearn! To redeem or confirm if the reward has already been redeemed, head to DAZNBoxing.io/redeem  after June 5, 2021.",
+      "post-fight-highlights-started": "Nothing but confidence for Canelo Alvarez as he makes his way to the ring to face Billy Joe Saunders in his super middleweight title fight on May 8, 2021 at AT&T Stadium in Arlington, Texas, in front of a record crowd for an indoor boxing event in the United States.<br/> <br/> This NFT features Movi Cam footage as well as fireworks, a mariachi band and dancers to introduce Canelo to the crowd of 73,126."
+    }
   },
   "NFTs": {
     "title-knockout": "Knockout",
+    "title-prefight": "Pre-Fight Drop",
     "title-tale": "Tale of the Tape",
     "title-prediction": "Prediction",
-    "title-post-fight": "Post-Fight Highlights: Coming soon",
+    "title-post-fight": "Post-Fight Highlights",
     "type-legendary": "Legendary",
     "type-gold": "Gold",
     "type-silver": "Silver",
     "type-bronze": "Bronze",
     "link-text": "View auction",
+    "read-more": "Read more",
     "nft-card": {
       "canelo-legendary-title": "Knockout -</br> Canelo",
       "canelo-legendary-description": "Canelo Alvarez has knocked out 37 of the fighters he’s faced. Get this 1-of-1 Legendary NFT representing his in-ring dominance. In addition to winning the NFT, the winning bid will receive 2 tickets to the next Canelo fight + signed fight gloves and a personalized video from Canelo! To redeem or confirm if the reward has already been redeemed, head to DAZNBoxing.io/redeem after June 5, 2021.",
@@ -120,7 +126,9 @@
         "description-two": "Pre-fight fixed price items (all Silver & Bronze editions) will open for sale at 3pm ET / 20:00 BST on Friday, May 7. This includes the Silver edition Tale of the Tape NFTs and the Bronze edition Prediction NFTs.",
         "description-three": "Knockout and Tale of the Tape items will be sold until 11pm ET on Saturday, May 8 (04:00 BST on Sunday, May 9). Prediction items will be sold until 10pm ET on Saturday, May 8 (03:00 BST on Sunday, May 9). Any bids placed on auction items during this time will extend the end time by 10 minutes in order to allow users who have been outbid a chance to increase their bids.",
         "description-four": "Note that in the event the auctions for the Prediction Series NFTs extend into the fight, the highest bid will be accepted at the start of the fight.",
-        "description-five": "Post-fight NFTs will go on sale shortly after the fight. Check back after the fight for more information."
+        "description-five": "Post-fight NFTs will go on sale shortly after the fight. Check back after the fight for more information.",
+        "description-copy": "The final two Face the Fearless NFTs are available for purchase via auction on OpenSea now. The auctions will close on Saturday, May 15, at 10pm ET / 3am BST. Any bids placed in the last 10 minutes of the auction will extend the auction by an additional 10 minutes to allow users who have been outbid a chance to increase their bids.",
+        "description-two-copy": "All other items have been sold but may be available for purchase via the secondary market on OpenSea. Check each NFT's availability by clicking on them on DAZNBoxing.io to view their ownership on OpenSea."
       },
       "fifth": {
         "title": "What are the different types of NFTs?",
@@ -154,7 +162,7 @@
   },
   "register": {
     "title": "Don't miss the drop",
-    "content-text": "SIGN UP TO BE THE FIRST TO KNOW ABOUT FIGHT HIGHLIGHT NFTs AND OTHER FUTURE DAZN NFT DROPS",
+    "content-text": "Sign up to be the first to know about future DAZN NFT drops",
     "input-firstname-placeholder": "First name",
     "input-lastname-placeholder": "Last name",
     "input-email-placeholder": "Email",
@@ -167,6 +175,8 @@
     "CTA": "Sign up here"
   },
   "terms": {
+    "more-faqs": "More FAQs",
+    "go-home": "GO HOME",
     "title": "TERMS & CONDITIONS",
     "CTA-one": "T&Cs",
     "CTA-two": "PRIVACY POLICY"
@@ -182,8 +192,8 @@
       "buy-now": "BUY NOW",
       "select-round": "SELECT ROUND"
     },
-    "round":"Round {{round}}",
-    "go-cards":"Gone to Cards",
+    "round": "Round {{round}}",
+    "go-cards": "Gone to Cards",
     "canelo-legendary-title": "Knockout -</br> Canelo",
     "canelo-legendary-description": "Canelo Alvarez has knocked out 37 of the fighters he’s faced. Get this 1-of-1 Legendary NFT representing his in-ring dominance. In addition to winning the NFT, the winning bid will receive 2 tickets to the next Canelo fight + <b>signed fight gloves</b> and a personalized video from Canelo!",
 
@@ -210,20 +220,25 @@
     "prediction-decision-description-bronze": "Limited edition NFTs predicting when the Canelo v. Saunders fight will end - in a specific round or with a judges' decision. For the winning NFTs only, receive an annual subscription to DAZN!",
     "prediction-decision-bronze-rarity": "100 Per Outcome",
 
-    "post-fight-title-legendary": "Winning <br/> moment",
-    "post-fight-description-legendary": "The Winning Moment in the May 8 fight between Canelo Alvarez and Billy Joe Saunders, forever immortalized in this NFT.",
+    "post-fight-title-legendary": "How It Ended: Canelo's Uppercut",
+    "post-fight-description-legendary": "Canelo Alvarez delivers a brutal right uppercut in the eighth round of his super middleweight title fight against Billy Joe Saunders on May 8, 2021 at AT&T Stadium in Arlington, TX. The devastating blow shut the eye of Saunders, forcing him to quit and ending the fight in a TKO, giving Canelo his 56th win and 38th knockout.With this victory, Canelo unified the WBO title with his WBA, WBC, and The Ring Magazine belts and solidified his place as the best pound-for-pound fighter in the sport. In addition to winning this NFT, the highest bidder will also receive signed gloves and a personalized video from Canelo's promoter Eddie Hearn! To redeem or confirm if the reward has already been redeemed, head to DAZNBoxing.io/redeem after June 5, 2021.",
+    
 
-    "post-fight-title-gold-canelo":"Winner’s <br/> ring walk",
-    "post-fight-title-silver-saunders":"Loser’s <br/> ring walk",
+    "post-fight-title-legendary-started": "How It Started: Canelo's Ring Walk ",
+    "post-fight-description-legendary-started": "Nothing but confidence for Canelo Alvarez as he makes his way to the ring to face Billy Joe Saunders in his super middleweight title fight on May 8, 2021 at AT&T Stadium in Arlington, Texas, in front of a record crowd for an indoor boxing event in the United States.<br/><br/> This NFT features Movi Cam footage as well as fireworks, a mariachi band and dancers to introduce Canelo to the crowd of 73,126.",
+    
+    "post-fight-title-gold-canelo": "Winner’s <br/> ring walk",
+    "post-fight-title-silver-saunders": "Loser’s <br/> ring walk",
 
-    "post-fight-description-gold-canelo":"Own the winning fighter’s ring walk, forever immortalized in this NFT.",
-    "post-fight-description-silver-saunders":"Own the losing fighter's ring walk, forever immortalized in this NFT.",
+    "post-fight-description-gold-canelo": "Own the winning fighter’s ring walk, forever immortalized in this NFT.",
+    "post-fight-description-silver-saunders": "Own the losing fighter's ring walk, forever immortalized in this NFT.",
 
     "rarity-1": "1/1",
     "rarity-50": "</br>",
     "rarity-only-50": "ONLY 50 AVAILABLE",
     "rarity-13": "13 1/1s (1 PER OUTCOME)",
     "rarity-100": "100 Per Outcome",
-    "coming-soon":"coming soon"
+    "coming-soon": "coming soon",
+    "sold-out": "Sold out"
   }
 }

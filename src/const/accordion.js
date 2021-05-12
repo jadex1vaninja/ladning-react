@@ -25,11 +25,11 @@ export const accordionInitialList = [
   {
     title: 'faq.questions.fourth.title',
     description: [
-      'faq.questions.fourth.description',
-      'faq.questions.fourth.description-two',
-      'faq.questions.fourth.description-three',
-      'faq.questions.fourth.description-four',
-      'faq.questions.fourth.description-five'
+      'faq.questions.fourth.description-copy',
+      'faq.questions.fourth.description-two-copy'
+      // 'faq.questions.fourth.description-three',
+      // 'faq.questions.fourth.description-four',
+      // 'faq.questions.fourth.description-five'
     ],
     isExpanded: false
   },
