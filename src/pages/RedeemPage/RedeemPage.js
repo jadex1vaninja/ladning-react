@@ -12,6 +12,7 @@ const RedeemPage = () => {
   const [error, setError] = useState(false);
   const [isEthereum, setIsEthereum] = useState(false);
   const [walletID, setWalletID] = useState(null);
+  const [signature, setSignature] = useState(null);
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -30,12 +31,23 @@ const RedeemPage = () => {
   // what Metamask injects as window.ethereum into each page
   const provider = new ethers.providers.Web3Provider(ETHEREUM);
   const signer = provider.getSigner();
-  const address = signer.getAddress();
+  const message = 'Open the door';
 
   const signMessage = async () => {
     try {
-      const signature = await signer.signMessage('open the door');
+      const signature = await signer.signMessage(message);
+      setSignature(signature);
       console.log('Message has been signed :', signature);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  const verifyMessage = async () => {
+    try {
+      const result = await ethers.utils.verifyMessage(message, signature);
+      const address = await signer.getAddress();
+      console.log('Verified', result === address);
     } catch (e) {
       console.error(e);
     }
@@ -118,12 +130,18 @@ const RedeemPage = () => {
           }}
           isDisabled={!!walletID}
         />
-        {/*<Button*/}
-        {/*  ctaText='Sign message'*/}
-        {/*  onClick={() => {*/}
-        {/*    signMessage();*/}
-        {/*  }}*/}
-        {/*/>*/}
+        <Button
+          ctaText='Sign message'
+          onClick={() => {
+            signMessage();
+          }}
+        />
+        <Button
+          ctaText='Verify message'
+          onClick={() => {
+            verifyMessage();
+          }}
+        />
         {walletID && (
           <Button
             ctaText='View items'
