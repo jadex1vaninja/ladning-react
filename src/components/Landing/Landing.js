@@ -13,6 +13,7 @@ import featuredBgRipped from '../../assets/img/featured-bg.png';
 import featuredBgBlack from '../../assets/img/featured-nft-black.png';
 import { RING_WALK_LINK, WINNING_MOMENT_LINK } from '../../const';
 import './Landing.scss';
+import { FeaturedNFT_ID_1, FeaturedNFT_ID_2 } from '../../const/nfts';
 
 const winningMomentVideoSrc =
   'https://storage.opensea.io/files/cddcb2cc6ec9719248caf6f9358881e9.mp4';
@@ -31,6 +32,7 @@ const Landing = () => {
           bgURL={featuredBgRipped}
           videoSource={winningMomentVideoSrc}
           link={WINNING_MOMENT_LINK}
+          featuredId={FeaturedNFT_ID_1}
         />
         <FeaturedNFT
           withMargin
@@ -39,6 +41,7 @@ const Landing = () => {
           bgURL={featuredBgBlack}
           videoSource={howItStartedVideoSrc}
           link={RING_WALK_LINK}
+          featuredId={FeaturedNFT_ID_2}
         />
         <CountdownWrapper title={t('featured-nft.countdown.title')} />
         <Cards />

@@ -204,6 +204,7 @@
     align-self: flex-start;
     position: relative;
     padding-right: 15px;
+    min-width: 300px;
 
     @include _1024 {
       padding-right: 30px;

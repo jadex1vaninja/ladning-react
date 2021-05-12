@@ -338,3 +338,6 @@ export const NFTs = [
   }
 ];
 export const FeaturedNFT_ID = LEGENDARY_KNOCKOUT_CANELO.link;
+export const FeaturedNFT_ID_1 =  POST_FIGHT_CANELO_LEGENDARY.link;
+export const FeaturedNFT_ID_2 = POST_FIGHT_CANELO_START.link;
+

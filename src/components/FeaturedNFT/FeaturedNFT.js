@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Countdown from 'react-countdown';
 import { API_URL, CONTRACT_ADDRESS, imgPath, LINK_TO_LIVE } from '../../const';
-import { FeaturedNFT_ID } from '../../const/nfts';
+// import { FeaturedNFT_ID } from '../../const/nfts';
 import './FeaturedNFT.scss';
 import axios from 'axios';
 
@@ -12,6 +12,7 @@ const FeaturedNFT = ({
   description,
   bgURL,
   videoSource,
+  FeaturedNFT_ID,
   link
 }) => {
   const { t } = useTranslation();
@@ -147,12 +148,12 @@ const FeaturedNFT = ({
               <h2 className='featured__price-title'>
                 {t('featured-nft.price.title')}
               </h2>
-              <p className='featured__price-value'>4.862</p>
+              <p className='featured__price-value'>{ethPrice}</p>
               <p className='featured__price-sign'>
                 {t('featured-nft.price.sign')}
               </p>
               <p>
-                <small class='featured__price-dollar'>$18888.43</small>
+                <small class='featured__price-dollar'>${usdPrice}</small>
               </p>
             </div>
             <div className='featured__countdown-block'>
