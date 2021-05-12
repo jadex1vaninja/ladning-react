@@ -39,7 +39,7 @@
       "sign": "ETH"
     },
     "countdown": {
-      "title": "Auction ended in",
+      "title": "Auction ending in",
       "days": "days",
       "hours": "hrs",
       "minutes": "mins",
