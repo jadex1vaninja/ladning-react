@@ -159,9 +159,10 @@ const FeaturedNFT = ({
             <div className='featured__countdown-block'>
               {isRolled ? (
                 <>
-                  <h2 className='featured__countdown-title'>
-                    {sliceText(text)}
-                  </h2>
+                  <h2
+                    className='featured__countdown-title'
+                    dangerouslySetInnerHTML={{ __html: sliceText(text) }}
+                  ></h2>
                   <p
                     className='featured__countdown-link'
                     onClick={showFullText}
@@ -171,7 +172,11 @@ const FeaturedNFT = ({
                 </>
               ) : (
                 <>
-                  <h2 className='featured__countdown-title'>{text}</h2>
+                  <h2
+                    className='featured__countdown-title'
+                    dangerouslySetInnerHTML={{ __html: text }}
+                  >
+                  </h2>
                   <p
                     className='featured__countdown-link'
                     onClick={showShortText}
