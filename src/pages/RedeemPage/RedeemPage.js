@@ -106,18 +106,18 @@ const RedeemPage = () => {
     handleCloseModal();
   };
 
-  return (
-    <h1
-      style={{
-        color: 'white',
-        fontSsize: '48px',
-        textAlign: 'center',
-        paddingTop: '100px'
-      }}
-    >
-      Coming Soon
-    </h1>
-  );
+  // return (
+  //   <h1
+  //     style={{
+  //       color: 'white',
+  //       fontSsize: '48px',
+  //       textAlign: 'center',
+  //       paddingTop: '100px'
+  //     }}
+  //   >
+  //     Coming Soon
+  //   </h1>
+  // );
 
   return (
     <>
