@@ -22,10 +22,11 @@ const RedeemPage = () => {
   //     console.error(e);
   //   }
   // };
-  const API = `https://rinkeby-api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=20&owner=`;
+  const collectionId = 'dazn-x-canelo-saunders';
+  const API = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=20&collection=${collectionId}&owner=`;
   const [error, setError] = useState(false);
   const [isEthereum, setIsEthereum] = useState(false);
-  const [walletID, setWalletID] = useState(null);
+  const [walletID, setWalletID] = useState(ETHEREUM.selectedAddress);
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -107,6 +108,10 @@ const RedeemPage = () => {
     handleCloseModal();
   };
 
+  useEffect(() => {
+    walletID && fetchData();
+  }, [walletID]);
+
   // return (
   //   <h1
   //     style={{
@@ -128,13 +133,13 @@ const RedeemPage = () => {
           onClick={connectWallet}
           isDisabled={!!walletID}
         />
-        {walletID && (
+        {/* {walletID && (
           <Button
             ctaText='View items'
             onClick={fetchData}
             isDisabled={!!data.length}
           />
-        )}
+        )} */}
       </Header>
       <Redeem
         data={data}

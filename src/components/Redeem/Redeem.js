@@ -20,6 +20,7 @@ const Redeem = ({
   onSubmit,
   closeErrorNotification
 }) => {
+  console.log(data);
   return (
     <div className='redeem-root'>
       {!isEthereum && (
@@ -43,7 +44,7 @@ const Redeem = ({
 
       <div className='redeem-root__preview'>
         <div className='redeem-root__preview-header'>
-          <p className='redeem-root__preview-header-text'>Contact address</p>
+          <p className='redeem-root__preview-header-text'>NFT</p>
           <p className='redeem-root__preview-header-text'>Token Id</p>
         </div>
         {loading ? (
@@ -52,7 +53,12 @@ const Redeem = ({
           <>
             {Boolean(data.length) &&
               data.map((item) => (
-                <Item key={item.id} id={item.id} name={item.name} />
+                <Item
+                  key={item.id}
+                  id={item.id}
+                  link={item.permalink}
+                  name={item.name}
+                />
               ))}
           </>
         )}

@@ -20,13 +20,16 @@
 
   &__name {
 
-    h2 {
+    h2,a {
       color: $brand-white;
       font-size: 30px;
       letter-spacing: 1px;
       line-height: 30px;
       font-family: 'DAZNTrim-Bold';
       text-transform: uppercase;
+      :hover{
+        color: $brand-yellow;
+      }
     }
   }
 
