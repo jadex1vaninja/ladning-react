@@ -6,8 +6,18 @@ import { FeaturedNFT_ID } from '../../const/nfts';
 import './FeaturedNFT.scss';
 import axios from 'axios';
 
-const FeaturedNFT = ({ withMargin, title, bgURL }) => {
+const FeaturedNFT = ({
+  withMargin,
+  title,
+  description,
+  shortDescription,
+  bgURL
+}) => {
   const { t } = useTranslation();
+  const [text, setText] = useState('');
+  const [shortText, setShortText] = useState('');
+  const [isRolled, setIsRolled] = useState(false);
+
   const [nftFromApi, setNft] = useState({
     orders: [{ closing_date: new Date('May 8, 2021 07:00:00 GMT-04:00') }]
   });
@@ -77,6 +87,30 @@ const FeaturedNFT = ({ withMargin, title, bgURL }) => {
     );
     setNft(response.data);
   }, []);
+
+  const MAX_SYMBOLS = 140;
+
+  const sliceText = (string) => {
+    return `${string.slice(0, MAX_SYMBOLS)}...`;
+  };
+
+  const showFullText = () => {
+    setIsRolled(false);
+    setText((prevState) => {
+      return prevState;
+    });
+  };
+
+  const showShortText = () => {
+    setIsRolled(true);
+  };
+
+  useEffect(() => {
+    setText(t(description));
+    setShortText(t(shortDescription));
+    setIsRolled(true);
+  }, [t]);
+
   return (
     <div
       className='featured'
@@ -123,14 +157,37 @@ const FeaturedNFT = ({ withMargin, title, bgURL }) => {
               </p>
             </div>
             <div className='featured__countdown-block'>
-              <h2 className='featured__countdown-title'>
-                {t('featured-nft.countdown.title')}
-              </h2>
-              <Countdown
-                date={new Date('May 8, 2021 23:00:00 GMT-04:00')}
-                daysInHours={true}
-                renderer={renderer}
-              />
+              {isRolled ? (
+                <>
+                  <h2 className='featured__countdown-title'>
+                    {sliceText(text)}
+                  </h2>
+                  <p
+                    className='featured__countdown-link'
+                    onClick={showFullText}
+                  >
+                    Read more
+                  </p>
+                </>
+              ) : (
+                <>
+                  <h2 className='featured__countdown-title'>{text}</h2>
+                  <p
+                    className='featured__countdown-link'
+                    onClick={showShortText}
+                  >
+                    Read less
+                  </p>
+                </>
+              )}
+              {/*<h2 className='featured__countdown-title'>*/}
+              {/*  {t('featured-nft.countdown.title')}*/}
+              {/*</h2>*/}
+              {/*<Countdown*/}
+              {/*  date={new Date('May 8, 2021 23:00:00 GMT-04:00')}*/}
+              {/*  daysInHours={true}*/}
+              {/*  renderer={renderer}*/}
+              {/*/>*/}
             </div>
           </div>
           <div className='featured__CTA-wrap'>

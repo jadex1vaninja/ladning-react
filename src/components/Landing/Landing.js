@@ -20,11 +20,13 @@ const Landing = () => {
       <main className='root'>
         <FeaturedNFT
           title={t('nft-card.post-fight-title-legendary')}
+          description='featured-nft.description.post-fight-highlights-ended'
           bgURL={featuredBgRipped}
         />
         <FeaturedNFT
           withMargin
           title={t('nft-card.post-fight-title-legendary-started')}
+          description='featured-nft.description.post-fight-highlights-started'
           bgURL={featuredBgBlack}
         />
 

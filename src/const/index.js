@@ -9,8 +9,10 @@ export const imgPath = process.env.PUBLIC_URL + '/assets/img/';
 export const vidPath = process.env.PUBLIC_URL + '/assets/video/';
 export const CONTRACT_ADDRESS = '0x495f947276749ce646f68ac8c248420045cb7b5e';
 export const LINK_TO_LIVE = `https://opensea.io/assets/${CONTRACT_ADDRESS}/`;
-export const DAZN_PUBLIC_LINK= "https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT";
-export const OPENSEA_COLLECTION_LINK="https://opensea.io/collection/dazn-x-canelo-saunders";
+export const DAZN_PUBLIC_LINK =
+  'https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT';
+export const OPENSEA_COLLECTION_LINK =
+  'https://opensea.io/assets/dazn-x-canelo-saunders?search[resultModel]=ASSETS&search[toggles][0]=ON_AUCTION';
 
 export const NFTS = [
   {

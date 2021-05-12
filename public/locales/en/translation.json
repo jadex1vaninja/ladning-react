@@ -45,7 +45,11 @@
       "minutes": "mins",
       "seconds": "secs"
     },
-    "CTA": "VIEW AUCTION"
+    "CTA": "VIEW AUCTION",
+    "description": {
+      "post-fight-highlights-ended": "Canelo Alvarez delivers a brutal right uppercut in the eighth round of his super middleweight title fight against Billy Joe Saunders on May 8, 2021 at AT&T Stadium in Arlington, TX. The devastating blow shut the eye of Saunders, forcing him to quit and ending the fight in a TKO, giving Canelo his 56th win and 38th knockout. With this victory, Canelo unified the WBO title with his WBA, WBC, and The Ring Magazine belts and solidified his place as the best pound-for-pound fighter in the sport. In addition to winning this NFT, the highest bidder will also receive signed gloves and a personalized video from Canelo's promoter Eddie Hearn! To redeem or confirm if the reward has already been redeemed, head to [www.daznboxing.io/redeem](https://www.daznboxing.io/redeem) after June 5, 2021.",
+      "post-fight-highlights-started": "Nothing but confidence for Canelo Alvarez as he makes his way to the ring to face Billy Joe Saunders in his super middleweight title fight on May 8, 2021 at AT&T Stadium in Arlington, Texas, in front of a record crowd for an indoor boxing event in the United States. This NFT features 8k camera footage as well as fireworks, a mariachi band and dancers to introduce Canelo to the crowd of 73,126."
+    }
   },
   "NFTs": {
     "title-knockout": "Knockout",
@@ -122,7 +126,9 @@
         "description-two": "Pre-fight fixed price items (all Silver & Bronze editions) will open for sale at 3pm ET / 20:00 BST on Friday, May 7. This includes the Silver edition Tale of the Tape NFTs and the Bronze edition Prediction NFTs.",
         "description-three": "Knockout and Tale of the Tape items will be sold until 11pm ET on Saturday, May 8 (04:00 BST on Sunday, May 9). Prediction items will be sold until 10pm ET on Saturday, May 8 (03:00 BST on Sunday, May 9). Any bids placed on auction items during this time will extend the end time by 10 minutes in order to allow users who have been outbid a chance to increase their bids.",
         "description-four": "Note that in the event the auctions for the Prediction Series NFTs extend into the fight, the highest bid will be accepted at the start of the fight.",
-        "description-five": "Post-fight NFTs will go on sale shortly after the fight. Check back after the fight for more information."
+        "description-five": "Post-fight NFTs will go on sale shortly after the fight. Check back after the fight for more information.",
+        "description-copy": "The final two Face the Fearless NFTs are available for purchase via auction on OpenSea now. The auctions will close on Saturday, May 15, at 10pm ET / 3am BST. Any bids placed in the last 10 minutes of the auction will extend the auction by an additional 10 minutes to allow users who have been outbid a chance to increase their bids.",
+        "description-two-copy": "All other items have been sold but may be available for purchase via the secondary market on OpenSea. Check each NFT's availability by clicking on them on DAZNBoxing.io to view their ownership on OpenSea."
       },
       "fifth": {
         "title": "What are the different types of NFTs?",
