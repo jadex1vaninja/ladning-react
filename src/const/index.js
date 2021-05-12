@@ -13,6 +13,10 @@ export const DAZN_PUBLIC_LINK =
   'https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT';
 export const OPENSEA_COLLECTION_LINK =
   'https://opensea.io/assets/dazn-x-canelo-saunders?search[resultModel]=ASSETS&search[toggles][0]=ON_AUCTION';
+export const RING_WALK_LINK =
+  'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506802757146247169';
+export const WINNING_MOMENT_LINK =
+  'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506803856657874945';
 
 export const NFTS = [
   {

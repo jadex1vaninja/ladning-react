@@ -6,7 +6,14 @@ import { FeaturedNFT_ID } from '../../const/nfts';
 import './FeaturedNFT.scss';
 import axios from 'axios';
 
-const FeaturedNFT = ({ withMargin, title, description, bgURL }) => {
+const FeaturedNFT = ({
+  withMargin,
+  title,
+  description,
+  bgURL,
+  videoSource,
+  link
+}) => {
   const { t } = useTranslation();
   const [text, setText] = useState('');
   const [isRolled, setIsRolled] = useState(false);
@@ -119,7 +126,7 @@ const FeaturedNFT = ({ withMargin, title, description, bgURL }) => {
             autoplay=''
             poster={imgPath + 'Legendary_2_Knockout_Canelo_1_1.png'}
           >
-            <source src='https://storage.opensea.io/files/9dde6c08550efb852ee28ccded80ad3b.mp4' />
+            <source src={videoSource} />
             <img
               src={imgPath + 'Legendary_2_Knockout_Canelo_1_1.png'}
               alt='card'
@@ -185,7 +192,8 @@ const FeaturedNFT = ({ withMargin, title, description, bgURL }) => {
           <div className='featured__CTA-wrap'>
             <button
               onClick={() => {
-                window.open(LINK_TO_LIVE + FeaturedNFT_ID, '_blank');
+                // window.open(LINK_TO_LIVE + FeaturedNFT_ID, '_blank');
+                window.open(link, '_blank');
               }}
               className='featured__CTA'
             >

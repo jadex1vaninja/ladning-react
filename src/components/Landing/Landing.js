@@ -11,7 +11,13 @@ import CountdownWrapper from '../CountdownWrapper';
 import TermsConditions from '../TermsConditions';
 import featuredBgRipped from '../../assets/img/featured-bg.png';
 import featuredBgBlack from '../../assets/img/featured-nft-black.png';
+import { RING_WALK_LINK, WINNING_MOMENT_LINK } from '../../const';
 import './Landing.scss';
+
+const winningMomentVideoSrc =
+  'https://storage.opensea.io/files/cddcb2cc6ec9719248caf6f9358881e9.mp4';
+const howItStartedVideoSrc =
+  'https://storage.opensea.io/files/6a01f47ea67d96cb2d302b4de628005c.mp4';
 
 const Landing = () => {
   const { t } = useTranslation();
@@ -23,12 +29,16 @@ const Landing = () => {
           title={t('nft-card.post-fight-title-legendary')}
           description='featured-nft.description.post-fight-highlights-ended'
           bgURL={featuredBgRipped}
+          videoSource={winningMomentVideoSrc}
+          link={WINNING_MOMENT_LINK}
         />
         <FeaturedNFT
           withMargin
           title={t('nft-card.post-fight-title-legendary-started')}
           description='featured-nft.description.post-fight-highlights-started'
           bgURL={featuredBgBlack}
+          videoSource={howItStartedVideoSrc}
+          link={RING_WALK_LINK}
         />
         <CountdownWrapper title={t('featured-nft.countdown.title')} />
         <Cards />
