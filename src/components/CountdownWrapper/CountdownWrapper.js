@@ -50,7 +50,7 @@ const CountdownWrapper = ({ title }) => {
     <div className='countdown-wrapper'>
       <h2 className='countdown-wrapper__title'>{title}</h2>
       <Countdown
-        date={new Date('May 15, 2021 23:00:00 GMT-04:00')}
+        date={new Date('May 15, 2021 22:00:00 GMT-04:00')}
         daysInHours={true}
         renderer={renderer}
       />
