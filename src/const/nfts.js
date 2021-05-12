@@ -273,6 +273,7 @@ const POST_FIGHT_CANELO_LEGENDARY = {
   isActive: true,
   comingSoon: false,
   cta: 'nft-card.cta.bin-now',
+  link:"69208789200216951769366063301950903931594320778910349241631506803856657874945",
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'
 };
@@ -297,6 +298,7 @@ const POST_FIGHT_CANELO_START = {
   description: 'nft-card.post-fight-description-legendary-started',
   isActive: true,
   cta: 'nft-card.cta.bin-now',
+  link:"69208789200216951769366063301950903931594320778910349241631506802757146247169",
   comingSoon: false,
   collectionLink:
     'https://opensea.io/assets/dazn-x-canelo-saunders?search[stringTraits][0][name]=Type&search[stringTraits][0][values][0]=Bronze'

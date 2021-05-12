@@ -12,7 +12,7 @@ const FeaturedNFT = ({
   description,
   bgURL,
   videoSource,
-  FeaturedNFT_ID,
+  featuredId,
   link
 }) => {
   const { t } = useTranslation();
@@ -84,8 +84,9 @@ const FeaturedNFT = ({
   }, []);
   const apiCall = useCallback(async () => {
     const response = await axios.get(
-      `${API_URL}/asset/${CONTRACT_ADDRESS}/${FeaturedNFT_ID}`
+      `${API_URL}/asset/${CONTRACT_ADDRESS}/${featuredId}`
     );
+    console.log(response);
     setNft(response.data);
   }, []);
 
@@ -153,7 +154,7 @@ const FeaturedNFT = ({
                 {t('featured-nft.price.sign')}
               </p>
               <p>
-                <small class='featured__price-dollar'>${usdPrice}</small>
+                <small class='featured__price-dollar'>${usdPrice.toFixed(2)}</small>
               </p>
             </div>
             <div className='featured__countdown-block'>
@@ -175,8 +176,7 @@ const FeaturedNFT = ({
                   <h2
                     className='featured__countdown-title'
                     dangerouslySetInnerHTML={{ __html: text }}
-                  >
-                  </h2>
+                  ></h2>
                   <p
                     className='featured__countdown-link'
                     onClick={showShortText}
