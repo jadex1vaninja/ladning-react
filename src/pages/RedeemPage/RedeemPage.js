@@ -26,6 +26,7 @@ const RedeemPage = () => {
   const API_OWNER = `${API_ALL}&owner=`;
   const CODE_GENERATOR = Math.floor(Math.random() * 1e16);
 
+  const [provider, setProvider] = useState(null);
   const [error, setError] = useState(false);
   const [isEthereum, setIsEthereum] = useState(false);
   const [walletID, setWalletID] = useState('');
@@ -48,12 +49,11 @@ const RedeemPage = () => {
   });
   // A Web3Provider wraps a standard Web3 provider, which is
   // what Metamask injects as window.ethereum into each page
-  let provider = null;
   let signer;
   if (provider) signer = provider.getSigner();
 
   useEffect(() => {
-    ETHEREUM && (provider = new ethers.providers.Web3Provider(ETHEREUM));
+    ETHEREUM && setProvider(new ethers.providers.Web3Provider(ETHEREUM));
     ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
     ETHEREUM && setWalletID(ETHEREUM.selectedAddress);
 

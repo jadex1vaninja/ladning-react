@@ -80,7 +80,7 @@ const Redeem = ({
                   openModal={showModalHandler}
                   addExtraToFormState={addExtraToFormState}
                   signMessage={signMessage}
-                  hasButton={false}
+                  hasButton
                 />
               ))}
           </>
