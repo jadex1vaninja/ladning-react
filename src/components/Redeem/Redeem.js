@@ -12,6 +12,7 @@ const Redeem = ({
   error,
   loading,
   data,
+  dataAll,
   showModalHandler,
   closeModalHandler,
   showModal,
@@ -51,8 +52,23 @@ const Redeem = ({
           <Spinner />
         ) : (
           <>
+          Your nfts
             {Boolean(data.length) &&
               data.map((item) => (
+                <Item
+                  key={item.id}
+                  id={item.id}
+                  link={item.permalink}
+                  name={item.name}
+                  openModal={showModalHandler}
+                  addExtraToFormState={addExtraToFormState}
+                  signMessage={signMessage}
+                />
+              ))}
+            <br></br>
+            Nfts
+            {Boolean(dataAll.length) &&
+              dataAll.map((item) => (
                 <Item
                   key={item.id}
                   id={item.id}
@@ -83,7 +99,7 @@ const Redeem = ({
               closeModalHandler={closeModalHandler}
             />
           ) : (
-            <div>Sign transaction please</div>
+            <div>Sign transaction please: Secret Code:$</div>
           )}
         </Modal.Body>
       </Modal>

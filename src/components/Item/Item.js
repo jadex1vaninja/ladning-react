@@ -21,10 +21,10 @@ const Item = ({ id, name,link, openModal, signMessage }) => {
             onClick={() => {
               openModal();
               signMessage()
-                .then(() => setIsRedeemed(true))
+                .then(() => {setIsRedeemed(true)})
                 .catch(() => setIsRedeemed(false));
             }}
-            isDisabled={!!isRedeemed}
+            // isDisabled={!!isRedeemed}
           />
         </div>
         <p>{id}</p>

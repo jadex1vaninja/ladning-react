@@ -22,7 +22,9 @@ const RedeemPage = () => {
   //   }
   // };
   const collectionId = 'dazn-x-canelo-saunders';
-  const API = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=20&collection=${collectionId}&owner=`;
+  const API_ALL = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=${collectionId}`;
+  const API_OWNER = `${API_ALL}&owner=`;
+
   const [error, setError] = useState(false);
   const [isEthereum, setIsEthereum] = useState(false);
   const [walletID, setWalletID] = useState(ETHEREUM.selectedAddress);
@@ -34,6 +36,8 @@ const RedeemPage = () => {
   const [isSigned, setIsSigned] = useState(false);
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
+  const [dataAll, setDataAll] = useState([]);
+
   const [showModal, setShowModal] = useState(false);
   const [initialFormState, setInitialFormState] = useState({
     name: '',
@@ -59,9 +63,11 @@ const RedeemPage = () => {
       setIsSigned(true);
       console.log('Message has been signed :', signature);
     } catch (e) {
+      console.log('error')
       console.error(e);
       setIsSigned(false);
-    }
+      throw new Error("test");
+    };
   };
 
   const verifyMessage = async () => {
@@ -81,9 +87,21 @@ const RedeemPage = () => {
   const fetchData = async (id) => {
     setLoading(true);
     try {
-      const response = await fetch(`${API + id}`);
+      const response = await fetch(`${API_OWNER + id}`);
       const { assets } = await response.json();
       setData(assets);
+    } catch (e) {
+      console.error('Ошибка:', e);
+    } finally {
+      setLoading(false);
+    }
+  };
+  const fetchDataAll= async (id) => {
+    setLoading(true);
+    try {
+      const response = await fetch(`${API_ALL}`);
+      const { assets } = await response.json();
+      setDataAll(assets);
     } catch (e) {
       console.error('Ошибка:', e);
     } finally {
@@ -120,6 +138,7 @@ const RedeemPage = () => {
 
   useEffect(() => {
     ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
+    fetchDataAll();
   }, []);
 
   const handleShowModal = () => setShowModal(true);
@@ -186,6 +205,7 @@ const RedeemPage = () => {
       </Header>
       <Redeem
         data={data}
+        dataAll={dataAll}
         initialFormState={initialFormState}
         error={error}
         closeModalHandler={handleCloseModal}
