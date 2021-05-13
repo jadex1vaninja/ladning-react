@@ -13,6 +13,7 @@ const RedeemPage = () => {
   const [isEthereum, setIsEthereum] = useState(false);
   const [walletID, setWalletID] = useState(null);
   const [signature, setSignature] = useState(null);
+  const [isSigned, setIsSigned] = useState(false);
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -31,21 +32,23 @@ const RedeemPage = () => {
   // what Metamask injects as window.ethereum into each page
   const provider = new ethers.providers.Web3Provider(ETHEREUM);
   const signer = provider.getSigner();
-  const message = 'Open the door';
+  const MESSAGE = `${Date.now()}`;
 
   const signMessage = async () => {
     try {
-      const signature = await signer.signMessage(message);
+      const signature = await signer.signMessage(MESSAGE);
       setSignature(signature);
+      setIsSigned(true);
       console.log('Message has been signed :', signature);
     } catch (e) {
       console.error(e);
+      setIsSigned(false);
     }
   };
 
   const verifyMessage = async () => {
     try {
-      const result = await ethers.utils.verifyMessage(message, signature);
+      const result = await ethers.utils.verifyMessage(MESSAGE, signature);
       const address = await signer.getAddress();
       console.log('Verified', result === address);
     } catch (e) {
@@ -57,10 +60,10 @@ const RedeemPage = () => {
     setError(false);
   };
 
-  const fetchData = async () => {
+  const fetchData = async (id) => {
     setLoading(true);
     try {
-      const response = await fetch(`${API + walletID}`);
+      const response = await fetch(`${API + id}`);
       const { assets } = await response.json();
       setData(assets);
     } catch (e) {
@@ -85,6 +88,7 @@ const RedeemPage = () => {
           result: [ID]
         } = accounts;
         setWalletID(ID);
+        return ID;
       }
       console.log('WALLET HAS BEEN CONNECTED');
     } catch (e) {
@@ -101,19 +105,23 @@ const RedeemPage = () => {
   }, []);
 
   const handleShowModal = () => setShowModal(true);
-  const handleCloseModal = () => setShowModal(false);
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setIsSigned(false);
+  };
 
-  const handleClickedID = (id) => {
-    const item = data.find((item) => item.id === id);
+  const addExtraToFormState = () => {
     setInitialFormState((prevState) => ({
       ...prevState,
       walletID,
-      itemId: item.id,
-      itemName: item.name,
-      itemDescription: item.description,
-      itemLink: item.permalink
+      signature,
+      message: MESSAGE
     }));
   };
+
+  useEffect(() => {
+    addExtraToFormState();
+  }, [signature]);
 
   const onSubmit = async (values) => {
     console.log('VALUES', values);
@@ -126,29 +134,10 @@ const RedeemPage = () => {
         <Button
           ctaText='Connect Wallet'
           onClick={() => {
-            connectWallet();
+            connectWallet().then((id) => fetchData(id));
           }}
           isDisabled={!!walletID}
         />
-        <Button
-          ctaText='Sign message'
-          onClick={() => {
-            signMessage();
-          }}
-        />
-        <Button
-          ctaText='Verify message'
-          onClick={() => {
-            verifyMessage();
-          }}
-        />
-        {walletID && (
-          <Button
-            ctaText='View items'
-            onClick={fetchData}
-            isDisabled={!!data.length}
-          />
-        )}
       </Header>
       <Redeem
         data={data}
@@ -158,10 +147,12 @@ const RedeemPage = () => {
         showModalHandler={handleShowModal}
         showModal={showModal}
         onSubmit={onSubmit}
-        handleClickedID={handleClickedID}
+        addExtraToFormState={addExtraToFormState}
         isEthereum={isEthereum}
         loading={loading}
         closeErrorNotification={closeErrorNotification}
+        isSigned={isSigned}
+        signMessage={signMessage}
       />
       <Footer isUsedOnSecondaryPage />
     </>

@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Button from '../Button';
 import './Item.scss';
 
-const Item = ({ id, name }) => {
+const Item = ({ id, name, openModal, signMessage }) => {
+  const [isRedeemed, setIsRedeemed] = useState(false);
   return (
     <div className='item'>
       <div className='item__name'>
         <h2>{name}</h2>
       </div>
       <div className='item__description'>
+        <div className='item__btn-wrapper'>
+          <Button
+            ctaText='Redeem'
+            onClick={() => {
+              openModal();
+              signMessage()
+                .then(() => setIsRedeemed(true))
+                .catch(() => setIsRedeemed(false));
+            }}
+            isDisabled={!!isRedeemed}
+          />
+        </div>
         <p>{id}</p>
       </div>
     </div>
