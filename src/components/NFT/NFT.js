@@ -62,7 +62,7 @@ const NFT = ({
 
           {isSoldOut && (
             <div className='cards-root__soldout-block'>
-              {t('') || 'SOLD OUT'}
+              {t('nft-card.sold-out')}
             </div>
           )}
           <div className='cards-root__content-wrapper'>

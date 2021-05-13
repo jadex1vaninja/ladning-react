@@ -45,7 +45,13 @@
       "minutes": "mins",
       "seconds": "secs"
     },
-    "CTA": "Ver la subasta"
+    "CTA": "Ver la subasta",
+    "description": {
+      "post-fight-highlights-ended": "Confianza pura de Canelo Álvarez mientras avanza hacia el cuadrilátero para enfrentarse a Billy Joe Saunders en su pelea por el título del peso súper medio del 8 de mayo de 2021 en el AT&T Stadium de Arlington, Texas, frente a un público que impuso una nueva marca de asistencia para un evento de box en interiores en Estados Unidos. Este NFT incluye material en video tomado con cámara 8K, así como fuegos artificiales, mariachis y ballet folclórico de la presentación de Canelo ante el público de 73,126 personas.",
+      "post-fight-highlights-started": "Canelo Álvarez lanza un brutal gancho de derecha en el octavo asalto de su combate con Billy Joe Saunders por el título de peso súper medio el 8 de mayo de 2021 en el AT&T Stadium de Arlington, Texas. El devastador impacto le cerró el ojo a Saunders y lo obligó a retirarse y terminar la pelea con un nocáut técnico, con el que Canelo obtuvo su 56.ª victoria y su 38.º nocáut. Con este triunfo, Canelo unificó el título de la OMB con sus cinturones de la AMB, el CMB y la revista The Ring, y reafirmó su lugar como el mejor peleador libra por libra del deporte. Además de ganar este NFT, ¡la persona que presente la puja más alta también recibirá guantes firmados y un video personalizado Eddie Hearn, el promotor de Canelo! Para canjear o revisar si ya se canjeó la recompensa, visita DAZNBoxing.io/Redeem a partir del 5 de junio de 2021."
+    },
+    "read-more": "Lee mas",
+    "read-less": "Leer menos"
   },
   "NFTs": {
     "title-knockout": "Nocaut",
@@ -216,7 +222,7 @@
     "prediction-decision-title-bronze": "Predicción: Alguno de los 12 asaltos + decisión",
     "prediction-decision-description-bronze": "NFT de edición limitada para predecir si la pelea entre Canelo y Saunders terminará en un asalto específico o con la decisión de los jueces. ¡Solo las NFT ganadoras recibirán una suscripción anual a DAZN!",
 
-    "post-fight-title-legendary": "Momento <br/> ganador",
+    "post-fight-title-legendary": " ASÍ TERMINÓ: EL GANCHO DE CANELO",
     "post-fight-description-legendary": "El momento ganador el 8 de mayo en la pelea de Canelo Alvarez y Billy Joe Saunders, inmortalizado para siempre en este NFT",
 
     "post-fight-title-gold-canelo": "Entrada <br/> del ganador",
@@ -225,13 +231,15 @@
     "post-fight-description-gold-canelo": "Obtén la entrada del peleador ganador hacia el cuadrilátero, inmortalizado para siempre en este NFT.",
     "post-fight-description-silver-saunders": "Obtén la entrada del peleador perdedor hacia el cuadrilátero, inmortalizado para siempre en este NFT.",
 
+    "post-fight-title-legendary-started": "ASÍ EMPEZÓ: LA CAMINATA AL CUADRILÁTERO DE CANELO",
+    "post-fight-description-legendary-started": "Canelo Álvarez lanza un brutal gancho de derecha en el octavo asalto de su combate con Billy Joe Saunders por el título de peso súper medio el 8 de mayo de 2021 en el AT&T Stadium de Arlington, Texas. El devastador impacto le cerró el ojo a Saunders y lo obligó a retirarse y terminar la pelea con un nocáut técnico, con el que Canelo obtuvo su 56.ª victoria y su 38.º nocáut. Con este triunfo, Canelo unificó el título de la OMB con sus cinturones de la AMB, el CMB y la revista The Ring, y reafirmó su lugar como el mejor peleador libra por libra del deporte. Además de ganar este NFT, ¡la persona que presente la puja más alta también recibirá guantes firmados y un video personalizado Eddie Hearn, el promotor de Canelo! Para canjear o revisar si ya se canjeó la recompensa, visita DAZNBoxing.io/Redeem a partir del 5 de junio de 2021.",
+
     "rarity-1": "1/1",
     "rarity-50": "50",
     "rarity-13": "13 (1 por resultado)",
     "rarity-100": "100 por resultado",
     "rarity-only-50": "50",
     "coming-soon": "Viene pronto",
-    "sold-out": "Liquidado"
-
+    "sold-out": "Agotado"
   }
 }

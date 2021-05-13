@@ -154,7 +154,9 @@ const FeaturedNFT = ({
                 {t('featured-nft.price.sign')}
               </p>
               <p>
-                <small class='featured__price-dollar'>${usdPrice.toFixed(2)}</small>
+                <small class='featured__price-dollar'>
+                  ${usdPrice.toFixed(2)}
+                </small>
               </p>
             </div>
             <div className='featured__countdown-block'>
@@ -163,12 +165,12 @@ const FeaturedNFT = ({
                   <h2
                     className='featured__countdown-title'
                     dangerouslySetInnerHTML={{ __html: sliceText(text) }}
-                  ></h2>
+                  />
                   <p
                     className='featured__countdown-link'
                     onClick={showFullText}
                   >
-                    Read more
+                    {t('featured-nft.read-more')}
                   </p>
                 </>
               ) : (
@@ -176,12 +178,12 @@ const FeaturedNFT = ({
                   <h2
                     className='featured__countdown-title'
                     dangerouslySetInnerHTML={{ __html: text }}
-                  ></h2>
+                  />
                   <p
                     className='featured__countdown-link'
                     onClick={showShortText}
                   >
-                    Read less
+                    {t('featured-nft.read-less')}
                   </p>
                 </>
               )}

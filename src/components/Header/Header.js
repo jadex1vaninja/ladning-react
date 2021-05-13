@@ -49,10 +49,10 @@ const Header = ({
           <h1 className='header__secondary-title'>{secondaryTitle}</h1>
           <ul
             className='header__language-list-secondary'
-            style={{ visibility: 'hidden' }}
+            // style={{ visibility: 'hidden' }}
           >
             <li
-              style={{ visibility: 'hidden' }}
+              // style={{ visibility: 'hidden' }}
               className={`header__button${language === 'en' ? ' active' : ''}`}
               onClick={() => {
                 changeLanguage('en');
@@ -62,7 +62,7 @@ const Header = ({
               En
             </li>
             <li
-              style={{ visibility: 'hidden' }}
+              // style={{ visibility: 'hidden' }}
               className={`header__button${language === 'es' ? ' active' : ''}`}
               onClick={() => {
                 changeLanguage('es');
@@ -113,7 +113,7 @@ const Header = ({
           <div className='header__terms-language'>
             <ul className='header__language-list'>
               <li
-                style={{ visibility: 'hidden' }}
+                // style={{ visibility: 'hidden' }}
                 className={`header__button${
                   language === 'en' ? ' active' : ''
                 }`}
@@ -125,7 +125,7 @@ const Header = ({
                 En
               </li>
               <li
-                style={{ visibility: 'hidden' }}
+                // style={{ visibility: 'hidden' }}
                 className={`header__button${
                   language === 'es' ? ' active' : ''
                 }`}
