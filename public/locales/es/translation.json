@@ -1,18 +1,28 @@
 {
   "header": {
+    "title": "EN VENTA AHORA",
+    "sub-title": "COMPRA AHORA POR OPENSEA",
     "nav-list": {
-      "nav-auction": "nav-auction",
-      "nav-faq": "nav-faq",
-      "nav-artwork": "nav-dazn"
+      "nav-auction": "Ver la colección",
+      "nav-faq": "PREGUNTAS FRECUENTES",
+      "nav-artwork": "Ver las obras de arte"
     },
     "list": {
       "list-t&c": "list-t&c",
-      "list-privacy": "ist-privacy"
+      "list-privacy": "Aviso de privacidad "
     },
     "promo-text": "De Cara a la Gloria </br> La Colección de NFT",
     "description": {
-      "text": "text",
-      "link": "link"
+      "text": "La pelea más grande del año está programada para el 8 de mayo en el AT&T Stadium de Arlington, Texas, donde el campeón de la AMB, el CMB y la revista Ring Magazine, Canelo Álvarez, se enfrenta a Billy Joe Saunders, el poseedor del cinturón de la OMB, en una batalla por la supremacía del peso súper mediano.",
+      "link": "Leer más sobre el lanzamiento de los NFT",
+      "link-less": "Leer menos"
+    },
+    "read-more": {
+      "text": "¡Esta impresionante colección de NFT conmemora la pelea e incluso lleva a los compradores a la acción! ¡Todos los NFT vienen con bonificaciones especiales desbloqueables! Los extremadamente raros NFT Gold y Legendary desbloquean artículos y experiencias premium como guantes firmados y boletos para una pelea futura. Consulte todas las colecciones NFT limitadas.",
+      "tale": "<b>Números frente a frente: </b> una edición Gold 1 de 1, más 50 ediciones Silver para cada boxeador",
+      "knockout": "<b>Nocaut: </b>Para cada boxeador, 1 de 1 Legendary guantes en 3D firmados digitalmente por el boxeador",
+      "prediction": "<b>Predicción: </b>Consigue el NFT para cuando crees que la pelea terminará para desbloquear recompensas",
+      "post-fight": "<b>Destacados de la pelea: </b>lanzan después de la pelea, obtén los mejores momentos de la pelea"
     },
     "buttons": {
       "btn-one": "Ver las obras de arte",
@@ -20,57 +30,67 @@
     }
   },
   "featured-nft": {
-    "sub-title": "sub-title",
-    "title": "title",
-    "rarity": "rarity",
-    "type": "type",
+    "sub-title": "NFT DESTACADO",
+    "title": "Nocaut Canelo",
+    "rarity": "1/1",
+    "type": "Legendary",
     "price": {
-      "title": "price.title",
-      "sign": "price.sign"
+      "title": "Precio actual",
+      "sign": "ETH"
     },
     "countdown": {
-      "title": "countdown.title",
+      "title": "Subasta finalizada",
       "days": "days",
       "hours": "hrs",
       "minutes": "mins",
       "seconds": "secs"
     },
-    "CTA": "CTA"
+    "CTA": "Ver la subasta"
   },
   "NFTs": {
-    "title-knockout": "title",
-    "title-tale": "title",
-    "title-prediction": "title",
-    "title-post-fight": "title",
-    "type-legendary": "title",
-    "type-gold": "title",
-    "type-silver": "title",
-    "type-bronze": "title",
-    "link-text": "title",
+    "title-knockout": "Nocaut",
+    "title-tale": "Los números frente a frente:",
+    "title-prefight": "colecciones previas a la pelea",
+    "title-prediction": "Predicción",
+    "title-post-fight": "Momentos destacados de la pelea",
+    "type-legendary": "Legendary",
+    "type-gold": "Gold",
+    "type-silver": "Silver",
+    "type-bronze": "Bronze",
+    "link-text": "Viene pronto",
+    "read-more": "Leer más",
     "nft-card": {
-      "canelo-legendary-title": "title",
-      "canelo-legendary-description": "title",
+      "canelo-legendary-title": "Nocaut:</br> Canelo",
+      "canelo-legendary-description": "Canelo Álvarez ha noqueado a 37 de los peleadores que ha enfrentado. Consigue la única edición de esta legendaria NFT que representa su dominancia en el cuadrilátero. Además de ganar la NFT, la oferta ganadora recibirá dos entradas para la siguiente pelea de Canelo + <b>unos guantes firmados <b/>, ¡además de un video personalizado de Canelo!",
 
-      "saunders-legendary-title": "Knockout -</br> Saunders",
-      "saunders-legendary-description":"In his 30 career fights, Billy Joe Saunders has knocked out 14 of his opponents. Will he knock out Canelo on May 8? Get this 1-of-1 Legendary NFT representing his knockout strength, In addition to winning the NFT, the winning bid will receive 2 tickets to a future Matchroom fight + signed gloves (potentially fight-worn) from Billy Joe Saunders + a personalized video from Billy Joe! To redeem or confirm if the reward has already been redeemed, head to www.daznboxing.io/redeem after June 5, 2021.",
+      "saunders-legendary-title": "Nocaut:</br> Saunders",
+      "saunders-legendary-description": "En sus 30 peleas profesionales, Billy Joe Saunders ha noqueado a 14 de sus oponentes. ¿Noqueará a Canelo el 8 de mayo? Consigue la única edición de esta legendaria NFT que representa su poder de nocaut. Además de ganar la NFT, la oferta ganadora recibirá dos entradas para la siguiente pelea de Billy Joe Saunders + <b>unos guantes firmados </b>, ¡además de un video personalizado de Eddie Hearn de Matchroom!",
 
-      "canelo-gold-title": "Tale of the Tape - Canelo",
-      "canelo-gold-description": "This is a 1-of-1 NFT celebrating one of the most decorated boxers in history. Canelo Alvarez heads to the ring on May 8 with a record of 55-1-2 with 37 knockouts. In addition to winning the NFT, the winning bid will receive signed gloves from Canelo Alvarez plus an annual subscription to DAZN. To redeem or confirm if the reward has already been redeemed, head to [www.daznboxing.io/redeem](https://www.daznboxing.io/redeem) after June 5, 2021.",
+      "canelo-gold-title": "Los números frente a frente: Canelo",
+      "canelo-gold-description": "Canelo Álvarez se dirige hacia el cuadrilátero el 8 de mayo con una marca de 55-1-2 y 37 nocauts. Además de ganar la NFT, la oferta ganadora recibirá unos guantes firmados de Canelo Álvarez + una suscripción anual a DAZN.",
 
-      "saunders-gold-title": "Tale of the Tape - Saunders",
-      "saunders-gold-description": "This 1-of-1 NFT recognizes the WBO belt holder - the undefeated Billy Joe Saunders (30 wins, 0 losses). In addition to winning the NFT, the winning bid will receive signed gloves from Matchroom's Eddie Hearn plus an annual subscription to DAZN. To redeem or confirm if the reward has already been redeemed, head to [www.daznboxing.io/redeem](https://www.daznboxing.io/redeem) after June 5, 2021.",
+      "saunders-gold-title": "Los números frente a frente: Saunders",
+      "saunders-gold-description": "Billy Joe Saunders se dirige hacia el cuadrilátero el 8 de mayo con una marca invicta (30-0) y 14 nocauts. Además de ganar la NFT, la oferta ganadora recibirá unos guantes firmados por Eddie Hearn de Matchroom + una suscripción anual a DAZN.",
 
-      "prediction-decision-title": "",
-      "prediction-decision-description": "",
+      "prediction-decision-title": "Predicción: Alguno de los 12 asaltos + decisión",
+      "prediction-decision-description": "NFT irrepetibles para predecir si la pelea entre Canelo y Saunders terminará en un asalto específico o con la decisión de los jueces. ¡Únicamente la NFT ganadora recibirá dos entradas para la siguiente pelea de Canelo!",
 
-      "canelo-silver-title": "Tale of the Tape - Canelo",
-      "canelo-silver-description": "This NFT celebrates one of the most decorated boxers in history. Canelo Alvarez heads to the ring on May 8 with a record of 55-1-2 with 37 knockouts. IF CANELO WINS, this NFT unlocks an annual DAZN subscription + 1 NFT will unlock 1 personalized video from Canelo. To redeem / confirm if the reward has already been redeemed and find out if your NFT unlocks the video, head to [www.daznboxing.io/redeem] (https://www.daznboxing.io/redeem) after June 5, 2021.",
+      "canelo-silver-title": "Los números frente a frente: Canelo",
+      "canelo-silver-description": "Canelo Álvarez se dirige hacia el cuadrilátero el 8 de mayo con una marca de 55-1-2 y 37 nocauts. SI CANELO GANA, esta NFT desbloquea una suscripción anual a DAZN + 1 de los 50 recibirá un video personalizado de Canelo.",
+      "saunders-silver-title": "Los números frente a frente: Saunders",
+      "saunders-silver-description": "Billy Joe Saunders se dirige hacia el cuadrilátero el 8 de mayo con una marca invicta (30-0) y 14 nocauts. SI Saunders GANA, esta NFT desbloquea una suscripción anual a DAZN + 1 de los 50 recibirá un video personalizado de Eddie Hearn de Matchroom.",
 
-      "saunders-silver-title": "Tale of the Tape - Saunders",
-      "saunders-silver-description": "This NFT recognizes the WBO belt holder - the undefeated Billy Joe Saunders (30 wins, 0 losses). IF SAUNDERS WINS, this NFT unlocks an annual DAZN subscription + 1 NFT will unlock 1 personalized video from Matchroom's Eddie Hearn. To redeem / confirm if the reward has already been redeemed and find out if your NFT unlocks the video, head to [www.daznboxing.io/redeem](https://www.daznboxing.io/redeem) after June 5, 2021.",
+      "prediction-decision-title-bronze": "Predicción: Alguno de los 12 asaltos + decisión",
+      "prediction-decision-description-bronze": "NFT de edición limitada para predecir si la pelea entre Canelo y Saunders terminará en un asalto específico o con la decisión de los jueces. ¡Solo las NFT ganadoras recibirán una suscripción anual a DAZN!",
 
-      "prediction-decision-title-bronze":"",
-      "prediction-decision-description-bronze":"",
+      "post-fight-title-legendary": "Momento <br/> ganador",
+      "post-fight-description-legendary": "El momento ganador el 8 de mayo en la pelea de Canelo Alvarez y Billy Joe Saunders, inmortalizado para siempre en este NFT",
+
+      "post-fight-title-gold-canelo": "Entrada <br/> del ganador",
+      "post-fight-title-silver-saunders": " Entrada <br/> del perdedor:",
+
+      "post-fight-description-gold-canelo": "Obtén la entrada del peleador ganador hacia el cuadrilátero, inmortalizado para siempre en este NFT.",
+      "post-fight-description-silver-saunders": "Obtén la entrada del peleador perdedor hacia el cuadrilátero, inmortalizado para siempre en este NFT.",
 
       "rarity-1": "1/1",
       "rarity-50": "50",
@@ -90,77 +110,89 @@
     "modal-title": "Gracias por registrarte",
     "modal-text": "modal.text",
     "modal-btn": "OK",
-    "CTA": "Sign up here"
+    "CTA": "Registrate aquí"
   },
   "faq": {
-    "title": "FAQs",
-    "sub-title": "WHAT IS AN NFT? AND OTHER QUESTIONS ANSWERED",
+    "title": "PREGUNTAS FRECUENTES",
+    "sub-title": "¿Qué es un NFT? Y otras preguntas respondidas.",
     "questions": {
       "first": {
-        "title": "first.title",
-        "description": "description"
+        "title": "¿Qué es un NFT?",
+        "description": "Los tokens no fungibles (NFT, por sus siglas en inglés) son artículos digitales coleccionables que se almacenan en una cadena de bloques. Cuando compras un NFT, hay un registro permanente de que eres el dueño y también existe evidencia digital de que un artista en particular creó la obra."
       },
       "second": {
-        "title": "second.title",
-        "description": "description",
+        "title": "¿Qué es la Colección de NFT de Canelo vs. Saunders: De cara a la gloria?",
+        "description": "Tokens no fungibles (NFT) que celebran el combate boxístico del 8 de mayo entre Canelo Álvarez y Billy Joe Saunders.Además, muchas de los NFT desbloquean recompensas prémium, como guantes firmados, boletos para futuras peleas y suscripciones a DAZN.",
         "reminder": "INSERT DAZN-PRODUCED EXPLAINER VIDEO"
       },
       "third": {
-        "title": "third.title",
-        "description": "description",
-        "description-two": "description-two",
-        "description-three": "description-three",
-        "description-four": "description-four",
-        "description-five": "description-five",
-        "description-six": "description-six",
-        "description-seven": "description-seven"
+        "title": "¿Cómo compro uno de los NFT?",
+        "description": "Las NFT de De cara a la gloria se venderán exclusivamente en <a target='_blank' href='https://www.opensea.io'>OpenSea</a>.. OpenSea te permite comprar y vender artículos criptocoleccionables, artículos de videojuegos, ilustraciones digitales y otros artículos digitales creados en cadena de bloques.",
+        "description-two": "Deberás configurar una cuenta de OpenSea para participar en las ventas, así como vincular tu billetera digital a OpenSea de acuerdo con sus términos y condiciones. Solo puedes participar en las ventas si vinculas tus billeteras digitales en extensiones de enlace compatibles, como <a target='_blank' href='https://metamask.io'>MetaMask</a>. MetaMask es una billetera electrónica que te permite realizar transacciones con la criptomoneda Ethereum. OpenSea te pedirá que descargues una extensión para billeteras electrónicas compatible y que conectes y desbloquees tus billeteras digitales con esa extensión. Una vez que envías un pedido para vender o comprar un artículo digital único, el pedido se transfiere a la extensión correspondiente, la cual finaliza la transacción en tu nombre.",
+        "description-three": "Te recomendamos que configures tu cuenta OpenSea y tu billetera digital asociada antes de las ventas que comienzan el 5 de mayo.",
+        "description-four": "DAZN no promueve el uso de MetaMask ni de ninguna otra billetera digital y no será responsable del uso que se haga de ella al comprar los NFT o poseer criptomonedas.",
+        "description-five": "Para poder comprar u pujar, debes usar Ethereum. OpenSea no acepta tarjetas de crédito.",
+        "description-six": "Para obtener más información sobre cómo configurar MetaMask, haz  <a target='_blank' href='https://www.youtube.com/watch?v=eYpz34noK6Y'>clic aquí</a>.",
+        "description-seven": "Para obtener más información sobre OpenSea,<a target='_blank' href='https://opensea.io/faq'>visita este enlace</a>."
       },
       "fourth": {
-        "title": "fourth.title",
-        "description": "",
-        "description-two": "",
-        "description-three": ""
+        "title": "¿Cuándo salen a la venta los NFT?",
+        "description": "Los artículos de la subasta previa a la pelea (todas las ediciones Legendaria y Oro) estarán a laventa a partir del miércoles, 5 de mayo, a las 12 p. m. ET o 17:00 BST. Esto incluye los NFT de la edición Legendaria para los nocauts, los NFT de la edición Oro para los números frente a frente y los NFT de la edición Oro para las predicciones de la pelea.",
+        "description-two": "Estos artículos previos a la pelea de precio fijo (todas las ediciones Plata y Bronce) estarán a laventa a partir del viernes, 7 de mayo, a las 3 p. m. ET o 20:00 BST. Esto incluye los NFT de la edición Plata para los números frente a frente y los NFT de la edición Bronce para las predicciones de la pelea.",
+        "description-three": "Los artículos sobre los nocauts y los números frente a frente dejarán de estar a la venta el sábado, 8 de mayo, a las 11 p. m. ET (domingo, 9 de mayo, a las 04:00 BST). Los artículos sobre las predicciones dejarán de estar a la venta el sábado, 8 de mayo, a las 10 p. m. ET (domingo, 9 de mayo, a las 03:00 BST). Toda puja realizada por los artículos de la subasta durante este periodo aplazará el tiempo de finalización durante 10 minutos para darles a los usuarios cuyas pujas hayan sido superadas la oportunidad de mejorarlas.",
+        "description-four": "Ten en cuenta que, en caso de que las subastas de los NFT de la Serie de Predicciones se aplacen de modo que sigan activas cuando ya haya dado inicio la pelea, la puja más alta será aceptada al comienzo de la pelea.",
+        "description-five": "Los NFT sobre el resultado de la pelea saldrán a la venta poco después de la pelea. Vuelve a visitarnos después de la pelea para obtener más información."
       },
       "fifth": {
-        "title": "fifth.title",
-        "list-title": "description",
-        "list-item": "description",
-        "list-item-two": "description",
-        "list-item-three": "description",
-        "list-item-four": "description"
+        "title": "¿Cuáles son los diferentes tipos de NFT?",
+        "list-title": "Hay tres colecciones previas a la pelea",
+        "list-item": "<b>Nocaut:</b> Por cada luchador, guantes 3D personalizados e irrepetibles de edición Legendaria firmados digitalmente por el luchador. El propietario del NFT de Canelo recibirá dos boletos para la próxima pelea de Canelo, guantes de pelea firmados por Canelo y un video personalizado de Canelo. El propietario del NFT de Saunders recibirá dos boletos para la próxima pelea de Saunders, guantes firmados por Eddie Hearn y un video personalizado de Eddie Hearn.",
+        "list-item-two": "<b>Números frente a frente:</b> Una edición Oro irrepetible más 50 ediciones Plata por cada luchador. Los propietarios de las ediciones Oro recibirán guantes firmados por Canelo —para elNFT de Canelo— o guantes firmados por Eddie Hearn —para el NFT de Saunders—, más una suscripción anual a DAZN. Los propietarios de los NFT de edición Plata que representen al peleador vencedor recibirán una suscripción anual a DAZN. Además, uno de los NFT de edición Plata que representen al luchador vencedor desbloqueará un video personalizado de Canelo o de Eddie Hearn.",
+        "list-item-three": "<b>Predicciones: </b> Obtén el NFT del momento en el que creas que la pelea va a terminar para desbloquear recompensas: una edición Oro irrepetible por cada uno de los 12 asaltos y una para si la pelea llega a la decisión de los jueces (13 en total), más 100 ediciones Bronce por cada asalto y la decisión de los jueces. El propietario de la edición Oro ganadora recibirá dos boletos para la próxima pelea de Canelo. Los propietarios de las ediciones Bronce ganadoras recibirán una suscripción anual a DAZN.",
+        "list-item-four": "<b>Momentos destacados de la pelea:</b> El Momento Triunfador de la pelea del 8 de mayo entre Canelo Álvarez y Billy Joe Saunders será inmortalizado para siempre en un NFT de edición Legendaria. También habrá una edición Oro de la caminata al cuadrilátero del peleador vencedor, así como una edición Plata de la caminata al cuadrilátero del peleador perdedor."
       },
       "sixth": {
-        "title": "sixth.title",
-        "description": "description"
+        "title": "¿Cuántos NFT de Canelo vs. Saunders: De cara a la gloria puedo comprar?",
+        "description": "Puedes comprar y pujar por todos los NFT que desees, pero están sujetos a disponibilidad. ¡Actúa rápido para reunir todos los tipos diferentes y aumentar tus posibilidades de ganar algunas experiencias y artículos de recuerdo únicos en la vida!"
       },
       "seventh": {
-        "title": "seventh.title",
-        "description": "description"
+        "title": "¿Puedo revender los NFT que compre?",
+        "description": "descrip¡Claro que sí! En cuanto seas propietario del NFT, puedes ponerlo a la venta en OpenSea o en cualquier otro mercado de NFT compatible.tion"
       },
       "eighth": {
-        "title": "eighth.title",
-        "description": "description"
+        "title": "¿Estarán disponibles otras versiones de estos NFT después de esta subasta?",
+        "description": "Este será el único lanzamiento de esta colección de NFT de Canelo vs. Saunders: De cara a la gloria."
       },
       "ninth": {
-        "title": "ninth.title",
-        "description": "description"
+        "title": "¿Cómo reclamo mi suscripción a DAZN u otras recompensas que se desbloquean al ser propietario de un NFT?",
+        "description": "Para canjear toda recompensa relacionada con un NFT, visita  <a target='_blank' href='https://www.daznboxing.io/redeem'>www.daznboxing.io/redeem</a> desde el 5 de junio de 2021. Las recompensas solo se pueden canjear una vez; visita el sitio decanje después del 5 de junio para ver si los artículos ya se canjearon."
       },
       "tenth": {
-        "title": "tenth.title",
-        "description": "description"
+        "title": "¿Dónde puedo ver la pelea por el campeonato Canelo vs. Saunders?",
+        "description": "Canelo vs. Saunders se puede ver en DAZN en todo el mundo (excepto en México) en más de 200 países y territorios. Si no estás suscrito a DAZN, puedes <a target='_blank' href='https://www.dazn.com/?utm_source=NFT&utm_medium=referral&utm_campaign=NFT'>registrarte aquí</a>. Si te encuentras en Argentina, Chile y Colombia, debes descargarlo del App Store de Apple o GooglePlay en Android"
       }
     }
   },
   "terms": {
+    "go-home": "REGRESO",
+    "more-faqs": "MÁS PREGUNTAS FRECUENTES",
     "title": "title",
-    "CTA-one": "CTA-one",
-    "CTA-two": "CTA-two"
+    "CTA-one": "T&Cs",
+    "CTA-two": "AVISO DE PRIVACIDAD"
   },
   "footer": {
     "text": "text",
     "CTA": "CTA"
   },
-   "nft-card": {
+  "nft-card": {
+    "cta": {
+      "bin-now": "Haz tu oferta",
+      "view-collection": "Ver la colección",
+      "buy-now": "Compra ahora",
+      "select-round": "elige la ronda"
+    },
+    "round": "Asaltos del número {{round}}",
+    "go-cards": "Hasta las tarjetas",
     "canelo-legendary-title": "Nocaut:</br> Canelo",
     "canelo-legendary-description": "Canelo Álvarez ha noqueado a 37 de los peleadores que ha enfrentado. Consigue la única edición de esta legendaria NFT que representa su dominancia en el cuadrilátero. Además de ganar la NFT, la oferta ganadora recibirá dos entradas para la siguiente pelea de Canelo + <b>unos guantes firmados <b/>, ¡además de un video personalizado de Canelo!",
 
@@ -184,12 +216,22 @@
     "prediction-decision-title-bronze": "Predicción: Alguno de los 12 asaltos + decisión",
     "prediction-decision-description-bronze": "NFT de edición limitada para predecir si la pelea entre Canelo y Saunders terminará en un asalto específico o con la decisión de los jueces. ¡Solo las NFT ganadoras recibirán una suscripción anual a DAZN!",
 
-    "post-fight-title-legendary":"Winning moments",
-    "post-fight-description-legendary":"The Winning Moment in the May 8 fight between Canelo Alvarez and Billy Joe Saunders, forever immortalized in this NFT.",
+    "post-fight-title-legendary": "Momento <br/> ganador",
+    "post-fight-description-legendary": "El momento ganador el 8 de mayo en la pelea de Canelo Alvarez y Billy Joe Saunders, inmortalizado para siempre en este NFT",
+
+    "post-fight-title-gold-canelo": "Entrada <br/> del ganador",
+    "post-fight-title-silver-saunders": " Entrada <br/> del perdedor:",
+
+    "post-fight-description-gold-canelo": "Obtén la entrada del peleador ganador hacia el cuadrilátero, inmortalizado para siempre en este NFT.",
+    "post-fight-description-silver-saunders": "Obtén la entrada del peleador perdedor hacia el cuadrilátero, inmortalizado para siempre en este NFT.",
 
     "rarity-1": "1/1",
     "rarity-50": "50",
     "rarity-13": "13 (1 por resultado)",
-    "rarity-100": "100 por resultado"
+    "rarity-100": "100 por resultado",
+    "rarity-only-50": "50",
+    "coming-soon": "Viene pronto",
+    "sold-out": "Liquidado"
+
   }
 }

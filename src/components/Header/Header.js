@@ -19,7 +19,7 @@ const Header = ({
   const { t, i18n } = useTranslation();
   const { isPhone } = useWindowInfo();
   const phone = isPhone();
-
+  const IS_SPANISH = language === 'es';
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
@@ -110,16 +110,7 @@ const Header = ({
               </a>
             </li>
           </ul>
-          <div className='header__dazn-logo' style={{ visibility: 'hidden' }}>
-            <a target='_blank' href={DAZN_PUBLIC_LINK}>
-              <img
-                className='header__dazn-img'
-                src={imgPath + 'DAZN-logo.png'}
-                alt='DAZN'
-              />
-            </a>
-          </div>
-          <div className='header__terms-language' style={{ display: 'none' }}>
+          <div className='header__terms-language'>
             <ul className='header__language-list'>
               <li
                 style={{ visibility: 'hidden' }}

@@ -2,13 +2,17 @@
 @import '../../variables';
 
 .featured {
-  background-image: url('../../assets/img/featured-bg.png');
+  //background-image: url('../../assets/img/featured-bg.png');
   background-size: cover;
   color: $brand-white;
   display: flex;
   justify-content: center;
   padding: 1.25rem 1.25rem 1.25rem;
   width: 100%;
+
+  &__margin{
+    margin-top: -50px;
+  }
 
   @include _1024 {
     padding: 6rem 2.5rem;
@@ -25,35 +29,52 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
-      width: 85%;
+      width: 100%;
     }
 
     @include _1440 {
-      width: 60%;
+      width: 70%;
     }
   }
 
   &__img-wrapper {
     width: 70%;
+    overflow: hidden;
 
     @include _768 {
       width: 50%;
-      margin-right: 10%;
+      //margin-right: 10%;
 
     }
 
     @include _1024 {
+      width: 40%;
+      //margin-right: 10%;
+    }
+
+    @include _1440 {
       width: 40%;
       margin-right: 10%;
     }
 
     video {
       width:100%;
-      -moz-transform:scale(1.5);
-      -webkit-transform:scale(1.5);
-      -o-transform:scale(1.5);
-      -ms-transform:scale(1.5);
-      transform:scale(1.5);
+      
+      @include _768 {
+        -moz-transform:scale(1);
+        -webkit-transform:scale(1);
+        -o-transform:scale(1);
+        -ms-transform:scale(1);
+        transform:scale(1);
+      }
+
+      @include _1024 {
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+        -ms-transform:scale(1.3);
+        transform:scale(1.3);
+      }
     }
 
     img {
@@ -71,7 +92,7 @@
     max-width: none;
 
     @include _1024 {
-      width: 60%;
+      width: 75%;
       max-width: 700px;
     }
   }
@@ -97,6 +118,7 @@
     font-family: 'DAZNTrim-Bold';
     font-size: 1.25rem;
     margin: 0 0 1.625rem 0;
+    text-transform: uppercase;
 
     @include _1024 {
       font-size: 2.813rem;
@@ -136,6 +158,7 @@
     margin: 0;
     width: min-content;
     text-align: center;
+    text-transform: uppercase;
 
     @include _1024 {
       font-size: 1.625rem;
@@ -184,6 +207,8 @@
 
     @include _1024 {
       padding-right: 30px;
+    min-width: 300px;
+
     }
 
     &:after {
@@ -228,11 +253,32 @@
   &__countdown-block {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    //align-items: center;
+    padding-left: 14px;
+
+    @include _1024 {
+      padding-left: 2rem;
+    }
   }
 
   &__countdown-title {
-    @include FeaturedNFT-Title;
+    text-align: center;
+    //@include FeaturedNFT-Title;
+    @include FeaturedNFT-Text;
+    text-transform: none;
+    letter-spacing: 2px;
+  }
+
+  &__countdown-link {
+    @include FeaturedNFT-Text;
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: center;
+
+
+    &:hover {
+      color: $brand-yellow;
+    }
   }
 
   &__time-section {
@@ -243,6 +289,7 @@
     color: $brand-white;
     font-size: 2.75rem;
     line-height: 2.75rem;
+     font-family: 'DAZNTrim-Bold';
     margin: 0;
 
     @include _1024 {
@@ -325,6 +372,7 @@
 
   &__indicator {
     @include FeaturedNFT-Text;
+    font-family: 'DAZNTrim-Bold';
   }
 
   &__CTA-wrap {
