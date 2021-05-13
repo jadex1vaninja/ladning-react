@@ -8,19 +8,6 @@ import { API_URL, ETHEREUM } from '../../const';
 import './RedeemPage.scss';
 
 const RedeemPage = () => {
-  // A Web3Provider wraps a standard Web3 provider, which is
-  // what Metamask injects as window.ethereum into each page
-  // const provider = new ethers.providers.Web3Provider(window.ethereum);
-  // const signer = provider.getSigner();
-
-  // const signMessage = async () => {
-  //   try {
-  //     const signature = await signer.signMessage('Hello there');
-  //     console.log(signature);
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
   const collectionId = 'dazn-x-canelo-saunders';
   const API_ALL = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=${collectionId}`;
   const API_OWNER = `${API_ALL}&owner=`;
