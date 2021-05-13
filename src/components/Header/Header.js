@@ -17,20 +17,10 @@ const Header = ({
   setLanguage,
   changeLanguage
 }) => {
-  // const [language, setLanguage] = useState('en');
   const [showMore, setShowMore] = useState(false);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { isPhone } = useWindowInfo();
   const phone = isPhone();
-  // const IS_SPANISH = language === 'es';
-  // const changeLanguage = (lng) => {
-  //   i18n.changeLanguage(lng);
-  // };
-  //
-  // const getLanguageFromStorage = () => {
-  //   const lang = 'en'; //localStorage.getItem('i18nextLng') || 'en';
-  //   return lang;
-  // };
 
   useEffect(() => {
     // setLanguage(getLanguageFromStorage());
