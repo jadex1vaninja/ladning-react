@@ -149,7 +149,7 @@ const RedeemPage = () => {
 
 
   useEffect(() => {
-    walletID && fetchData();
+    walletID && fetchData(walletID);
   }, [walletID]);
 
   // return (
