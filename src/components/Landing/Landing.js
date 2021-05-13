@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Header from '../Header';
 import Cards from '../Cards';
@@ -21,10 +21,21 @@ const howItStartedVideoSrc =
   'https://storage.opensea.io/files/6a01f47ea67d96cb2d302b4de628005c.mp4';
 
 const Landing = () => {
-  const { t } = useTranslation();
+  const [language, setLanguage] = useState('en');
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <>
-      <Header isUsedOnSecondaryPage={false} promoBanner={<PromoBanner />} />
+      <Header
+        language={language}
+        setLanguage={setLanguage}
+        changeLanguage={changeLanguage}
+        isUsedOnSecondaryPage={false}
+        promoBanner={<PromoBanner language={language} />}
+      />
       <main className='root'>
         <FeaturedNFT
           title={t('nft-card.post-fight-title-legendary')}

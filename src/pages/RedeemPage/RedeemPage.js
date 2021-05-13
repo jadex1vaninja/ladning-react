@@ -5,8 +5,8 @@ import Footer from '../../components/Footer';
 import Redeem from '../../components/Redeem';
 import Button from '../../components/Button';
 import { API_URL, ETHEREUM } from '../../const';
+import { useTranslation } from 'react-i18next';
 import './RedeemPage.scss';
-import PromoBanner from '../../components/Header/components/PromoBanner';
 
 const RedeemPage = () => {
   // A Web3Provider wraps a standard Web3 provider, which is
@@ -22,6 +22,11 @@ const RedeemPage = () => {
   //     console.error(e);
   //   }
   // };
+  const [language, setLanguage] = useState('en');
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
   const API = `https://rinkeby-api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=20&owner=`;
   const [error, setError] = useState(false);
   const [isEthereum, setIsEthereum] = useState(false);
@@ -121,7 +126,13 @@ const RedeemPage = () => {
 
   return (
     <>
-      <Header isUsedOnSecondaryPage secondaryTitle='Redemption'>
+      <Header
+        language={language}
+        setLanguage={setLanguage}
+        changeLanguage={changeLanguage}
+        isUsedOnSecondaryPage
+        secondaryTitle='Redemption'
+      >
         <Button
           ctaText='Connect Wallet'
           onClick={connectWallet}

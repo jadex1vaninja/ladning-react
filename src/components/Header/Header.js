@@ -12,25 +12,28 @@ const Header = ({
   isUsedOnSecondaryPage,
   secondaryTitle,
   children,
-  promoBanner
+  promoBanner,
+  language,
+  setLanguage,
+  changeLanguage
 }) => {
-  const [language, setLanguage] = useState('en');
+  // const [language, setLanguage] = useState('en');
   const [showMore, setShowMore] = useState(false);
   const { t, i18n } = useTranslation();
   const { isPhone } = useWindowInfo();
   const phone = isPhone();
-  const IS_SPANISH = language === 'es';
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
-
-  const getLanguageFromStorage = () => {
-    const lang = 'en'; //localStorage.getItem('i18nextLng') || 'en';
-    return lang;
-  };
+  // const IS_SPANISH = language === 'es';
+  // const changeLanguage = (lng) => {
+  //   i18n.changeLanguage(lng);
+  // };
+  //
+  // const getLanguageFromStorage = () => {
+  //   const lang = 'en'; //localStorage.getItem('i18nextLng') || 'en';
+  //   return lang;
+  // };
 
   useEffect(() => {
-    setLanguage(getLanguageFromStorage());
+    // setLanguage(getLanguageFromStorage());
   }, []);
 
   return (

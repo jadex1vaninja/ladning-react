@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { imgPath } from '../../../../const';
 
-const PromoBanner = () => {
+const PromoBanner = ({ language }) => {
   const { t } = useTranslation();
 
   return (
@@ -13,6 +13,7 @@ const PromoBanner = () => {
         alt='promo'
       />
       <p
+        style={language === 'es' ? { letterSpacing: 5 } : {}}
         className='header__promo-text'
         dangerouslySetInnerHTML={{ __html: t('header.promo-text') }}
       />

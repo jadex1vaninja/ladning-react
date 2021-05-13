@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import './T&CsPage.scss';
@@ -13,11 +13,21 @@ const TCsPage = () => {
   };
 
   const { t, i18n } = useTranslation();
-  const language = i18n.language;
-  const IS_SPANISH = language === 'es';
+  const [language, setLanguage] = useState('en');
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+  const _language = i18n.language;
+  const IS_SPANISH = _language === 'es';
   return (
     <>
-      <Header isUsedOnSecondaryPage secondaryTitle='Terms & Conditions' />
+      <Header
+        language={language}
+        setLanguage={setLanguage}
+        changeLanguage={changeLanguage}
+        isUsedOnSecondaryPage
+        secondaryTitle='Terms & Conditions'
+      />
       <div className='tcs'>
         <div className='tcs__wrapper'></div>
         <div className='tcs__container'>
