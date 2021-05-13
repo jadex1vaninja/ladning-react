@@ -152,4 +152,12 @@
   &__preview-header-text {
     margin: 0;
   }
+
+  &__title {
+    color: $brand-white;
+    font-size: 3rem;
+    line-height: 4rem;
+    font-family: 'DAZNTrim-Bold';
+    text-transform: uppercase;
+  }
 }

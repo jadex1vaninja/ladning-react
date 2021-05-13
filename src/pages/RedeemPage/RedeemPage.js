@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { ethers } from 'ethers';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -24,20 +24,17 @@ const RedeemPage = () => {
   const collectionId = 'dazn-x-canelo-saunders';
   const API_ALL = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=${collectionId}`;
   const API_OWNER = `${API_ALL}&owner=`;
+  const CODE_GENERATOR = Math.floor(Math.random() * 1e16);
 
   const [error, setError] = useState(false);
   const [isEthereum, setIsEthereum] = useState(false);
-  const [walletID, setWalletID] = useState(ETHEREUM.selectedAddress);
-  // const API = `https://rinkeby-api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=20&owner=`;
-  // const [error, setError] = useState(false);
-  // const [isEthereum, setIsEthereum] = useState(false);
-  // const [walletID, setWalletID] = useState(null);
+  const [walletID, setWalletID] = useState('');
   const [signature, setSignature] = useState(null);
   const [isSigned, setIsSigned] = useState(false);
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   const [dataAll, setDataAll] = useState([]);
-
+  const [secretMessage, setSecretMessage] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [initialFormState, setInitialFormState] = useState({
     name: '',
@@ -49,30 +46,47 @@ const RedeemPage = () => {
     country: '',
     additional: ''
   });
-
   // A Web3Provider wraps a standard Web3 provider, which is
   // what Metamask injects as window.ethereum into each page
-  const provider = new ethers.providers.Web3Provider(ETHEREUM);
-  const signer = provider.getSigner();
-  const MESSAGE = `${Date.now()}`;
+  let provider = null;
+  let signer;
+  if (provider) signer = provider.getSigner();
+
+  useEffect(() => {
+    ETHEREUM && (provider = new ethers.providers.Web3Provider(ETHEREUM));
+    ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
+    ETHEREUM && setWalletID(ETHEREUM.selectedAddress);
+
+    fetchDataAll();
+    setSecretMessage(`${CODE_GENERATOR}`);
+  }, []);
+
+  useEffect(() => {
+    addExtraToFormState();
+  }, [signature]);
+
+  useEffect(() => {
+    setSecretMessage(`${CODE_GENERATOR}`);
+  }, [isSigned]);
 
   const signMessage = async () => {
     try {
-      const signature = await signer.signMessage(MESSAGE);
+      const signature = await signer.signMessage(secretMessage);
       setSignature(signature);
       setIsSigned(true);
       console.log('Message has been signed :', signature);
     } catch (e) {
-      console.log('error')
+      console.log('error');
       console.error(e);
       setIsSigned(false);
-      throw new Error("test");
-    };
+      handleCloseModal();
+      throw new Error('error');
+    }
   };
 
   const verifyMessage = async () => {
     try {
-      const result = await ethers.utils.verifyMessage(MESSAGE, signature);
+      const result = await ethers.utils.verifyMessage(secretMessage, signature);
       const address = await signer.getAddress();
       console.log('Verified', result === address);
     } catch (e) {
@@ -96,7 +110,8 @@ const RedeemPage = () => {
       setLoading(false);
     }
   };
-  const fetchDataAll= async (id) => {
+
+  const fetchDataAll = async () => {
     setLoading(true);
     try {
       const response = await fetch(`${API_ALL}`);
@@ -136,11 +151,6 @@ const RedeemPage = () => {
     }
   };
 
-  useEffect(() => {
-    ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
-    fetchDataAll();
-  }, []);
-
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => {
     setShowModal(false);
@@ -152,38 +162,19 @@ const RedeemPage = () => {
       ...prevState,
       walletID,
       signature,
-      message: MESSAGE
+      message: secretMessage
     }));
   };
 
-  useEffect(() => {
-    addExtraToFormState();
-  }, [signature]);
-
   const onSubmit = async (values) => {
     console.log('VALUES', values);
-    console.log('api call')
+    console.log('api call');
     handleCloseModal();
   };
 
-
-  useEffect(() => {
-    walletID && fetchData(walletID);
-  }, [walletID]);
-
-  // return (
-  //   <h1
-  //     style={{
-  //       color: 'white',
-  //       fontSsize: '48px',
-  //       textAlign: 'center',
-  //       paddingTop: '100px'
-  //     }}
-  //   >
-  //     Coming Soon
-  //   </h1>
-  // );
-
+  // useEffect(() => {
+  //   walletID && fetchData(walletID);
+  // }, [walletID]);
 
   return (
     <>
@@ -193,15 +184,8 @@ const RedeemPage = () => {
           onClick={() => {
             connectWallet().then((id) => fetchData(id));
           }}
-          isDisabled={!!walletID}
+          isDisabled={!!walletID || !isEthereum}
         />
-        {/* {walletID && (
-          <Button
-            ctaText='View items'
-            onClick={fetchData}
-            isDisabled={!!data.length}
-          />
-        )} */}
       </Header>
       <Redeem
         data={data}
@@ -218,6 +202,7 @@ const RedeemPage = () => {
         closeErrorNotification={closeErrorNotification}
         isSigned={isSigned}
         signMessage={signMessage}
+        secretMessage={secretMessage}
       />
       <Footer isUsedOnSecondaryPage />
     </>

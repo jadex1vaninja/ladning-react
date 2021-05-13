@@ -19,9 +19,10 @@ const Redeem = ({
   initialFormState,
   addExtraToFormState,
   onSubmit,
-  closeErrorNotification
+  closeErrorNotification,
+  secretMessage
 }) => {
-  console.log(data);
+  console.log(secretMessage);
   return (
     <div className='redeem-root'>
       {!isEthereum && (
@@ -52,7 +53,9 @@ const Redeem = ({
           <Spinner />
         ) : (
           <>
-          Your nfts
+            {Boolean(data.length) && (
+              <h2 className='redeem-root__title'>Your nfts</h2>
+            )}
             {Boolean(data.length) &&
               data.map((item) => (
                 <Item
@@ -63,10 +66,10 @@ const Redeem = ({
                   openModal={showModalHandler}
                   addExtraToFormState={addExtraToFormState}
                   signMessage={signMessage}
+                  hasButton
                 />
               ))}
-            <br></br>
-            Nfts
+            <h2 className='redeem-root__title'>Nfts</h2>
             {Boolean(dataAll.length) &&
               dataAll.map((item) => (
                 <Item
@@ -77,6 +80,7 @@ const Redeem = ({
                   openModal={showModalHandler}
                   addExtraToFormState={addExtraToFormState}
                   signMessage={signMessage}
+                  hasButton={false}
                 />
               ))}
           </>
@@ -99,7 +103,9 @@ const Redeem = ({
               closeModalHandler={closeModalHandler}
             />
           ) : (
-            <div>Sign transaction please: Secret Code:$</div>
+            <div>
+              Sign transaction please: Secret Code: <code>{secretMessage}</code>
+            </div>
           )}
         </Modal.Body>
       </Modal>
