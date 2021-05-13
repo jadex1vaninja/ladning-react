@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-// import { ethers } from 'ethers';
+import { ethers } from 'ethers';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Redeem from '../../components/Redeem';
 import Button from '../../components/Button';
 import { API_URL, ETHEREUM } from '../../const';
 import './RedeemPage.scss';
-import PromoBanner from '../../components/Header/components/PromoBanner';
 
 const RedeemPage = () => {
   // A Web3Provider wraps a standard Web3 provider, which is
@@ -27,6 +26,12 @@ const RedeemPage = () => {
   const [error, setError] = useState(false);
   const [isEthereum, setIsEthereum] = useState(false);
   const [walletID, setWalletID] = useState(ETHEREUM.selectedAddress);
+  // const API = `https://rinkeby-api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=20&owner=`;
+  // const [error, setError] = useState(false);
+  // const [isEthereum, setIsEthereum] = useState(false);
+  // const [walletID, setWalletID] = useState(null);
+  const [signature, setSignature] = useState(null);
+  const [isSigned, setIsSigned] = useState(false);
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -41,18 +46,42 @@ const RedeemPage = () => {
     additional: ''
   });
 
-  useEffect(() => {
-    ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
-  }, []);
+  // A Web3Provider wraps a standard Web3 provider, which is
+  // what Metamask injects as window.ethereum into each page
+  const provider = new ethers.providers.Web3Provider(ETHEREUM);
+  const signer = provider.getSigner();
+  const MESSAGE = `${Date.now()}`;
+
+  const signMessage = async () => {
+    try {
+      const signature = await signer.signMessage(MESSAGE);
+      setSignature(signature);
+      setIsSigned(true);
+      console.log('Message has been signed :', signature);
+    } catch (e) {
+      console.error(e);
+      setIsSigned(false);
+    }
+  };
+
+  const verifyMessage = async () => {
+    try {
+      const result = await ethers.utils.verifyMessage(MESSAGE, signature);
+      const address = await signer.getAddress();
+      console.log('Verified', result === address);
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   const closeErrorNotification = () => {
     setError(false);
   };
 
-  const fetchData = async () => {
+  const fetchData = async (id) => {
     setLoading(true);
     try {
-      const response = await fetch(`${API + walletID}`);
+      const response = await fetch(`${API + id}`);
       const { assets } = await response.json();
       setData(assets);
     } catch (e) {
@@ -77,7 +106,9 @@ const RedeemPage = () => {
           result: [ID]
         } = accounts;
         setWalletID(ID);
+        return ID;
       }
+      console.log('WALLET HAS BEEN CONNECTED');
     } catch (e) {
       console.error(e);
       setError(true);
@@ -87,26 +118,35 @@ const RedeemPage = () => {
     }
   };
 
-  const handleShowModal = () => setShowModal(true);
-  const handleCloseModal = () => setShowModal(false);
+  useEffect(() => {
+    ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
+  }, []);
 
-  const handleClickedID = (id) => {
-    const item = data.find((item) => item.id === id);
+  const handleShowModal = () => setShowModal(true);
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setIsSigned(false);
+  };
+
+  const addExtraToFormState = () => {
     setInitialFormState((prevState) => ({
       ...prevState,
       walletID,
-      itemId: item.id,
-      itemName: item.name,
-      itemDescription: item.description,
-      itemLink: item.permalink
+      signature,
+      message: MESSAGE
     }));
   };
+
+  useEffect(() => {
+    addExtraToFormState();
+  }, [signature]);
 
   const onSubmit = async (values) => {
     console.log('VALUES', values);
     console.log('api call')
     handleCloseModal();
   };
+
 
   useEffect(() => {
     walletID && fetchData();
@@ -125,12 +165,15 @@ const RedeemPage = () => {
   //   </h1>
   // );
 
+
   return (
     <>
       <Header isUsedOnSecondaryPage secondaryTitle='Redemption'>
         <Button
           ctaText='Connect Wallet'
-          onClick={connectWallet}
+          onClick={() => {
+            connectWallet().then((id) => fetchData(id));
+          }}
           isDisabled={!!walletID}
         />
         {/* {walletID && (
@@ -149,10 +192,12 @@ const RedeemPage = () => {
         showModalHandler={handleShowModal}
         showModal={showModal}
         onSubmit={onSubmit}
-        handleClickedID={handleClickedID}
+        addExtraToFormState={addExtraToFormState}
         isEthereum={isEthereum}
         loading={loading}
         closeErrorNotification={closeErrorNotification}
+        isSigned={isSigned}
+        signMessage={signMessage}
       />
       <Footer isUsedOnSecondaryPage />
     </>
