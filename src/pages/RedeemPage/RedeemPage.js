@@ -5,6 +5,7 @@ import Footer from '../../components/Footer';
 import Redeem from '../../components/Redeem';
 import Button from '../../components/Button';
 import { API_URL, ETHEREUM } from '../../const';
+import { useTranslation } from 'react-i18next';
 import './RedeemPage.scss';
 
 const RedeemPage = () => {
@@ -165,7 +166,13 @@ const RedeemPage = () => {
 
   return (
     <>
-      <Header isUsedOnSecondaryPage secondaryTitle='Redemption'>
+      <Header
+        language={language}
+        setLanguage={setLanguage}
+        changeLanguage={changeLanguage}
+        isUsedOnSecondaryPage
+        secondaryTitle='Redemption'
+      >
         <Button
           ctaText='Connect Wallet'
           onClick={() => {

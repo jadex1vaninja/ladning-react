@@ -45,7 +45,13 @@
       "minutes": "mins",
       "seconds": "secs"
     },
-    "CTA": "Ver la subasta"
+    "CTA": "Agotado",
+    "description": {
+      "post-fight-highlights-started": "Confianza pura de Canelo Álvarez mientras avanza hacia el cuadrilátero para enfrentarse a Billy Joe Saunders en su pelea por el título del peso súper medio del 8 de mayo de 2021 en el AT&T Stadium de Arlington, Texas, frente a un público que impuso una nueva marca de asistencia para un evento de box en interiores en Estados Unidos.<br/> <br/>Este NFT incluye material en video tomado con cámara 8K, así como fuegos artificiales, mariachis y ballet folclórico de la presentación de Canelo ante el público de 73,126 personas.",
+      "post-fight-highlights-ended": "Canelo Álvarez lanza un brutal gancho de derecha en el octavo asalto de su combate con Billy Joe Saunders por el título de peso súper medio el 8 de mayo de 2021 en el AT&T Stadium de Arlington, Texas.<br/> <br/> El devastador impacto le cerró el ojo a Saunders y lo obligó a retirarse y terminar la pelea con un nocáut técnico, con el que Canelo obtuvo su 56.ª victoria y su 38.º nocáut. Con este triunfo, Canelo unificó el título de la OMB con sus cinturones de la AMB, el CMB y la revista The Ring, y reafirmó su lugar como el mejor peleador libra por libra del deporte.<br/> <br/> Además de ganar este NFT, ¡la persona que presente la puja más alta también recibirá guantes firmados y un video personalizado Eddie Hearn, el promotor de Canelo! Para canjear o revisar si ya se canjeó la recompensa, visita DAZNBoxing.io/Redeem a partir del 5 de junio de 2021."
+    },
+    "read-more": "Lee mas",
+    "read-less": "Leer menos"
   },
   "NFTs": {
     "title-knockout": "Nocaut",
@@ -141,7 +147,9 @@
         "description-two": "Estos artículos previos a la pelea de precio fijo (todas las ediciones Plata y Bronce) estarán a laventa a partir del viernes, 7 de mayo, a las 3 p. m. ET o 20:00 BST. Esto incluye los NFT de la edición Plata para los números frente a frente y los NFT de la edición Bronce para las predicciones de la pelea.",
         "description-three": "Los artículos sobre los nocauts y los números frente a frente dejarán de estar a la venta el sábado, 8 de mayo, a las 11 p. m. ET (domingo, 9 de mayo, a las 04:00 BST). Los artículos sobre las predicciones dejarán de estar a la venta el sábado, 8 de mayo, a las 10 p. m. ET (domingo, 9 de mayo, a las 03:00 BST). Toda puja realizada por los artículos de la subasta durante este periodo aplazará el tiempo de finalización durante 10 minutos para darles a los usuarios cuyas pujas hayan sido superadas la oportunidad de mejorarlas.",
         "description-four": "Ten en cuenta que, en caso de que las subastas de los NFT de la Serie de Predicciones se aplacen de modo que sigan activas cuando ya haya dado inicio la pelea, la puja más alta será aceptada al comienzo de la pelea.",
-        "description-five": "Los NFT sobre el resultado de la pelea saldrán a la venta poco después de la pelea. Vuelve a visitarnos después de la pelea para obtener más información."
+        "description-five": "Los NFT sobre el resultado de la pelea saldrán a la venta poco después de la pelea. Vuelve a visitarnos después de la pelea para obtener más información.",
+        "description-copy": "Los últimos dos NFT de \"De cara a la gloria\" ya están disponibles a la venta por subasta en OpenSea. Las subastas cierran el sábado, 15 de mayo a las 10 p. m. (hora del este) / 3 a. m. (hora de verano británica). Si se presentan pujas en los últimos 10 minutos de la subasta, esta se prolongará 10 minutos adicionales para permitirles a los usuarios aumentar sus pujas si las anteriores fueron superadas.",
+        "description-two-copy": "El resto de los artículos están agotados, pero es posible que se revendan en OpenSea. Comprueba la disponibilidad de los NFT haciendo clic en cada uno en DAZNBoxing.io para ver su estado de propiedad en OpenSea."
       },
       "fifth": {
         "title": "¿Cuáles son los diferentes tipos de NFT?",
@@ -216,7 +224,7 @@
     "prediction-decision-title-bronze": "Predicción: Alguno de los 12 asaltos + decisión",
     "prediction-decision-description-bronze": "NFT de edición limitada para predecir si la pelea entre Canelo y Saunders terminará en un asalto específico o con la decisión de los jueces. ¡Solo las NFT ganadoras recibirán una suscripción anual a DAZN!",
 
-    "post-fight-title-legendary": "Momento <br/> ganador",
+    "post-fight-title-legendary": " ASÍ TERMINÓ: EL GANCHO DE CANELO",
     "post-fight-description-legendary": "El momento ganador el 8 de mayo en la pelea de Canelo Alvarez y Billy Joe Saunders, inmortalizado para siempre en este NFT",
 
     "post-fight-title-gold-canelo": "Entrada <br/> del ganador",
@@ -225,13 +233,15 @@
     "post-fight-description-gold-canelo": "Obtén la entrada del peleador ganador hacia el cuadrilátero, inmortalizado para siempre en este NFT.",
     "post-fight-description-silver-saunders": "Obtén la entrada del peleador perdedor hacia el cuadrilátero, inmortalizado para siempre en este NFT.",
 
+    "post-fight-title-legendary-started": "ASÍ EMPEZÓ: LA CAMINATA AL CUADRILÁTERO DE CANELO",
+    "post-fight-description-legendary-started": "Canelo Álvarez lanza un brutal gancho de derecha en el octavo asalto de su combate con Billy Joe Saunders por el título de peso súper medio el 8 de mayo de 2021 en el AT&T Stadium de Arlington, Texas. El devastador impacto le cerró el ojo a Saunders y lo obligó a retirarse y terminar la pelea con un nocáut técnico, con el que Canelo obtuvo su 56.ª victoria y su 38.º nocáut. Con este triunfo, Canelo unificó el título de la OMB con sus cinturones de la AMB, el CMB y la revista The Ring, y reafirmó su lugar como el mejor peleador libra por libra del deporte. Además de ganar este NFT, ¡la persona que presente la puja más alta también recibirá guantes firmados y un video personalizado Eddie Hearn, el promotor de Canelo! Para canjear o revisar si ya se canjeó la recompensa, visita DAZNBoxing.io/Redeem a partir del 5 de junio de 2021.",
+
     "rarity-1": "1/1",
     "rarity-50": "50",
     "rarity-13": "13 (1 por resultado)",
     "rarity-100": "100 por resultado",
     "rarity-only-50": "50",
     "coming-soon": "Viene pronto",
-    "sold-out": "Liquidado"
-
+    "sold-out": "Agotado"
   }
 }

@@ -13,7 +13,9 @@ const FeaturedNFT = ({
   bgURL,
   videoSource,
   featuredId,
-  link
+  link,
+  sold,
+  soldUSD,
 }) => {
   const { t } = useTranslation();
   const [text, setText] = useState('');
@@ -30,12 +32,12 @@ const FeaturedNFT = ({
   const tokenPrice = paymentInfo
     ? highestBid.base_price / 10 ** highestBid.payment_token_contract.decimals
     : 0;
-  const usdPrice = paymentInfo
+  const usdPrice = soldUSD || (paymentInfo
     ? tokenPrice * highestBid.payment_token_contract.usd_price
-    : 0;
-  const ethPrice = paymentInfo
+    : 0);
+  const ethPrice = sold || (paymentInfo
     ? tokenPrice * highestBid.payment_token_contract.eth_price
-    : 0;
+    : 0);
 
   // const renderer = ({ days, hours, minutes, seconds }) => {
   //   const DOUBLE_NUM = 10;
@@ -154,7 +156,9 @@ const FeaturedNFT = ({
                 {t('featured-nft.price.sign')}
               </p>
               <p>
-                <small class='featured__price-dollar'>${usdPrice.toFixed(2)}</small>
+                <small class='featured__price-dollar'>
+                  ${usdPrice.toFixed(2)}
+                </small>
               </p>
             </div>
             <div className='featured__countdown-block'>
@@ -163,12 +167,12 @@ const FeaturedNFT = ({
                   <h2
                     className='featured__countdown-title'
                     dangerouslySetInnerHTML={{ __html: sliceText(text) }}
-                  ></h2>
+                  />
                   <p
                     className='featured__countdown-link'
                     onClick={showFullText}
                   >
-                    Read more
+                    {t('featured-nft.read-more')}
                   </p>
                 </>
               ) : (
@@ -176,12 +180,12 @@ const FeaturedNFT = ({
                   <h2
                     className='featured__countdown-title'
                     dangerouslySetInnerHTML={{ __html: text }}
-                  ></h2>
+                  />
                   <p
                     className='featured__countdown-link'
                     onClick={showShortText}
                   >
-                    Read less
+                    {t('featured-nft.read-less')}
                   </p>
                 </>
               )}
@@ -195,6 +199,7 @@ const FeaturedNFT = ({
               {/*/>*/}
             </div>
           </div>
+
           <div className='featured__CTA-wrap'>
             <button
               onClick={() => {
@@ -206,6 +211,7 @@ const FeaturedNFT = ({
               {t('featured-nft.CTA')}
             </button>
           </div>
+          
         </div>
       </div>
     </div>

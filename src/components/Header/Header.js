@@ -12,25 +12,18 @@ const Header = ({
   isUsedOnSecondaryPage,
   secondaryTitle,
   children,
-  promoBanner
+  promoBanner,
+  language,
+  setLanguage,
+  changeLanguage
 }) => {
-  const [language, setLanguage] = useState('en');
   const [showMore, setShowMore] = useState(false);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { isPhone } = useWindowInfo();
   const phone = isPhone();
-  const IS_SPANISH = language === 'es';
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
-
-  const getLanguageFromStorage = () => {
-    const lang = 'en'; //localStorage.getItem('i18nextLng') || 'en';
-    return lang;
-  };
 
   useEffect(() => {
-    setLanguage(getLanguageFromStorage());
+    // setLanguage(getLanguageFromStorage());
   }, []);
 
   return (
@@ -49,10 +42,10 @@ const Header = ({
           <h1 className='header__secondary-title'>{secondaryTitle}</h1>
           <ul
             className='header__language-list-secondary'
-            style={{ visibility: 'hidden' }}
+            // style={{ visibility: 'hidden' }}
           >
             <li
-              style={{ visibility: 'hidden' }}
+              // style={{ visibility: 'hidden' }}
               className={`header__button${language === 'en' ? ' active' : ''}`}
               onClick={() => {
                 changeLanguage('en');
@@ -62,7 +55,7 @@ const Header = ({
               En
             </li>
             <li
-              style={{ visibility: 'hidden' }}
+              // style={{ visibility: 'hidden' }}
               className={`header__button${language === 'es' ? ' active' : ''}`}
               onClick={() => {
                 changeLanguage('es');
@@ -113,7 +106,7 @@ const Header = ({
           <div className='header__terms-language'>
             <ul className='header__language-list'>
               <li
-                style={{ visibility: 'hidden' }}
+                // style={{ visibility: 'hidden' }}
                 className={`header__button${
                   language === 'en' ? ' active' : ''
                 }`}
@@ -125,7 +118,7 @@ const Header = ({
                 En
               </li>
               <li
-                style={{ visibility: 'hidden' }}
+                // style={{ visibility: 'hidden' }}
                 className={`header__button${
                   language === 'es' ? ' active' : ''
                 }`}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import './PrivacyPage.scss';
@@ -13,11 +13,21 @@ const PrivacyPage = () => {
     history.push('/');
   };
   const { t, i18n } = useTranslation();
-  const language = i18n.language;
-  const IS_SPANISH = language === 'es';
+  const [language, setLanguage] = useState('en');
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+  const _language = i18n.language;
+  const IS_SPANISH = _language === 'es';
   return (
     <>
-      <Header isUsedOnSecondaryPage secondaryTitle={t('terms.CTA-two')} />
+      <Header
+        language={language}
+        setLanguage={setLanguage}
+        changeLanguage={changeLanguage}
+        isUsedOnSecondaryPage
+        secondaryTitle={t('terms.CTA-two')}
+      />
       <div className='privacy'>
         <div className='privacy__wrapper'></div>
         <div className='privacy__container'>
