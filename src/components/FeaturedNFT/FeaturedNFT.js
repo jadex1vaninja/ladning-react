@@ -199,19 +199,19 @@ const FeaturedNFT = ({
               {/*/>*/}
             </div>
           </div>
-          {!sold &&
-              <div className='featured__CTA-wrap'>
-                <button
-                  onClick={() => {
-                    // window.open(LINK_TO_LIVE + FeaturedNFT_ID, '_blank');
-                    window.open(link, '_blank');
-                  }}
-                  className='featured__CTA'
-                >
-                  {t('featured-nft.CTA')}
-                </button>
-              </div>
-          }
+
+          <div className='featured__CTA-wrap'>
+            <button
+              onClick={() => {
+                // window.open(LINK_TO_LIVE + FeaturedNFT_ID, '_blank');
+                window.open(link, '_blank');
+              }}
+              className='featured__CTA'
+            >
+              {t('featured-nft.CTA')}
+            </button>
+          </div>
+          
         </div>
       </div>
     </div>
