@@ -13,7 +13,9 @@ const FeaturedNFT = ({
   bgURL,
   videoSource,
   featuredId,
-  link
+  link,
+  sold,
+  soldUSD,
 }) => {
   const { t } = useTranslation();
   const [text, setText] = useState('');
@@ -30,12 +32,12 @@ const FeaturedNFT = ({
   const tokenPrice = paymentInfo
     ? highestBid.base_price / 10 ** highestBid.payment_token_contract.decimals
     : 0;
-  const usdPrice = paymentInfo
+  const usdPrice = soldUSD || (paymentInfo
     ? tokenPrice * highestBid.payment_token_contract.usd_price
-    : 0;
-  const ethPrice = paymentInfo
+    : 0);
+  const ethPrice = sold || (paymentInfo
     ? tokenPrice * highestBid.payment_token_contract.eth_price
-    : 0;
+    : 0);
 
   // const renderer = ({ days, hours, minutes, seconds }) => {
   //   const DOUBLE_NUM = 10;
@@ -197,17 +199,19 @@ const FeaturedNFT = ({
               {/*/>*/}
             </div>
           </div>
-          <div className='featured__CTA-wrap'>
-            <button
-              onClick={() => {
-                // window.open(LINK_TO_LIVE + FeaturedNFT_ID, '_blank');
-                window.open(link, '_blank');
-              }}
-              className='featured__CTA'
-            >
-              {t('featured-nft.CTA')}
-            </button>
-          </div>
+          {!sold &&
+              <div className='featured__CTA-wrap'>
+                <button
+                  onClick={() => {
+                    // window.open(LINK_TO_LIVE + FeaturedNFT_ID, '_blank');
+                    window.open(link, '_blank');
+                  }}
+                  className='featured__CTA'
+                >
+                  {t('featured-nft.CTA')}
+                </button>
+              </div>
+          }
         </div>
       </div>
     </div>

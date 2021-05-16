@@ -44,6 +44,8 @@ const Landing = () => {
           videoSource={winningMomentVideoSrc}
           link={WINNING_MOMENT_LINK}
           featuredId={FeaturedNFT_ID_1}
+          sold={3.86}
+          soldUSD={14739.83}
         />
         <FeaturedNFT
           withMargin
@@ -53,6 +55,8 @@ const Landing = () => {
           videoSource={howItStartedVideoSrc}
           link={RING_WALK_LINK}
           featuredId={FeaturedNFT_ID_2}
+          sold={1.8742}
+          soldUSD={7156.83}
         />
         <CountdownWrapper title={t('featured-nft.countdown.title')} />
         <Cards />
