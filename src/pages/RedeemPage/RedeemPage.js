@@ -1,12 +1,15 @@
-import React, { useEffect, useState, useMemo, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Redeem from '../../components/Redeem';
 import Button from '../../components/Button';
-import { API_URL, ETHEREUM } from '../../const';
+import PromoBanner from '../../components/Header/components/PromoBanner';
+import Description from '../../components/Header/components/Description';
+import { ETHEREUM } from '../../const';
 import { useTranslation } from 'react-i18next';
 import './RedeemPage.scss';
+import Heading from '../../components/Header/components/Heading';
 
 const RedeemPage = () => {
   const collectionId = 'dazn-x-canelo-saunders';
@@ -35,6 +38,11 @@ const RedeemPage = () => {
     country: '',
     additional: ''
   });
+  const [language, setLanguage] = useState('en');
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
   // A Web3Provider wraps a standard Web3 provider, which is
   // what Metamask injects as window.ethereum into each page
   let signer;
@@ -171,16 +179,27 @@ const RedeemPage = () => {
         setLanguage={setLanguage}
         changeLanguage={changeLanguage}
         isUsedOnSecondaryPage
-        secondaryTitle='Redemption'
-      >
-        <Button
-          ctaText='Connect Wallet'
-          onClick={() => {
-            connectWallet().then((id) => fetchData(id));
-          }}
-          isDisabled={!!walletID || !isEthereum}
-        />
-      </Header>
+        promoBanner={<PromoBanner language={language} isRedeemPage />}
+        description={
+          <Description isMore={false} text={t('header.description-redeem')} />
+        }
+        betweenLogosSection={
+          <Button
+            ctaText={t('header.buttons.wallet')}
+            onClick={() => {
+              connectWallet().then((id) => fetchData(id));
+            }}
+            isDisabled={!!walletID || !isEthereum}
+          />
+        }
+        redeemOnlyTitle={
+          <Heading
+            type={'h1'}
+            className={'header__title-redemption'}
+            text={'Redemption'}
+          />
+        }
+      />
       <Redeem
         data={data}
         dataAll={dataAll}

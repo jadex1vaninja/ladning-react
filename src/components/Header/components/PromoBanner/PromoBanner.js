@@ -2,11 +2,15 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { imgPath } from '../../../../const';
 
-const PromoBanner = ({ language }) => {
+const PromoBanner = ({ language, isRedeemPage }) => {
   const { t } = useTranslation();
 
   return (
-    <div className='header__promo'>
+    <div
+      className={
+        isRedeemPage ? 'header__promo header__promo--redeem' : 'header__promo'
+      }
+    >
       <img
         className='header__promo-img'
         src={imgPath + 'promo.png'}

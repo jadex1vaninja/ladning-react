@@ -18,6 +18,11 @@ export const RING_WALK_LINK =
 export const WINNING_MOMENT_LINK =
   'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506803856657874945';
 
+export const winningMomentVideoSrc =
+  'https://storage.opensea.io/files/cddcb2cc6ec9719248caf6f9358881e9.mp4';
+export const howItStartedVideoSrc =
+  'https://storage.opensea.io/files/6a01f47ea67d96cb2d302b4de628005c.mp4';
+
 export const NFTS = [
   {
     type: 'legendary',

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   imgPath,
@@ -13,11 +13,13 @@ const Header = ({
   secondaryTitle,
   children,
   promoBanner,
+  description,
   language,
   setLanguage,
-  changeLanguage
+  changeLanguage,
+  betweenLogosSection,
+  redeemOnlyTitle
 }) => {
-  const [showMore, setShowMore] = useState(false);
   const { t } = useTranslation();
   const { isPhone } = useWindowInfo();
   const phone = isPhone();
@@ -134,88 +136,25 @@ const Header = ({
         </nav>
       )}
       {promoBanner && promoBanner}
-      {!isUsedOnSecondaryPage && (
-        <div className='header__description'>
-          <p className='header__description-text'>
-            {t('header.description.text')}
-          </p>
-          {/* TODO: ADD LINK */}
-          {!showMore && (
-            <span
-              onClick={() => setShowMore(true)}
-              className='header__description-link'
-            >
-              {t('header.description.link')}
-            </span>
-          )}
-          {showMore && (
-            <>
-              <br></br>
-              <p className='header__description-text'>
-                {t('header.read-more.text')}
-              </p>
-              <br></br>
-              <ul className='header__list'>
-                <li
-                  dangerouslySetInnerHTML={{
-                    __html: t('header.read-more.tale')
-                  }}
-                />
-                <li
-                  dangerouslySetInnerHTML={{
-                    __html: t('header.read-more.knockout')
-                  }}
-                />
-                <li
-                  dangerouslySetInnerHTML={{
-                    __html: t('header.read-more.prediction')
-                  }}
-                />
-                <li
-                  dangerouslySetInnerHTML={{
-                    __html: t('header.read-more.post-fight')
-                  }}
-                />
-              </ul>
-              <span
-                className='header__description-link'
-                onClick={() => setShowMore(false)}
-              >
-                {t('header.description.link-less')}
-              </span>
-            </>
-          )}
+      {redeemOnlyTitle && redeemOnlyTitle}
+      {description && description}
+      <div className='header__inner'>
+        <div className='header__img-wrapper header__img-wrapper--first'>
+          <img
+            className='header__logo1'
+            src={imgPath + 'logo.png'}
+            alt='logo'
+          />
         </div>
-      )}
-      {!isUsedOnSecondaryPage && (
-        <div className='header__inner'>
-          <div className='header__img-wrapper header__img-wrapper--first'>
-            <img
-              className='header__logo1'
-              src={imgPath + 'logo.png'}
-              alt='logo'
-            />
-          </div>
-
-          <div className='header__text-wrapper'>
-            <h1 className='header__title'>{t('header.title')}</h1>
-            <a
-              className='text-center'
-              target='_blank'
-              href={OPENSEA_COLLECTION_LINK}
-            >
-              <span className='header__text'>{t('header.sub-title')}</span>
-            </a>
-          </div>
-          <div className='header__img-wrapper header__img-wrapper--second'>
-            <img
-              className='header__logo3'
-              src={imgPath + 'RGB_white_red.png'}
-              alt='logo'
-            />
-          </div>
+        <div className='header__text-wrapper'>{betweenLogosSection}</div>
+        <div className='header__img-wrapper header__img-wrapper--second'>
+          <img
+            className='header__logo3'
+            src={imgPath + 'RGB_white_red.png'}
+            alt='logo'
+          />
         </div>
-      )}
+      </div>
       <div className='header__miscellaneous'>{children}</div>
       <div className='header__banner'>
         <img

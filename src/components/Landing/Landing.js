@@ -7,18 +7,21 @@ import Registration from '../Registration';
 import FeaturedNFT from '../FeaturedNFT';
 import FAQs from '../FAQs';
 import PromoBanner from '../Header/components/PromoBanner';
+import Description from '../Header/components/Description';
 import CountdownWrapper from '../CountdownWrapper';
-import TermsConditions from '../TermsConditions';
+import Link from '../Header/components/Link';
+import Heading from '../Header/components/Heading';
 import featuredBgRipped from '../../assets/img/featured-bg.png';
 import featuredBgBlack from '../../assets/img/featured-nft-black.png';
-import { RING_WALK_LINK, WINNING_MOMENT_LINK } from '../../const';
-import './Landing.scss';
+import {
+  RING_WALK_LINK,
+  WINNING_MOMENT_LINK,
+  OPENSEA_COLLECTION_LINK,
+  winningMomentVideoSrc,
+  howItStartedVideoSrc
+} from '../../const';
 import { FeaturedNFT_ID_1, FeaturedNFT_ID_2 } from '../../const/nfts';
-
-const winningMomentVideoSrc =
-  'https://storage.opensea.io/files/cddcb2cc6ec9719248caf6f9358881e9.mp4';
-const howItStartedVideoSrc =
-  'https://storage.opensea.io/files/6a01f47ea67d96cb2d302b4de628005c.mp4';
+import './Landing.scss';
 
 const Landing = () => {
   const [language, setLanguage] = useState('en');
@@ -34,7 +37,24 @@ const Landing = () => {
         setLanguage={setLanguage}
         changeLanguage={changeLanguage}
         isUsedOnSecondaryPage={false}
-        promoBanner={<PromoBanner language={language} />}
+        promoBanner={<PromoBanner language={language} isRedeemPage={false} />}
+        description={<Description isMore text={t('header.description.text')} />}
+        betweenLogosSection={
+          <>
+            <Heading
+              className={'header__title'}
+              text={t('header.title')}
+              type={'h1'}
+            />
+            <Link
+              className={'text-center'}
+              secondClassName={'header__text'}
+              text={t('header.sub-title')}
+              href={OPENSEA_COLLECTION_LINK}
+              target={'_blank'}
+            />
+          </>
+        }
       />
       <main className='root'>
         <FeaturedNFT
@@ -67,7 +87,6 @@ const Landing = () => {
           isUsedOnSecondaryPage={false}
         />
         <Registration />
-        {/* <TermsConditions /> */}
       </main>
       <Footer />
     </>

@@ -17,6 +17,7 @@
       "link": "Read more about the NFT Drop",
       "link-less": "Read less"
     },
+    "description-redeem": "Connect your wallet to verify ownership of a redeemable Face the Fearless NFT or check the table below to see if a Face the Fearless NFT has already been redeemed. Please contact help@dazn.com with any questions.",
     "read-more": {
       "text": "This stunning collection of NFTs commemorates the fight and even gets buyers into the action! All NFTs come with special unlockable bonuses! The extremely rare Gold and Legendary NFTs unlock premium items and experiences like signed gloves and tickets to a future fight. Check out all the limited NFT collections.",
       "tale": "<b>Tale of the Tape:</b> a 1-of-1 Gold Edition plus 50 Silver Editions for each fighter.",
@@ -26,7 +27,8 @@
     },
     "buttons": {
       "btn-one": "see collection",
-      "btn-two": "subscribe to dazn"
+      "btn-two": "subscribe to dazn",
+      "wallet": "Connect Wallet"
     }
   },
   "featured-nft": {

@@ -17,6 +17,7 @@
       "link": "Leer más sobre el lanzamiento de los NFT",
       "link-less": "Leer menos"
     },
+    "description-redeem": "description-redeem",
     "read-more": {
       "text": "¡Esta impresionante colección de NFT conmemora la pelea e incluso lleva a los compradores a la acción! ¡Todos los NFT vienen con bonificaciones especiales desbloqueables! Los extremadamente raros NFT Gold y Legendary desbloquean artículos y experiencias premium como guantes firmados y boletos para una pelea futura. Consulte todas las colecciones NFT limitadas.",
       "tale": "<b>Números frente a frente: </b> una edición Gold 1 de 1, más 50 ediciones Silver para cada boxeador",
@@ -26,7 +27,8 @@
     },
     "buttons": {
       "btn-one": "Ver las obras de arte",
-      "btn-two": "btn-two"
+      "btn-two": "btn-two",
+      "wallet": "cta-text-spain"
     }
   },
   "featured-nft": {

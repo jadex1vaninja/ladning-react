@@ -33,11 +33,28 @@
     margin: 0;
 
     @include _768 {
+      font-size: 57px;
+      letter-spacing: 0px;
+      line-height: 45px;
+    }
+  }
+  &__title-redemption {
+    color: white;
+    font-family: 'DAZNTrim-Bold';
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 41px;
+    line-height: 34px;
+    margin: 0;
+
+    @include _768 {
       font-size: 50px;
       letter-spacing: 0px;
       line-height: 38px;
+      margin: 0 0 4rem 0;
     }
   }
+
   &__language-list-secondary {
     display: flex;
     align-self: flex-start;
@@ -225,6 +242,10 @@
 
     @include _1024 {
       margin-bottom: 50px;
+    }
+
+    &--redeem {
+      margin-top: -9rem;
     }
   }
 
