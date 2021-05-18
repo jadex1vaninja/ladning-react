@@ -27,6 +27,7 @@ const TCsPage = () => {
         changeLanguage={changeLanguage}
         isUsedOnSecondaryPage
         secondaryTitle='Terms & Conditions'
+        displayLanguageSwitcher
       />
       <div className='tcs'>
         <div className='tcs__wrapper'></div>

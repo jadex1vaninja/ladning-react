@@ -200,6 +200,7 @@ const RedeemPage = () => {
             text={'Redemption'}
           />
         }
+        displayLanguageSwitcher={false}
       />
       <Redeem
         data={data}

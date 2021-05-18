@@ -7,7 +7,10 @@ const Description = ({ isMore, text }) => {
 
   return (
     <div className='header__description'>
-      <p className='header__description-text'>{text}</p>
+      <p
+        className='header__description-text'
+        dangerouslySetInnerHTML={{ __html: text }}
+      />
       {/* TODO: ADD LINK */}
       {isMore && !showMore && (
         <span

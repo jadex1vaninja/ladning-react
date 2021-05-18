@@ -27,6 +27,7 @@ const PrivacyPage = () => {
         changeLanguage={changeLanguage}
         isUsedOnSecondaryPage
         secondaryTitle={t('terms.CTA-two')}
+        displayLanguageSwitcher
       />
       <div className='privacy'>
         <div className='privacy__wrapper'></div>

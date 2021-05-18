@@ -55,6 +55,7 @@ const Landing = () => {
             />
           </>
         }
+        displayLanguageSwitcher
       />
       <main className='root'>
         <FeaturedNFT

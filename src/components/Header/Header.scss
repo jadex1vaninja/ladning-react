@@ -263,6 +263,7 @@
       height: 212px;
     }
   }
+
   &__text-wrapper {
     position: relative;
     display: flex;
@@ -282,6 +283,7 @@
       order: 2;
     }
   }
+
   &__text {
     color: $brand-yellow;
     font-family: 'DAZNTrim-Light';
@@ -296,6 +298,7 @@
       line-height: 45px;
     }
   }
+
   &__promo-text {
     font-family: 'DAZNTrim-Light';
     color: $brand-white;
@@ -337,6 +340,19 @@
     text-align: center;
     word-spacing: 3px;
     max-width: none;
+
+    > a {
+      font-family: 'DAZNTrim-Light';
+      color: $brand-white;
+      font-size: 0.75rem;
+      text-decoration: none;
+      cursor: pointer;
+
+      @include _1024 {
+        font-size: 1.563rem;
+        line-height: 2.188rem;
+      }
+    }
 
     @include _1024 {
       max-width: 50%;

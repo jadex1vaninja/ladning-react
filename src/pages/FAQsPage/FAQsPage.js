@@ -26,6 +26,7 @@ const FAQsPage = () => {
         changeLanguage={changeLanguage}
         isUsedOnSecondaryPage
         secondaryTitle={t('faq.title')}
+        displayLanguageSwitcher
       />
       <FAQs
         show={10}
