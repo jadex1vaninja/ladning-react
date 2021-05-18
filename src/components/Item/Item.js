@@ -26,6 +26,7 @@ const Item = ({
         <div className='item__btn-wrapper'>
           {hasButton && (
             <Button
+              extraClassName='redeem-btn'
               ctaText='Redeem'
               onClick={() => {
                 openModal();

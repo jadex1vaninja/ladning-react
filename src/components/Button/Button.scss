@@ -35,3 +35,13 @@
   }
 
 }
+
+.redeem-btn {
+  background-color: transparent;
+  color: $brand-yellow;
+
+  &:hover {
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
