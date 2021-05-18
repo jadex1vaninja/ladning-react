@@ -11,6 +11,9 @@ const Item = ({
   hasButton,
   isRedeemed
 }) => {
+  const sliceText = (string) => {
+    return `${String(string).slice(0, 5)}...`;
+  };
   const [isRedeemedState, setIsRedeemedState] = useState(false);
 
   return (
@@ -40,7 +43,7 @@ const Item = ({
             />
           )}
         </div>
-        <p>{id}</p>
+        <p>{sliceText(id)}</p>
       </div>
       <div className='item__status'>
         <div
