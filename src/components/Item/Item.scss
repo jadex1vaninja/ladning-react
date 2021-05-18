@@ -3,7 +3,7 @@
 
 .item {
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
   align-items: center;
   width: 100%;
   border-bottom: 1px solid $brand-white;
@@ -19,6 +19,7 @@
   }
 
   &__name {
+    width: 50%;
 
     h2,a {
       color: $brand-white;
@@ -36,6 +37,8 @@
   &__description {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    width: 35%;
 
     p {
       color: $brand-white;
@@ -44,6 +47,24 @@
       line-height: 55px;
       font-family: 'DAZNTrim-Bold';
       margin: 0;
+    }
+  }
+
+  &__status {
+    display: flex;
+    justify-content: flex-end;
+    width: 15%;
+  }
+
+  &__sign {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid $brand-yellow;
+    background-color: transparent;
+
+    &--redeemed {
+      background-color: $brand-yellow;
     }
   }
 

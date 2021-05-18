@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
+import { useTranslation } from 'react-i18next';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Redeem from '../../components/Redeem';
@@ -7,9 +8,9 @@ import Button from '../../components/Button';
 import PromoBanner from '../../components/Header/components/PromoBanner';
 import Description from '../../components/Header/components/Description';
 import { ETHEREUM } from '../../const';
-import { useTranslation } from 'react-i18next';
-import './RedeemPage.scss';
+import { MY_NFTS } from '../../const/myNFTs';
 import Heading from '../../components/Header/components/Heading';
+import './RedeemPage.scss';
 
 const RedeemPage = () => {
   const collectionId = 'dazn-x-canelo-saunders';
@@ -55,6 +56,8 @@ const RedeemPage = () => {
 
     fetchDataAll();
     setSecretMessage(`${CODE_GENERATOR}`);
+
+    setData(MY_NFTS);
   }, []);
 
   useEffect(() => {
@@ -187,7 +190,8 @@ const RedeemPage = () => {
           <Button
             ctaText={t('header.buttons.wallet')}
             onClick={() => {
-              connectWallet().then((id) => fetchData(id));
+              // connectWallet().then((id) => fetchData(id));
+              connectWallet().then(() => setData(MY_NFTS));
             }}
             isDisabled={!!walletID || !isEthereum}
           />

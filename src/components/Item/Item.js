@@ -2,8 +2,17 @@ import React, { useState } from 'react';
 import Button from '../Button';
 import './Item.scss';
 
-const Item = ({ id, name, link, openModal, signMessage, hasButton }) => {
-  const [isRedeemed, setIsRedeemed] = useState(false);
+const Item = ({
+  id,
+  name,
+  link,
+  openModal,
+  signMessage,
+  hasButton,
+  isRedeemed
+}) => {
+  const [isRedeemedState, setIsRedeemedState] = useState(false);
+
   return (
     <div className='item'>
       <div className='item__name'>
@@ -22,15 +31,22 @@ const Item = ({ id, name, link, openModal, signMessage, hasButton }) => {
                 openModal();
                 signMessage()
                   .then(() => {
-                    setIsRedeemed(true);
+                    setIsRedeemedState(true);
                   })
-                  .catch(() => setIsRedeemed(false));
+                  .catch(() => setIsRedeemedState(false));
               }}
-              isDisabled={!!isRedeemed}
+              isDisabled={!!isRedeemedState}
             />
           )}
         </div>
         <p>{id}</p>
+      </div>
+      <div className='item__status'>
+        <div
+          className={
+            isRedeemed ? 'item__sign item__sign--redeemed' : 'item__sign'
+          }
+        />
       </div>
     </div>
   );

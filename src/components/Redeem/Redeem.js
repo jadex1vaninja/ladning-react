@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Modal } from 'react-bootstrap';
 import { Spinner } from '../shared/SVG/Spinner';
 import Item from '../Item';
@@ -22,7 +22,37 @@ const Redeem = ({
   closeErrorNotification,
   secretMessage
 }) => {
-  console.log(secretMessage);
+  const mockAllItems = dataAll.map((el) => ({ ...el, isRedeemed: true }));
+  const mockMyItems = data.map((el) => ({ ...el, isRedeemed: false }));
+
+  const findCoincidence = (allItems, myItems) => {
+    const result = [];
+
+    // for (let i = 0; i < allItems.length; i += 1) {
+    //   if (myItems[i].id) {
+    //     if (
+    //       allItems[i].id === myItems[i].id &&
+    //       myItems[i].isRedeemed === false
+    //     ) {
+    //       const temp = {
+    //         ...allItems[i],
+    //         isRedeemed: false,
+    //         hasButton: true
+    //       };
+    //       result.push(temp);
+    //     }
+    //   } else {
+    //     const temp = {
+    //       ...allItems[i],
+    //       hasButton: false
+    //     };
+    //     result.push(temp);
+    //   }
+    // }
+  };
+  // findCoincidence(mockAllItems, mockMyItems);
+  const renderData = findCoincidence(mockAllItems, mockMyItems);
+
   return (
     <div className='redeem-root'>
       {!isEthereum && (
@@ -46,18 +76,22 @@ const Redeem = ({
 
       <div className='redeem-root__preview'>
         <div className='redeem-root__preview-header'>
-          <p className='redeem-root__preview-header-text'>NFT</p>
-          <p className='redeem-root__preview-header-text'>Token Id</p>
+          <p className='redeem-root__preview-header-text redeem-root__preview-header-text--name'>
+            NFT
+          </p>
+          <p className='redeem-root__preview-header-text redeem-root__preview-header-text--id'>
+            Token Id
+          </p>
+          <p className='redeem-root__preview-header-text redeem-root__preview-header-text--isRedeemed'>
+            REDEEMED?
+          </p>
         </div>
         {loading ? (
           <Spinner />
         ) : (
           <>
-            {Boolean(data.length) && (
-              <h2 className='redeem-root__title'>Your nfts</h2>
-            )}
-            {Boolean(data.length) &&
-              data.map((item) => (
+            {Boolean(mockAllItems.length) &&
+              mockAllItems.map((item) => (
                 <Item
                   key={item.id}
                   id={item.id}
@@ -66,21 +100,8 @@ const Redeem = ({
                   openModal={showModalHandler}
                   addExtraToFormState={addExtraToFormState}
                   signMessage={signMessage}
-                  hasButton
-                />
-              ))}
-            <h2 className='redeem-root__title'>Nfts</h2>
-            {Boolean(dataAll.length) &&
-              dataAll.map((item) => (
-                <Item
-                  key={item.id}
-                  id={item.id}
-                  link={item.permalink}
-                  name={item.name}
-                  openModal={showModalHandler}
-                  addExtraToFormState={addExtraToFormState}
-                  signMessage={signMessage}
-                  hasButton={false}
+                  hasButton={item.hasButton}
+                  isRedeemed={item.isRedeemed} //TO-DO: replace with api data
                 />
               ))}
           </>

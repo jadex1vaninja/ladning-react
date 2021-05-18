@@ -139,15 +139,31 @@
   &__preview-header {
     padding: 1.25rem 0;
     display: flex;
-    justify-content: space-between;
     color: $brand-white;
     text-transform: uppercase;
     border-bottom: 1px solid $brand-white;
     font-size: 1.25rem;
+    width: 100%;
   }
 
   &__preview-header-text {
     margin: 0;
+
+    &--name {
+      width: 50%;
+    }
+
+    &--id {
+      width: 35%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &--isRedeemed {
+      width: 15%;
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 
   &__title {

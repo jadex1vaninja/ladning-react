@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Heading = ({ type, className, text }) => {
+const Heading = ({ type, className = '', text }) => {
   switch (type) {
     case 'h1':
       return <h1 className={className}>{text}</h1>;
