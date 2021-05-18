@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import _ from 'lodash';
 import { Modal } from 'react-bootstrap';
 import { Spinner } from '../shared/SVG/Spinner';
 import Item from '../Item';
@@ -22,37 +23,35 @@ const Redeem = ({
   closeErrorNotification,
   secretMessage
 }) => {
-  const mockAllItems = dataAll.map((el) => ({ ...el, isRedeemed: true }));
-  const mockMyItems = data.map((el) => ({ ...el, isRedeemed: false }));
+  const mockAllItems = dataAll.map((el) => ({ ...el, isRedeemed: false }));
+  const mockMyItems = data
+    .map((el) => ({ ...el, isRedeemed: false }))
+    .filter((el) => !el.isRedeemed);
 
   const findCoincidence = (allItems, myItems) => {
-    const result = [];
+    const listOfDoesntMatches = allItems
+      .filter((element) => {
+        return myItems.every((el) => el.token_id !== element.token_id);
+      })
+      .map((e) => ({
+        ...e,
+        hasButton: false
+      }));
 
-    // for (let i = 0; i < allItems.length; i += 1) {
-    //   if (myItems[i].id) {
-    //     if (
-    //       allItems[i].id === myItems[i].id &&
-    //       myItems[i].isRedeemed === false
-    //     ) {
-    //       const temp = {
-    //         ...allItems[i],
-    //         isRedeemed: false,
-    //         hasButton: true
-    //       };
-    //       result.push(temp);
-    //     }
-    //   } else {
-    //     const temp = {
-    //       ...allItems[i],
-    //       hasButton: false
-    //     };
-    //     result.push(temp);
-    //   }
-    // }
+    const listOfMatches = _.intersectionBy(allItems, myItems, 'token_id').map(
+      (e) => {
+        return {
+          ...e,
+          hasButton: true
+        };
+      }
+    );
+    console.log(listOfMatches);
+    return [...listOfMatches, ...listOfDoesntMatches];
   };
-  // findCoincidence(mockAllItems, mockMyItems);
-  const renderData = findCoincidence(mockAllItems, mockMyItems);
 
+  const renderData = findCoincidence(mockAllItems, mockMyItems);
+  console.log(renderData);
   return (
     <div className='redeem-root'>
       {!isEthereum && (
@@ -90,8 +89,8 @@ const Redeem = ({
           <Spinner />
         ) : (
           <>
-            {Boolean(mockAllItems.length) &&
-              mockAllItems.map((item) => (
+            {Boolean(renderData.length) &&
+              renderData.map((item) => (
                 <Item
                   key={item.id}
                   id={item.id}
@@ -108,6 +107,7 @@ const Redeem = ({
         )}
       </div>
       <Modal
+        className='redeem-root__modal'
         show={showModal}
         onHide={closeModalHandler}
         backdrop='static'
@@ -115,8 +115,8 @@ const Redeem = ({
         centered
         animation={false}
       >
-        <Modal.Header closeButton />
-        <Modal.Body>
+        <Modal.Header className='redeem-root__modal-head' closeButton />
+        <Modal.Body className='redeem-root__modal-body'>
           {isSigned ? (
             <OwnForm
               initialFormState={initialFormState}
@@ -124,8 +124,14 @@ const Redeem = ({
               closeModalHandler={closeModalHandler}
             />
           ) : (
-            <div>
-              Sign transaction please: Secret Code: <code>{secretMessage}</code>
+            <div className='redeem-root__alert'>
+              <div className='redeem-root__alert-head'>
+                Sign transaction please:
+              </div>
+              <div className='redeem-root__alert-body'>
+                <p className='redeem-root__alert-body-text'>Secret Code:</p>
+                <p className='redeem-root__alert-body-value'>{secretMessage}</p>
+              </div>
             </div>
           )}
         </Modal.Body>

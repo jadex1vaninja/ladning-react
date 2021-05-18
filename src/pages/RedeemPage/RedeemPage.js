@@ -16,7 +16,7 @@ const RedeemPage = () => {
   const collectionId = 'dazn-x-canelo-saunders';
   const API_ALL = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=${collectionId}`;
   const API_OWNER = `${API_ALL}&owner=`;
-  const CODE_GENERATOR = Math.floor(Math.random() * 1e16);
+  const CODE_GENERATOR = Math.floor(Math.random() * 1e21);
 
   const [provider, setProvider] = useState(null);
   const [error, setError] = useState(false);
