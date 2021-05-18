@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import _ from 'lodash';
 import { Modal } from 'react-bootstrap';
 import { Spinner } from '../shared/SVG/Spinner';
@@ -46,12 +46,11 @@ const Redeem = ({
         };
       }
     );
-    console.log(listOfMatches);
     return [...listOfMatches, ...listOfDoesntMatches];
   };
 
   const renderData = findCoincidence(mockAllItems, mockMyItems);
-  console.log(renderData);
+
   return (
     <div className='redeem-root'>
       {!isEthereum && (
@@ -90,7 +89,7 @@ const Redeem = ({
         ) : (
           <>
             {Boolean(renderData.length) &&
-              renderData.map((item,index) => (
+              renderData.map((item, index) => (
                 <Item
                   key={item.id}
                   id={item.id}
@@ -100,14 +99,20 @@ const Redeem = ({
                   addExtraToFormState={addExtraToFormState}
                   signMessage={signMessage}
                   hasButton={item.hasButton}
-                  isRedeemed={renderData.length === index+1 ||  item.isRedeemed  } //TO-DO: replace with api data, Mock Last item as redeemed
+                  isRedeemed={
+                    renderData.length === index + 1 || item.isRedeemed
+                  } //TO-DO: replace with api data, Mock Last item as redeemed
                 />
               ))}
           </>
         )}
       </div>
       <Modal
-        className='redeem-root__modal'
+        className={
+          isSigned
+            ? 'redeem-root__modal redeem-root__modal--form'
+            : 'redeem-root__modal'
+        }
         show={showModal}
         onHide={closeModalHandler}
         backdrop='static'

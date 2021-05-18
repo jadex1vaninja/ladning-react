@@ -1,0 +1,42 @@
+@import '../../media-mixin.scss';
+@import '../../variables';
+
+.main-form {
+  padding: 35px 32px 16px;
+
+  .form-group {
+    margin-bottom: 24px;
+
+    > label {
+      display: none;
+    }
+
+    > input {
+      padding: 22px 19px;
+      font-family: 'DAZNTrim-Bold';
+      letter-spacing: 1px;
+      font-size: 20px;
+      line-height: 28px;
+      height: auto;
+
+      &::placeholder {
+        text-transform: uppercase;
+        font-family: 'DAZNTrim-Bold';
+        letter-spacing: 1px;
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &__submit-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__submit-btn {
+    @include CTA;
+    color: $brand-yellow;
+    background-color: $brand-black;
+  }
+}

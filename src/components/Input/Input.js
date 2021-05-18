@@ -7,6 +7,7 @@ const Input = ({ htmlFor, name, errors, text, touched }) => {
     <div className='form-group'>
       <label htmlFor={htmlFor}>{text}</label>
       <Field
+        placeholder={text}
         name={name}
         type='text'
         className={'form-control' + (errors && touched ? ' is-invalid' : '')}

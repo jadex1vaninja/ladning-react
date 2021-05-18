@@ -30,14 +30,11 @@ const RedeemPage = () => {
   const [secretMessage, setSecretMessage] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [initialFormState, setInitialFormState] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
-    street: '',
-    city: '',
-    state: '',
-    zipcode: '',
-    country: '',
-    additional: ''
+    openseaUserName: '',
+    country: ''
   });
   const [language, setLanguage] = useState('en');
   const { t, i18n } = useTranslation();

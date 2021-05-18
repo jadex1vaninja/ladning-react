@@ -3,13 +3,21 @@ import { Formik } from 'formik';
 import { Form } from 'react-bootstrap';
 import * as Yup from 'yup';
 import Input from '../Input/Input';
+import './OwnForm.scss';
 
 const OwnForm = ({ initialFormState, onSubmit, closeModalHandler }) => {
   return (
     <Formik
       initialValues={initialFormState}
       validationSchema={Yup.object().shape({
-        name: Yup.string()
+        firstName: Yup.string()
+          .required('Required field')
+          .min(3, 'Should has at least 3 symbols')
+          .matches(/^[A-ZА-Я][a-zа-я]{2,20}|[a-zа-я]{2,20}/, {
+            message: 'Must be a string',
+            excludeEmptyString: true
+          }),
+        lastName: Yup.string()
           .required('Required field')
           .min(3, 'Should has at least 3 symbols')
           .matches(/^[A-ZА-Я][a-zа-я]{2,20}|[a-zа-я]{2,20}/, {
@@ -19,37 +27,16 @@ const OwnForm = ({ initialFormState, onSubmit, closeModalHandler }) => {
         email: Yup.string()
           .email('Email has been typed incorrect')
           .required('Required field'),
-        street: Yup.string()
+        openseaUserName: Yup.string()
           .required('Required field')
           .min(3, 'At least should have 3 symbols')
           .matches(/^[A-ZА-Я][a-zа-я]{2,20}|[a-zа-я]{2,20}/, {
             message: 'Must be a string',
             excludeEmptyString: true
           }),
-        city: Yup.string()
-          .required('Required field')
-          .min(3, 'At least should have 3 symbols')
-          .matches(/^[A-ZА-Я][a-zа-я]{2,20}|[a-zа-я]{2,20}/, {
-            message: 'Must be a string',
-            excludeEmptyString: true
-          }),
-        state: Yup.string()
-          .required('Required field')
-          .min(3, 'At least should have 3 symbols')
-          .matches(/[A-ZА-Я][a-zа-я]{2,20}|[a-zа-я]{2,20}/, {
-            message: 'Must be a string',
-            excludeEmptyString: true
-          }),
-        zipcode: Yup.number()
-          .positive()
-          .integer()
-          .typeError('Must be a number')
-          .required('Required field'),
-
         country: Yup.string()
           .min(4, 'Should has at least 4 symbols')
-          .required('Required field'),
-        additional: Yup.string()
+          .required('Required field')
       })}
       onSubmit={onSubmit}
     >
@@ -65,17 +52,26 @@ const OwnForm = ({ initialFormState, onSubmit, closeModalHandler }) => {
         resetForm
       }) => (
         <Form
+          className='main-form'
           onSubmit={(event) => {
             event.preventDefault();
+            closeModalHandler();
             handleSubmit();
           }}
         >
           <Input
-            text={'First name / Last Name'}
-            htmlFor={'name'}
-            name={'name'}
-            errors={errors.name}
-            touched={touched.name}
+            text={'First name'}
+            htmlFor={'firstName'}
+            name={'firstName'}
+            errors={errors.firstName}
+            touched={touched.firstName}
+          />
+          <Input
+            text={'Last name'}
+            htmlFor={'lastName'}
+            name={'lastName'}
+            errors={errors.lastName}
+            touched={touched.lastName}
           />
           <Input
             text={'Email'}
@@ -85,32 +81,11 @@ const OwnForm = ({ initialFormState, onSubmit, closeModalHandler }) => {
             touched={touched.email}
           />
           <Input
-            text={'Street'}
-            htmlFor={'street'}
-            name={'street'}
-            errors={errors.street}
-            touched={touched.street}
-          />
-          <Input
-            text={'City'}
-            htmlFor={'city'}
-            name={'city'}
-            errors={errors.city}
-            touched={touched.city}
-          />
-          <Input
-            text={'State'}
-            htmlFor={'state'}
-            name={'state'}
-            errors={errors.state}
-            touched={touched.state}
-          />
-          <Input
-            text={'Zipcode'}
-            htmlFor={'zipcode'}
-            name={'zipcode'}
-            errors={errors.zipcode}
-            touched={touched.zipcode}
+            text={'Opensea Username'}
+            htmlFor={'openseaUserName'}
+            name={'openseaUserName'}
+            errors={errors.openseaUserName}
+            touched={touched.openseaUserName}
           />
           <Input
             text={'Country'}
@@ -119,35 +94,28 @@ const OwnForm = ({ initialFormState, onSubmit, closeModalHandler }) => {
             errors={errors.country}
             touched={touched.country}
           />
-          <Input
-            text={'Additional info'}
-            htmlFor={'additional'}
-            name={'additional'}
-            errors={errors.additional}
-            touched={touched.additional}
-          />
-          <div className='form-group'>
+          <div className='form-group main-form__submit-wrapper'>
             <button
               type='submit'
-              className='btn btn-primary mr-2'
+              className='main-form__submit-btn'
               disabled={!isValid}
             >
-              Confirm
+              Submit
             </button>
-            <button
-              type='reset'
-              className='btn btn-secondary mr-2'
-              onClick={resetForm}
-            >
-              Reset
-            </button>
-            <button
-              type='button'
-              className='btn btn-danger'
-              onClick={closeModalHandler}
-            >
-              Decline
-            </button>
+            {/*<button*/}
+            {/*  type='reset'*/}
+            {/*  className='btn btn-secondary mr-2'*/}
+            {/*  onClick={resetForm}*/}
+            {/*>*/}
+            {/*  Reset*/}
+            {/*</button>*/}
+            {/*<button*/}
+            {/*  type='button'*/}
+            {/*  className='btn btn-danger'*/}
+            {/*  onClick={closeModalHandler}*/}
+            {/*>*/}
+            {/*  Decline*/}
+            {/*</button>*/}
           </div>
         </Form>
       )}

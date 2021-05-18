@@ -189,6 +189,15 @@
         max-width: 600px;
       }
     }
+
+    &--form {
+
+      .modal-dialog {
+        @include _1024 {
+          min-width: 710px;
+        }
+      }
+    }
   }
 
   &__modal-head {
