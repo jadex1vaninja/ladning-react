@@ -90,7 +90,7 @@ const Redeem = ({
         ) : (
           <>
             {Boolean(renderData.length) &&
-              renderData.map((item) => (
+              renderData.map((item,index) => (
                 <Item
                   key={item.id}
                   id={item.id}
@@ -100,7 +100,7 @@ const Redeem = ({
                   addExtraToFormState={addExtraToFormState}
                   signMessage={signMessage}
                   hasButton={item.hasButton}
-                  isRedeemed={item.isRedeemed} //TO-DO: replace with api data
+                  isRedeemed={renderData.length === index+1 ||  item.isRedeemed  } //TO-DO: replace with api data, Mock Last item as redeemed
                 />
               ))}
           </>
