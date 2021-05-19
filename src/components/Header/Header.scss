@@ -245,7 +245,12 @@
     }
 
     &--redeem {
-      margin-top: -9rem;
+      margin-top: -2rem;
+
+      @include _1024 {
+        margin-top: -9rem;
+      }
+
     }
   }
 
@@ -351,6 +356,11 @@
       @include _1024 {
         font-size: 1.563rem;
         line-height: 2.188rem;
+      }
+
+      &:hover {
+        color: $brand-yellow;
+        text-decoration: none;
       }
     }
 

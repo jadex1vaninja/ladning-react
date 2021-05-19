@@ -75,7 +75,7 @@ const Redeem = ({
       <div className='redeem-root__preview'>
         <div className='redeem-root__preview-header'>
           <p className='redeem-root__preview-header-text redeem-root__preview-header-text--name'>
-            NFT
+            Nft name
           </p>
           <p className='redeem-root__preview-header-text redeem-root__preview-header-text--id'>
             Token Id
@@ -123,11 +123,7 @@ const Redeem = ({
         <Modal.Header className='redeem-root__modal-head' closeButton />
         <Modal.Body className='redeem-root__modal-body'>
           {isSigned ? (
-            <OwnForm
-              initialFormState={initialFormState}
-              onSubmit={onSubmit}
-              closeModalHandler={closeModalHandler}
-            />
+            <OwnForm initialFormState={initialFormState} onSubmit={onSubmit} />
           ) : (
             <div className='redeem-root__alert'>
               <div className='redeem-root__alert-head'>

@@ -39,6 +39,17 @@
 .redeem-btn {
   background-color: transparent;
   color: $brand-yellow;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 12px;
+  margin-bottom: 0;
+  padding: 0;
+
+  @include _1024 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+  }
 
   &:hover {
     box-shadow: none;

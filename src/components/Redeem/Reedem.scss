@@ -132,7 +132,8 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 65%;
+    width: 100%;
+    max-width: 1140px;
     margin: 0 auto;
   }
 
@@ -148,21 +149,42 @@
 
   &__preview-header-text {
     margin: 0;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 10px;
+    font-family: 'DAZNTrim-Bold';
+
+    @include _1024 {
+      font-size: 20px;
+      line-height: 20px;
+    }
 
     &--name {
-      width: 50%;
+      width: 100%;
     }
 
     &--id {
-      width: 35%;
+      width: 100%;
       display: flex;
       justify-content: flex-end;
+      max-width: 120px;
+
+      @include _1024 {
+        width: 100%;
+        max-width: 280px;
+      }
     }
 
     &--isRedeemed {
-      width: 15%;
+      width: 100%;
+      max-width: 60px;
       display: flex;
       justify-content: flex-end;
+
+      @include _1024 {
+        width: 100%;
+        max-width: 150px;
+      }
     }
   }
 
@@ -207,8 +229,13 @@
       opacity: 1;
       color: $brand-white;
       position: absolute;
-      right: -40px;
+      right: 0;
       top: -20px;
+
+      @include _1024 {
+        right: -40px;
+        top: -20px;
+      }
 
       > span {
         font-size: 2rem;

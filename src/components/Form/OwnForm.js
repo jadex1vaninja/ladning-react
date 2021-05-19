@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import Input from '../Input/Input';
 import './OwnForm.scss';
 
-const OwnForm = ({ initialFormState, onSubmit, closeModalHandler }) => {
+const OwnForm = ({ initialFormState, onSubmit }) => {
   return (
     <Formik
       initialValues={initialFormState}
@@ -55,7 +55,6 @@ const OwnForm = ({ initialFormState, onSubmit, closeModalHandler }) => {
           className='main-form'
           onSubmit={(event) => {
             event.preventDefault();
-            closeModalHandler();
             handleSubmit();
           }}
         >

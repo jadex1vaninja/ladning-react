@@ -19,15 +19,23 @@
   }
 
   &__name {
-    width: 50%;
+    width: 100%;
 
-    h2,a {
+    h2, a {
       color: $brand-white;
-      font-size: 30px;
+      font-size: 14px;
       letter-spacing: 1px;
-      line-height: 30px;
-      font-family: 'DAZNTrim-Bold';
+      line-height: 14px;
+      font-family: 'DAZNTrim-ExtraBold';
       text-transform: uppercase;
+      margin: 0;
+
+      @include _1024 {
+        font-size: 30px;
+        letter-spacing: 1px;
+        line-height: 30px;
+      }
+
       :hover{
         color: $brand-yellow;
       }
@@ -36,32 +44,55 @@
 
   &__description {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: flex-end;
-    width: 35%;
+    width: 100%;
+    max-width: 120px;
+
+    @include _1024 {
+      width: 100%;
+      max-width: 280px;
+    }
 
     p {
       color: $brand-white;
-      font-size: 30px;
+      font-size: 14px;
       letter-spacing: 1px;
-      line-height: 55px;
+      line-height: 14px;
       font-family: 'DAZNTrim-Bold';
       margin: 0;
+
+      @include _1024 {
+        font-size: 30px;
+        letter-spacing: 1px;
+        line-height: 30px;
+      }
     }
   }
 
   &__status {
     display: flex;
     justify-content: flex-end;
-    width: 15%;
+    width: 100%;
+    max-width: 60px;
+
+    @include _1024 {
+      width: 100%;
+      max-width: 150px;
+    }
   }
 
   &__sign {
-    width: 38px;
-    height: 38px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     border: 1px solid $brand-yellow;
     background-color: transparent;
+
+    @include _1024 {
+      width: 38px;
+      height: 38px;
+    }
 
     &--redeemed {
       background-color: $brand-yellow;
@@ -69,10 +100,24 @@
   }
 
   &__btn-wrapper {
-    margin-right: 2rem;
+    //margin-right: 2rem;
   }
 
   &__btn {
     @include  CTA;
+  }
+}
+
+#tooltip > .tooltip-inner {
+  background-color: $brand-yellow;
+  color: $brand-black;
+  border: 1px solid $brand-yellow;
+  font-family: 'DAZNTrim-Bold';
+}
+
+#tooltip > .arrow {
+
+  &:before {
+    border-right-color: $brand-yellow;
   }
 }
