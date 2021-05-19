@@ -32,14 +32,12 @@ const Redeem = ({
     .filter((el) => !el.isRedeemed);
 
   const findCoincidence = (allItems, myItems) => {
-    const listOfDoesntMatches = allItems
-      .filter((element) => {
-        return myItems.every((el) => el.token_id !== element.token_id);
-      })
-      .map((e) => ({
+    const listOfDifference = _.differenceBy(allItems, myItems, 'token_id').map(
+      (e) => ({
         ...e,
         hasButton: false
-      }));
+      })
+    );
 
     const listOfMatches = _.intersectionBy(allItems, myItems, 'token_id').map(
       (e) => {
@@ -51,7 +49,7 @@ const Redeem = ({
       }
     );
 
-    return _.sortBy([...listOfMatches, ...listOfDoesntMatches], ['name']);
+    return _.sortBy([...listOfMatches, ...listOfDifference], ['name']);
   };
 
   const renderData = findCoincidence(mockAllItems, mockMyItems);
