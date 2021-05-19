@@ -23,7 +23,10 @@ const Redeem = ({
   closeErrorNotification,
   secretMessage
 }) => {
-  const mockAllItems = dataAll.map((el) => ({ ...el, isRedeemed: false }));
+  const mockAllItems = dataAll.map((el) => ({
+    ...el,
+    isRedeemed: Math.floor(Math.random() * 10) >= 5 //assign random value
+  }));
   const mockMyItems = data
     .map((el) => ({ ...el, isRedeemed: false }))
     .filter((el) => !el.isRedeemed);
@@ -42,7 +45,8 @@ const Redeem = ({
       (e) => {
         return {
           ...e,
-          hasButton: true
+          hasButton: true,
+          isRedeemed: false // just for dev
         };
       }
     );
