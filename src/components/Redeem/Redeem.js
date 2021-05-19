@@ -46,7 +46,8 @@ const Redeem = ({
         };
       }
     );
-    return [...listOfMatches, ...listOfDoesntMatches];
+
+    return _.sortBy([...listOfMatches, ...listOfDoesntMatches], ['name']);
   };
 
   const renderData = findCoincidence(mockAllItems, mockMyItems);

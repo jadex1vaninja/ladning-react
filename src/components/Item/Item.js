@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Tooltip, Overlay } from 'react-bootstrap';
+// import { Tooltip, Overlay } from 'react-bootstrap';
 import Button from '../Button';
 import './Item.scss';
 
