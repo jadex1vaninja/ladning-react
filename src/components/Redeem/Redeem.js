@@ -4,6 +4,7 @@ import { Modal } from 'react-bootstrap';
 import { Spinner } from '../shared/SVG/Spinner';
 import Item from '../Item';
 import OwnForm from '../Form';
+import MyModal from '../MyModal/MyModal';
 import './Reedem.scss';
 
 const Redeem = ({
@@ -56,12 +57,12 @@ const Redeem = ({
 
   return (
     <div className='redeem-root'>
-      {!isEthereum && (
-        <div className='redeem-root__error'>
-          <h1>Missing Metamask</h1>
-          <p>Install Metamask please</p>
-        </div>
-      )}
+      {/*{!isEthereum && (*/}
+      {/*  <div className='redeem-root__error'>*/}
+      {/*    <h1>Missing Metamask</h1>*/}
+      {/*    <p>Install Metamask please</p>*/}
+      {/*  </div>*/}
+      {/*)}*/}
       {error && (
         <div className='redeem-root__error'>
           <p
@@ -110,36 +111,55 @@ const Redeem = ({
           </>
         )}
       </div>
-      <Modal
-        className={
-          isSigned
-            ? 'redeem-root__modal redeem-root__modal--form'
-            : 'redeem-root__modal'
-        }
-        show={showModal}
-        onHide={closeModalHandler}
-        backdrop='static'
-        keyboard={false}
-        centered
-        animation={false}
+      <MyModal
+        showModal={showModal}
+        closeModal={closeModalHandler}
+        isSigned={isSigned}
       >
-        <Modal.Header className='redeem-root__modal-head' closeButton />
-        <Modal.Body className='redeem-root__modal-body'>
-          {isSigned ? (
-            <OwnForm initialFormState={initialFormState} onSubmit={onSubmit} />
-          ) : (
-            <div className='redeem-root__alert'>
-              <div className='redeem-root__alert-head'>
-                Sign transaction please:
-              </div>
-              <div className='redeem-root__alert-body'>
-                <p className='redeem-root__alert-body-text'>Secret Code:</p>
-                <p className='redeem-root__alert-body-value'>{secretMessage}</p>
-              </div>
+        {isSigned ? (
+          <OwnForm initialFormState={initialFormState} onSubmit={onSubmit} />
+        ) : (
+          <div className='redeem-root__alert'>
+            <div className='redeem-root__alert-head'>
+              Sign transaction please:
             </div>
-          )}
-        </Modal.Body>
-      </Modal>
+            <div className='redeem-root__alert-body'>
+              <p className='redeem-root__alert-body-text'>Secret Code:</p>
+              <p className='redeem-root__alert-body-value'>{secretMessage}</p>
+            </div>
+          </div>
+        )}
+      </MyModal>
+      {/*<Modal*/}
+      {/*  className={*/}
+      {/*    isSigned*/}
+      {/*      ? 'redeem-root__modal redeem-root__modal--form'*/}
+      {/*      : 'redeem-root__modal'*/}
+      {/*  }*/}
+      {/*  show={showModal}*/}
+      {/*  onHide={closeModalHandler}*/}
+      {/*  backdrop='static'*/}
+      {/*  keyboard={false}*/}
+      {/*  centered*/}
+      {/*  animation={false}*/}
+      {/*>*/}
+      {/*  <Modal.Header className='redeem-root__modal-head' closeButton />*/}
+      {/*  <Modal.Body className='redeem-root__modal-body'>*/}
+      {/*    {isSigned ? (*/}
+      {/*      <OwnForm initialFormState={initialFormState} onSubmit={onSubmit} />*/}
+      {/*    ) : (*/}
+      {/*      <div className='redeem-root__alert'>*/}
+      {/*        <div className='redeem-root__alert-head'>*/}
+      {/*          Sign transaction please:*/}
+      {/*        </div>*/}
+      {/*        <div className='redeem-root__alert-body'>*/}
+      {/*          <p className='redeem-root__alert-body-text'>Secret Code:</p>*/}
+      {/*          <p className='redeem-root__alert-body-value'>{secretMessage}</p>*/}
+      {/*        </div>*/}
+      {/*      </div>*/}
+      {/*    )}*/}
+      {/*  </Modal.Body>*/}
+      {/*</Modal>*/}
     </div>
   );
 };

@@ -11,19 +11,46 @@
   }
 
   &__error {
-    position: absolute;
+    //position: absolute;
+    font-family: 'DAZNTrim-Bold';
     top: 1rem;
     right: 1rem;
     padding: 1rem;
     color: $brand-black;
-    border: 1px solid $brand-black;
-    border-radius: 8px;
-    background-color: $brand-yellow;
-    z-index: 99;
+    background-color: $brand-white;
+    //z-index: 99;
 
-    @include _1024 {
-      top: 2rem;
-      right: 4rem;
+    //@include _1024 {
+    //  top: 2rem;
+    //  right: 4rem;
+    //}
+
+    p {
+      font-size: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    a {
+      color: $brand-black;
+      text-decoration: underline;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+
+      &:hover {
+        color: $brand-yellow;
+      }
+    }
+
+    span {
+      cursor: pointer;
+      color: $brand-black;
+      text-decoration: underline;
+      font-size: 20px;
+      letter-spacing:  0.5px;
+
+      &:hover {
+        color: $brand-yellow;
+      }
     }
   }
 

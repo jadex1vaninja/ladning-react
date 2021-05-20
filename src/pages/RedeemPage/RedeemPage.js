@@ -11,6 +11,7 @@ import { ETHEREUM } from '../../const';
 import { MY_NFTS } from '../../const/myNFTs';
 import Heading from '../../components/Header/components/Heading';
 import './RedeemPage.scss';
+import MyModal from '../../components/MyModal/MyModal';
 
 const RedeemPage = () => {
   const collectionId = 'dazn-x-canelo-saunders';
@@ -21,6 +22,7 @@ const RedeemPage = () => {
   const [provider, setProvider] = useState(null);
   const [error, setError] = useState(false);
   const [isEthereum, setIsEthereum] = useState(false);
+  const [ethereumIsMissed, setEthereumIsMissed] = useState(false);
   const [walletID, setWalletID] = useState('');
   const [signature, setSignature] = useState(null);
   const [isSigned, setIsSigned] = useState(false);
@@ -56,6 +58,10 @@ const RedeemPage = () => {
 
     setData(MY_NFTS);
   }, []);
+
+  useEffect(() => {
+    !isEthereum ? setEthereumIsMissed(true) : setEthereumIsMissed(false);
+  }, [isEthereum]);
 
   useEffect(() => {
     addExtraToFormState();
@@ -220,6 +226,28 @@ const RedeemPage = () => {
         secretMessage={secretMessage}
       />
       <Footer isUsedOnSecondaryPage />
+      <MyModal
+        showModal={ethereumIsMissed}
+        closeModal={() => setEthereumIsMissed(false)}
+      >
+        <div className='redeem-root__error'>
+          <h1>Missing Metamask</h1>
+          <p>
+            Here is a{' '}
+            <a
+              href='https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn'
+              target='_blank'
+            >
+              link
+            </a>{' '}
+            to install Metamask
+          </p>
+          <p>
+            Do not forget{' '}
+            <span onClick={() => window.location.reload()}>reload</span> page
+          </p>
+        </div>
+      </MyModal>
     </>
   );
 };
