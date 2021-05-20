@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'lodash';
-import { Modal } from 'react-bootstrap';
 import { Spinner } from '../shared/SVG/Spinner';
 import Item from '../Item';
 import OwnForm from '../Form';
@@ -10,7 +9,6 @@ import './Reedem.scss';
 const Redeem = ({
   isSigned,
   signMessage,
-  isEthereum,
   error,
   loading,
   data,
@@ -24,14 +22,6 @@ const Redeem = ({
   closeErrorNotification,
   secretMessage
 }) => {
-  const mockAllItems = dataAll.map((el) => ({
-    ...el,
-    isRedeemed: Math.floor(Math.random() * 10) >= 5 //assign random value
-  }));
-  const mockMyItems = data
-    .map((el) => ({ ...el, isRedeemed: false }))
-    .filter((el) => !el.isRedeemed);
-
   const findCoincidence = (allItems, myItems) => {
     const listOfDifference = _.differenceBy(allItems, myItems, 'token_id').map(
       (e) => ({
@@ -44,8 +34,7 @@ const Redeem = ({
       (e) => {
         return {
           ...e,
-          hasButton: true,
-          isRedeemed: false // just for dev
+          hasButton: true
         };
       }
     );
@@ -53,16 +42,10 @@ const Redeem = ({
     return _.sortBy([...listOfMatches, ...listOfDifference], ['name']);
   };
 
-  const renderData = findCoincidence(mockAllItems, mockMyItems);
+  const renderData = findCoincidence(dataAll, data);
 
   return (
     <div className='redeem-root'>
-      {/*{!isEthereum && (*/}
-      {/*  <div className='redeem-root__error'>*/}
-      {/*    <h1>Missing Metamask</h1>*/}
-      {/*    <p>Install Metamask please</p>*/}
-      {/*  </div>*/}
-      {/*)}*/}
       {error && (
         <div className='redeem-root__error'>
           <p
@@ -103,9 +86,8 @@ const Redeem = ({
                   addExtraToFormState={addExtraToFormState}
                   signMessage={signMessage}
                   hasButton={item.hasButton}
-                  isRedeemed={
-                    renderData.length === index + 1 || item.isRedeemed
-                  } //TO-DO: replace with api data, Mock Last item as redeemed
+                  token={item.token_id}
+                  isRedeemed={item.isRedeemed} //TO-DO: replace with api data, Mock Last item as redeemed
                 />
               ))}
           </>
@@ -130,36 +112,6 @@ const Redeem = ({
           </div>
         )}
       </MyModal>
-      {/*<Modal*/}
-      {/*  className={*/}
-      {/*    isSigned*/}
-      {/*      ? 'redeem-root__modal redeem-root__modal--form'*/}
-      {/*      : 'redeem-root__modal'*/}
-      {/*  }*/}
-      {/*  show={showModal}*/}
-      {/*  onHide={closeModalHandler}*/}
-      {/*  backdrop='static'*/}
-      {/*  keyboard={false}*/}
-      {/*  centered*/}
-      {/*  animation={false}*/}
-      {/*>*/}
-      {/*  <Modal.Header className='redeem-root__modal-head' closeButton />*/}
-      {/*  <Modal.Body className='redeem-root__modal-body'>*/}
-      {/*    {isSigned ? (*/}
-      {/*      <OwnForm initialFormState={initialFormState} onSubmit={onSubmit} />*/}
-      {/*    ) : (*/}
-      {/*      <div className='redeem-root__alert'>*/}
-      {/*        <div className='redeem-root__alert-head'>*/}
-      {/*          Sign transaction please:*/}
-      {/*        </div>*/}
-      {/*        <div className='redeem-root__alert-body'>*/}
-      {/*          <p className='redeem-root__alert-body-text'>Secret Code:</p>*/}
-      {/*          <p className='redeem-root__alert-body-value'>{secretMessage}</p>*/}
-      {/*        </div>*/}
-      {/*      </div>*/}
-      {/*    )}*/}
-      {/*  </Modal.Body>*/}
-      {/*</Modal>*/}
     </div>
   );
 };

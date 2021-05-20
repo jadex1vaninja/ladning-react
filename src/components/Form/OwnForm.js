@@ -8,6 +8,7 @@ import './OwnForm.scss';
 const OwnForm = ({ initialFormState, onSubmit }) => {
   return (
     <Formik
+      enableReinitialize={true}
       initialValues={initialFormState}
       validationSchema={Yup.object().shape({
         firstName: Yup.string()

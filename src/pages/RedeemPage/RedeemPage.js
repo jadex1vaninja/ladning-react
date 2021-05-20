@@ -16,6 +16,7 @@ import MyModal from '../../components/MyModal/MyModal';
 const RedeemPage = () => {
   const collectionId = 'dazn-x-canelo-saunders';
   const API_ALL = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=${collectionId}`;
+  const API_LAMDA = 'https://ladma-dazn.vercel.app/api/nfts';
   const API_OWNER = `${API_ALL}&owner=`;
   const CODE_GENERATOR = Math.floor(Math.random() * 1e21);
 
@@ -36,7 +37,11 @@ const RedeemPage = () => {
     lastName: '',
     email: '',
     openseaUserName: '',
-    country: ''
+    country: '',
+    walletID,
+    signature,
+    message: secretMessage,
+    token_id: null
   });
   const [language, setLanguage] = useState('en');
   const { t, i18n } = useTranslation();
@@ -63,9 +68,9 @@ const RedeemPage = () => {
     !isEthereum ? setEthereumIsMissed(true) : setEthereumIsMissed(false);
   }, [isEthereum]);
 
-  useEffect(() => {
-    addExtraToFormState();
-  }, [signature]);
+  // useEffect(() => {
+  //
+  // }, [signature]);
 
   useEffect(() => {
     setSecretMessage(`${CODE_GENERATOR}`);
@@ -77,6 +82,7 @@ const RedeemPage = () => {
       setSignature(signature);
       setIsSigned(true);
       console.log('Message has been signed :', signature);
+      return signature;
     } catch (e) {
       console.log('error');
       console.error(e);
@@ -116,9 +122,9 @@ const RedeemPage = () => {
   const fetchDataAll = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${API_ALL}`);
-      const { assets } = await response.json();
-      setDataAll(assets);
+      const response = await fetch(`${API_LAMDA}`);
+      const { nfts } = await response.json();
+      setDataAll(nfts);
     } catch (e) {
       console.error('Ошибка:', e);
     } finally {
@@ -159,16 +165,31 @@ const RedeemPage = () => {
     setIsSigned(false);
   };
 
-  const addExtraToFormState = () => {
+  const addExtraToFormState = (token, signature) => {
     setInitialFormState((prevState) => ({
       ...prevState,
       walletID,
-      signature,
-      message: secretMessage
+      signature: signature,
+      message: secretMessage,
+      token_id: token
     }));
   };
 
   const onSubmit = async (values) => {
+    try {
+      const response = await fetch('https://ladma-dazn.vercel.app/api/redeem', {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const json = await response.json();
+      console.log('Успех:', JSON.stringify(json));
+    } catch (error) {
+      console.error('Ошибка:', error);
+    }
+
     console.log('VALUES', values);
     console.log('api call');
     handleCloseModal();
@@ -218,7 +239,6 @@ const RedeemPage = () => {
         showModal={showModal}
         onSubmit={onSubmit}
         addExtraToFormState={addExtraToFormState}
-        isEthereum={isEthereum}
         loading={loading}
         closeErrorNotification={closeErrorNotification}
         isSigned={isSigned}

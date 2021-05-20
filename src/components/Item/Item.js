@@ -10,7 +10,9 @@ const Item = ({
   openModal,
   signMessage,
   hasButton,
-  isRedeemed
+  isRedeemed,
+  token,
+  addExtraToFormState
 }) => {
   const sliceText = (string) => {
     return `${String(string).slice(0, 5)}...`;
@@ -37,13 +39,10 @@ const Item = ({
             <Button
               extraClassName='redeem-btn'
               ctaText='Redeem'
-              onClick={() => {
+              onClick={async () => {
                 openModal();
-                signMessage()
-                  .then(() => {
-                    // setIsRedeemedState(true);
-                  })
-                  .catch(() => setIsRedeemedState(false));
+                const signature = await signMessage();
+                addExtraToFormState(token, signature);
               }}
               isDisabled={!!isRedeemedState}
             />
