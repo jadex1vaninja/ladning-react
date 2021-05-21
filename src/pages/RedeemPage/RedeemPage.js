@@ -22,6 +22,7 @@ const RedeemPage = () => {
 
   const [provider, setProvider] = useState(null);
   const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState({});
   const [isEthereum, setIsEthereum] = useState(false);
   const [walletID, setWalletID] = useState('');
   const [signature, setSignature] = useState(null);
@@ -156,7 +157,11 @@ const RedeemPage = () => {
         }
       });
       const json = await response.json();
-      window.location.reload();
+      if (json.error) {
+        setError(true);
+        setErrorMessage(json);
+      }
+      handleCloseModal();
     } catch (error) {
       console.error('Ошибка:', error);
     } finally {
@@ -204,8 +209,8 @@ const RedeemPage = () => {
           <Button
             ctaText={t('header.buttons.wallet')}
             onClick={() => {
-              connectWallet().then((id) => fetchData(id));
-              // connectWallet().then(() => setData(MY_NFTS));
+              // connectWallet().then((id) => fetchData(id));
+              connectWallet().then(() => setData(MY_NFTS));
             }}
             isDisabled={!!walletID}
           />
@@ -235,6 +240,7 @@ const RedeemPage = () => {
         isSigned={isSigned}
         signMessage={signMessage}
         secretMessage={secretMessage}
+        errorMessage={errorMessage}
       />
       <Footer isUsedOnSecondaryPage />
       <MyModal

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import _ from 'lodash';
 import { Spinner } from '../shared/SVG/Spinner';
 import Item from '../Item';
@@ -21,7 +21,8 @@ const Redeem = ({
   addExtraToFormState,
   onSubmit,
   closeErrorNotification,
-  secretMessage
+  secretMessage,
+  errorMessage
 }) => {
   const findCoincidence = (allItems, myItems) => {
     const listOfDifference = _.differenceBy(allItems, myItems, 'token_id').map(
@@ -44,27 +45,14 @@ const Redeem = ({
         };
       }
     );
-    console.log(listOfMatches);
     return _.sortBy([...listOfMatches, ...listOfDifference], ['name']);
   };
 
   const renderData = findCoincidence(dataAll, data);
 
+  useEffect(() => {}, [error]);
   return (
     <div className='redeem-root'>
-      {error && (
-        <div className='redeem-root__error'>
-          <p
-            className='redeem-root__error-close'
-            onClick={closeErrorNotification}
-          >
-            X
-          </p>
-          <h1>Error</h1>
-          <p>Something goes wrong...</p>
-        </div>
-      )}
-
       <div className='redeem-root__preview'>
         <div className='redeem-root__preview-header'>
           <p className='redeem-root__preview-header-text redeem-root__preview-header-text--name'>
@@ -118,6 +106,16 @@ const Redeem = ({
             </div>
           </div>
         )}
+      </MyModal>
+      <MyModal
+        showModal={error}
+        showCloseBtn
+        closeModal={closeErrorNotification}
+      >
+        <div className='redeem-root__error'>
+          <h1>{errorMessage.error}</h1>
+          <p>Sorry for that...</p>
+        </div>
       </MyModal>
     </div>
   );
