@@ -7,7 +7,7 @@ import Redeem from '../../components/Redeem';
 import Button from '../../components/Button';
 import PromoBanner from '../../components/Header/components/PromoBanner';
 import Description from '../../components/Header/components/Description';
-import { ETHEREUM } from '../../const';
+import { ETHEREUM, STORAGE_KEY } from '../../const';
 import { MY_NFTS } from '../../const/myNFTs';
 import Heading from '../../components/Header/components/Heading';
 import MyModal from '../../components/MyModal';
@@ -52,19 +52,6 @@ const RedeemPage = () => {
   let signer;
   if (provider) signer = provider.getSigner();
 
-  useEffect(() => {
-    ETHEREUM && setProvider(new ethers.providers.Web3Provider(ETHEREUM));
-    ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
-    ETHEREUM && setWalletID(ETHEREUM.selectedAddress);
-
-    fetchDataAll();
-    setSecretMessage(`${CODE_GENERATOR}`);
-  }, []);
-
-  useEffect(() => {
-    setSecretMessage(`${CODE_GENERATOR}`);
-  }, [isSigned]);
-
   const signMessage = async () => {
     try {
       const signature = await signer.signMessage(secretMessage);
@@ -83,6 +70,10 @@ const RedeemPage = () => {
 
   const closeErrorNotification = () => {
     setError(false);
+  };
+
+  const setToLocaleStorage = (id) => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(id));
   };
 
   const fetchData = async (id) => {
@@ -126,6 +117,7 @@ const RedeemPage = () => {
           result: [ID]
         } = accounts;
         setWalletID(ID);
+        setToLocaleStorage(ID);
         return ID;
       }
       console.log('WALLET HAS BEEN CONNECTED');
@@ -156,7 +148,7 @@ const RedeemPage = () => {
 
   const onSubmit = async (values) => {
     try {
-      const response = await fetch('https://ladma-dazn.vercel.app/api/redeem', {
+      const response = await fetch('http://localhost:3000/api/redeem', {
         method: 'POST',
         body: JSON.stringify(values),
         headers: {
@@ -164,16 +156,39 @@ const RedeemPage = () => {
         }
       });
       const json = await response.json();
-      console.log('Успех:', JSON.stringify(json));
+      window.location.reload();
     } catch (error) {
       console.error('Ошибка:', error);
+    } finally {
+      handleCloseModal();
     }
-
-    console.log('VALUES', values);
-    console.log('api call');
-    handleCloseModal();
   };
 
+  useEffect(() => {
+    ETHEREUM && setProvider(new ethers.providers.Web3Provider(ETHEREUM));
+    ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
+    // ETHEREUM && setWalletID(ETHEREUM.selectedAddress);
+
+    fetchDataAll();
+    setSecretMessage(`${CODE_GENERATOR}`);
+  }, []);
+
+  useEffect(() => {
+    const walletKeyFromStorage =
+      JSON.parse(localStorage.getItem(STORAGE_KEY)) || null;
+    setWalletID(walletKeyFromStorage);
+  }, []);
+
+  useEffect(() => {
+    setSecretMessage(`${CODE_GENERATOR}`);
+  }, [isSigned]);
+
+  useEffect(() => {
+    // walletID && setData(MY_NFTS);
+    walletID && fetchData(walletID);
+  }, [walletID]);
+
+  console.log(walletID);
   return (
     <>
       <Header
@@ -189,10 +204,10 @@ const RedeemPage = () => {
           <Button
             ctaText={t('header.buttons.wallet')}
             onClick={() => {
-              // connectWallet().then((id) => fetchData(id));
-              connectWallet().then(() => setData(MY_NFTS));
+              connectWallet().then((id) => fetchData(id));
+              // connectWallet().then(() => setData(MY_NFTS));
             }}
-            isDisabled={!!walletID || !isEthereum}
+            isDisabled={!!walletID}
           />
         }
         redeemOnlyTitle={
@@ -205,6 +220,7 @@ const RedeemPage = () => {
         displayLanguageSwitcher={false}
       />
       <Redeem
+        walletID={walletID}
         data={data}
         dataAll={dataAll}
         initialFormState={initialFormState}

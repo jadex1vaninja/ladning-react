@@ -7,6 +7,7 @@ import MyModal from '../MyModal';
 import './Reedem.scss';
 
 const Redeem = ({
+  walletID,
   isSigned,
   signMessage,
   error,
@@ -32,13 +33,18 @@ const Redeem = ({
 
     const listOfMatches = _.intersectionBy(allItems, myItems, 'token_id').map(
       (e) => {
+        let checkIfIHaveRedeemed = false;
+        if (e.whoRedeemed) {
+          checkIfIHaveRedeemed = e.whoRedeemed.includes(walletID.toUpperCase());
+        }
         return {
           ...e,
-          hasButton: true
+          checkIfIHaveRedeemed,
+          hasButton: !checkIfIHaveRedeemed
         };
       }
     );
-
+    console.log(listOfMatches);
     return _.sortBy([...listOfMatches, ...listOfDifference], ['name']);
   };
 

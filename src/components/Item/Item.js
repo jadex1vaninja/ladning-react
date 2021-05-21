@@ -41,7 +41,7 @@ const Item = ({
                 const signature = await signMessage();
                 addExtraToFormState(token, signature);
               }}
-              isDisabled={!isRedeemed}
+              isDisabled={!!isRedeemed}
             />
           )}
         </div>
