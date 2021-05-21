@@ -1,5 +1,4 @@
-import React, { useState, useRef } from 'react';
-// import { Tooltip, Overlay } from 'react-bootstrap';
+import React from 'react';
 import Button from '../Button';
 import './Item.scss';
 
@@ -17,9 +16,7 @@ const Item = ({
   const sliceText = (string) => {
     return `${String(string).slice(0, 5)}...`;
   };
-  const [isRedeemedState, setIsRedeemedState] = useState(false);
-  // const [show, setShow] = useState(false);
-  const target = useRef(null);
+  // const [isRedeemedState, setIsRedeemedState] = useState(false);
 
   return (
     <div className='item'>
@@ -44,24 +41,11 @@ const Item = ({
                 const signature = await signMessage();
                 addExtraToFormState(token, signature);
               }}
-              isDisabled={!!isRedeemedState}
+              isDisabled={!isRedeemed}
             />
           )}
         </div>
-        <p
-          // onMouseEnter={() => setShow(true)}
-          // onMouseLeave={() => setShow(false)}
-          ref={target}
-        >
-          {sliceText(id)}
-          {/*<Overlay target={target.current} show={show} placement={'right'}>*/}
-          {/*  {(props) => (*/}
-          {/*    <Tooltip id='tooltip' {...props}>*/}
-          {/*      {id}*/}
-          {/*    </Tooltip>*/}
-          {/*  )}*/}
-          {/*</Overlay>*/}
-        </p>
+        <p>{sliceText(id)}</p>
       </div>
       <div className='item__status'>
         <div

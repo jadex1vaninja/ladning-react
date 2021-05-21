@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { Spinner } from '../shared/SVG/Spinner';
 import Item from '../Item';
 import OwnForm from '../Form';
-import MyModal from '../MyModal/MyModal';
+import MyModal from '../MyModal';
 import './Reedem.scss';
 
 const Redeem = ({
@@ -87,7 +87,7 @@ const Redeem = ({
                   signMessage={signMessage}
                   hasButton={item.hasButton}
                   token={item.token_id}
-                  isRedeemed={item.isRedeemed} //TO-DO: replace with api data, Mock Last item as redeemed
+                  isRedeemed={item.isRedeemed}
                 />
               ))}
           </>
@@ -97,6 +97,7 @@ const Redeem = ({
         showModal={showModal}
         closeModal={closeModalHandler}
         isSigned={isSigned}
+        showCloseBtn
       >
         {isSigned ? (
           <OwnForm initialFormState={initialFormState} onSubmit={onSubmit} />

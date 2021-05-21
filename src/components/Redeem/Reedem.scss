@@ -11,46 +11,36 @@
   }
 
   &__error {
-    //position: absolute;
+    display: flex;
+    flex-direction: column;
     font-family: 'DAZNTrim-Bold';
-    top: 1rem;
-    right: 1rem;
-    padding: 1rem;
+    padding: 2rem 4rem;
     color: $brand-black;
     background-color: $brand-white;
-    //z-index: 99;
 
-    //@include _1024 {
-    //  top: 2rem;
-    //  right: 4rem;
-    //}
+    h1 {
+      font-size: 50px;
+      line-height: 50px;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0;
+    }
 
     p {
-      font-size: 20px;
-      letter-spacing: 0.5px;
+      font-size: 30px;
+      line-height: 30px;
+      color: $brand-grey;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      margin-top: 1.5rem;
+      text-transform: uppercase;
     }
 
-    a {
-      color: $brand-black;
-      text-decoration: underline;
-      font-size: 20px;
-      letter-spacing: 0.5px;
-
-      &:hover {
-        color: $brand-yellow;
-      }
-    }
-
-    span {
-      cursor: pointer;
-      color: $brand-black;
-      text-decoration: underline;
-      font-size: 20px;
-      letter-spacing:  0.5px;
-
-      &:hover {
-        color: $brand-yellow;
-      }
+    button {
+      @include CTA;
+      align-self: center;
+      color: $brand-yellow;
+      background-color: $brand-black;
     }
   }
 

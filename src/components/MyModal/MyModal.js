@@ -1,7 +1,13 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
 
-const MyModal = ({ showModal, closeModal, isSigned, children }) => {
+const MyModal = ({
+  showModal,
+  closeModal,
+  isSigned,
+  showCloseBtn,
+  children
+}) => {
   return (
     <Modal
       className={
@@ -16,7 +22,10 @@ const MyModal = ({ showModal, closeModal, isSigned, children }) => {
       centered
       animation={false}
     >
-      <Modal.Header className='redeem-root__modal-head' closeButton />
+      <Modal.Header
+        className='redeem-root__modal-head'
+        closeButton={showCloseBtn}
+      />
       <Modal.Body className='redeem-root__modal-body'>{children}</Modal.Body>
     </Modal>
   );
