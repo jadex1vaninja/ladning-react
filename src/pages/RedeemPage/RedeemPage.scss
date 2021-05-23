@@ -1,0 +1,17 @@
+
+@import '../../media-mixin.scss';
+@import '../../variables';
+
+a.Metamask{
+    font-size: 30px;
+    line-height: 30px;
+    color: #81bbff !important;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    &:hover{
+        color: #81bbff !important;
+    }
+}

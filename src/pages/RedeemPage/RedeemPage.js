@@ -16,7 +16,9 @@ import './RedeemPage.scss';
 const RedeemPage = () => {
   const collectionId = 'dazn-x-canelo-saunders';
   const API_ALL = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=${collectionId}`;
-  const API_LAMDA = 'https://ladma-dazn.vercel.app/api/nfts';
+  const LOCAL_API_LAMDA = 'http://localhost:3000/api';
+  const API_LAMBDA = 'https://ladma-dazn.vercel.app/api';
+
   const API_OWNER = `${API_ALL}&owner=`;
   const CODE_GENERATOR = Math.floor(Math.random() * 1e21);
 
@@ -24,6 +26,8 @@ const RedeemPage = () => {
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState({});
   const [isEthereum, setIsEthereum] = useState(false);
+  const [isRedeemed, setIsRedeemed] = useState(false);
+
   const [walletID, setWalletID] = useState('');
   const [signature, setSignature] = useState(null);
   const [isSigned, setIsSigned] = useState(false);
@@ -93,7 +97,7 @@ const RedeemPage = () => {
   const fetchDataAll = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${API_LAMDA}`);
+      const response = await fetch(`${API_LAMBDA}/nfts`);
       const { nfts } = await response.json();
       setDataAll(nfts);
     } catch (e) {
@@ -149,7 +153,7 @@ const RedeemPage = () => {
 
   const onSubmit = async (values) => {
     try {
-      const response = await fetch('http://localhost:3000/api/redeem', {
+      const response = await fetch(`${API_LAMBDA}/redeem`, {
         method: 'POST',
         body: JSON.stringify(values),
         headers: {
@@ -160,8 +164,11 @@ const RedeemPage = () => {
       if (json.error) {
         setError(true);
         setErrorMessage(json);
+      } else{
+        setIsRedeemed(true);
       }
       handleCloseModal();
+  
     } catch (error) {
       console.error('Ошибка:', error);
     } finally {
@@ -241,6 +248,11 @@ const RedeemPage = () => {
         signMessage={signMessage}
         secretMessage={secretMessage}
         errorMessage={errorMessage}
+        isRedeemed={isRedeemed}
+        closeRedeemWindow={() => {
+          setIsRedeemed(false);
+          window.location.reload();
+        }}
       />
       <Footer isUsedOnSecondaryPage />
       <MyModal
@@ -250,7 +262,10 @@ const RedeemPage = () => {
       >
         <div className='redeem-root__error'>
           <h1>Missing Metamask</h1>
-          <p>Please install metamask</p>
+          <p>
+            Please install{" "}
+            <a className="Metamask" href='https://metamask.io/download.html' target="_blank">metamask</a>
+          </p>
           <button onClick={() => window.location.reload()}>Refresh page</button>
         </div>
       </MyModal>

@@ -22,7 +22,9 @@ const Redeem = ({
   onSubmit,
   closeErrorNotification,
   secretMessage,
-  errorMessage
+  errorMessage,
+  isRedeemed,
+  closeRedeemWindow
 }) => {
   const findCoincidence = (allItems, myItems) => {
     const listOfDifference = _.differenceBy(allItems, myItems, 'token_id').map(
@@ -36,7 +38,7 @@ const Redeem = ({
       (e) => {
         let checkIfIHaveRedeemed = false;
         if (e.whoRedeemed) {
-          checkIfIHaveRedeemed = e.whoRedeemed.includes(walletID.toUpperCase());
+          checkIfIHaveRedeemed = e.whoRedeemed.includes(walletID.toLowerCase());
         }
         return {
           ...e,
@@ -81,7 +83,7 @@ const Redeem = ({
                   signMessage={signMessage}
                   hasButton={item.hasButton}
                   token={item.token_id}
-                  isRedeemed={item.isRedeemed}
+                  isRedeemed={item.isRedeemed || item.checkIfIHaveRedeemed}
                 />
               ))}
           </>
@@ -113,8 +115,14 @@ const Redeem = ({
         closeModal={closeErrorNotification}
       >
         <div className='redeem-root__error'>
-          <h1>{errorMessage.error}</h1>
+          <h4 className='text-center'>{errorMessage.error}</h4>
           <p>Sorry for that...</p>
+        </div>
+      </MyModal>
+      <MyModal showModal={isRedeemed} closeModal={closeRedeemWindow}>
+        <div className='redeem-root__error'>
+          <p>NFT was redeemed successfully!</p>
+          <button onClick={() => window.location.reload()}>Ok</button>
         </div>
       </MyModal>
     </div>
