@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
+import _ from 'lodash';
+import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -7,8 +9,8 @@ import Redeem from '../../components/Redeem';
 import Button from '../../components/Button';
 import PromoBanner from '../../components/Header/components/PromoBanner';
 import Description from '../../components/Header/components/Description';
-import { ETHEREUM, STORAGE_KEY } from '../../const';
-import { MY_NFTS } from '../../const/myNFTs';
+import { ETHEREUM, STORAGE_KEY, API_KEY } from '../../const';
+// import { MY_NFTS } from '../../const/myNFTs';
 import Heading from '../../components/Header/components/Heading';
 import MyModal from '../../components/MyModal';
 import './RedeemPage.scss';
@@ -18,6 +20,8 @@ const RedeemPage = () => {
   const API_ALL = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=${collectionId}`;
   const LOCAL_API_LAMDA = 'http://localhost:3000/api';
   const API_LAMBDA = 'https://ladma-dazn.vercel.app/api';
+  const API_SINGLE_ASSET =
+    'https://api.opensea.io/api/v1/asset/0x495f947276749ce646f68ac8c248420045cb7b5e/';
 
   const API_OWNER = `${API_ALL}&owner=`;
   const CODE_GENERATOR = Math.floor(Math.random() * 1e21);
@@ -32,6 +36,7 @@ const RedeemPage = () => {
   const [signature, setSignature] = useState(null);
   const [isSigned, setIsSigned] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [submitLoading, setSubmitLoading] = useState(false);
   const [data, setData] = useState([]);
   const [dataAll, setDataAll] = useState([]);
   const [secretMessage, setSecretMessage] = useState('');
@@ -69,7 +74,7 @@ const RedeemPage = () => {
       console.error(e);
       setIsSigned(false);
       handleCloseModal();
-      throw new Error('error');
+      // throw new Error('error');
     }
   };
 
@@ -84,9 +89,14 @@ const RedeemPage = () => {
   const fetchData = async (id) => {
     setLoading(true);
     try {
-      const response = await fetch(`${API_OWNER + id}`);
-      const { assets } = await response.json();
+      const response = await axios.get(`${API_OWNER + id}`, {
+        headers: {
+          'X-API-KEY': API_KEY
+        }
+      });
+      const { assets } = response.data;
       setData(assets);
+      return assets;
     } catch (e) {
       console.error('Ошибка:', e);
     } finally {
@@ -97,13 +107,41 @@ const RedeemPage = () => {
   const fetchDataAll = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${API_LAMBDA}/nfts`);
-      const { nfts } = await response.json();
+      const response = await axios.get(`${API_LAMBDA}/nfts`);
+      const { nfts } = response.data;
       setDataAll(nfts);
     } catch (e) {
       console.error('Ошибка:', e);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const fetchSingleAsset = async (data) => {
+    try {
+      if (!data.length) return;
+      const firstElementId = _.head(data).token_id;
+
+      const response = await axios.get(API_SINGLE_ASSET + firstElementId, {
+        headers: {
+          'X-API-KEY': API_KEY
+        },
+        params: {
+          account_address: walletID
+        }
+      });
+
+      const {
+        ownership: {
+          owner: {
+            user: { username }
+          }
+        }
+      } = response.data;
+
+      return username;
+    } catch (e) {
+      console.error(e);
     }
   };
 
@@ -121,6 +159,7 @@ const RedeemPage = () => {
         const {
           result: [ID]
         } = accounts;
+
         setWalletID(ID);
         setToLocaleStorage(ID);
         return ID;
@@ -152,6 +191,7 @@ const RedeemPage = () => {
   };
 
   const onSubmit = async (values) => {
+    setSubmitLoading(true);
     try {
       const response = await fetch(`${API_LAMBDA}/redeem`, {
         method: 'POST',
@@ -164,16 +204,29 @@ const RedeemPage = () => {
       if (json.error) {
         setError(true);
         setErrorMessage(json);
-      } else{
+      } else {
         setIsRedeemed(true);
       }
       handleCloseModal();
-  
     } catch (error) {
       console.error('Ошибка:', error);
     } finally {
       handleCloseModal();
+      setSubmitLoading(false);
     }
+  };
+
+  const clickHandler = async () => {
+    const id = await connectWallet();
+    console.log(id, 'id');
+    const data = await fetchData(id);
+    console.log(data, 'data');
+    const userName = await fetchSingleAsset(data);
+
+    setInitialFormState((prevState) => ({
+      ...prevState,
+      openseaUserName: userName
+    }));
   };
 
   useEffect(() => {
@@ -200,7 +253,6 @@ const RedeemPage = () => {
     walletID && fetchData(walletID);
   }, [walletID]);
 
-  console.log(walletID);
   return (
     <>
       <Header
@@ -215,10 +267,7 @@ const RedeemPage = () => {
         betweenLogosSection={
           <Button
             ctaText={t('header.buttons.wallet')}
-            onClick={() => {
-              // connectWallet().then((id) => fetchData(id));
-              connectWallet().then(() => setData(MY_NFTS));
-            }}
+            onClick={clickHandler}
             isDisabled={!!walletID}
           />
         }
@@ -243,6 +292,7 @@ const RedeemPage = () => {
         onSubmit={onSubmit}
         addExtraToFormState={addExtraToFormState}
         loading={loading}
+        submitLoading={submitLoading}
         closeErrorNotification={closeErrorNotification}
         isSigned={isSigned}
         signMessage={signMessage}
@@ -263,8 +313,14 @@ const RedeemPage = () => {
         <div className='redeem-root__error'>
           <h1>Missing Metamask</h1>
           <p>
-            Please install{" "}
-            <a className="Metamask" href='https://metamask.io/download.html' target="_blank">metamask</a>
+            Please install{' '}
+            <a
+              className='Metamask'
+              href='https://metamask.io/download.html'
+              target='_blank'
+            >
+              metamask
+            </a>
           </p>
           <button onClick={() => window.location.reload()}>Refresh page</button>
         </div>

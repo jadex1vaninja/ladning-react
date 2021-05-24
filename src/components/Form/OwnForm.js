@@ -2,10 +2,11 @@ import React from 'react';
 import { Formik } from 'formik';
 import { Form } from 'react-bootstrap';
 import * as Yup from 'yup';
+import { Spinner } from '../shared/SVG/Spinner';
 import Input from '../Input/Input';
 import './OwnForm.scss';
 
-const OwnForm = ({ initialFormState, onSubmit }) => {
+const OwnForm = ({ initialFormState, onSubmit, loading }) => {
   return (
     <Formik
       enableReinitialize={true}
@@ -14,14 +15,14 @@ const OwnForm = ({ initialFormState, onSubmit }) => {
         firstName: Yup.string()
           .required('Required field')
           .min(3, 'Should has at least 3 symbols')
-          .matches(/^[A-ZА-Я][a-zа-я]{2,20}|[a-zа-я]{2,20}/, {
+          .matches(/^[A-ZА-Я][a-zа-я]{2,20}|[a-zа-я]{2,20}|[A-ZА-Я]{2,20}/, {
             message: 'Must be a string',
             excludeEmptyString: true
           }),
         lastName: Yup.string()
           .required('Required field')
           .min(3, 'Should has at least 3 symbols')
-          .matches(/^[A-ZА-Я][a-zа-я]{2,20}|[a-zа-я]{2,20}/, {
+          .matches(/^[A-ZА-Я][a-zа-я]{2,20}|[a-zа-я]{2,20}|[A-ZА-Я]{2,20}/, {
             message: 'Must be a string',
             excludeEmptyString: true
           }),
@@ -95,27 +96,17 @@ const OwnForm = ({ initialFormState, onSubmit }) => {
             touched={touched.country}
           />
           <div className='form-group main-form__submit-wrapper'>
-            <button
-              type='submit'
-              className='main-form__submit-btn'
-              disabled={!isValid}
-            >
-              Submit
-            </button>
-            {/*<button*/}
-            {/*  type='reset'*/}
-            {/*  className='btn btn-secondary mr-2'*/}
-            {/*  onClick={resetForm}*/}
-            {/*>*/}
-            {/*  Reset*/}
-            {/*</button>*/}
-            {/*<button*/}
-            {/*  type='button'*/}
-            {/*  className='btn btn-danger'*/}
-            {/*  onClick={closeModalHandler}*/}
-            {/*>*/}
-            {/*  Decline*/}
-            {/*</button>*/}
+            {loading ? (
+              <Spinner />
+            ) : (
+              <button
+                type='submit'
+                className='main-form__submit-btn'
+                disabled={!isValid}
+              >
+                Submit
+              </button>
+            )}
           </div>
         </Form>
       )}

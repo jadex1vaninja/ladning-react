@@ -12,6 +12,7 @@ const Redeem = ({
   signMessage,
   error,
   loading,
+  submitLoading,
   data,
   dataAll,
   showModalHandler,
@@ -53,6 +54,7 @@ const Redeem = ({
   const renderData = findCoincidence(dataAll, data);
 
   useEffect(() => {}, [error]);
+
   return (
     <div className='redeem-root'>
       <div className='redeem-root__preview'>
@@ -96,7 +98,11 @@ const Redeem = ({
         showCloseBtn
       >
         {isSigned ? (
-          <OwnForm initialFormState={initialFormState} onSubmit={onSubmit} />
+          <OwnForm
+            initialFormState={initialFormState}
+            onSubmit={onSubmit}
+            loading={submitLoading}
+          />
         ) : (
           <div className='redeem-root__alert'>
             <div className='redeem-root__alert-head'>
