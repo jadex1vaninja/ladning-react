@@ -232,11 +232,11 @@ const RedeemPage = () => {
 
   const signMessageHandler = async () => {
     await signMessage();
-    const userName = await fetchSingleAsset(data, walletID);
+    // const userName = await fetchSingleAsset(data, walletID);
 
     setInitialFormState((prevState) => ({
       ...prevState,
-      openseaUserName: userName || ''
+      // openseaUserName: userName || ''
     }));
   };
 
@@ -267,7 +267,9 @@ const RedeemPage = () => {
   const assetHandler= async (id)=> {
     const data = await fetchData(id);
     console.log(data, 'data');
-    const userName = await fetchSingleAsset(data);
+    const userName = await fetchSingleAsset(data, id);
+    console.log(userName, 'userName');
+
 
     setInitialFormState((prevState) => ({
       ...prevState,
