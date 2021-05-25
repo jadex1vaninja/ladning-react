@@ -19,7 +19,7 @@ const RedeemPage = () => {
   const collectionId = 'dazn-x-canelo-saunders';
   const API_ALL = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=${collectionId}`;
   const LOCAL_API_LAMDA = 'http://localhost:3000/api';
-  const API_LAMBDA = 'https://ladma-dazn.vercel.app/api';
+  const API_LAMBDA =LOCAL_API_LAMDA || 'https://ladma-dazn.vercel.app/api';
   const API_SINGLE_ASSET =
     'https://api.opensea.io/api/v1/asset/0x495f947276749ce646f68ac8c248420045cb7b5e/';
 
@@ -47,8 +47,8 @@ const RedeemPage = () => {
     email: '',
     openseaUserName: '',
     country: '',
-    walletID: walletID,
-    signature: signature,
+    walletID,
+    signature,
     message: secretMessage,
     token_id: null
   });
@@ -167,7 +167,7 @@ const RedeemPage = () => {
           result: [ID]
         } = accounts;
         // const mockID = '0xfb52b9ff03ccc774f14e50fd6463af25462a3673';
-
+        console.log(ID);
         setWalletID(ID);
         setToStorage(ID);
         return ID;
@@ -192,9 +192,6 @@ const RedeemPage = () => {
   const addExtraToFormState = (token, signature) => {
     setInitialFormState((prevState) => ({
       ...prevState,
-      walletID,
-      signature: signature,
-      message: secretMessage,
       token_id: token
     }));
   };
@@ -204,7 +201,12 @@ const RedeemPage = () => {
     try {
       const response = await fetch(`${API_LAMBDA}/redeem`, {
         method: 'POST',
-        body: JSON.stringify(values),
+        body: JSON.stringify({
+          ...values,
+          message: secretMessage,
+          signature,
+          walletID
+        }),
         headers: {
           'Content-Type': 'application/json'
         }
@@ -226,8 +228,8 @@ const RedeemPage = () => {
   };
 
   const clickHandler = async () => {
-    const id = await connectWallet();
-    const data = await fetchData(id);
+    const walletId = await connectWallet();
+    const data = await fetchData(walletId);
   };
 
   const signMessageHandler = async () => {
@@ -235,47 +237,31 @@ const RedeemPage = () => {
   };
 
   useEffect(() => {
-    setWalletID(getFromStorage()); //set if we've already connected wallet
-  }, []);
-
-  useEffect(() => {
     ETHEREUM && setProvider(new ethers.providers.Web3Provider(ETHEREUM));
     ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
-    // ETHEREUM && setWalletID(ETHEREUM.selectedAddress);
+    ETHEREUM && setWalletID(ETHEREUM.selectedAddress ||  getFromStorage());
 
     fetchDataAll();
     setSecretMessage(`${CODE_GENERATOR}`);
   }, []);
 
   useEffect(() => {
-    setSecretMessage(`${CODE_GENERATOR}`);
-  }, [isSigned]);
-
-  useEffect(() => {
-    // walletID && setData(MY_NFTS);
-    if (!walletID) return;
-
+    if(!walletID) return;
     walletID && assetHandler(walletID);
   }, [walletID]);
 
-  useEffect(() => {
-    setInitialFormState((prevState) => ({
-      ...prevState,
-      walletID: walletID,
-      signature: signature,
-      message: secretMessage
-    }));
-  }, [walletID, signature, secretMessage]);
-
-  const assetHandler = async (id) => {
+  const assetHandler= async (id)=> {
     const data = await fetchData(id);
+    console.log(data, 'data');
     const userName = await fetchSingleAsset(data, id);
+    console.log(userName, 'userName');
+
 
     setInitialFormState((prevState) => ({
       ...prevState,
       openseaUserName: userName
     }));
-  };
+  }
   return (
     <>
       <Header

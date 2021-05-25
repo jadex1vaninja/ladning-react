@@ -39,7 +39,9 @@ const Redeem = ({
       (e) => {
         let checkIfIHaveRedeemed = false;
         if (e.whoRedeemed) {
-          checkIfIHaveRedeemed = e.whoRedeemed.includes(walletID.toLowerCase());
+          checkIfIHaveRedeemed =
+            e.whoRedeemed.includes(walletID.toLowerCase()) ||
+            e.possibleQuantityOfRedeem === e.currentQuantityOfRedeem;
         }
         return {
           ...e,
