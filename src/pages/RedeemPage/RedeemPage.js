@@ -250,9 +250,21 @@ const RedeemPage = () => {
 
   useEffect(() => {
     // walletID && setData(MY_NFTS);
-    walletID && fetchData(walletID);
+    if(!walletID) return;
+    
+    walletID && assetHandler(walletID);
   }, [walletID]);
 
+  const assetHandler= async (id)=> {
+    const data = await fetchData(id);
+    console.log(data, 'data');
+    const userName = await fetchSingleAsset(data);
+
+    setInitialFormState((prevState) => ({
+      ...prevState,
+      openseaUserName: userName
+    }));
+  }
   return (
     <>
       <Header
