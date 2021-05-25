@@ -79,7 +79,7 @@ const Redeem = ({
               renderData.map((item, index) => (
                 <Item
                   key={item.id}
-                  id={item.id}
+                  id={item.token_id}
                   link={item.permalink}
                   name={item.name}
                   openModal={showModalHandler}
