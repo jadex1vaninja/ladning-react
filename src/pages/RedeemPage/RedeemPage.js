@@ -82,8 +82,14 @@ const RedeemPage = () => {
     setError(false);
   };
 
-  const setToLocaleStorage = (id) => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(id));
+  const setToStorage = (id) => {
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(id));
+  };
+
+  const getFromStorage = () => {
+    const walletKeyFromStorage =
+      JSON.parse(sessionStorage.getItem(STORAGE_KEY)) || '';
+    return walletKeyFromStorage;
   };
 
   const fetchData = async (id) => {
@@ -107,6 +113,7 @@ const RedeemPage = () => {
   const fetchDataAll = async () => {
     setLoading(true);
     try {
+      console.log('starting fetch data');
       const response = await axios.get(`${API_LAMBDA}/nfts`);
       const { nfts } = response.data;
       setDataAll(nfts);
@@ -117,8 +124,9 @@ const RedeemPage = () => {
     }
   };
 
-  const fetchSingleAsset = async (data) => {
+  const fetchSingleAsset = async (data, id) => {
     try {
+      console.log('start request', data);
       if (!data.length) return;
       const firstElementId = _.head(data).token_id;
 
@@ -127,10 +135,9 @@ const RedeemPage = () => {
           'X-API-KEY': API_KEY
         },
         params: {
-          account_address: walletID
+          account_address: id
         }
       });
-
       const {
         ownership: {
           owner: {
@@ -159,9 +166,10 @@ const RedeemPage = () => {
         const {
           result: [ID]
         } = accounts;
+        // const mockID = '0xfb52b9ff03ccc774f14e50fd6463af25462a3673';
 
         setWalletID(ID);
-        setToLocaleStorage(ID);
+        setToStorage(ID);
         return ID;
       }
       console.log('WALLET HAS BEEN CONNECTED');
@@ -175,6 +183,7 @@ const RedeemPage = () => {
   };
 
   const handleShowModal = () => setShowModal(true);
+
   const handleCloseModal = () => {
     setShowModal(false);
     setIsSigned(false);
@@ -218,30 +227,30 @@ const RedeemPage = () => {
 
   const clickHandler = async () => {
     const id = await connectWallet();
-    console.log(id, 'id');
     const data = await fetchData(id);
-    console.log(data, 'data');
-    const userName = await fetchSingleAsset(data);
+  };
+
+  const signMessageHandler = async () => {
+    await signMessage();
+    const userName = await fetchSingleAsset(data, walletID);
 
     setInitialFormState((prevState) => ({
       ...prevState,
-      openseaUserName: userName
+      openseaUserName: userName || ''
     }));
   };
 
   useEffect(() => {
-    ETHEREUM && setProvider(new ethers.providers.Web3Provider(ETHEREUM));
-    ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
-    // ETHEREUM && setWalletID(ETHEREUM.selectedAddress);
-
-    fetchDataAll();
-    setSecretMessage(`${CODE_GENERATOR}`);
+    setWalletID(getFromStorage()); //set if we've already connected wallet
   }, []);
 
   useEffect(() => {
-    const walletKeyFromStorage =
-      JSON.parse(localStorage.getItem(STORAGE_KEY)) || null;
-    setWalletID(walletKeyFromStorage);
+    ETHEREUM && setProvider(new ethers.providers.Web3Provider(ETHEREUM));
+    ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
+    ETHEREUM && setWalletID(ETHEREUM.selectedAddress);
+
+    fetchDataAll();
+    setSecretMessage(`${CODE_GENERATOR}`);
   }, []);
 
   useEffect(() => {
@@ -307,7 +316,7 @@ const RedeemPage = () => {
         submitLoading={submitLoading}
         closeErrorNotification={closeErrorNotification}
         isSigned={isSigned}
-        signMessage={signMessage}
+        signMessage={signMessageHandler}
         secretMessage={secretMessage}
         errorMessage={errorMessage}
         isRedeemed={isRedeemed}

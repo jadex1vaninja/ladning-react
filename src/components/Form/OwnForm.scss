@@ -38,5 +38,16 @@
     @include CTA;
     color: $brand-yellow;
     background-color: $brand-black;
+
+    &:disabled {
+      background-color: #7d7d7d;
+      color: $brand-white;
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: #7d7d7d;
+        box-shadow: none;
+      }
+    }
   }
 }
