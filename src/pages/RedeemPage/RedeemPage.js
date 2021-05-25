@@ -19,7 +19,7 @@ const RedeemPage = () => {
   const collectionId = 'dazn-x-canelo-saunders';
   const API_ALL = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=${collectionId}`;
   const LOCAL_API_LAMDA = 'http://localhost:3000/api';
-  const API_LAMBDA =LOCAL_API_LAMDA || 'https://ladma-dazn.vercel.app/api';
+  const API_LAMBDA ='https://ladma-dazn.vercel.app/api';
   const API_SINGLE_ASSET =
     'https://api.opensea.io/api/v1/asset/0x495f947276749ce646f68ac8c248420045cb7b5e/';
 
