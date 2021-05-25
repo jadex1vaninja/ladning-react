@@ -39,9 +39,7 @@ const Redeem = ({
       (e) => {
         let checkIfIHaveRedeemed = false;
         if (e.whoRedeemed) {
-          checkIfIHaveRedeemed =
-            e.whoRedeemed.includes(walletID.toLowerCase()) ||
-            e.possibleQuantityOfRedeem === e.currentQuantityOfRedeem;
+          checkIfIHaveRedeemed = e.whoRedeemed.includes(walletID.toLowerCase());
         }
         return {
           ...e,
@@ -54,7 +52,6 @@ const Redeem = ({
   };
 
   const renderData = findCoincidence(dataAll, data);
-
   useEffect(() => {}, [error]);
 
   return (
@@ -87,7 +84,12 @@ const Redeem = ({
                   signMessage={signMessage}
                   hasButton={item.hasButton}
                   token={item.token_id}
-                  isRedeemed={item.isRedeemed || item.checkIfIHaveRedeemed}
+                  isRedeemed={
+                    item.isRedeemed ||
+                    item.checkIfIHaveRedeemed ||
+                    item.possibleQuantityOfRedeem ===
+                      item.currentQuantityOfRedeem
+                  }
                 />
               ))}
           </>

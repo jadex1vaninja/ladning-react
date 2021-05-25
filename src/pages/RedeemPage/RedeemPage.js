@@ -239,7 +239,7 @@ const RedeemPage = () => {
   useEffect(() => {
     ETHEREUM && setProvider(new ethers.providers.Web3Provider(ETHEREUM));
     ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
-    ETHEREUM && setWalletID(ETHEREUM.selectedAddress ||  getFromStorage());
+    // ETHEREUM && setWalletID(ETHEREUM.selectedAddress ||  getFromStorage());
 
     fetchDataAll();
     setSecretMessage(`${CODE_GENERATOR}`);
