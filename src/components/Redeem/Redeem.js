@@ -131,7 +131,10 @@ const Redeem = ({
       </MyModal>
       <MyModal showModal={isRedeemed} closeModal={closeRedeemWindow}>
         <div className='redeem-root__error'>
-          <p>NFT was redeemed successfully!</p>
+          <p>
+            Thank you for redeeming your NFT. We will email you shortly with
+            next steps.
+          </p>
           <button onClick={() => window.location.reload()}>Ok</button>
         </div>
       </MyModal>

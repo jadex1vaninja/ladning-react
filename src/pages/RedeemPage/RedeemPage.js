@@ -19,7 +19,7 @@ const RedeemPage = () => {
   const collectionId = 'dazn-x-canelo-saunders';
   const API_ALL = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=${collectionId}`;
   const LOCAL_API_LAMDA = 'http://localhost:3000/api';
-  const API_LAMBDA ='https://ladma-dazn.vercel.app/api';
+  const API_LAMBDA = 'https://ladma-dazn.vercel.app/api';
   const API_SINGLE_ASSET =
     'https://api.opensea.io/api/v1/asset/0x495f947276749ce646f68ac8c248420045cb7b5e/';
 
@@ -167,9 +167,9 @@ const RedeemPage = () => {
           result: [ID]
         } = accounts;
         // const mockID = '0xfb52b9ff03ccc774f14e50fd6463af25462a3673';
-        console.log(ID);
+
         setWalletID(ID);
-        setToStorage(ID);
+        // setToStorage(ID);
         return ID;
       }
       console.log('WALLET HAS BEEN CONNECTED');
@@ -246,22 +246,19 @@ const RedeemPage = () => {
   }, []);
 
   useEffect(() => {
-    if(!walletID) return;
+    if (!walletID) return;
     walletID && assetHandler(walletID);
   }, [walletID]);
 
-  const assetHandler= async (id)=> {
+  const assetHandler = async (id) => {
     const data = await fetchData(id);
-    console.log(data, 'data');
     const userName = await fetchSingleAsset(data, id);
-    console.log(userName, 'userName');
-
 
     setInitialFormState((prevState) => ({
       ...prevState,
       openseaUserName: userName
     }));
-  }
+  };
   return (
     <>
       <Header
@@ -275,7 +272,11 @@ const RedeemPage = () => {
         }
         betweenLogosSection={
           <Button
-            ctaText={t('header.buttons.wallet')}
+            ctaText={
+              !walletID
+                ? t('header.buttons.wallet')
+                : t('header.buttons.wallet-connected')
+            }
             onClick={clickHandler}
             isDisabled={!!walletID}
           />

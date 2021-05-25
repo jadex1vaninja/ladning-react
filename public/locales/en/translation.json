@@ -28,7 +28,8 @@
     "buttons": {
       "btn-one": "see collection",
       "btn-two": "subscribe to dazn",
-      "wallet": "Connect Wallet"
+      "wallet": "Connect Wallet",
+      "wallet-connected": "Wallet Connected"
     }
   },
   "featured-nft": {
