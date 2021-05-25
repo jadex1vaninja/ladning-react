@@ -47,8 +47,8 @@ const RedeemPage = () => {
     email: '',
     openseaUserName: '',
     country: '',
-    walletID,
-    signature,
+    walletID: walletID,
+    signature: signature,
     message: secretMessage,
     token_id: null
   });
@@ -232,12 +232,6 @@ const RedeemPage = () => {
 
   const signMessageHandler = async () => {
     await signMessage();
-    // const userName = await fetchSingleAsset(data, walletID);
-
-    setInitialFormState((prevState) => ({
-      ...prevState,
-      // openseaUserName: userName || ''
-    }));
   };
 
   useEffect(() => {
@@ -247,7 +241,7 @@ const RedeemPage = () => {
   useEffect(() => {
     ETHEREUM && setProvider(new ethers.providers.Web3Provider(ETHEREUM));
     ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
-    ETHEREUM && setWalletID(ETHEREUM.selectedAddress);
+    // ETHEREUM && setWalletID(ETHEREUM.selectedAddress);
 
     fetchDataAll();
     setSecretMessage(`${CODE_GENERATOR}`);
@@ -259,23 +253,29 @@ const RedeemPage = () => {
 
   useEffect(() => {
     // walletID && setData(MY_NFTS);
-    if(!walletID) return;
-    
+    if (!walletID) return;
+
     walletID && assetHandler(walletID);
   }, [walletID]);
 
-  const assetHandler= async (id)=> {
-    const data = await fetchData(id);
-    console.log(data, 'data');
-    const userName = await fetchSingleAsset(data, id);
-    console.log(userName, 'userName');
+  useEffect(() => {
+    setInitialFormState((prevState) => ({
+      ...prevState,
+      walletID: walletID,
+      signature: signature,
+      message: secretMessage
+    }));
+  }, [walletID, signature, secretMessage]);
 
+  const assetHandler = async (id) => {
+    const data = await fetchData(id);
+    const userName = await fetchSingleAsset(data, id);
 
     setInitialFormState((prevState) => ({
       ...prevState,
       openseaUserName: userName
     }));
-  }
+  };
   return (
     <>
       <Header
