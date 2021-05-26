@@ -238,6 +238,7 @@ const RedeemPage = () => {
     ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
     ETHEREUM ? setIsMetamaskModal(false) : setIsMetamaskModal(true);
     ETHEREUM && setWalletID(ETHEREUM.selectedAddress);
+    console.log(ETHEREUM.selectedAddress);
 
     fetchDataAll();
     setSecretMessage(`${CODE_GENERATOR}`);
