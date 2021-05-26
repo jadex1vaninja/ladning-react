@@ -16,7 +16,6 @@ const Item = ({
   const sliceText = (string) => {
     return `${String(string).slice(0, 5)}...`;
   };
-  // const [isRedeemedState, setIsRedeemedState] = useState(false);
 
   return (
     <div className='item'>

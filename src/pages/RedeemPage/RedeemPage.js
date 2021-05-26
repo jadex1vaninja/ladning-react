@@ -31,7 +31,7 @@ const RedeemPage = () => {
   const [errorMessage, setErrorMessage] = useState({});
   const [isEthereum, setIsEthereum] = useState(false);
   const [isRedeemed, setIsRedeemed] = useState(false);
-
+  const [isMetamaskModal, setIsMetamaskModal] = useState(false);
   const [walletID, setWalletID] = useState('');
   const [signature, setSignature] = useState(null);
   const [isSigned, setIsSigned] = useState(false);
@@ -45,7 +45,7 @@ const RedeemPage = () => {
     firstName: '',
     lastName: '',
     email: '',
-    openseaUserName: '',
+    // openseaUserName: '',
     country: '',
     walletID,
     signature,
@@ -154,14 +154,8 @@ const RedeemPage = () => {
 
   const connectWallet = async () => {
     setLoading(true);
-
-    //if you have closed Metamask window [X]
-    const timeOut = setTimeout(() => {
-      setLoading(false);
-    }, 10000);
-
     try {
-      if (ETHEREUM) {
+      if (isEthereum) {
         const accounts = await ETHEREUM.send('eth_requestAccounts');
         const {
           result: [ID]
@@ -178,7 +172,6 @@ const RedeemPage = () => {
       setError(true);
     } finally {
       setLoading(false);
-      clearTimeout(timeOut);
     }
   };
 
@@ -228,6 +221,10 @@ const RedeemPage = () => {
   };
 
   const clickHandler = async () => {
+    if (!isMetamaskModal && !isEthereum) {
+      setIsMetamaskModal(true);
+      return;
+    }
     const walletId = await connectWallet();
     const data = await fetchData(walletId);
   };
@@ -239,6 +236,7 @@ const RedeemPage = () => {
   useEffect(() => {
     ETHEREUM && setProvider(new ethers.providers.Web3Provider(ETHEREUM));
     ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
+    ETHEREUM ? setIsMetamaskModal(false) : setIsMetamaskModal(true);
     // ETHEREUM && setWalletID(ETHEREUM.selectedAddress ||  getFromStorage());
 
     fetchDataAll();
@@ -252,13 +250,14 @@ const RedeemPage = () => {
 
   const assetHandler = async (id) => {
     const data = await fetchData(id);
-    const userName = await fetchSingleAsset(data, id);
+    // const userName = await fetchSingleAsset(data, id);
 
-    setInitialFormState((prevState) => ({
-      ...prevState,
-      openseaUserName: userName
-    }));
+    // setInitialFormState((prevState) => ({
+    //   ...prevState,
+    //   openseaUserName: userName
+    // }));
   };
+
   return (
     <>
       <Header
@@ -316,9 +315,9 @@ const RedeemPage = () => {
       />
       <Footer isUsedOnSecondaryPage />
       <MyModal
-        showModal={!isEthereum}
-        closeModal={() => {}}
-        showCloseBtn={false}
+        showModal={isMetamaskModal}
+        closeModal={() => setIsMetamaskModal(false)}
+        showCloseBtn
       >
         <div className='redeem-root__error'>
           <h1>Missing Metamask</h1>
