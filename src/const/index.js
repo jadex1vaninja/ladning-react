@@ -8,7 +8,7 @@ export const DESKTOP = 1024;
 // export const DESKTOP_EXTRA_LARGE = 1920;
 export const collectionId = 'dazn-x-canelo-saunders';
 export const API_ALL = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=${collectionId}`;
-export const LOCAL_API_LAMDA = 'http://localhost:3000/api';
+export const LOCAL_API_LAMBDA = 'http://localhost:3000/api';
 export const API_LAMBDA = 'https://ladma-dazn.vercel.app/api';
 export const API_OWNER = `${API_ALL}&owner=`;
 export const imgPath = process.env.PUBLIC_URL + '/assets/img/';

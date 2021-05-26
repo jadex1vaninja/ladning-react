@@ -87,8 +87,7 @@ const Redeem = ({
                   isRedeemed={
                     item.isRedeemed ||
                     item.checkIfIHaveRedeemed ||
-                    item.possibleQuantityOfRedeem ===
-                      item.currentQuantityOfRedeem
+                    item.possibleQuantityOfRedeem === item.whoRedeemed.length
                   }
                 />
               ))}
