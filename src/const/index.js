@@ -6,6 +6,11 @@ export const TABLET = 768;
 export const DESKTOP = 1024;
 // export const DESKTOP_LARGE = 1440;
 // export const DESKTOP_EXTRA_LARGE = 1920;
+export const collectionId = 'dazn-x-canelo-saunders';
+export const API_ALL = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=${collectionId}`;
+export const LOCAL_API_LAMDA = 'http://localhost:3000/api';
+export const API_LAMBDA = 'https://ladma-dazn.vercel.app/api';
+export const API_OWNER = `${API_ALL}&owner=`;
 export const imgPath = process.env.PUBLIC_URL + '/assets/img/';
 export const vidPath = process.env.PUBLIC_URL + '/assets/video/';
 export const CONTRACT_ADDRESS = '0x495f947276749ce646f68ac8c248420045cb7b5e';
@@ -18,7 +23,6 @@ export const RING_WALK_LINK =
   'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506802757146247169';
 export const WINNING_MOMENT_LINK =
   'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/69208789200216951769366063301950903931594320778910349241631506803856657874945';
-
 export const winningMomentVideoSrc =
   'https://storage.opensea.io/files/cddcb2cc6ec9719248caf6f9358881e9.mp4';
 export const howItStartedVideoSrc =

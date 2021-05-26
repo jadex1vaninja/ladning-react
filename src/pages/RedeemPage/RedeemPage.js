@@ -9,19 +9,13 @@ import Redeem from '../../components/Redeem';
 import Button from '../../components/Button';
 import PromoBanner from '../../components/Header/components/PromoBanner';
 import Description from '../../components/Header/components/Description';
-import { ETHEREUM, API_KEY } from '../../const';
+import { ETHEREUM, API_KEY, API_OWNER, API_LAMBDA } from '../../const';
 import Heading from '../../components/Header/components/Heading';
 import MyModal from '../../components/MyModal';
 import './RedeemPage.scss';
 
 const RedeemPage = () => {
-  const collectionId = 'dazn-x-canelo-saunders';
-  const API_ALL = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=${collectionId}`;
-  const LOCAL_API_LAMDA = 'http://localhost:3000/api';
-  const API_LAMBDA = 'https://ladma-dazn.vercel.app/api';
-  const API_OWNER = `${API_ALL}&owner=`;
   const CODE_GENERATOR = Math.floor(Math.random() * 1e21);
-
   const [provider, setProvider] = useState(null);
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState({});
