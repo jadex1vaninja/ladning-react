@@ -118,13 +118,10 @@ const RedeemPage = () => {
             }
           ]
         });
-        const mockID = '0xfb52b9ff03ccc774f14e50fd6463af25462a3673';
+        // const mockID = '0xfb52b9ff03ccc774f14e50fd6463af25462a3673';
 
-        setWalletID(mockID);
-        return mockID;
-
-        // setWalletID(_.head(accounts));
-        // return _.head(accounts);
+        setWalletID(_.head(accounts));
+        return _.head(accounts);
       }
       console.log('WALLET HAS BEEN CONNECTED');
     } catch (e) {
