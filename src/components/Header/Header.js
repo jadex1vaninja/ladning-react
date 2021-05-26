@@ -34,7 +34,7 @@ const Header = ({
       {isUsedOnSecondaryPage ? (
         <nav className='header__navigation-secondary'>
           <div className='header__dazn-logo'>
-            <a target='_blank' href={DAZN_PUBLIC_LINK}>
+            <a target='_blank' href={DAZN_PUBLIC_LINK} rel='noreferrer'>
               <img
                 className='header__dazn-img'
                 src={imgPath + 'DAZN-logo.png'}
@@ -73,7 +73,7 @@ const Header = ({
       ) : (
         <nav className='header__navigation'>
           <div className='header__dazn-logo'>
-            <a target='_blank' href={DAZN_PUBLIC_LINK}>
+            <a target='_blank' href={DAZN_PUBLIC_LINK} rel='noreferrer'>
               <img
                 className='header__dazn-img'
                 src={imgPath + 'DAZN-logo.png'}
@@ -87,6 +87,7 @@ const Header = ({
                 className='header__nav-link c'
                 target='_blank'
                 href={OPENSEA_COLLECTION_LINK}
+                rel='noreferrer'
               >
                 {t('header.nav-list.nav-auction')}
               </a>
@@ -97,6 +98,7 @@ const Header = ({
                 style={{ textTransform: 'none' }}
                 href='/faq'
                 target='_blank'
+                rel='noreferrer'
               >
                 {t('header.nav-list.nav-faq')}
               </a>
@@ -111,7 +113,6 @@ const Header = ({
             <div className='header__terms-language'>
               <ul className='header__language-list'>
                 <li
-                  // style={{ visibility: 'hidden' }}
                   className={`header__button${
                     language === 'en' ? ' active' : ''
                   }`}
@@ -123,7 +124,6 @@ const Header = ({
                   En
                 </li>
                 <li
-                  // style={{ visibility: 'hidden' }}
                   className={`header__button${
                     language === 'es' ? ' active' : ''
                   }`}

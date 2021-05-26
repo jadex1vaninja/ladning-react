@@ -29,13 +29,6 @@ const OwnForm = ({ initialFormState, onSubmit, loading }) => {
         email: Yup.string()
           .email('Email has been typed incorrect')
           .required('Required field'),
-        // openseaUserName: Yup.string()
-        //   .required('Required field')
-        //   .min(3, 'At least should have 3 symbols')
-        //   .matches(/^[A-ZА-Я][a-zа-я]{2,20}|[a-zа-я]{2,20}/, {
-        //     message: 'Must be a string',
-        //     excludeEmptyString: true
-        //   }),
         country: Yup.string()
           .min(4, 'Should has at least 4 symbols')
           .required('Required field')
@@ -81,13 +74,6 @@ const OwnForm = ({ initialFormState, onSubmit, loading }) => {
             errors={errors.email}
             touched={touched.email}
           />
-          {/*<Input*/}
-          {/*  text={'Opensea Username'}*/}
-          {/*  htmlFor={'openseaUserName'}*/}
-          {/*  name={'openseaUserName'}*/}
-          {/*  errors={errors.openseaUserName}*/}
-          {/*  touched={touched.openseaUserName}*/}
-          {/*/>*/}
           <Input
             text={'Country'}
             htmlFor={'country'}

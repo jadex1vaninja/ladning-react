@@ -9,8 +9,7 @@ import Redeem from '../../components/Redeem';
 import Button from '../../components/Button';
 import PromoBanner from '../../components/Header/components/PromoBanner';
 import Description from '../../components/Header/components/Description';
-import { ETHEREUM, STORAGE_KEY, API_KEY } from '../../const';
-// import { MY_NFTS } from '../../const/myNFTs';
+import { ETHEREUM, API_KEY } from '../../const';
 import Heading from '../../components/Header/components/Heading';
 import MyModal from '../../components/MyModal';
 import './RedeemPage.scss';
@@ -20,9 +19,6 @@ const RedeemPage = () => {
   const API_ALL = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=${collectionId}`;
   const LOCAL_API_LAMDA = 'http://localhost:3000/api';
   const API_LAMBDA = 'https://ladma-dazn.vercel.app/api';
-  const API_SINGLE_ASSET =
-    'https://api.opensea.io/api/v1/asset/0x495f947276749ce646f68ac8c248420045cb7b5e/';
-
   const API_OWNER = `${API_ALL}&owner=`;
   const CODE_GENERATOR = Math.floor(Math.random() * 1e21);
 
@@ -45,7 +41,6 @@ const RedeemPage = () => {
     firstName: '',
     lastName: '',
     email: '',
-    // openseaUserName: '',
     country: '',
     walletID,
     signature,
@@ -67,29 +62,17 @@ const RedeemPage = () => {
       const signature = await signer.signMessage(secretMessage);
       setSignature(signature);
       setIsSigned(true);
-      console.log('Message has been signed :', signature);
       return signature;
     } catch (e) {
       console.log('error');
       console.error(e);
       setIsSigned(false);
       handleCloseModal();
-      // throw new Error('error');
     }
   };
 
   const closeErrorNotification = () => {
     setError(false);
-  };
-
-  const setToStorage = (id) => {
-    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(id));
-  };
-
-  const getFromStorage = () => {
-    const walletKeyFromStorage =
-      JSON.parse(sessionStorage.getItem(STORAGE_KEY)) || '';
-    return walletKeyFromStorage;
   };
 
   const fetchData = async (id) => {
@@ -102,7 +85,6 @@ const RedeemPage = () => {
       });
       const { assets } = response.data;
       setData(assets);
-      return assets;
     } catch (e) {
       console.error('Ошибка:', e);
     } finally {
@@ -124,47 +106,25 @@ const RedeemPage = () => {
     }
   };
 
-  const fetchSingleAsset = async (data, id) => {
-    try {
-      console.log('start request', data);
-      if (!data.length) return;
-      const firstElementId = _.head(data).token_id;
-
-      const response = await axios.get(API_SINGLE_ASSET + firstElementId, {
-        headers: {
-          'X-API-KEY': API_KEY
-        },
-        params: {
-          account_address: id
-        }
-      });
-      const {
-        ownership: {
-          owner: {
-            user: { username }
-          }
-        }
-      } = response.data;
-
-      return username;
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
   const connectWallet = async () => {
     setLoading(true);
     try {
       if (isEthereum) {
-        const accounts = await ETHEREUM.send('eth_requestAccounts');
-        const {
-          result: [ID]
-        } = accounts;
-        // const mockID = '0xfb52b9ff03ccc774f14e50fd6463af25462a3673';
+        const accounts = await ETHEREUM.request({
+          method: 'eth_requestAccounts',
+          params: [
+            {
+              eth_accounts: {}
+            }
+          ]
+        });
+        const mockID = '0xfb52b9ff03ccc774f14e50fd6463af25462a3673';
 
-        setWalletID(ID);
-        // setToStorage(ID);
-        return ID;
+        setWalletID(mockID);
+        return mockID;
+
+        // setWalletID(_.head(accounts));
+        // return _.head(accounts);
       }
       console.log('WALLET HAS BEEN CONNECTED');
     } catch (e) {
@@ -182,7 +142,7 @@ const RedeemPage = () => {
     setIsSigned(false);
   };
 
-  const addExtraToFormState = (token, signature) => {
+  const addExtraToFormState = (token) => {
     setInitialFormState((prevState) => ({
       ...prevState,
       token_id: token
@@ -192,22 +152,16 @@ const RedeemPage = () => {
   const onSubmit = async (values) => {
     setSubmitLoading(true);
     try {
-      const response = await fetch(`${API_LAMBDA}/redeem`, {
-        method: 'POST',
-        body: JSON.stringify({
-          ...values,
-          message: secretMessage,
-          signature,
-          walletID
-        }),
-        headers: {
-          'Content-Type': 'application/json'
-        }
+      const response = await axios.post(`${API_LAMBDA}/redeem`, {
+        ...values,
+        message: secretMessage,
+        signature,
+        walletID
       });
-      const json = await response.json();
-      if (json.error) {
+      const data = response.data;
+      if (data.error) {
         setError(true);
-        setErrorMessage(json);
+        setErrorMessage(data);
       } else {
         setIsRedeemed(true);
       }
@@ -226,7 +180,7 @@ const RedeemPage = () => {
       return;
     }
     const walletId = await connectWallet();
-    const data = await fetchData(walletId);
+    await fetchData(walletId);
   };
 
   const signMessageHandler = async () => {
@@ -237,26 +191,10 @@ const RedeemPage = () => {
     ETHEREUM && setProvider(new ethers.providers.Web3Provider(ETHEREUM));
     ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
     ETHEREUM ? setIsMetamaskModal(false) : setIsMetamaskModal(true);
-    // ETHEREUM && setWalletID(ETHEREUM.selectedAddress ||  getFromStorage());
 
     fetchDataAll();
     setSecretMessage(`${CODE_GENERATOR}`);
   }, []);
-
-  useEffect(() => {
-    if (!walletID) return;
-    walletID && assetHandler(walletID);
-  }, [walletID]);
-
-  const assetHandler = async (id) => {
-    const data = await fetchData(id);
-    // const userName = await fetchSingleAsset(data, id);
-
-    // setInitialFormState((prevState) => ({
-    //   ...prevState,
-    //   openseaUserName: userName
-    // }));
-  };
 
   return (
     <>

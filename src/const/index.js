@@ -1,5 +1,4 @@
 export const ETHEREUM = window.ethereum;
-export const STORAGE_KEY = 'walletID';
 export const API_KEY = '919ec8c06a8b476cbbc34f2e40ef7cc7';
 export const API_URL = `https://api.opensea.io/api/v1`;
 export const PHONE = 320;

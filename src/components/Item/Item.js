@@ -21,7 +21,7 @@ const Item = ({
     <div className='item'>
       <div className='item__name'>
         <h2>
-          <a href={link} target='_blank'>
+          <a href={link} target='_blank' rel='noreferrer'>
             {name}
           </a>
         </h2>
@@ -37,8 +37,8 @@ const Item = ({
               ctaText='Redeem'
               onClick={async () => {
                 openModal();
-                const signature = await signMessage();
-                addExtraToFormState(token, signature);
+                signMessage();
+                addExtraToFormState(token);
               }}
               isDisabled={!!isRedeemed}
             />
