@@ -237,7 +237,7 @@ const RedeemPage = () => {
     ETHEREUM && setProvider(new ethers.providers.Web3Provider(ETHEREUM));
     ETHEREUM ? setIsEthereum(true) : setIsEthereum(false);
     ETHEREUM ? setIsMetamaskModal(false) : setIsMetamaskModal(true);
-    // ETHEREUM && setWalletID(ETHEREUM.selectedAddress ||  getFromStorage());
+    ETHEREUM && setWalletID(ETHEREUM.selectedAddress);
 
     fetchDataAll();
     setSecretMessage(`${CODE_GENERATOR}`);
